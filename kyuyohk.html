@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .css-logo-wrapper {
+            background-color: #fff;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 20px 30px 10px;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+        .css-logo-gradient {
+            height: 50px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 60%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding-right: 20px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 15px 10px;
+            gap: 15px;
+        }
+        .top-nav a, .top-nav .nav-tel {
+            color: #0d737d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .top-nav a:hover {
+            background-color: #eaf6f7;
+            text-decoration: underline;
+        }
+        .top-nav .nav-tel {
+            cursor: default;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* 大見出しをブルーの帯・白文字に変更 */
+        h1 {
+            color: #fff;
+            background-color: #2980b9;
+            font-size: 1.8em;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.2em;
+        }
+        .highlight-box {
+            background-color: #e8f6f3;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #1abc9c;
+        }
+        .alert-box {
+            background-color: #fdedec;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #e74c3c;
+        }
+        .checklist {
+            background-color: #fdfefe;
+            border: 1px solid #d0d3d4;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .checklist .red-circle::before {
+            content: "🔴";
+            position: absolute;
+            left: 0;
+        }
+        .checklist .blue-circle::before {
+            content: "🔵";
+            position: absolute;
+            left: 0;
+        }
+        ul.standard-list {
+            padding-left: 20px;
+        }
+        ul.standard-list li {
+            margin-bottom: 8px;
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 0.85em;
+            color: #666;
+        }
+        .disclaimer-box p {
+            margin: 0 0 10px 0;
+        }
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/gI6oRx8qS_A" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    
+    <h1>法人と個人事業主で給与ってこんなに違う！自分と家族の給料で大きく差の出る税金戦略</h1>
+
+    <h2>①オープニング</h2>
+    <p>「えっ…！自分の給料、個人事業主だと経費にできないの！？」<br>
+    「せっかく頑張って稼いだのに、税金でかなりの額持っていかれた…」<br>
+    「家族に手伝ってもらってるのに、給与を出したら逆に損してる気がする…」</p>
+    
+    <p>こんな経験、ありませんか？<br>
+    実は、個人事業主と法人では、自分や家族への給与の扱いが根本的に違うんです！この違いを知らないと、同じ稼ぎでも年間数十万円から数百万円も手取りが変わってしまう可能性があります。</p>
+    
+    <p>最後まで見たら、あなたの事業の未来がガラッと変わるかも…？<br>
+    それでは、いきますよ！</p>
+
+    <h2>②重要な解説</h2>
+    <p>さて、ここからが本当の重要な解説になります！</p>
+    <p>今日は3つのポイントで、個人と法人の「給与の違い」を徹底比較します。<br>
+    初心者でも「なるほど！」ってなるように、具体例と数字で分かりやすくお話ししますね。</p>
+
+    <h3>❶1つ目：まずは「自分への給料」　個人と法人で世界が違う</h3>
+    
+    <div class="checklist">
+        <h3>🔴 個人事業主の場合</h3>
+        <ul>
+            <li class="red-circle">売上から経費を引いた残りが、全部あなたの「事業所得」になります。つまり、自分に「給料」という概念がないんです。</li>
+            <li class="red-circle">例えば、売上1,000万円、経費400万円だったら、残り600万円が丸ごと所得。ここに所得税・住民税・事業税がかかります。</li>
+            <li class="red-circle">「好きな時に好きなだけ生活費として引き出せる」のは楽ですが、600万円全部が課税対象…。</li>
+        </ul>
+        
+        <h3>🔵 法人（株式会社など）にした場合</h3>
+        <ul>
+            <li class="blue-circle">あなたは「会社の社長」として、会社から「役員報酬」というお給料をもらいます。この役員報酬、会社の経費（損金）にできるんです！</li>
+            <li class="blue-circle">先ほどの例で、役員報酬を月50万円（年600万円）に設定したら、会社の利益は1,000万円－400万円－600万円＝0円！法人税がほぼゼロに近づきます。</li>
+            <li class="blue-circle">しかも、社長個人は「給与所得」になるので、サラリーマンと同じ「給与所得控除」が使えます。年600万円の報酬でも約164万円が自動的に控除されて、課税対象が436万円に減るんです。</li>
+        </ul>
+    </div>
+
+    <div class="alert-box">
+        <p>ただし制約もあります：</p>
+        <ul class="standard-list">
+            <li>役員報酬は事業年度開始から3ヶ月以内に決定</li>
+            <li>原則1年間同額の「定期同額給与」が必要</li>
+        </ul>
+        <p>このルールは絶対。<br>
+        なので「今月ちょっと儲かったから上げたい…」ができないのは、意外と見落とされます。</p>
+    </div>
+
+    <div class="highlight-box">
+        <p>でも、利益が大きい人ほど、メリットの差は劇的です！</p>
+    </div>
+
+    <h3>❷2つ目：次は家族への給料　一番トラブルになりやすい領域です。</h3>
+
+    <div class="checklist">
+        <h3>🔴 個人事業主の場合</h3>
+        <ul>
+            <li class="red-circle">家族に給与を払うには「青色事業専従者給与」という特別ルールを使います。</li>
+            <li class="red-circle">条件は厳しくて、以下のルールを守る必要があります。
+                <ul class="standard-list" style="margin-top: 10px;">
+                    <li>同一生計の配偶者または15歳以上の親族</li>
+                    <li>年間6ヶ月超の専従</li>
+                    <li>事前に税務署への届出</li>
+                    <li>世間相場に見合った妥当な金額</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="alert-box">
+        <p>これを守れば経費にできますが、大きな落とし穴が…<br>
+        <strong>その家族は「配偶者控除」や「扶養控除」が使えなくなるんです！</strong><br>
+        例えば、奥さんに年100万円払って経費にした場合、奥さんの配偶者控除が消えて、逆に損するケースも多いんです。</p>
+    </div>
+
+    <div class="checklist">
+        <h3>🔵 法人の場合</h3>
+        <ul>
+            <li class="blue-circle">家族を従業員や役員にすれば、仕事内容に見合った給与は原則として届出なしで全額経費にできます！</li>
+            <li class="blue-circle">しかも奥さんの場合、年収が一定額以下なら配偶者控除も併用できるんです！</li>
+            <li class="blue-circle">例えば、奥さんに年100万円の給与を払う。<br>
+            →会社は100万円経費<br>
+            →社長は奥さんを配偶者控除の対象にできる→<strong>ダブルで得する！</strong></li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <p>実際、年収1,000万円超える経営者で法人化したら、家族給与使っただけで年間50～100万円以上手取りが増えた！という方が続出してます。</p>
+    </div>
+
+    <h3>❸3つ目：じゃあ、いつ法人化すればいいの？</h3>
+    <p>目安は「事業所得が年間800万円を超えたあたり」とされています。<br>
+    このラインを超えると、</p>
+    <ul class="standard-list">
+        <li>自分への給与を経費にできる</li>
+        <li>家族への給与の自由度が爆上がり</li>
+        <li>給与所得控除が使える</li>
+    </ul>
+
+    <div class="highlight-box">
+        <p>この3つの合わせ技で、トータルの税金＋社会保険料がグッと下がるケースがほとんど。</p>
+    </div>
+
+    <div class="alert-box">
+        <p>ただし、法人化には社会保険の加入義務や事務負担が増えるデメリットもあります。<br>
+        だからこそ「自分の数字」をちゃんと見て判断することが大事なんです。</p>
+    </div>
+
+    <h2>③まとめ</h2>
+    <p>今日の話を一言で言うと、<br>
+    <strong>「どちらが得か」ではなく、あなたの事業ステージと家族構成に最適な給与設計ができているか</strong>です。<br>
+    個人事業主は自由度が高く、法人は節税と将来への備えに優れています。</p>
+
+    <div class="highlight-box">
+        <p>プラスアルファ情報として、最近は「段階的法人化」という選択肢も注目されています。<br>
+        まず個人事業で基盤を固め、収益が安定してから一部事業を法人化する戦略です。これにより、リスクを抑えながら最適なタイミングで法人化のメリットを享受できます。</p>
+    </div>
+
+    <p>事業の成長とともに最適解も変わります。定期的な見直しで、常にベストな選択を心がけましょう。</p>
+
+    <p>迷ったら無料相談お待ちしてます(^^)。<br>
+    参考になったらチャンネル登録、高評価、お願いします！</p>
+
+    <div class="disclaimer-box">
+        <p><strong>【作成月】</strong>2025/12</p>
+        <p><strong>【ご利用にあたっての注意事項】</strong></p>
+        <ul>
+            <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+            <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+            <li>※内容の是非については、当事務所では対応いたしません。</li>
+        </ul>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/gI6oRx8qS_A" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
