@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        
+        .css-logo-wrapper {
+            background-color: #fff;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 20px 30px 10px;
+            margin: 0;
+            letter-spacing: 0.05em;
+        }
+        .css-logo-gradient {
+            height: 50px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 60%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding-right: 20px;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 15px 10px;
+            gap: 15px;
+        }
+        .top-nav a, .top-nav .nav-tel {
+            color: #0d737d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .top-nav a:hover {
+            background-color: #eaf6f7;
+            text-decoration: underline;
+        }
+        .top-nav .nav-tel {
+            cursor: default;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        /* 大見出しをブルーの帯・白文字に変更 */
+        h1 {
+            color: #fff;
+            background-color: #2980b9;
+            font-size: 1.8em;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+        
+        h2 {
+            color: #2980b9;
+            font-size: 1.4em;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.2em;
+        }
+        .highlight-box {
+            background-color: #e8f6f3;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #1abc9c;
+        }
+        .alert-box {
+            background-color: #fdedec;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            border-left: 5px solid #e74c3c;
+        }
+        .checklist {
+            background-color: #fdfefe;
+            border: 1px solid #d0d3d4;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .checklist li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .checklist .red-circle::before {
+            content: "🔴";
+            position: absolute;
+            left: 0;
+        }
+        .checklist .blue-circle::before {
+            content: "🔵";
+            position: absolute;
+            left: 0;
+        }
+        ul.standard-list {
+            padding-left: 20px;
+        }
+        ul.standard-list li {
+            margin-bottom: 8px;
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 0.85em;
+            color: #666;
+        }
+        .disclaimer-box p {
+            margin: 0 0 10px 0;
+        }
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/8oEUxQJYog0" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    
+    <h1>【96%の会社が危険⁉️】節税が逆効果!? 「同族会社」のヤバい落とし穴TOP3</h1>
+
+    <h2>①オープニング</h2>
+    <p>追徴課税500万円！</p>
+    <p>ある経営者が突然受けた税務調査の悪夢です。親族に不動産を貸してただけなのに…</p>
+    <p>実は日本企業の96%が対象となる同族会社の落とし穴。<br>
+    『身内だから大丈夫』そう思ってたら人生変わります。</p>
+    <p>あなたの会社は大丈夫ですか?</p>
+    <div class="alert-box">
+        <p>税務署が持つ最強の武器『行為計算否認』、知らないと本当にヤバい！</p>
+    </div>
+
+    <h2>②重要な解説</h2>
+    <p>さてここからが重要な解説になります!</p>
+
+    <h3>1. 【衝撃の実話】ある社長に起きた悲劇</h3>
+    <p>まず、実際にあった話からお伝えします。<br>
+    都内で不動産業を営むA社長、50代。順調に事業を拡大し、節税のために同族の管理会社を設立しました。</p>
+
+    <div class="checklist">
+        <h3>🔴 Before（失敗前）</h3>
+        <ul>
+            <li class="red-circle">自分が所有する賃貸ビルを、同族会社に月30万円で貸し出し。その会社が第三者に月100万円で転貸。差額70万円が管理会社の利益に。「これで節税できる!」と思っていたんです。</li>
+            <li class="red-circle">ところが3年後、税務調査が入りました。調査官が言った一言がこれです。「この取引、否認させていただきます」</li>
+            <li class="red-circle">結果は…追徴課税480万円、加算税を含めると総額550万円！<br>A社長は言いました。「契約書もある、実際に取引してる、何が悪いんだ！」</li>
+            <li class="red-circle">でも税務署の答えは明確でした。「管理料として適正なのは収入の15%程度。あなたのケースは70%。経済的合理性がありません」</li>
+        </ul>
+
+        <h3>🔵 After（学びと成功）</h3>
+        <ul>
+            <li class="blue-circle">その後、A社長は専門家と共に契約を見直し。適正な管理料15%に設定し直し、事業目的を明確化。議事録や価格算定資料も完備しました。</li>
+            <li class="blue-circle">今では税務調査でも何も指摘されない、クリーンな経営を実現しています。</li>
+        </ul>
+    </div>
+
+    <div class="highlight-box">
+        <p>この差、わかりますか?知ってるか知らないか、それだけで550万円変わるんです!</p>
+    </div>
+
+    <h3>2. 96%が対象!あなたも当事者です</h3>
+    <p>ここで確認です。あなたの会社は大丈夫ですか?</p>
+
+    <div class="highlight-box">
+        <p>同族会社の定義は超シンプル。上位3つの株主グループで議決権の50%超を持っていたら…該当します!</p>
+    </div>
+
+    <p>チェックしてみてください</p>
+    <ul class="standard-list">
+        <li>社長とその家族で株の過半数を持っている?</li>
+        <li>親族が役員になっている?</li>
+        <li>身内に給料や報酬を払っている?</li>
+    </ul>
+
+    <p>一つでも当てはまれば、あなたも今日の話の当事者です。<br>
+    国税庁のデータでは日本の法人の96%が同族会社。つまり、ほぼ全員が対象なんです。</p>
+
+    <p>なぜ同族会社が狙われるのか?<br>
+    答えは明確です。親族間だと「普通じゃ絶対やらない取引」ができちゃうから。第三者との取引なら絶対に成立しない条件でも、身内なら「まあいいか」で通しちゃう。そこに税務署は目を光らせているんです。</p>
+
+    <h3>3. 伝家の宝刀が抜かれる瞬間</h3>
+    <p>「同族会社の行為計算否認」、これが税務署の最強武器です。</p>
+    <p>恐ろしいのは、こういう点です</p>
+    <ul class="standard-list">
+        <li>実際に取引が行われていてもダメ</li>
+        <li>契約書があってもダメ</li>
+        <li>お金が動いていてもダメ</li>
+    </ul>
+
+    <div class="alert-box">
+        <p>「不当に税金を減らしてる」と判断されたら、全部ひっくり返されます。</p>
+    </div>
+
+    <p>あなたの会社は、こんな取引してませんか?</p>
+    <div class="checklist">
+        <h3>🔴 要注意取引チェック</h3>
+        <ul>
+            <li class="red-circle">❌ 相場より異常に高い役員報酬</li>
+            <li class="red-circle">❌ 親族への不動産が市場価格とかけ離れてる</li>
+            <li class="red-circle">❌ 無利息や超低金利での身内への貸付</li>
+            <li class="red-circle">❌ 実態のない管理会社への高額委託料</li>
+            <li class="red-circle">❌ 赤字会社への不自然な資産移転</li>
+        </ul>
+    </div>
+    <p>一つでも心当たりがあるなら、今すぐ見直しが必要です!</p>
+
+    <h3>4. 否認の3大判断基準</h3>
+    <p>税務署はこの3つで判断します</p>
+    <ul class="standard-list">
+        <li><strong>基準1 経済的合理性の欠如：</strong>「普通の経済人ならやらない取引」かどうか。第三者との取引と比べて異常だったらアウト。</li>
+        <li><strong>基準2 租税回避目的：</strong>事業目的がなく、税金を減らすためだけの取引はNG。「なぜその取引が必要なのか」説明できますか?</li>
+        <li><strong>基準3 同族だからできた：</strong>身内だから可能になった取引。ここが一番のポイントです。</li>
+    </ul>
+
+    <h3>5. 今すぐできる3つの防衛策</h3>
+    <p>あなたの会社を守る方法、教えます!</p>
+    <ul class="standard-list">
+        <li><strong>防衛策1 市場価格の徹底調査：</strong>親族間取引でも、必ず周辺相場や業界水準を調べる。不動産なら複数の不動産会社に査定依頼、報酬なら同業他社の水準をリサーチ。</li>
+        <li><strong>防衛策2 事業目的の文書化：</strong>なぜこの取引が必要なのか、稟議書に明記する。「コスト削減のため」「事業拡大のため」「専門性の活用のため」…具体的な経営上の理由を書面で残しましょう。</li>
+        <li><strong>防衛策3 証拠書類の完璧な整備：</strong>これらを最低5年は保管!税務調査で「ありません」は通用しません。
+            <ul class="standard-list">
+                <li>取締役会議事録</li>
+                <li>価格算定の根拠資料</li>
+                <li>市場調査データ</li>
+                <li>契約書の詳細な内容</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>③まとめ</h2>
+    <div class="alert-box">
+        <p>最後に衝撃の事実を一つ。もし否認されて争っても、勝率は10%以下と言われています。だからこそ、最初から否認されない仕組み作りが超重要なんです。</p>
+    </div>
+
+    <p>もう一度確認です。あなたの会社は大丈夫ですか?<br>
+    今この瞬間に思い当たる取引があるなら、明日からでも見直しを始めてください！</p>
+
+    <p>迷ったら無料相談お待ちしてます(^^)。<br>
+    参考になったらチャンネル登録、高評価、お願いします！</p>
+
+    <div class="disclaimer-box">
+        <p><strong>【作成月】</strong>2025/10</p>
+        <p><strong>【ご利用にあたっての注意事項】</strong></p>
+        <ul>
+            <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+            <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+            <li>※内容の是非については、当事務所では対応いたしません。</li>
+        </ul>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/8oEUxQJYog0" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
