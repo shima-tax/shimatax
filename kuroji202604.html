@@ -4,46 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>島田税理士事務所コラム</title>
-    
+
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
-    
+
     <style>
+        :root {
+            --bg: #eef3f6;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #60717d;
+            --navy: #102a43;
+            --navy-2: #163a59;
+            --teal: #0d737d;
+            --teal-2: #17a2a8;
+            --teal-soft: #e7f7f8;
+            --blue-soft: #eef7ff;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #f2a541;
+            --gold-soft: #fff4df;
+            --green: #14a86b;
+            --green-soft: #eaf9f1;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(13,115,125,0.17), transparent 30%),
+                radial-gradient(circle at top right, rgba(242,165,65,0.18), transparent 26%),
+                linear-gradient(180deg, #f9fcfd 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
         }
-        
+
+        a {
+            color: inherit;
+        }
+
         .css-logo-wrapper {
-            background-color: #fff;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.9);
         }
+
         .css-logo-text {
             font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
-            font-size: 2.2em;
+            font-size: 2.25em;
             font-weight: bold;
-            color: #115d63;
-            padding: 20px 30px 10px;
+            color: var(--teal);
+            padding: 24px 32px 10px;
             margin: 0;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
         }
+
         .css-logo-gradient {
-            height: 50px;
-            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 60%, #0d737d 100%);
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
             display: flex;
             justify-content: flex-end;
             align-items: center;
             color: #fff;
-            padding-right: 20px;
+            padding: 0 22px;
             font-weight: bold;
             font-size: 0.95em;
+            letter-spacing: 0.05em;
         }
 
         .top-nav {
@@ -51,123 +92,551 @@
             flex-wrap: wrap;
             justify-content: center;
             background-color: #f4f9fa;
-            padding: 15px 10px;
-            gap: 15px;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
         }
+
         .top-nav a, .top-nav .nav-tel {
-            color: #0d737d;
+            color: var(--teal);
             text-decoration: none;
             font-weight: bold;
             font-size: 0.95em;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
         }
+
         .top-nav a:hover {
-            background-color: #eaf6f7;
-            text-decoration: underline;
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
         }
+
         .top-nav .nav-tel {
             cursor: default;
+            color: var(--muted);
         }
 
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
         }
-        
-        /* 大見出しをブルーの帯・白文字に変更 */
-        h1 {
+
+        .hero {
+            position: relative;
+            padding: 38px 36px 34px;
             color: #fff;
-            background-color: #2980b9;
-            font-size: 1.8em;
-            padding: 15px 20px;
-            border-radius: 5px;
-            margin-bottom: 20px;
+            background:
+                radial-gradient(circle at top right, rgba(242,165,65,0.35), transparent 32%),
+                linear-gradient(135deg, #102a43 0%, #0d737d 62%, #17a2a8 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "CASH FLOW";
+            position: absolute;
+            right: 18px;
+            bottom: -4px;
+            font-size: 4.8em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.09);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, #ffb648, #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(242,165,65,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.65em, 4vw, 2.38em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .metric-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .metric-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+        }
+
+        .metric-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .metric-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.32em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .metric-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+        }
+
+        .article-body {
+            padding: 30px 36px 40px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy-2);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p {
+            margin: 0 0 1.1em;
+        }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(242,165,65,0.32) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(242,165,65,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .cash-box p:last-child,
+        .cta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "要注意";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .cash-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .cash-box::after {
+            content: "¥";
+            position: absolute;
+            right: 18px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.08);
+            font-size: 6em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .cash-box h3 {
             margin-top: 0;
         }
-        
-        h2 {
-            color: #2980b9;
-            font-size: 1.4em;
-            margin-top: 30px;
-            border-left: 5px solid #3498db;
-            padding-left: 10px;
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
         }
-        h3 {
-            color: #34495e;
-            font-size: 1.2em;
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
         }
-        .highlight-box {
-            background-color: #e8f6f3;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #1abc9c;
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
         }
-        .alert-box {
-            background-color: #fdedec;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #e74c3c;
-        }
+
         .checklist {
-            background-color: #fdfefe;
-            border: 1px solid #d0d3d4;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 20px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
         }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
         .checklist ul {
             list-style-type: none;
             padding-left: 0;
+            margin: 0 0 18px;
         }
+
+        .checklist ul:last-child {
+            margin-bottom: 0;
+        }
+
         .checklist li {
             margin-bottom: 10px;
-            padding-left: 25px;
+            padding: 13px 13px 13px 38px;
             position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
         }
+
         .checklist .red-circle::before {
-            content: "🔴";
+            content: "!";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
+
         .checklist .blue-circle::before {
-            content: "🔵";
+            content: "✓";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
-        ul.standard-list {
-            padding-left: 20px;
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 24px 0;
         }
-        ul.standard-list li {
-            margin-bottom: 8px;
+
+        .action-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .action-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .action-card p {
+            margin-bottom: 0;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 {
+            margin-top: 0;
+        }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(242,165,65,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
         }
 
         .disclaimer-box {
             margin-top: 40px;
-            padding: 20px;
+            padding: 22px;
             background-color: #f5f5f5;
             border: 1px solid #e0e0e0;
-            border-radius: 5px;
+            border-radius: 14px;
             font-size: 0.85em;
             color: #666;
         }
+
         .disclaimer-box p {
             margin: 0 0 10px 0;
         }
+
         .disclaimer-box ul {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
         }
+
         .disclaimer-box li {
             margin-bottom: 8px;
             text-indent: -1em;
             padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 12px;
+                max-width: 100%;
+            }
+
+            .css-logo-text {
+                font-size: 1.7em;
+                padding: 18px 20px 8px;
+            }
+
+            .css-logo-gradient {
+                justify-content: center;
+                padding: 0 12px;
+                text-align: center;
+            }
+
+            .top-nav a,
+            .top-nav .nav-tel {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 28px 20px 26px;
+            }
+
+            .hero::after {
+                font-size: 2.6em;
+            }
+
+            .metric-row {
+                grid-template-columns: 1fr;
+                padding: 0 20px 24px;
+            }
+
+            .article-body {
+                padding: 24px 20px 30px;
+            }
+
+            h2 {
+                font-size: 1.26em;
+            }
+
+            h3 {
+                font-size: 1.08em;
+            }
+
+            .action-card {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -185,86 +654,132 @@
 </div>
 
 <div class="container">
-    
-    <h1>【黒字企業のリスク】売上はあるのにお金がない！倒産企業4割が黒字の現実と5つの対策</h1>
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">黒字倒産リスク</span>
+            <span class="badge">資金繰り対策</span>
+        </div>
+        <h1>【黒字企業のリスク】<br>売上はあるのにお金がない！<br>倒産企業4割が黒字の現実と5つの対策</h1>
+        <p class="hero-lead">利益が出ていても、現金がなければ会社は止まります。売掛金・税金・入金サイクルを見直し、黒字倒産を防ぐための実務ポイントを整理します。</p>
+    </section>
 
-    <h2>① オープニング</h2>
-    <p>「売上は過去最高！毎日忙しくて嬉しい悲鳴！…なのに、なぜか月末になると通帳の残高が寂しい…。」</p>
-    <p>そんな経験、ありませんか？</p>
-    <p>それどころか、決算後に届いた税金の請求額を見て「えっ、こんなに払えないよ…」と血の気が引いたこと、一度でもあるなら、今日の動画はあなたのためのものです。</p>
-
-    <div class="alert-box">
-        <p>実はこれ、東京商工リサーチの調査によると、倒産企業の約4割が黒字企業という衝撃の事実があります。</p>
+    <div class="metric-row">
+        <div class="metric-card">
+            <span class="metric-label">RISK 01</span>
+            <span class="metric-value">利益 ≠ 現金</span>
+            <p class="metric-note">帳簿上の黒字と、通帳残高は別物です。</p>
+        </div>
+        <div class="metric-card">
+            <span class="metric-label">RISK 02</span>
+            <span class="metric-value">売掛金の罠</span>
+            <p class="metric-note">入金前でも税金・支払いは待ってくれません。</p>
+        </div>
+        <div class="metric-card">
+            <span class="metric-label">ACTION</span>
+            <span class="metric-value">3ヶ月先を見る</span>
+            <p class="metric-note">資金繰り表で未来の不足を先読みします。</p>
+        </div>
     </div>
 
-    <p>今日は、あなたの会社から現金を奪う真犯人、「売掛金」の正体と、その具体的な対策を詳しく解説します！</p>
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「売上は過去最高！毎日忙しくて嬉しい悲鳴！…なのに、なぜか月末になると通帳の残高が寂しい…。」</p>
+            <p>そんな経験、ありませんか？</p>
+            <p>それどころか、決算後に届いた税金の請求額を見て「えっ、こんなに払えないよ…」と血の気が引いたこと、一度でもあるなら、今日の動画はあなたのためのものです。</p>
+        </div>
 
-    <h2>② 重要な解説</h2>
-    <p>さてここからが重要な解説になります！</p>
-    <p>「利益が出ているのにお金がない」この状況から脱出するための、具体的で即効性のあるポイントを3つに絞って、解説していきますね。</p>
+        <div class="alert-box">
+            <p>実はこれ、東京商工リサーチの調査によると、倒産企業の約4割が黒字企業という衝撃の事実があります。</p>
+        </div>
 
-    <h3>1. 【リスク編】なぜ？利益300万円なのに、手元には現金10万円の恐怖</h3>
-    <p>まず大前提として、あなたの会社の「利益」と「現金（キャッシュ）」は全くの別物だと、今日、ここで肝に銘じてください。</p>
-    <p>WEB制作で起業したA社長。彼は頑張って1,000万円の案件を受注しました。かかった経費は700万円。帳簿上の利益は、見事300万円です！</p>
-    <p>「やった！大成功だ！」と喜ぶA社長。</p>
-    <p>しかし、契約条件は「納品後、翌々月末払い」。つまり、実際にお金が振り込まれるのは、なんと2ヶ月も先なんです。</p>
-    <p>その間にも、スタッフの給料、オフィスの家賃、PCのリース代…支払いは待ってくれません。手元の現金はどんどん減っていき、気づけば残高はたったの10万円。</p>
+        <p>今日は、あなたの会社から現金を奪う真犯人、「売掛金」の正体と、その具体的な対策を詳しく解説します！</p>
 
-    <div class="alert-box">
-        <p>そこへ追い打ちをかけるように、決算・申告が近づくと『この利益に対する法人税を納める必要がある』現実が襲ってきます。 まだ入金されていない“帳簿上の利益”でも、税金は待ってくれません。</p>
-    </div>
+        <h2>② 重要な解説</h2>
+        <p>さてここからが重要な解説になります！</p>
+        <p>「利益が出ているのにお金がない」この状況から脱出するための、具体的で即効性のあるポイントを3つに絞って、解説していきますね。</p>
 
-    <p>これが「黒字倒産」の入り口です。皆さんの会社は、大丈夫ですか？</p>
+        <h3>1. 【リスク編】なぜ？利益300万円なのに、手元には現金10万円の恐怖</h3>
+        <p>まず大前提として、あなたの会社の「利益」と「現金（キャッシュ）」は全くの別物だと、今日、ここで肝に銘じてください。</p>
 
-    <h3>2. 【深掘り編】売掛金が引き起こす「見せかけ黒字」の罠</h3>
-    <p>ではなぜ、この「売掛金」がこれほどまでに恐ろしいのでしょうか？その本質は、2つの見えないリスクを抱えた「時限爆弾」だからです。</p>
+        <div class="cash-box">
+            <h3>ケース：WEB制作で起業したA社長</h3>
+            <p>彼は頑張って1,000万円の案件を受注しました。かかった経費は700万円。帳簿上の利益は、見事300万円です！</p>
+            <p>「やった！大成功だ！」と喜ぶA社長。</p>
+            <p>しかし、契約条件は「納品後、翌々月末払い」。つまり、実際にお金が振り込まれるのは、なんと2ヶ月も先なんです。</p>
+        </div>
 
-    <div class="checklist">
-        <h3>🔴 1つ目のリスク：「消費税の立て替え地獄」</h3>
-        <ul>
-            <li class="red-circle">売上が1,100万円あったら、そのうち100万円は顧客から預かっている消費税ですよね。<br>でも、入金が2ヶ月先なら、その100万円をあなたは自分の会社の現金から「立て替えて」納税の準備をしないといけないんです。売上が増えれば増えるほど、この立て替え額が膨らみ、資金繰りを圧迫します。</li>
-        </ul>
-        <h3>🔵 2つ目のリスク：「未回収リスク」</h3>
-        <ul>
-            <li class="blue-circle">もし、取引先が倒産してしまったら…？売掛金は1円も入ってきません。しかし、あなたの会社ではすでに「売上」として計上してしまっているため、利益に対する法人税や、預かってもいない消費税の納税義務だけが、重くのしかかってくるんです。</li>
-        </ul>
-    </div>
+        <p>その間にも、スタッフの給料、オフィスの家賃、PCのリース代…支払いは待ってくれません。手元の現金はどんどん減っていき、気づけば残高はたったの10万円。</p>
 
-    <div class="highlight-box">
-        <p>まさに、働けば働くほど、頑張れば頑張るほど、手元の現金が消えていく…この負のスパイラルこそが、多くの経営者を苦しめる「売掛金」の正体なんです。</p>
-    </div>
+        <div class="alert-box">
+            <p>そこへ追い打ちをかけるように、決算・申告が近づくと『この利益に対する法人税を納める必要がある』現実が襲ってきます。まだ入金されていない“帳簿上の利益”でも、税金は待ってくれません。</p>
+        </div>
 
-    <p>さあ、ここからが本題です。</p>
-    <p>この最悪の状況をどうやって乗り越えるのか？具体的な解決策を見ていきましょう！</p>
+        <p>これが「黒字倒産」の入り口です。皆さんの会社は、大丈夫ですか？</p>
 
-    <h3>3. 【解決編】会社を救う！即効性のある3つの鉄壁ガード術</h3>
-    <p>安心してください。この問題は、正しい知識で必ず防げます。今日から実践できる、あなたの会社を守る3つの具体的なアクションをお伝えします。</p>
+        <h3>2. 【深掘り編】売掛金が引き起こす「見せかけ黒字」の罠</h3>
+        <p>ではなぜ、この「売掛金」がこれほどまでに恐ろしいのでしょうか？その本質は、2つの見えないリスクを抱えた「時限爆弾」だからです。</p>
 
-    <ul class="standard-list">
-        <li><strong>❶アクション1：入金サイクルを「交渉」する勇気を持つ！</strong><br>「業界の慣習だから…」と諦めていませんか？新規契約の際、「月末締め・翌月末払い」を「翌月20日払い」にするなど、たった10日早める交渉をするだけでも、資金繰りは劇的に改善します。<br>「売ってあげる」のではなく、「取引していただく」という対等な立場で、支払い条件を交渉する勇気を持ちましょう。</li>
-        <li><strong>❷アクション2：資金繰り表で「3ヶ月先の未来」を予測する！</strong><br>通帳の残高だけを見て一喜一憂するのは、経営ではありません。<br>エクセルで構いません。「いつ、誰から、いくら入金があり、いつ、何に、いくら支払いがあるのか」を、3ヶ月先まで書き出してみてください。これだけで、「来月、資金がショートしそうだ」という未来が予測でき、銀行への融資相談など、先手を打つことができます。</li>
-        <li><strong>❸アクション3：攻めの「外部サービス」を味方につける！</strong><br>「どうしても入金まで待てない！」<br>そんな時は、売掛金を買い取ってもらい早期に現金化する「ファクタリング」や、銀行の短期融資をためらわずに活用しましょう。<br>もちろん、利用には手数料がかかりますし、使いすぎは利益を削ります。ですが、「目先の支払いのために、黒字なのに倒産する」という最悪の事態を回避するための『緊急避難』として、選択肢に持っておくことは重要です。</li>
-    </ul>
+        <div class="checklist">
+            <h3>🔴 1つ目のリスク：「消費税の立て替え地獄」</h3>
+            <ul>
+                <li class="red-circle">売上が1,100万円あったら、そのうち100万円は顧客から預かっている消費税ですよね。<br>でも、入金が2ヶ月先なら、その100万円をあなたは自分の会社の現金から「立て替えて」納税の準備をしないといけないんです。売上が増えれば増えるほど、この立て替え額が膨らみ、資金繰りを圧迫します。</li>
+            </ul>
+            <h3>🔵 2つ目のリスク：「未回収リスク」</h3>
+            <ul>
+                <li class="blue-circle">もし、取引先が倒産してしまったら…？売掛金は1円も入ってきません。しかし、あなたの会社ではすでに「売上」として計上してしまっているため、利益に対する法人税や、預かってもいない消費税の納税義務だけが、重くのしかかってくるんです。</li>
+            </ul>
+        </div>
 
-    <h2>③ まとめ</h2>
-    <p>「売掛金」は、将来入ってくる予定の「宝くじ」ではありません。回収するまでは、あなたの会社を脅かす「リスク」そのものです。</p>
+        <div class="highlight-box">
+            <p>まさに、働けば働くほど、頑張れば頑張るほど、手元の現金が消えていく…この負のスパイラルこそが、多くの経営者を苦しめる「売掛金」の正体なんです。</p>
+        </div>
 
-    <div class="highlight-box">
-        <p>これからは、「売ること」と同じ熱量で、「回収すること」に執着してください。その執着こそが、あなたの会社と、大切な社員、そしてその家族の生活を守る、唯一の方法なんです。</p>
-    </div>
+        <p>さあ、ここからが本題です。</p>
+        <p>この最悪の状況をどうやって乗り越えるのか？具体的な解決策を見ていきましょう！</p>
 
-    <p>最後にプラスアルファの情報です。<br>資金繰り表を作るのが面倒な方は、まずは「入金予定」と「出金予定」をカレンダーに書き込むだけでもOKです。</p>
-    <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。</p>
-    <p>参考になったらチャンネル登録、高評価、お願いします！</p>
-    
-    <div class="disclaimer-box">
-        <p><strong>【作成月】</strong>2026/04</p>
-        <p><strong>【ご利用にあたっての注意事項】</strong></p>
-        <ul>
-            <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
-            <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
-            <li>※内容の是非については、当事務所では対応いたしません。</li>
-        </ul>
+        <h3>3. 【解決編】会社を救う！即効性のある3つの鉄壁ガード術</h3>
+        <p>安心してください。この問題は、正しい知識で必ず防げます。今日から実践できる、あなたの会社を守る3つの具体的なアクションをお伝えします。</p>
+
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="action-num">1</div>
+                <p><strong>アクション1：入金サイクルを「交渉」する勇気を持つ！</strong><br>「業界の慣習だから…」と諦めていませんか？新規契約の際、「月末締め・翌月末払い」を「翌月20日払い」にするなど、たった10日早める交渉をするだけでも、資金繰りは劇的に改善します。<br>「売ってあげる」のではなく、「取引していただく」という対等な立場で、支払い条件を交渉する勇気を持ちましょう。</p>
+            </div>
+            <div class="action-card">
+                <div class="action-num">2</div>
+                <p><strong>アクション2：資金繰り表で「3ヶ月先の未来」を予測する！</strong><br>通帳の残高だけを見て一喜一憂するのは、経営ではありません。<br>エクセルで構いません。「いつ、誰から、いくら入金があり、いつ、何に、いくら支払いがあるのか」を、3ヶ月先まで書き出してみてください。これだけで、「来月、資金がショートしそうだ」という未来が予測でき、銀行への融資相談など、先手を打つことができます。</p>
+            </div>
+            <div class="action-card">
+                <div class="action-num">3</div>
+                <p><strong>アクション3：攻めの「外部サービス」を味方につける！</strong><br>「どうしても入金まで待てない！」<br>そんな時は、売掛金を買い取ってもらい早期に現金化する「ファクタリング」や、銀行の短期融資をためらわずに活用しましょう。<br>もちろん、利用には手数料がかかりますし、使いすぎは利益を削ります。ですが、「目先の支払いのために、黒字なのに倒産する」という最悪の事態を回避するための『緊急避難』として、選択肢に持っておくことは重要です。</p>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <h2>③ まとめ</h2>
+            <p>「売掛金」は、将来入ってくる予定の「宝くじ」ではありません。回収するまでは、あなたの会社を脅かす「リスク」そのものです。</p>
+
+            <div class="highlight-box">
+                <p>これからは、「売ること」と同じ熱量で、「回収すること」に執着してください。その執着こそが、あなたの会社と、大切な社員、そしてその家族の生活を守る、唯一の方法なんです。</p>
+            </div>
+
+            <p>最後にプラスアルファの情報です。<br>資金繰り表を作るのが面倒な方は、まずは「入金予定」と「出金予定」をカレンダーに書き込むだけでもOKです。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。<br>参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2026/04</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
     </div>
 </div>
 
