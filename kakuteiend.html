@@ -5,42 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>島田税理士事務所コラム</title>
     <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --gray-soft: #f6f8f9;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.13), transparent 30%),
+                radial-gradient(circle at top right, rgba(13,115,125,0.16), transparent 28%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
         }
-        
+
+        a {
+            color: inherit;
+        }
+
         .css-logo-wrapper {
-            background-color: #fff;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
         }
+
         .css-logo-text {
             font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
-            font-size: 2.2em;
+            font-size: 2.25em;
             font-weight: bold;
             color: #115d63;
-            padding: 20px 30px 10px;
+            padding: 24px 32px 10px;
             margin: 0;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
         }
+
         .css-logo-gradient {
-            height: 50px;
-            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 60%, #0d737d 100%);
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
             display: flex;
             justify-content: flex-end;
             align-items: center;
             color: #fff;
-            padding-right: 20px;
+            padding: 0 22px;
             font-weight: bold;
             font-size: 0.95em;
+            letter-spacing: 0.05em;
         }
 
         .top-nav {
@@ -48,122 +91,569 @@
             flex-wrap: wrap;
             justify-content: center;
             background-color: #f4f9fa;
-            padding: 15px 10px;
-            gap: 15px;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
         }
-        .top-nav a, .top-nav .nav-tel {
-            color: #0d737d;
+
+        .top-nav a,
+        .top-nav .nav-tel {
+            color: var(--teal);
             text-decoration: none;
             font-weight: bold;
             font-size: 0.95em;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
         }
+
         .top-nav a:hover {
-            background-color: #eaf6f7;
-            text-decoration: underline;
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
         }
+
         .top-nav .nav-tel {
             cursor: default;
+            color: var(--muted);
         }
 
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
         }
+
+        .hero {
+            position: relative;
+            padding: 40px 36px 34px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.28), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "TAX AUDIT";
+            position: absolute;
+            right: 14px;
+            bottom: -4px;
+            font-size: 4.55em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
         h1 {
-            color: #2c3e50;
-            font-size: 1.8em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.62em, 4vw, 2.32em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body {
+            padding: 30px 36px 40px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p {
+            margin: 0 0 1.1em;
+        }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .evidence-box p:last-child,
+        .cta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "税務調査リスク";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .evidence-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .evidence-box::after {
+            content: "EVIDENCE";
+            position: absolute;
+            right: 16px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.08);
+            font-size: 4.4em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .evidence-box h3 {
             margin-top: 0;
         }
-        h2 {
-            color: #2980b9;
-            font-size: 1.4em;
-            margin-top: 30px;
-            border-left: 5px solid #3498db;
-            padding-left: 10px;
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
         }
-        h3 {
-            color: #34495e;
-            font-size: 1.2em;
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
         }
-        .highlight-box {
-            background-color: #e8f6f3;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #1abc9c;
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
         }
-        .alert-box {
-            background-color: #fdedec;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #e74c3c;
+
+        .timeline-box {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
         }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .timeline-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .timeline-item p {
+            margin-bottom: 0;
+        }
+
         .checklist {
-            background-color: #fdfefe;
-            border: 1px solid #d0d3d4;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 20px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
         }
+
         .checklist h3 {
             margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
         }
+
         .checklist ul {
             list-style-type: none;
             padding-left: 0;
+            margin: 0 0 18px;
         }
+
+        .checklist ul:last-child {
+            margin-bottom: 0;
+        }
+
         .checklist li {
             margin-bottom: 10px;
-            padding-left: 25px;
+            padding: 13px 13px 13px 38px;
             position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
         }
+
         .checklist .red-circle::before {
-            content: "🔴";
+            content: "!";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
+
         .checklist .blue-circle::before {
-            content: "🔵";
+            content: "✓";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
-        ul.standard-list {
-            padding-left: 20px;
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
         }
-        ul.standard-list li {
-            margin-bottom: 8px;
+
+        .summary-card h2 {
+            margin-top: 0;
+        }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
         }
 
         .disclaimer-box {
             margin-top: 40px;
-            padding: 20px;
+            padding: 22px;
             background-color: #f5f5f5;
             border: 1px solid #e0e0e0;
-            border-radius: 5px;
+            border-radius: 14px;
             font-size: 0.85em;
             color: #666;
         }
+
         .disclaimer-box p {
             margin: 0 0 10px 0;
         }
+
         .disclaimer-box ul {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
         }
+
         .disclaimer-box li {
             margin-bottom: 8px;
             text-indent: -1em;
             padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 12px;
+                max-width: 100%;
+            }
+
+            .css-logo-text {
+                font-size: 1.7em;
+                padding: 18px 20px 8px;
+            }
+
+            .css-logo-gradient {
+                justify-content: center;
+                padding: 0 12px;
+                text-align: center;
+            }
+
+            .top-nav a,
+            .top-nav .nav-tel {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 28px 20px 26px;
+            }
+
+            .hero::after {
+                font-size: 2.45em;
+            }
+
+            .risk-row {
+                grid-template-columns: 1fr;
+                padding: 0 20px 24px;
+            }
+
+            .article-body {
+                padding: 24px 20px 30px;
+            }
+
+            h2 {
+                font-size: 1.26em;
+            }
+
+            h3 {
+                font-size: 1.08em;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -181,109 +671,158 @@
 </div>
 
 <div class="container">
-    
-    <h1>「確定申告終わった！」で油断した結果…税務調査の入口は4月だった</h1>
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">税務調査アラート</span>
+            <span class="badge">確定申告後の資料保管</span>
+        </div>
+        <h1>「確定申告終わった！」で油断した結果…<br>税務調査の入口は4月だった</h1>
+        <p class="hero-lead">確定申告の提出はゴールではありません。むしろ、領収書・集計表・計算メモを守る「証拠保全」のスタートです。</p>
+    </section>
 
-    <p>「あー、やっと終わった！これで今年の仕事は一区切りだ！」<br>
-    カサッ、ポイッ。<br>
-    確定申告書を提出した直後、デスクに山積みになった領収書やメモ書きを、晴れやかな気持ちでゴミ箱へ……。<br>
-    もし今、そんな「解放感」に浸っているとしたら、ちょっとだけ手を止めてください。</p>
-
-    <p>実は、税務署の職員がカレンダーをめくり、「さて、次はどこに行こうか」と申告内容の精査を本格化させるのが、まさにこの4月頃なんです。</p>
-
-    <p>「申告が終わったから、もう証拠はいらない」<br>
-    そう思って捨ててしまったその1枚の紙が、数年後、あなたの家のインターホンを鳴らす税務署員の「決定的な証拠」に変わるとしたら……？<br>
-    今日は、“ゴミ箱”から始まる、知られざる税務調査の裏側についてお話しします。</p>
-
-    <h2>重要な解説</h2>
-    <p>さてここからが重要な解説になります！<br>
-    「申告が終われば一安心」というのは、実は大きな誤解かもしれません。<br>
-    なぜ4月が危険なのか、そしてどう備えるべきか、3つのポイントで解説します。</p>
-
-    <h3>1. 申告直後の4月。なぜ“捨てたくなる”のか</h3>
-    <p>確定申告が終わった直後は、申告の疲労からつい「もういいや」と資料を処分したくなる「燃え尽き症候群」の様な心理状態になりやすいと言われています。<br>
-    この時期にやってしまいがちなのが、「とりあえず出した数字の根拠」を曖昧にしてしまうことです。</p>
-    <ul class="standard-list">
-        <li>「とりあえず経費に入れたけど、何のレシートか忘れた」</li>
-        <li>「計算が合わなかったけど、少額だからいいやとエイヤで出した」</li>
-    </ul>
-    <p>こうした「小さな妥協」の証拠を4月に捨ててしまうと、数年後に調査が来た時、あなたは「なぜこの数字になったのか？」を説明する武器を失っていることになります。</p>
-    
-    <div class="alert-box">
-        <p>税務調査は、申告の「直後」ではなく「数年後」に来ることが多いため、記憶に頼るのは非常に危険です。領収書などの書類は、個人・法人を問わず原則7年間の保存義務があります。</p>
+    <div class="risk-row">
+        <div class="risk-card">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">申告後に捨てる</span>
+            <p class="risk-note">解放感で資料を処分すると、数年後に説明材料を失います。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">RISK 02</span>
+            <span class="risk-value">反面調査で発覚</span>
+            <p class="risk-note">自分が捨てても、取引先や銀行側に記録が残ることがあります。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">ACTION</span>
+            <span class="risk-value">申告セットを保管</span>
+            <p class="risk-note">領収書だけでなく、集計表や計算メモも一緒に保存します。</p>
+        </div>
     </div>
 
-    <h3>2. 反面調査という"飛び火"の怖さ</h3>
-    <p>「自分は領収書を捨てたから、証拠はないはずだ」<br>
-    そう考える経営者の方もいらっしゃいますが、これが最大の落とし穴です。<br>
-    税務署には「反面調査」という武器があります。これは、あなたの取引先や銀行を調べる調査のことです。</p>
-    <ul class="standard-list">
-        <li>あなたが捨てた「外注費の領収書」の控えを、取引先はしっかり保管している</li>
-        <li>あなたが消した「振込履歴」を、銀行は一定期間記録している</li>
-    </ul>
-    
-    <p><strong>具体例</strong></p>
-    <ul class="standard-list">
-        <li>取引先では外注費として計上済み</li>
-        <li>でも、自分側では売上計上の時期がズレている</li>
-        <li>さらに領収書や発注メールが残っていない</li>
-    </ul>
-    <p>こうなると、説明は急に苦しくなります。<br>
-    もちろん、資料がない＝即アウト、と単純には言えません。ただ、説明の材料が薄いほど、不利になりやすいのは現実です。</p>
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「あー、やっと終わった！これで今年の仕事は一区切りだ！」</p>
+            <p>カサッ、ポイッ。<br>
+            確定申告書を提出した直後、デスクに山積みになった領収書やメモ書きを、晴れやかな気持ちでゴミ箱へ……。<br>
+            もし今、そんな「解放感」に浸っているとしたら、ちょっとだけ手を止めてください。</p>
 
-    <h3>3. “泳がせ”に見える税務署の手法</h3>
-    <p>税務署は、申告書が出揃った4月から、独自のシステムなどを使って、「怪しい動き」をしている事業者をピックアップすると考えられています。<br>
-    しかし、すぐに調査には来ません。あえて数年分の申告が溜まるのを待つ「泳がせてる」様に見えるケースがあるとも言われています。</p>
-    <p>例えば</p>
-    <ul class="standard-list">
-        <li>4月の時点で「この経費、少し不自然だな」とフラグを立てる</li>
-        <li>SNSでの発信（豪華な生活ぶりなど）を確認し、申告所得との矛盾をチェックする</li>
-        <li>「確実な矛盾」が見つかったタイミングで、数年分まとめて調査の連絡を入れる</li>
-    </ul>
+            <p>実は、税務署の職員がカレンダーをめくり、「さて、次はどこに行こうか」と申告内容の精査を本格化させるのが、まさにこの4月頃なんです。</p>
 
-    <div class="highlight-box">
-        <p>「確定申告を乗り切ったから大丈夫」ではなく、「提出した書類の整合性が、その後の運命を決める」という意識を持つことが大切です。</p>
-    </div>
+            <p>「申告が終わったから、もう証拠はいらない」<br>
+            そう思って捨ててしまったその1枚の紙が、数年後、あなたの家のインターホンを鳴らす税務署員の「決定的な証拠」に変わるとしたら……？<br>
+            今日は、“ゴミ箱”から始まる、知られざる税務調査の裏側についてお話しします。</p>
+        </div>
 
-    <h2>実務的な対策：明日からできる3つのこと</h2>
-    <p>では、私たちはどうすればいいのでしょうか？</p>
-    <ul class="standard-list">
-        <li><strong>❶「申告セット」を一つの箱にまとめる</strong><br>
-        領収書だけでなく、その数字を導き出した「集計表」や「計算メモ」も一緒に保管してください。数年後の自分への手紙なんです。</li>
-        <li><strong>❷デジタル化で「物理的なゴミ」を減らす</strong><br>
-        スキャナ保存などを活用すれば、デスクもスッキリし、紛失リスクも抑えられます（※要件確認が必要）。</li>
-        <li><strong>❸「なぜ？」に答えられる準備をする</strong><br>
-        「これは会議費です」だけでなく、「誰と、どこで、何の目的で」をメモしておく。この一手間が、将来のあなたを守る盾になります。</li>
-    </ul>
+        <h2>重要な解説</h2>
+        <p>さてここからが重要な解説になります！<br>
+        「申告が終われば一安心」というのは、実は大きな誤解かもしれません。<br>
+        なぜ4月が危険なのか、そしてどう備えるべきか、3つのポイントで解説します。</p>
 
-    <h2>具体的な事例</h2>
-    <div class="checklist">
-        <h3>🔴 A社長の失敗</h3>
-        <ul>
-            <li class="red-circle">「申告が終わった！スッキリしたい！」と、計算に使ったメモ書きを全て破棄。数年後、税務調査で「この売上の根拠は？」と聞かれ、記憶が曖昧で説明できず。結果、多額の追徴課税を課せられる可能性が高まってしまいました。</li>
+        <h3>1. 申告直後の4月。なぜ“捨てたくなる”のか</h3>
+        <p>確定申告が終わった直後は、申告の疲労からつい「もういいや」と資料を処分したくなる「燃え尽き症候群」の様な心理状態になりやすいと言われています。<br>
+        この時期にやってしまいがちなのが、「とりあえず出した数字の根拠」を曖昧にしてしまうことです。</p>
+
+        <ul class="standard-list">
+            <li>「とりあえず経費に入れたけど、何のレシートか忘れた」</li>
+            <li>「計算が合わなかったけど、少額だからいいやとエイヤで出した」</li>
         </ul>
-        <h3>🔵 B社長の成功</h3>
-        <ul>
-            <li class="blue-circle">申告に使った資料一式を「2025年度 確定申告根拠資料」として封印。調査が来た際、その袋を開けるだけで全ての数字の根拠を即座に提示。調査官も「しっかり管理されていますね」と、スムーズに調査が終了しました。</li>
-        </ul>
-    </div>
 
-    <h2>まとめ</h2>
-    <p>いかがでしたか？ 確定申告の終了は、ゴールではなく「保管という仕事のスタート」です。<br>
-    数字の根拠となる紙1枚が、将来のあなたを救うかもしれません。<br>
-    「あの時、捨てなきゃよかった……」と後悔する前に、もう一度デスクの周りを確認してみてくださいね。</p>
-    
-    <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。<br>
-    参考になったらチャンネル登録、高評価、お願いします！</p>
+        <p>こうした「小さな妥協」の証拠を4月に捨ててしまうと、数年後に調査が来た時、あなたは「なぜこの数字になったのか？」を説明する武器を失っていることになります。</p>
+        
+        <div class="alert-box">
+            <p>税務調査は、申告の「直後」ではなく「数年後」に来ることが多いため、記憶に頼るのは非常に危険です。領収書などの書類は、個人・法人を問わず原則7年間の保存義務があります。</p>
+        </div>
 
-    <div class="disclaimer-box">
-        <p><strong>【作成月】</strong>2026/03</p>
-        <p><strong>【ご利用にあたっての注意事項】</strong></p>
-        <ul>
-            <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
-            <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
-            <li>※内容の是非については、当事務所では対応いたしません。</li>
+        <h3>2. 反面調査という“飛び火”の怖さ</h3>
+        <p>「自分は領収書を捨てたから、証拠はないはずだ」<br>
+        そう考える経営者の方もいらっしゃいますが、これが最大の落とし穴です。<br>
+        税務署には「反面調査」という武器があります。これは、あなたの取引先や銀行を調べる調査のことです。</p>
+
+        <div class="evidence-box">
+            <h3>自分が消しても、相手側に残るもの</h3>
+            <ul class="standard-list">
+                <li>あなたが捨てた「外注費の領収書」の控えを、取引先はしっかり保管している</li>
+                <li>あなたが消した「振込履歴」を、銀行は一定期間記録している</li>
+            </ul>
+        </div>
+        
+        <p><strong>具体例</strong></p>
+        <ul class="standard-list">
+            <li>取引先では外注費として計上済み</li>
+            <li>でも、自分側では売上計上の時期がズレている</li>
+            <li>さらに領収書や発注メールが残っていない</li>
         </ul>
+        <p>こうなると、説明は急に苦しくなります。<br>
+        もちろん、資料がない＝即アウト、と単純には言えません。ただ、説明の材料が薄いほど、不利になりやすいのは現実です。</p>
+
+        <h3>3. “泳がせ”に見える税務署の手法</h3>
+        <p>税務署は、申告書が出揃った4月から、独自のシステムなどを使って、「怪しい動き」をしている事業者をピックアップすると考えられています。<br>
+        しかし、すぐに調査には来ません。あえて数年分の申告が溜まるのを待つ「泳がせてる」様に見えるケースがあるとも言われています。</p>
+        <p>例えば</p>
+        <ul class="standard-list">
+            <li>4月の時点で「この経費、少し不自然だな」とフラグを立てる</li>
+            <li>SNSでの発信（豪華な生活ぶりなど）を確認し、申告所得との矛盾をチェックする</li>
+            <li>「確実な矛盾」が見つかったタイミングで、数年分まとめて調査の連絡を入れる</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>「確定申告を乗り切ったから大丈夫」ではなく、「提出した書類の整合性が、その後の運命を決める」という意識を持つことが大切です。</p>
+        </div>
+
+        <h2>実務的な対策：明日からできる3つのこと</h2>
+        <p>では、私たちはどうすればいいのでしょうか？</p>
+
+        <div class="timeline-box">
+            <div class="timeline-item">
+                <div class="timeline-num">1</div>
+                <p><strong>「申告セット」を一つの箱にまとめる</strong><br>
+                領収書だけでなく、その数字を導き出した「集計表」や「計算メモ」も一緒に保管してください。数年後の自分への手紙なんです。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-num">2</div>
+                <p><strong>デジタル化で「物理的なゴミ」を減らす</strong><br>
+                スキャナ保存などを活用すれば、デスクもスッキリし、紛失リスクも抑えられます（※要件確認が必要）。</p>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-num">3</div>
+                <p><strong>「なぜ？」に答えられる準備をする</strong><br>
+                「これは会議費です」だけでなく、「誰と、どこで、何の目的で」をメモしておく。この一手間が、将来のあなたを守る盾になります。</p>
+            </div>
+        </div>
+
+        <h2>具体的な事例</h2>
+        <div class="checklist">
+            <h3>🔴 A社長の失敗</h3>
+            <ul>
+                <li class="red-circle">「申告が終わった！スッキリしたい！」と、計算に使ったメモ書きを全て破棄。数年後、税務調査で「この売上の根拠は？」と聞かれ、記憶が曖昧で説明できず。結果、多額の追徴課税を課せられる可能性が高まってしまいました。</li>
+            </ul>
+            <h3>🔵 B社長の成功</h3>
+            <ul>
+                <li class="blue-circle">申告に使った資料一式を「2025年度 確定申告根拠資料」として封印。調査が来た際、その袋を開けるだけで全ての数字の根拠を即座に提示。調査官も「しっかり管理されていますね」と、スムーズに調査が終了しました。</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ</h2>
+            <p>いかがでしたか？ 確定申告の終了は、ゴールではなく「保管という仕事のスタート」です。<br>
+            数字の根拠となる紙1枚が、将来のあなたを救うかもしれません。<br>
+            「あの時、捨てなきゃよかった……」と後悔する前に、もう一度デスクの周りを確認してみてくださいね。</p>
+        </div>
+        
+        <div class="cta-box">
+            <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。<br>
+            参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2026/03</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
     </div>
 </div>
 
