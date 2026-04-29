@@ -5,42 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>島田税理士事務所コラム</title>
     <style>
+        :root {
+            --bg: #f2f5f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d84a4a;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6957d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(47,128,237,0.15), transparent 30%),
+                radial-gradient(circle at top right, rgba(13,115,125,0.16), transparent 28%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
         }
-        
+
+        a {
+            color: inherit;
+        }
+
         .css-logo-wrapper {
-            background-color: #fff;
-            margin-bottom: 30px;
-            border-radius: 8px;
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
         }
+
         .css-logo-text {
             font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
-            font-size: 2.2em;
+            font-size: 2.25em;
             font-weight: bold;
             color: #115d63;
-            padding: 20px 30px 10px;
+            padding: 24px 32px 10px;
             margin: 0;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
         }
+
         .css-logo-gradient {
-            height: 50px;
-            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 60%, #0d737d 100%);
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
             display: flex;
             justify-content: flex-end;
             align-items: center;
             color: #fff;
-            padding-right: 20px;
+            padding: 0 22px;
             font-weight: bold;
             font-size: 0.95em;
+            letter-spacing: 0.05em;
         }
 
         .top-nav {
@@ -48,119 +92,592 @@
             flex-wrap: wrap;
             justify-content: center;
             background-color: #f4f9fa;
-            padding: 15px 10px;
-            gap: 15px;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
         }
-        .top-nav a, .top-nav .nav-tel {
-            color: #0d737d;
+
+        .top-nav a,
+        .top-nav .nav-tel {
+            color: var(--teal);
             text-decoration: none;
             font-weight: bold;
             font-size: 0.95em;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
         }
+
         .top-nav a:hover {
-            background-color: #eaf6f7;
-            text-decoration: underline;
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
         }
+
         .top-nav .nav-tel {
             cursor: default;
+            color: var(--muted);
         }
 
         .container {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
         }
+
+        .hero {
+            position: relative;
+            padding: 40px 36px 34px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(255,255,255,0.16), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,154,43,0.25), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #14526d 56%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "LOAN MAP";
+            position: absolute;
+            right: 16px;
+            bottom: -4px;
+            font-size: 4.55em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.09);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--gold), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,154,43,0.24);
+        }
+
         h1 {
-            color: #2c3e50;
-            font-size: 1.8em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.65em, 4vw, 2.34em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .decision-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .decision-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decision-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(13,115,125,0.08);
+        }
+
+        .decision-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .decision-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.25em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .decision-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body {
+            padding: 30px 36px 40px;
+        }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy-2);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p {
+            margin: 0 0 1.1em;
+        }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .question-map {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .question-item {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 12px;
+            align-items: start;
+            padding: 15px;
+            border-radius: 16px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.05);
+        }
+
+        .question-num {
+            width: 34px;
+            height: 34px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .question-item p {
+            margin: 0;
+            font-weight: 800;
+            color: var(--navy);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "判断ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .strategy-box p:last-child,
+        .cta-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "注意点";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .strategy-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .strategy-box::after {
+            content: "PLAN";
+            position: absolute;
+            right: 16px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.09);
+            font-size: 5.1em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .strategy-box h3 {
             margin-top: 0;
         }
-        h2 {
-            color: #2980b9;
-            font-size: 1.4em;
-            margin-top: 30px;
-            border-left: 5px solid #3498db;
-            padding-left: 10px;
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
         }
-        h3 {
-            color: #34495e;
-            font-size: 1.2em;
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
         }
-        .highlight-box {
-            background-color: #e8f6f3;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #1abc9c;
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
         }
-        .alert-box {
-            background-color: #fdedec;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-            border-left: 5px solid #e74c3c;
-        }
+
         .checklist {
-            background-color: #fdfefe;
-            border: 1px solid #d0d3d4;
-            border-radius: 5px;
-            padding: 20px;
-            margin: 20px 0;
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
         }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
         .checklist ul {
             list-style-type: none;
             padding-left: 0;
+            margin: 0 0 18px;
         }
+
+        .checklist ul:last-child {
+            margin-bottom: 0;
+        }
+
         .checklist li {
             margin-bottom: 10px;
-            padding-left: 25px;
+            padding: 13px 13px 13px 38px;
             position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
         }
+
         .checklist .red-circle::before {
-            content: "🔴";
+            content: "!";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
+
         .checklist .blue-circle::before {
-            content: "🔵";
+            content: "✓";
             position: absolute;
-            left: 0;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
         }
-        ul.standard-list {
-            padding-left: 20px;
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
         }
-        ul.standard-list li {
-            margin-bottom: 8px;
+
+        .summary-card h2 {
+            margin-top: 0;
+        }
+
+        .note-box {
+            background: linear-gradient(135deg, var(--purple-soft) 0%, #ffffff 100%);
+            border: 1px solid #d9d3ff;
+            border-left: 8px solid var(--purple);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+        }
+
+        .note-box::before {
+            content: "補足";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--purple), #8978ff);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
         }
 
         .disclaimer-box {
             margin-top: 40px;
-            padding: 20px;
+            padding: 22px;
             background-color: #f5f5f5;
             border: 1px solid #e0e0e0;
-            border-radius: 5px;
+            border-radius: 14px;
             font-size: 0.85em;
             color: #666;
         }
+
         .disclaimer-box p {
             margin: 0 0 10px 0;
         }
+
         .disclaimer-box ul {
             list-style-type: none;
             padding-left: 0;
             margin: 0;
         }
+
         .disclaimer-box li {
             margin-bottom: 8px;
             text-indent: -1em;
             padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body {
+                padding: 12px;
+                max-width: 100%;
+            }
+
+            .css-logo-text {
+                font-size: 1.7em;
+                padding: 18px 20px 8px;
+            }
+
+            .css-logo-gradient {
+                justify-content: center;
+                padding: 0 12px;
+                text-align: center;
+            }
+
+            .top-nav a,
+            .top-nav .nav-tel {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 28px 20px 26px;
+            }
+
+            .hero::after {
+                font-size: 2.45em;
+            }
+
+            .decision-row {
+                grid-template-columns: 1fr;
+                padding: 0 20px 24px;
+            }
+
+            .article-body {
+                padding: 24px 20px 30px;
+            }
+
+            h2 {
+                font-size: 1.26em;
+            }
+
+            h3 {
+                font-size: 1.08em;
+            }
+
+            .question-item {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -178,129 +695,179 @@
 </div>
 
 <div class="container">
-    
-    <h1>融資の二股申し込みはアリ？両方に申し込むメリットと注意点とは？</h1>
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">融資同時申請</span>
+            <span class="badge">資金調達の判断マップ</span>
+        </div>
+        <h1>融資の二股申し込みはアリ？<br>両方に申し込むメリットと注意点とは？</h1>
+        <p class="hero-lead">複数の金融機関へ同時に相談してよいのか、両方通ったら断れるのか、将来の信用に影響するのか。起業家が迷いやすい資金調達の判断ポイントを整理します。</p>
+    </section>
 
-    <h2>オープニング</h2>
-    <p>「事業計画は完璧。あとは資金だけ…」<br>
-    そう思って銀行に申し込んだのに、まさかの審査落ち…。<br>
-    「保険で2つの銀行に同時に申し込むのって…アリ？」<br>
-    「もし両方通ったら、片方断っていいの？」<br>
-    「断ったら、もう二度と貸してもらえないんじゃ…」<br>
-    その不安、すごく分かります。実はこれ、多くの起業家が悩むポイントなんです。<br>
-    そんな疑問を、具体的に解決していきましょう！</p>
-
-    <h2>重要な解説</h2>
-    <p>さてここからが重要な解説になります！<br>
-    「融資の同時申し込み」について、皆さんが本当に知りたいのはこの3つですよね。</p>
-    <ul class="standard-list">
-        <li>1. そもそも、同時に申し込んでOK？</li>
-        <li>2. 両方通ったら、片方断れる？</li>
-        <li>3. 断ると、将来不利になる？</li>
-    </ul>
-    <p>この3つの疑問に、初心者の方にも分かりやすく、ズバッとお答えします！</p>
-
-    <h3>1. そもそも、同時に申し込んでOK？</h3>
-    <p>まず、基本。<br>
-    日本政策金融公庫のような公的機関と、民間の銀行を組み合わせる場合、同時申請は問題ないケースが多いんです。<br>
-    なぜなら、それぞれ審査の基準が違うから。<br>
-    公庫は創業者向けの融資制度が充実していますが、民間銀行は地元密着のサポートが魅力です。<br>
-    両方に声をかけると、資金調達のチャンスが広がる可能性があります。</p>
-
-    <div class="checklist">
-        <h3>🔵 良い例</h3>
-        <ul>
-            <li class="blue-circle">あなたがカフェを開業したいとします。<br>公庫に設備資金500万円を申請しつつ、地元銀行に運転資金300万円を同時申請。<br>資金の使い道を明確に分けておけば、重複感なく進めやすいですよ。</li>
-        </ul>
-        <h3>🔴 ダメな例</h3>
-        <ul>
-            <li class="red-circle">同じ民間銀行２つに、同じような資金使途で申請。<br>信用保証協会が絡むと、情報が共有されやすいので、「なぜ分けて申請？」と疑問を持たれるかも。<br>結果、手続きが複雑になって、印象ダウンのリスク。</li>
-        </ul>
+    <div class="decision-row">
+        <div class="decision-card">
+            <span class="decision-label">QUESTION 01</span>
+            <span class="decision-value">同時申請はOK？</span>
+            <p class="decision-note">資金使途や組み合わせ方を整理すれば、選択肢になります。</p>
+        </div>
+        <div class="decision-card">
+            <span class="decision-label">QUESTION 02</span>
+            <span class="decision-value">片方を辞退できる？</span>
+            <p class="decision-note">契約前なら可能。ただし連絡の仕方が大切です。</p>
+        </div>
+        <div class="decision-card">
+            <span class="decision-label">QUESTION 03</span>
+            <span class="decision-value">将来不利になる？</span>
+            <p class="decision-note">信用情報とは別に、金融機関内の印象は意識しましょう。</p>
+        </div>
     </div>
 
-    <p>対策として、申請前に資金計画をしっかり練りましょう。<br>
-    例えば、「このお金は機械購入に、あっちは在庫仕入れに」と分ける。</p>
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「事業計画は完璧。あとは資金だけ…」</p>
+            <p>そう思って銀行に申し込んだのに、まさかの審査落ち…。<br>
+            「保険で2つの銀行に同時に申し込むのって…アリ？」<br>
+            「もし両方通ったら、片方断っていいの？」<br>
+            「断ったら、もう二度と貸してもらえないんじゃ…」</p>
+            <p>その不安、すごく分かります。実はこれ、多くの起業家が悩むポイントなんです。<br>
+            そんな疑問を、具体的に解決していきましょう！</p>
+        </div>
 
-    <div class="highlight-box">
-        <p><strong>行動指針：</strong><br>まずは公庫のサイトで相談予約を。そして、地元銀行の担当者に「他の機関も検討中ですが、アドバイスいただけますか？」と軽く相談。申告せずに進める人もいますが、正直ベースが信頼築くコツかも。</p>
-    </div>
+        <h2>重要な解説</h2>
+        <p>さてここからが重要な解説になります！<br>
+        「融資の同時申し込み」について、皆さんが本当に知りたいのはこの3つですよね。</p>
 
-    <h3>2. 両方通ったら、片方断れる？</h3>
-    <p>両方通ったらラッキー！<br>
-    でも、必要額だけ借りて、もう片方を辞退したいですよね。<br>
-    実際、契約締結前なら辞退は可能です。<br>
-    金融機関も、強制的に借りさせるわけじゃないので。</p>
+        <div class="question-map">
+            <div class="question-item">
+                <div class="question-num">1</div>
+                <p>そもそも、同時に申し込んでOK？</p>
+            </div>
+            <div class="question-item">
+                <div class="question-num">2</div>
+                <p>両方通ったら、片方断れる？</p>
+            </div>
+            <div class="question-item">
+                <div class="question-num">3</div>
+                <p>断ると、将来不利になる？</p>
+            </div>
+        </div>
 
-    <div class="alert-box">
-        <p><strong>注意点：</strong><br>辞退しても、すぐにペナルティはないけど、その金融機関の内部記録に残る場合があります。<br>例えば、「この会社、審査通ったのに辞退したな」とメモされて、次回の申請で少し厳しく見られるかも。可能であれば両方受けることも検討し、辞退時は早めの連絡を。</p>
-    </div>
+        <p>この3つの疑問に、初心者の方にも分かりやすく、ズバッとお答えします！</p>
 
-    <div class="checklist">
-        <h3>🔵 良い例</h3>
-        <ul>
-            <li class="blue-circle">公庫の融資が満額出たので、銀行側に「ありがとうございます。でも資金計画が変わりまして」と丁寧に連絡。理由を正直に伝えると、関係が悪化しにくいですよ。</li>
-        </ul>
-        <h3>🔴 ダメな例</h3>
-        <ul>
-            <li class="red-circle">無連絡で放置。これは最悪で、信頼を失うきっかけに。電話一本で印象が変わります。</li>
-        </ul>
-    </div>
+        <h3>1. そもそも、同時に申し込んでOK？</h3>
+        <p>まず、基本。<br>
+        日本政策金融公庫のような公的機関と、民間の銀行を組み合わせる場合、同時申請は問題ないケースが多いんです。<br>
+        なぜなら、それぞれ審査の基準が違うから。<br>
+        公庫は創業者向けの融資制度が充実していますが、民間銀行は地元密着のサポートが魅力です。<br>
+        両方に声をかけると、資金調達のチャンスが広がる可能性があります。</p>
 
-    <p>両方通ってしまった複数申請の事例では、一般的には片方を辞退するパターンが多いようです。<br>ただし、原則として両方受けるのが推奨され、辞退は慎重に。</p>
+        <div class="strategy-box">
+            <h3>使い分けの考え方</h3>
+            <p>ポイントは「同じお金を二重に取りに行く」のではなく、資金使途を整理して、どの金融機関に何を相談するのかを明確にすることです。</p>
+        </div>
 
-    <div class="highlight-box">
-        <p><strong>行動指針：</strong><br>決まったらすぐ連絡を。「ご検討いただき感謝しますが、今回は見送らせてください」と、感謝を忘れずに。</p>
-    </div>
+        <div class="checklist">
+            <h3>🔵 良い例</h3>
+            <ul>
+                <li class="blue-circle">あなたがカフェを開業したいとします。<br>公庫に設備資金500万円を申請しつつ、地元銀行に運転資金300万円を同時申請。<br>資金の使い道を明確に分けておけば、重複感なく進めやすいですよ。</li>
+            </ul>
+            <h3>🔴 ダメな例</h3>
+            <ul>
+                <li class="red-circle">同じ民間銀行２つに、同じような資金使途で申請。<br>信用保証協会が絡むと、情報が共有されやすいので、「なぜ分けて申請？」と疑問を持たれるかも。<br>結果、手続きが複雑になって、印象ダウンのリスク。</li>
+            </ul>
+        </div>
 
-    <h3>3. 断ると、将来不利になる？</h3>
-    <p>「一度断ったら、ブラックリストに載るんじゃないか…」<br>
-    これが一番の心配事ですよね。</p>
+        <p>対策として、申請前に資金計画をしっかり練りましょう。<br>
+        例えば、「このお金は機械購入に、あっちは在庫仕入れに」と分ける。</p>
 
-    <div class="highlight-box">
-        <p>安心してください。<br>融資を辞退しても、信用情報機関（CIC・JICC・全国銀行個人信用情報センターなど）に事故情報として登録されることはありません。<br>信用情報に傷がつくのは、返済を延滞した場合などです。融資の辞退はこれに当たりません。</p>
-    </div>
+        <div class="highlight-box">
+            <p><strong>行動指針：</strong><br>まずは公庫のサイトで相談予約を。そして、地元銀行の担当者に「他の機関も検討中ですが、アドバイスいただけますか？」と軽く相談。申告せずに進める人もいますが、正直ベースが信頼築くコツかも。</p>
+        </div>
 
-    <div class="alert-box">
-        <p>ただし、金融機関の「内部記録」には残ると考えておきましょう。<br>
-        「あの会社は、以前うちの融資を辞退した」というメモですね。これが将来100%影響しないとは言えませんが、大きなマイナスになる可能性は低いです。</p>
-    </div>
+        <h3>2. 両方通ったら、片方断れる？</h3>
+        <p>両方通ったらラッキー！<br>
+        でも、必要額だけ借りて、もう片方を辞退したいですよね。<br>
+        実際、契約締結前なら辞退は可能です。<br>
+        金融機関も、強制的に借りさせるわけじゃないので。</p>
 
-    <div class="checklist">
-        <h3>🔵 良い例</h3>
-        <ul>
-            <li class="blue-circle">辞退連絡の時点で、理由・お礼・今後の見通しを短く伝える。これが一番実務的です。関係を修復して、次のチャンスに備える。</li>
-        </ul>
-        <h3>🔴 ダメな例</h3>
-        <ul>
-            <li class="red-circle">同じ相手に“申込→辞退”を繰り返すと、社内履歴として“またか”になりやすいので、頻度は避けましょう。</li>
-        </ul>
-    </div>
+        <div class="alert-box">
+            <p><strong>注意点：</strong><br>辞退しても、すぐにペナルティはないけど、その金融機関の内部記録に残る場合があります。<br>例えば、「この会社、審査通ったのに辞退したな」とメモされて、次回の申請で少し厳しく見られるかも。可能であれば両方受けることも検討し、辞退時は早めの連絡を。</p>
+        </div>
 
-    <p>金融機関も、将来有望な会社とは良い関係を築きたいと思っています。<br>誠実な対応で、未来の可能性を残しておきましょう。</p>
+        <div class="checklist">
+            <h3>🔵 良い例</h3>
+            <ul>
+                <li class="blue-circle">公庫の融資が満額出たので、銀行側に「ありがとうございます。でも資金計画が変わりまして」と丁寧に連絡。理由を正直に伝えると、関係が悪化しにくいですよ。</li>
+            </ul>
+            <h3>🔴 ダメな例</h3>
+            <ul>
+                <li class="red-circle">無連絡で放置。これは最悪で、信頼を失うきっかけに。電話一本で印象が変わります。</li>
+            </ul>
+        </div>
 
-    <h2>まとめ</h2>
-    <ul class="standard-list">
-        <li><strong>融資の同時申し込みは可能！</strong> 理由は誠実に伝えましょう。</li>
-        <li><strong>審査後の辞退も可能！</strong> 断る時は感謝と丁寧さを忘れずに。</li>
-        <li><strong>辞退しても信用情報に傷はつかない！</strong> でも、銀行への印象は大切に。頻繁な辞退は避けましょう。</li>
-    </ul>
-    
-    <p>このように、同時申請と辞退を上手に使えば、資金調達のリスクを減らせます。<br>
-    資金調達は、不安で動けなくなるのが一番もったいない。正しい知識で、自信をもって一歩を踏み出しましょう！</p>
+        <p>両方通ってしまった複数申請の事例では、一般的には片方を辞退するパターンが多いようです。<br>ただし、原則として両方受けるのが推奨され、辞退は慎重に。</p>
 
-    <p>最後に補足です。ご自身の信用情報が気になる方は、CIC・JICC・全国銀行個人信用情報センター（KSC）でそれぞれ情報開示をしてみることをお勧めします。それぞれの機関でオンライン開示が可能です。</p>
+        <div class="highlight-box">
+            <p><strong>行動指針：</strong><br>決まったらすぐ連絡を。「ご検討いただき感謝しますが、今回は見送らせてください」と、感謝を忘れずに。</p>
+        </div>
 
-    <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。<br>
-    参考になったらチャンネル登録、高評価、お願いします！</p>
+        <h3>3. 断ると、将来不利になる？</h3>
+        <p>「一度断ったら、ブラックリストに載るんじゃないか…」<br>
+        これが一番の心配事ですよね。</p>
 
-    <div class="disclaimer-box">
-        <p><strong>【作成月】</strong>2026/04</p>
-        <p><strong>【ご利用にあたっての注意事項】</strong></p>
-        <ul>
-            <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
-            <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
-            <li>※内容の是非については、当事務所では対応いたしません。</li>
-        </ul>
+        <div class="highlight-box">
+            <p>安心してください。<br>融資を辞退しても、信用情報機関（CIC・JICC・全国銀行個人信用情報センターなど）に事故情報として登録されることはありません。<br>信用情報に傷がつくのは、返済を延滞した場合などです。融資の辞退はこれに当たりません。</p>
+        </div>
+
+        <div class="alert-box">
+            <p>ただし、金融機関の「内部記録」には残ると考えておきましょう。<br>
+            「あの会社は、以前うちの融資を辞退した」というメモですね。これが将来100%影響しないとは言えませんが、大きなマイナスになる可能性は低いです。</p>
+        </div>
+
+        <div class="checklist">
+            <h3>🔵 良い例</h3>
+            <ul>
+                <li class="blue-circle">辞退連絡の時点で、理由・お礼・今後の見通しを短く伝える。これが一番実務的です。関係を修復して、次のチャンスに備える。</li>
+            </ul>
+            <h3>🔴 ダメな例</h3>
+            <ul>
+                <li class="red-circle">同じ相手に“申込→辞退”を繰り返すと、社内履歴として“またか”になりやすいので、頻度は避けましょう。</li>
+            </ul>
+        </div>
+
+        <p>金融機関も、将来有望な会社とは良い関係を築きたいと思っています。<br>誠実な対応で、未来の可能性を残しておきましょう。</p>
+
+        <div class="summary-card">
+            <h2>まとめ</h2>
+            <ul class="standard-list">
+                <li><strong>融資の同時申し込みは可能！</strong> 理由は誠実に伝えましょう。</li>
+                <li><strong>審査後の辞退も可能！</strong> 断る時は感謝と丁寧さを忘れずに。</li>
+                <li><strong>辞退しても信用情報に傷はつかない！</strong> でも、銀行への印象は大切に。頻繁な辞退は避けましょう。</li>
+            </ul>
+        </div>
+        
+        <p>このように、同時申請と辞退を上手に使えば、資金調達のリスクを減らせます。<br>
+        資金調達は、不安で動けなくなるのが一番もったいない。正しい知識で、自信をもって一歩を踏み出しましょう！</p>
+
+        <div class="note-box">
+            <p>最後に補足です。ご自身の信用情報が気になる方は、CIC・JICC・全国銀行個人信用情報センター（KSC）でそれぞれ情報開示をしてみることをお勧めします。それぞれの機関でオンライン開示が可能です。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。<br>
+            参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2026/04</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
     </div>
 </div>
 
