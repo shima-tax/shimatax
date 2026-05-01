@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,154,43,0.16), transparent 30%),
+                radial-gradient(circle at top right, rgba(13,115,125,0.15), transparent 28%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 40px 36px 34px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.22), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 50%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "SELF CLOSING";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 4.05em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--gold), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,154,43,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.62em, 4vw, 2.32em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,154,43,0.10);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .cost-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "落とし穴";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .cost-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .cost-box::after {
+            content: "COST";
+            position: absolute;
+            right: 16px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.08);
+            font-size: 5.1em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .cost-box h3 { margin-top: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .bomb-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .bomb-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .bomb-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .bomb-card p { margin-bottom: 0; }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "!";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .investment-card {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .investment-card h3 { margin-top: 0; }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 2.15em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .bomb-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/WZWiBHXpoOI" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">法人決算リスク診断</span>
+            <span class="badge">セルフ決算の落とし穴</span>
+        </div>
+        <h1>法人決算は自分でできるのか？<br>メリットと落とし穴！</h1>
+        <p class="hero-lead">法人決算は法律上、自分で行うことも可能です。ただし、時間・信用・節税機会という見えにくいコストを見落とすと、目先の節約以上の損失につながることがあります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">時間を失う</span>
+            <p class="risk-note">調べながらの決算作業で、本業の時間が大きく削られます。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">RISK 02</span>
+            <span class="risk-value">信用を失う</span>
+            <p class="risk-note">決算書の精度は、銀行融資や取引先からの評価にも影響します。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">RISK 03</span>
+            <span class="risk-value">節税機会を逃す</span>
+            <p class="risk-note">制度や特例を知らないだけで、余計な税負担が生じることもあります。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「うわっ、またやっちまった…！」</p>
+            <p>パソコンの前で頭を抱える僕。そう、あれは起業して初めての決算。税理士費用をケチって、自分でやろうとした結果…地獄を見ました。</p>
+            <p>「費用を抑えたい！」その一心で始めたセルフ決算。でも、待っていたのは意味不明な専門用語の嵐、終わらない入力作業、そして「これ合ってるのか？」という不安…。</p>
+        </div>
+
+        <div class="alert-box">
+            <p>結局、本業は完全にストップ。売上も機会も失って、浮いたはずの税理士費用なんて、あっという間に吹っ飛ぶほどの大損害でした。</p>
+        </div>
+
+        <p>でも、ちょっと待ってください。実は法人決算って、法律上は誰でもできるんです。</p>
+        <p>しかも自分で正しくやれば、税理士費用、決算だけで15万円～25万円、顧問契約なら年間50万円以上も節約できるケースもあるんです。<br>じゃあ、なんで約9割の法人が税理士に頼むんでしょうか？</p>
+        <p>そのカラクリ、知りたくないですか？</p>
+
+        <h2>② 重要な解説</h2>
+        <p>さてここからが重要な解説になります！</p>
+        <p>「法人決算を自分でやるなんて、本当に無謀なの？」そう思いますよね。</p>
+
+        <div class="highlight-box">
+            <p>結論から言うと、自力での決算は非常に困難な道です。<br>なぜなら、財務省のデータによると、法人税の申告の89.5%、つまり約9割が、プロの税理士に任せてるのが現実なんです。</p>
+        </div>
+
+        <p>しかし、残りの1割の社長は、ある「基準」を満たしているからこそ成功できるんです。<br>今日は、その成功と失敗の分かれ道を3つのポイントで徹底解説していきます！</p>
+
+        <h3>1. 幻想の「コスト削減」と見えない「3つの時限爆弾」</h3>
+        <p>多くの社長が「税理士費用15万円が浮く！新しいPCが買えるぞ！」と、目先の数字に飛びつきます。でも、実はその裏で、3つの恐ろしい時限爆弾がカチカチと音を立て始めていることに気づいていません。</p>
+
+        <div class="bomb-grid">
+            <div class="bomb-card">
+                <div class="bomb-num">1</div>
+                <p><strong>時間の搾取</strong><br>簿記知識がない方が決算書を作ろうとすると、調べながら進めることになり、数週間以上かかることも珍しくありません。その間、本業に集中できなくなります。</p>
+            </div>
+            <div class="bomb-card">
+                <div class="bomb-num">2</div>
+                <p><strong>信用の失墜</strong><br>素人が作った決算書は、銀行の融資担当者から見れば、「この会社、本当に大丈夫？」と疑いの目で見られます。いざという時に融資が受けられず、資金繰りがショート…なんてことになりかねません。</p>
+            </div>
+            <div class="bomb-card">
+                <div class="bomb-num">3</div>
+                <p><strong>節税機会の喪失</strong><br>税金のルールは、毎年複雑に変わります。プロの税理士なら使える特典や特例など、知っているだけで数十万、数百万円レベルの節税が可能になることもあります。</p>
+            </div>
+        </div>
+
+        <div class="cost-box">
+            <h3>本当に「コスト削減」になっているか？</h3>
+            <p>税理士費用だけを見ると節約に見えます。しかし、本業停止・融資評価・税制判断まで含めると、見えないコストが大きく膨らむ可能性があります。</p>
+        </div>
+
+        <h3>2. あなたはどっち？セルフ決算「成功組」と「失敗組」の決定的な違い</h3>
+        <p>「でも、中には自分でやってる人もいるじゃないか！」と思いますよね。その通りです。では、成功する1割の社長の違いは何だと思いますか？</p>
+        <p>それは、「事業のシンプルさ」と「経営者の性格」、この2つです。</p>
+
+        <div class="checklist">
+            <h3>🔵 セルフ決算「成功組」の条件</h3>
+            <ul>
+                <li class="blue-circle"><strong>年商1,000万円未満、かつ赤字であること。</strong><br>これは消費税の納税義務が免除される一つの目安で、取引が比較的シンプルであるケースが多いです。特に赤字であれば、そもそも納税額が発生しないため、万が一ミスがあっても追徴課税のリスクがほぼゼロになります。</li>
+                <li class="blue-circle"><strong>従業員がいない「ひとり社長」であること。</strong><br>給与計算や社会保険といった複雑な処理が発生しません。</li>
+                <li class="blue-circle"><strong>日々の記帳をマメに、完璧にこなせる性格であること。</strong><br>数字に強く、地道な作業が苦にならない人でないと、まず続きません。</li>
+            </ul>
+            <h3>🔴 「失敗組」の予備軍</h3>
+            <ul>
+                <li class="red-circle">上記の3つの条件に一つでも当てはまらない場合、あなたは「失敗組」の予備軍です。<br>特に「利益が出始めた」「人を雇った」というタイミングでは、税務処理が複雑になるため、専門家への相談を強く推奨します。</li>
+            </ul>
+        </div>
+
+        <h3>3. 税理士は「コスト」ではなく「未来への投資」だ！</h3>
+        <p>ここまで聞いて、「やっぱり税理士に頼むしかないか…でも高いんだよな…」と感じていますよね。</p>
+
+        <div class="investment-card">
+            <h3>税理士費用を「投資」と見る理由</h3>
+            <p>例えば、「この設備投資は今のタイミングなら税制上の優遇を受けられますよ」や「来期は利益が増えそうなので、今のうちに必要経費を計上しましょう」といった具体的なアドバイスがもらえます。<br>さらに、正確な決算書は銀行からの信用を高め、より有利な条件での融資を引き出す「最強の武器」にもなります。</p>
+        </div>
+
+        <p>あなたは、目先の15万円をケチって、毎年数十万円の税金を余分に払い、銀行からの信用も失い、本業に集中できない日々を送りたいですか？<br>答えは、もう明らかですよね。</p>
+
+        <div class="summary-card">
+            <h2>③ 課題の最後に</h2>
+            <p>今日の話をまとめます！</p>
+            <div class="alert-box">
+                <p>「自分で決算」という甘い誘惑の裏には、「時間」「信用」「節税機会」という3つの時限爆弾が隠されています。目先の費用をケチったつもりが、気づけば何倍もの損失を生んでいるんです！</p>
+            </div>
+            <p>そして、プラスアルファの情報です。税理士を選ぶ際は、必ず「あなたの業界に詳しいか」を確認してください。業界特有の会計処理や節税策を知っているかで、結果は大きく変わりますよ！</p>
+        </div>
+
+        <div class="cta-box">
+            <p>迷ったら無料相談お待ちしてます(^^)。<br>参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+        
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/09</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/WZWiBHXpoOI" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
