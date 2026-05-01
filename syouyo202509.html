@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.13), transparent 30%),
+                radial-gradient(circle at top right, rgba(13,115,125,0.15), transparent 28%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 40px 36px 34px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.28), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 50%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "BONUS RULE";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 4.25em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.6em, 4vw, 2.28em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .rule-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "トラブル注意";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .rule-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .rule-box::after {
+            content: "RULE";
+            position: absolute;
+            right: 16px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.08);
+            font-size: 5.1em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .rule-box h3 { margin-top: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .defense-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .defense-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .defense-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .defense-card p { margin-bottom: 0; }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "!";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .magic-clause {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .magic-clause::before {
+            content: "会社を守る一文";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 2.2em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .defense-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/CvPrQ7xy7Tk" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">賞与トラブル防衛</span>
+            <span class="badge">就業規則チェック</span>
+        </div>
+        <h1>【社長必見】賞与トラブルを防ぐ３つのポイント！<br>訴訟・炎上防衛策！</h1>
+        <p class="hero-lead">賞与は「払う・払わない」だけの問題ではありません。支給日在籍要件を明確にし、例外まで整えることで、社員との認識ズレや労務トラブルを防ぎやすくなります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">規定がない</span>
+            <p class="risk-note">支給日在籍要件がなければ、会社側の説明根拠が弱くなります。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">RISK 02</span>
+            <span class="risk-value">例外を見落とす</span>
+            <p class="risk-note">整理解雇や死亡退職などは、機械的に不支給としにくい場面があります。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">ACTION</span>
+            <span class="risk-value">就業規則を整える</span>
+            <p class="risk-note">ルールを明文化し、全スタッフと共有しておくことが防衛策です。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「ちょっと待ってください！その退職、ボーナスをドブに捨てることになるかもしれませんよ！」</p>
+            <p>…なんて、ドキッとしませんか？</p>
+            <p>実はこれ、多くの経営者が知らないうちに陥ってしまう、めちゃくちゃ怖い落とし穴なんです。</p>
+            <p>イメージしてみてください。あなたがレストランで1年間美味しい料理を作り続けたシェフ。でも、ボーナス支給の直前に辞めちゃったら、「はい、ごめんね、ボーナスなし！」って言われるようなもの。これ、社員からしたら「え、納得いかない！」ってなりますよね。</p>
+        </div>
+
+        <p>実際、「1年間働いた分のボーナスはもらう権利があるはず！」と会社を訴えるケースは少なくありません。そして、多くの裁判では、この「支給日在籍要件」が有効だと判断されています。しかし、このルールが曖昧な会社では、後々深刻なトラブルに発展するんです。</p>
+
+        <div class="highlight-box">
+            <p>この問題、実は会社のルール一つで、払うも払わぬも、そして後のトラブルになるもならないも、全てが決まってしまうんです。</p>
+        </div>
+
+        <h2>②重要な解説</h2>
+        <p>さてここからが重要な解説になります！</p>
+
+        <div class="rule-box">
+            <h3>支給日在籍要件とは？</h3>
+            <p>「支給日に在籍していないとボーナスは出ません」というルールのことです。このたった一文が、就業規則にあるかないかで、天国と地獄ほどの結果の違いを生むことがあります。</p>
+        </div>
+
+        <p>多くの会社では、例えば「4月から9月まで働いた分を12月に支給する」というように、ボーナスの評価対象期間と実際の支給日がズレていますよね。</p>
+        <p>この時、社員は「評価期間に働いたんだから貰えるはず」と考え、会社は「いや、支給日にいないから払わない」と考える。この認識のズレが、トラブルの元凶になるんです。</p>
+
+        <div class="defense-grid">
+            <div class="defense-card">
+                <div class="defense-num">1</div>
+                <p><strong>経営者の盾</strong><br>支給日在籍要件を就業規則に明記しておくことで、無用な争いを避ける材料になります。</p>
+            </div>
+            <div class="defense-card">
+                <div class="defense-num">2</div>
+                <p><strong>例外の確認</strong><br>定年退職・整理解雇・死亡退職など、判断が分かれやすいケースを押さえておく必要があります。</p>
+            </div>
+            <div class="defense-card">
+                <div class="defense-num">3</div>
+                <p><strong>理想の規定づくり</strong><br>支給日在籍要件だけでなく、例外規定まで明文化することで炎上・紛争を防ぎやすくなります。</p>
+            </div>
+        </div>
+
+        <h3>1. なぜ「支給日在籍要件」は認められるのか？【経営者の最強の盾】</h3>
+        <p>じゃあ、なぜこんなルールがあるんでしょう？</p>
+        <p>実は、ボーナスってただの「ありがとうのお金」じゃないんです。会社側には3つの目的があるんですよ。</p>
+
+        <ul class="standard-list">
+            <li><strong>過去の貢献への報酬。</strong><br>これは分かりやすいですよね。</li>
+            <li><strong>社員の生活サポート。</strong><br>ボーナスで家計が助かる人も多いはず。</li>
+            <li><strong>将来のやる気アップ！</strong><br>会社は「これからも頑張ってね！」ってメッセージを込めてボーナスを出すんです。</li>
+        </ul>
+
+        <p>だから、「支給日に在籍してないと、未来の貢献が見込めないよね」ってことで、このルールを設ける会社が多いんです。</p>
+        <p>裁判所も基本的にこの「支給日在籍要件」を有効だと認めています。ボーナスには過去の頑張りに対する「功労報奨」の意味だけでなく、「将来への期待料」という意味合いも含まれている、と解釈されているからです。</p>
+
+        <div class="highlight-box">
+            <p>これを就業規則に明記しておくことは、経営者にとって、いざという時の無用なトラブルを避ける「最強の盾」になるんです。</p>
+        </div>
+
+        <h3>2. 要件があれば絶対安泰？【思わぬ落とし穴と3つの例外】</h3>
+        <p>「なるほど、じゃあ就業規則に一文入れておけばもう安心だ！」…そう思ったあなたに、実はここに大きな落とし穴があります。</p>
+
+        <div class="alert-box">
+            <p><strong>まず超重要なポイント。</strong>「在籍要件」が賃金規程にしっかり記載されている場合に限り有効なんです。<br>
+            もしそのような規定がなければ、「賞与を支給しない」と回答する根拠がないということになります。<br>
+            つまり、規定がないと逆に払わなければならなくなる可能性があるんです。</p>
+        </div>
+
+        <p>さらに、この「支給日在籍要件」が通用しない、例外的なケースが3つ存在するんです。</p>
+        <ul class="standard-list">
+            <li>定年退職</li>
+            <li>整理解雇</li>
+            <li>死亡退職</li>
+        </ul>
+        
+        <p>なぜこれらのケースは例外なのでしょうか？</p>
+        <p>裁判例を見ると、定年退職については要件が有効とされることが多いですが、整理解雇や労働者の死亡については要件が無効とされる傾向があります。</p>
+
+        <div class="checklist">
+            <h3>🔴 要件が有効とされることが多いケース</h3>
+            <ul>
+                <li class="red-circle">定年退職</li>
+            </ul>
+            <h3>🔵 要件が無効とされる傾向があるケース</h3>
+            <ul>
+                <li class="blue-circle">整理解雇</li>
+                <li class="blue-circle">労働者の死亡</li>
+            </ul>
+        </div>
+
+        <p>つまり、会社都合で辞めさせられたのにボーナスがもらえないのは不公平だという判断ですね。</p>
+
+        <h3>3. 炎上回避！誰もが納得する「理想の就業規則」とは？</h3>
+        <p>ここまで聞いて、「じゃあ、どう書けば完璧なんだ！」と思われたのではないでしょうか。</p>
+        <p>答えはシンプルです。トラブルを未然に防ぎ、社員のモチベーションも維持する「魔法の一文」を就業規則に加えるのです。</p>
+
+        <div class="magic-clause">
+            <p><strong>支給日在籍要件を定めた上で、</strong><br>「ただし、整理解雇および死亡による退職者についてはこの限りではない」<br>と付け加えること。</p>
+        </div>
+
+        <p>これにより、労働紛争を未然に防ぐことができます。</p>
+
+        <div class="summary-card">
+            <h2>③課題の最後に</h2>
+            <p>今回の話をまとめます！</p>
+            <p>支給日在籍要件は基本的に有効だが、会社都合の退職には注意が必要ということです。</p>
+            <p>ボーナス制度は会社の成長と労働者のモチベーション向上の両方を実現できる素晴らしい制度です。だからこそ、適切なルール作りが重要なんです。</p>
+            <p>最後に一つだけプラスアルファの情報です。このルールは、パートやアルバイトの方にも適用される可能性があります。雇用形態に関わらず、全てのスタッフとの間で明確なルールを共有しておくことが、最高のチームを作る秘訣ですよ。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>もし税金・起業などで迷ったら、無料相談お待ちしてます(^^)。<br>
+            参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/09</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/CvPrQ7xy7Tk" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
