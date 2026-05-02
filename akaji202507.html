@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(18,160,106,0.14), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(47,128,237,0.12), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.36), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(18,160,106,0.30), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "LOSS SHIELD";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 4.05em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--gold), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,154,43,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.5em, 4vw, 2.22em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .loss-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .loss-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loss-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(18,160,106,0.08);
+        }
+
+        .loss-card.caution {
+            border-color: #ffd1d1;
+            background: linear-gradient(135deg, var(--red-soft), #fff);
+        }
+
+        .loss-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .loss-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .loss-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .strategy-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "落とし穴";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "!";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .strategy-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .strategy-box::before {
+            content: "赤字を武器に変える条件";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 2.05em; }
+            .loss-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/6nCU0498kio" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">赤字繰越・繰越欠損金</span>
+            <span class="badge">税金の盾 × 資金管理</span>
+        </div>
+        <h1>【赤字が武器に！】黒字でも税金ゼロに激減させる節税術</h1>
+        <p class="hero-lead">赤字は、ただの失敗ではありません。青色申告で正しく申告しておけば、将来の黒字と相殺できる“税金の盾”になります。ただし、キャッシュフロー管理を間違えると危険な刃物にもなります。</p>
+    </section>
+
+    <div class="loss-row">
+        <div class="loss-card">
+            <span class="loss-label">POINT 01</span>
+            <span class="loss-value">青色申告が前提</span>
+            <p class="loss-note">赤字を繰り越すには、青色申告と期限内の申告管理が重要です。</p>
+        </div>
+        <div class="loss-card">
+            <span class="loss-label">POINT 02</span>
+            <span class="loss-value">個人3年・法人10年</span>
+            <p class="loss-note">繰越期間の違いが、黒字化した年の税負担に大きく影響します。</p>
+        </div>
+        <div class="loss-card caution">
+            <span class="loss-label">CAUTION</span>
+            <span class="loss-value">現金切れは危険</span>
+            <p class="loss-note">赤字は税金の盾ですが、資金繰りを見誤ると会社は倒れます。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <h2>① オープニング</h2>
+            <p class="hook-line">「赤字が税金の救世主！？」</p>
+            <p>事業で赤字が出たら、誰でも焦りますよね。「もうダメだ！」と思う瞬間もあるはずです。</p>
+            <p>でも、ちょっと待ってください。実は赤字は、正しく扱えば<strong>合法的に将来の税負担を減らせる強力なカード</strong>になります。</p>
+            <p>今日は、赤字を活用した節税術を、個人事業主や法人経営者にも分かりやすく解説します。</p>
+        </div>
+
+        <h2>② 重要な解説</h2>
+        <p>さてここからが重要な解説になります！</p>
+        <p>赤字を活用した節税で大切なのは、制度の仕組みだけでなく、<strong>申告・繰越期間・資金管理</strong>までセットで考えることです。</p>
+
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>赤字繰越の仕組みを知る</strong><br>過去の赤字を、将来の黒字から差し引くことで課税所得を減らせます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>個人と法人の違いを押さえる</strong><br>個人は3年、法人は10年という繰越期間の違いがあります。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>青色申告と申告継続を守る</strong><br>赤字だから申告しない、は将来の節税チャンスを失う原因になります。</p>
+            </div>
+        </div>
+
+        <h3>1. 赤字繰越のスゴさを知ろう！</h3>
+        <p>青色申告をしていると、事業で出た赤字を「繰越欠損金」として、将来の利益から差し引けます。これは、黒字化した年の税金を大きく減らせる制度です。</p>
+        <p>ある中小企業が、設立から3年連続で赤字。「もうダメかもしれない…」と諦めかけたその時、4年目にヒット商品が生まれて、一気に黒字500万円になったとします。</p>
+        <p>普通なら、ここで税金が発生します。でも、過去の赤字を繰り越していれば、その黒字と相殺できる可能性があります。</p>
+
+        <div class="highlight-box">
+            <p>その秘密が、<strong>赤字の繰越控除</strong>です。つまり、過去の赤字を未来の利益と相殺して、税金を抑える制度です。</p>
+        </div>
+
+        <h3>2. 個人事業主と法人の違いは？</h3>
+        <p>ここが重要です。個人事業主と法人では、赤字を繰り越せる期間が違います。</p>
+
+        <div class="checklist">
+            <h3>🔴 個人事業主</h3>
+            <ul>
+                <li class="red-circle">赤字は原則3年間繰り越せます。</li>
+            </ul>
+            <h3>🔵 法人</h3>
+            <ul>
+                <li class="blue-circle">赤字は原則10年間繰り越せます。</li>
+            </ul>
+        </div>
+
+        <p>例えば、毎年100万円の赤字が5年続いて、今年500万円の利益が出たとします。</p>
+        <p>個人事業主なら3年分の300万円までしか使えませんが、法人なら5年分の500万円を使える可能性があります。この差は、黒字化した年の納税額に大きく影響します。</p>
+
+        <h3>3. 具体例でシミュレーション！</h3>
+        <p>あるカフェ経営者のAさん、法人のケースです。</p>
+        <ul class="standard-list">
+            <li>2020年〜2024年：毎年100万円の赤字、合計500万円</li>
+            <li>2025年：500万円の利益が出た</li>
+        </ul>
+        <p>Aさんが法人で、要件を満たしていれば、過去5年分の赤字500万円を差し引き、課税対象を大きく減らせる可能性があります。</p>
+        <p>一方、個人事業主の場合は繰越期間が3年のため、使える赤字が300万円に限られ、残りの利益に税金がかかる可能性があります。</p>
+
+        <div class="alert-box">
+            <p>ただし、赤字繰越には青色申告の承認や、申告を継続していることなどの要件があります。赤字だからといって申告をサボると、将来の節税カードを失うことになります。</p>
+        </div>
+
+        <h3>4. 法人化のメリットとデメリット</h3>
+        <p>「法人なら10年繰越できるなら、すぐ法人化しよう」と考える方もいます。でも、法人化にはメリットだけでなく、コストもあります。</p>
+        <ul class="standard-list">
+            <li>設立費用がかかる</li>
+            <li>赤字でも法人住民税の均等割などが発生する</li>
+            <li>経理や社会保険の手間が増える</li>
+        </ul>
+        <p>利益規模が小さい場合は個人事業主のままの方が合うケースもあります。一方、売上が増え、利益も安定してきた場合は、法人化によって節税や信用面のメリットが出ることもあります。</p>
+
+        <h3>5. 意外と知られていない落とし穴</h3>
+        <p>この制度には、見落としやすい落とし穴があります。</p>
+        <div class="checklist">
+            <h3>🔴 落とし穴①：青色申告でないと使えない</h3>
+            <ul>
+                <li class="red-circle">白色申告のままでは、赤字の繰越控除を使えません。</li>
+            </ul>
+            <h3>🔴 落とし穴②：赤字でも申告しないとダメ</h3>
+            <ul>
+                <li class="red-circle">「赤字だから申告しなくていい」は危険です。申告しなければ、その赤字を将来に持ち越せません。</li>
+            </ul>
+        </div>
+
+        <h3>6. 知っているだけで何十万円の差が出る！</h3>
+        <p>たとえば、2人の個人事業主がいたとします。</p>
+        <ul class="standard-list">
+            <li>1人は、赤字だった年もきちんと青色で申告していた</li>
+            <li>もう1人は、面倒で申告をサボった</li>
+        </ul>
+        <p>翌年、2人とも300万円の黒字になった場合、きちんと申告していた人は前年の赤字と相殺できる可能性があります。申告していなかった人は、そのカードを使えません。</p>
+
+        <div class="strategy-box">
+            <p>赤字を武器に変えるには、<strong>赤字の年こそ申告する</strong>ことが大切です。赤字の申告は、未来の黒字に備えるための「税金の保険」のようなものです。</p>
+        </div>
+
+        <h3>7. 赤字を戦略的に使う！</h3>
+        <p>赤字が出そうな年は、設備投資や広告費を前倒しして、将来の売上につながる支出を行う選択肢もあります。</p>
+        <p>ただし、税務署に「不自然な赤字」と見られないように、事業目的・必要性・証拠書類をきちんと残すことが重要です。</p>
+
+        <h3>8. 赤字は武器だが、刃物でもある</h3>
+        <p>ここまで聞くと「赤字っていいことじゃん」と思うかもしれません。でも、ここは要注意です。</p>
+        <div class="alert-box">
+            <p>赤字は税金対策としては強力ですが、現金が尽きたら会社は倒れます。赤字はあくまで「税金の盾」。キャッシュフローを見誤ると、いくら赤字を繰り越せても意味がありません。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p>だからこそ、<strong>税金の知識と資金管理はセット</strong>で考える必要があります。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>③ 課題の最後に</h2>
+            <p>赤字は、悪いことのように見えます。でも、それを正しく記録し、申告し、未来の黒字と組み合わせられる人だけが、次のステージに進めます。</p>
+            <p>大切なのは、赤字を隠すことではありません。赤字を<strong>経営判断の材料</strong>として使うことです。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>あなたも、「赤字を活かす戦略」始めてみませんか？<br>
+            迷った時は、気軽に無料相談、お待ちしております(^^)。<br>
+            参考になったら、チャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/07</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/6nCU0498kio" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
