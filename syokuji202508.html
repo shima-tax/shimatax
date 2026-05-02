@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.13), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(13,115,125,0.12), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.38), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.28), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "MEAL RULE";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 4.2em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.52em, 4vw, 2.24em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .rule-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .rule-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rule-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .rule-card.safe {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .rule-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .rule-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .rule-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .case-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "給与課税リスク";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .case-box {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .case-box::after {
+            content: "CASE";
+            position: absolute;
+            right: 16px;
+            bottom: -18px;
+            color: rgba(13,115,125,0.08);
+            font-size: 5.2em;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .case-box h3 { margin-top: 0; }
+
+        .two-rule-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .two-rule-card {
+            border-radius: 18px;
+            padding: 22px;
+            border: 1px solid #ffe0a3;
+            background: linear-gradient(135deg, var(--gold-soft), #fff);
+            box-shadow: 0 10px 24px rgba(217,154,43,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .two-rule-card::before {
+            content: attr(data-label);
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--gold), #ffb84d);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .two-rule-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "!";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--green);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .document-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .document-box::before {
+            content: "調査官を黙らせる書類";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 2.1em; }
+            .rule-row, .two-rule-box { grid-template-columns: 1fr; }
+            .rule-row { padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HwOdPyhZ1xA" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">食事補助の給与課税リスク</span>
+            <span class="badge">福利厚生・非課税ルール</span>
+        </div>
+        <h1>【知らなきゃ損】社長、その食事補助は「給与」です！<br>税務調査で泣かないための非課税術</h1>
+        <p class="hero-lead">社員のための食事補助も、ルールを外すと給与課税の対象になることがあります。非課税にするには「本人負担」と「会社負担額」の2つの条件を、制度としてきちんと管理することが大切です。</p>
+    </section>
+
+    <div class="rule-row">
+        <div class="rule-card">
+            <span class="rule-label">RISK 01</span>
+            <span class="rule-value">給与扱いになる</span>
+            <p class="rule-note">現物支給でも、従業員の経済的利益と見られることがあります。</p>
+        </div>
+        <div class="rule-card safe">
+            <span class="rule-label">RULE 01</span>
+            <span class="rule-value">社員が半分以上負担</span>
+            <p class="rule-note">食事代の本人負担割合が、最初の重要ラインです。</p>
+        </div>
+        <div class="rule-card safe">
+            <span class="rule-label">RULE 02</span>
+            <span class="rule-value">会社負担は月3,500円以下</span>
+            <p class="rule-note">税抜で月3,500円以下に収める管理が必要です。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「あー、またやっちゃった…」。</p>
+            <p>これ、実は多くの社長が経験する、本当に怖い話なんです。社員の頑張りに応えようと、良かれと思って始めたお昼ごはんの補助。社員はみんな「社長、ありがとうございます！」って、すごく喜んでくれたんです。</p>
+            <p>でも、その数か月後…。税務調査で調査官から突き付けられたのは、「社長、この食事代は給与ですね。追徴課税です」という非情な一言。頭が真っ白になりました…。</p>
+        </div>
+
+        <div class="alert-box">
+            <p>良かれと思った福利厚生が、まさか会社と社員の両方を苦しめる落とし穴になることがあります。食事補助は、制度設計を間違えると“やさしさのつもりが給与課税”になってしまうのです。</p>
+        </div>
+
+        <h2>なぜ、ただの食事補助が「給与」という名の爆弾に変わるのか？</h2>
+        <p>まず、絶対に知っておいてほしい大前提からお話ししますね。なぜ、会社が負担した食事代が「給与」と見なされてしまうんでしょうか？</p>
+        <p>それは、税務署が「会社から従業員への金銭・物品の提供は、原則すべて給与である」という考え方を持っているからです。現金はもちろん、食事や旅行のような「現物支給」も、従業員にとっては経済的な利益。だから、お給料と同じように税金をかけるのが基本なんです。</p>
+        <p>でも、安心してください。国も鬼ではありません。「働く人のささやかな楽しみまで税金を取るのは忍びない…」ということで、ちゃんと救済措置を用意してくれています。それが、「食事補助の非課税ルール」です。</p>
+
+        <div class="highlight-box">
+            <p>このルールを使いこなせば、会社は経費として計上でき、社員の所得税もかからない。会社も社員もハッピーになる、Win-Winの福利厚生にできます。</p>
+        </div>
+
+        <h2>【最重要】天国と地獄を分ける、たった2つの鉄則！</h2>
+        <p>食事補助を「魔法の福利厚生」に変える方法は、驚くほどシンプル。たった2つの条件を、両方ともクリアするだけです。</p>
+
+        <div class="two-rule-box">
+            <div class="two-rule-card" data-label="鉄則①">
+                <p><strong>社員が食事代の半分以上を負担していること</strong><br>本人負担が半分未満になると、非課税の条件から外れる可能性があります。</p>
+            </div>
+            <div class="two-rule-card" data-label="鉄則②">
+                <p><strong>会社負担額が、1ヶ月あたり3,500円（税抜）以下であること</strong><br>月額の補助上限を、税込・税抜の違いも含めて管理する必要があります。</p>
+            </div>
+        </div>
+
+        <div class="alert-box">
+            <p>本当に恐ろしいのは、条件を少しでも外すと、超えた分だけではなく、会社が補助した金額全体が給与課税の対象になり得ることです。まさに天国と地獄の境界線です。</p>
+        </div>
+
+        <h2>【運命の分かれ道】あなたの会社は天国？地獄？ケーススタディで徹底検証！</h2>
+        <p>「ルールは分かったけど、具体的にうちの場合はどうなるの？」と思いますよね。ここで、2人の社長の例を見て、その違いをハッキリさせましょう。</p>
+
+        <div class="checklist">
+            <h3>🔴 【失敗例：Before】優しさがアダとなったA社長</h3>
+            <ul>
+                <li class="red-circle">社員想いのA社長。1食600円のお弁当を、社員の負担が軽くなるようにと、本人負担200円で毎日（20日間）提供しました。</li>
+                <li class="red-circle">会社負担：400円 × 20日 = 月8,000円</li>
+                <li class="red-circle">本人負担：200円（半分以下なので、この時点でアウト）</li>
+                <li class="red-circle">結果：会社が負担した8,000円の全額が給与に上乗せ。社員は所得税や社会保険料が増えて手取りが減り、会社も社会保険料の負担が増加…。誰も幸せにならない、悲しい結末です。</li>
+            </ul>
+
+            <h3>🔵 【成功例：After】ルールを使いこなすB社長</h3>
+            <ul>
+                <li class="blue-circle">一方、ルールをしっかり理解しているB社長は、同じ600円のお弁当でこうしました。</li>
+                <li class="blue-circle">本人負担：300円（半分ピッタリで鉄則①クリア）</li>
+                <li class="blue-circle">会社負担：300円</li>
+                <li class="blue-circle">提供日数を調整し、月11日に設定。</li>
+                <li class="blue-circle">月間の会社負担額：300円 × 11日 = 3,300円（税込）</li>
+                <li class="blue-circle">税抜に直すと… 3,300円 ÷ 1.1 = 3,000円（鉄則②クリア）</li>
+                <li class="blue-circle">結果：会社負担の3,300円は全額非課税。経費として認められ、社員の満足度もアップ。福利厚生として運用しやすくなります。</li>
+            </ul>
+        </div>
+
+        <h2>税務調査官を黙らせる「魔法の書類」とは？</h2>
+        <p>この非課税ルールを運用していても、最後の詰めが甘いと、税務調査で思わぬ指摘を受けることがあります。そのリスクを下げるために必要な一手が「就業規則への明記」です。</p>
+
+        <div class="document-box">
+            <p>「食事補助規定」といった項目を就業規則に設けて、<strong>「従業員が食事価額の半額以上を負担し、会社の補助は月額3,500円（税抜）を上限とする」</strong>といったルールを文章で残しておきます。</p>
+        </div>
+
+        <p>これがあるだけで、調査官に対して「私たちはルールに則って、適切に制度を運用しています」と説明しやすくなります。制度の透明性が担保され、税務上のリスクを下げる重要な資料になります。</p>
+
+        <h2>【応用編】知らなきゃ損！残業食事代を全額非課税にする裏ワザ</h2>
+        <p>最後に、もう一つだけ、経営者のあなたに知っておいてほしいお得な情報があります。それは残業や深夜勤務の食事についてです。</p>
+        <p>実は、残業や宿直など、通常の勤務時間外に提供する食事は、全額会社負担でも非課税になるという特例があります。夜遅くまで頑張ってくれる社員に、お弁当を会社のお金で買って渡すようなケースですね。</p>
+
+        <div class="alert-box">
+            <p>ただし、ここにも落とし穴があります。それは、<strong>「現金の支給」は避けること</strong>です。<br>「残業お疲れ様！これでご飯でも食べて」と1,000円を渡すと、その1,000円は給与として課税される可能性があります。ポイントは、あくまで「食事そのもの」を現物で渡すことです。</p>
+        </div>
+
+        <div class="case-box">
+            <h3>社長自身への適用も要注意</h3>
+            <p>この食事補助は、他の従業員がいるのであれば、役員である社長自身も対象にできる場合があります。ただし、従業員がいない「一人社長」の場合は、給与と見なされる可能性が高いので注意が必要です。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ</h2>
+            <p>食事補助は、社員満足度を上げるとても良い福利厚生です。ですが、本人負担割合、会社負担額、就業規則への明記、そして現金支給を避ける運用までセットで考える必要があります。</p>
+            <p>今日の話を聞いて、少しでも「ウチの会社、大丈夫かな？」と不安になった方は、手遅れになる前に一度確認してみてください。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>迷ったら無料相談お待ちしてます(^^)。<br>この動画が参考になったら、ぜひチャンネル登録と高評価をお願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/08</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HwOdPyhZ1xA" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
