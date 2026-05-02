@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.14), transparent 30%),
+                radial-gradient(circle at top right, rgba(13,115,125,0.16), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(217,154,43,0.12), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.30), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 50%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "DIRECTOR RISK";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 3.65em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.5em, 4vw, 2.22em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 820px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .risk-card.safe {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .pledge-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "会社防衛アラート";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "!";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            top: 13px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.78em;
+        }
+
+        .pledge-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .pledge-box::before {
+            content: "最強の予防策";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.85em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/5WqKiuKePYw" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">役員リスク管理</span>
+            <span class="badge">競業避止義務・会社防衛</span>
+        </div>
+        <h1>【中小企業必見】役員が裏切り！？<br>競業避止義務違反で会社を守る方法</h1>
+        <p class="hero-lead">取締役は、会社の重要情報にアクセスできる立場です。顧客リスト・価格情報・新規事業計画を使った競業行為は、会社に大きな損害を与えるため、早期発見と予防策が重要です。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">顧客を奪われる</span>
+            <p class="risk-note">会社の取引先を、自分や家族の会社へ誘導するリスク。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">RISK 02</span>
+            <span class="risk-value">情報を使われる</span>
+            <p class="risk-note">価格設定・顧客リスト・新事業計画が競合に流れるリスク。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">ACTION</span>
+            <span class="risk-value">誓約書で防ぐ</span>
+            <p class="risk-note">役員就任時に競業避止義務を明文化しておくことが重要です。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <h2>①オープニング</h2>
+            <p class="hook-line">「信じていた役員に裏切られた…」</p>
+            <p>こんな悪夢が、あなたの会社でも起こるかもしれません。</p>
+            <p>突然ですが、社長の皆さん。もし、あなたの会社の役員が、あなたに内緒で、すぐ近くに同じ事業の会社を立ち上げたら…どうしますか？</p>
+            <p>しかも、自社の顧客リストを持ち出して営業をかけていた...。</p>
+            <p>「まさか、うちの役員に限って…」そう思ったあなた、実はこれ、中小企業でめちゃくちゃ多いトラブルなんです。</p>
+        </div>
+
+        <div class="alert-box">
+            <p>信頼していた仲間からの突然の裏切り。売上も顧客もごっそり奪われ、気づいた時にはもう手遅れ…。そんな状況を防ぐには、感情論ではなく、ルールと証拠で会社を守る必要があります。</p>
+        </div>
+
+        <p>今日は、そんな最悪の事態を避けるための「会社の守り方」について、誰よりも分かりやすく解説します。</p>
+
+        <h2>②重要な解説</h2>
+        <p>さてここからが重要な解説になります！<br>
+        今日は、このルールを3つのステップで徹底解説します。</p>
+
+        <div class="step-grid">
+            <div class="step-card">
+                <div class="step-num">1</div>
+                <p><strong>競業避止義務を知る</strong><br>役員が会社の不利益になるライバル行為をしてはいけない、という基本ルールです。</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">2</div>
+                <p><strong>裏切り行為を見抜く</strong><br>誰のための取引か、会社の事業と競合するか、役員の立場を利用していないかを確認します。</p>
+            </div>
+            <div class="step-card">
+                <div class="step-num">3</div>
+                <p><strong>対抗策を準備する</strong><br>差止請求・取締役の解任・損害賠償請求という選択肢を押さえます。</p>
+            </div>
+        </div>
+
+        <h3>1. 最強の盾！「競業避止義務」って何？</h3>
+        <p>まず絶対に知っておいてほしいのが<strong>「競業避止義務（きょうぎょうひしぎむ）」</strong>というルールです。</p>
+        <p>名前は難しそうですが、中身はシンプル。「取締役は、会社の不利益になるようなライバル行為をしちゃダメですよ」という法律上の義務のことです。</p>
+        <p>なぜこんなルールがあるのか？考えてみてください。</p>
+        
+        <p>役員は、会社の「命」とも言える重要な内部情報にアクセスできますよね。</p>
+        <ul class="standard-list">
+            <li>顧客リスト</li>
+            <li>価格設定の秘密</li>
+            <li>新商品の開発計画 など</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>もし、その役員がその情報を利用して、自分のために同じようなビジネスを始めたらどうなるでしょうか？<br>
+            会社の技術やノウハウが丸ごとライバルに渡ってしまうようなものです。<br>
+            これは、会社にとって致命的なダメージになりかねません。</p>
+        </div>
+
+        <p>だからこそ、会社法では「会社の事業と競合する取引をするなら、事前に株主総会や取締役会でちゃんと許可取ってね」と定めているんです。</p>
+
+        <h3>2. 「それ、アウトです！」裏切り行為の3つのチェックリスト</h3>
+        <p>では、具体的にどんな行為が「アウト」になるのでしょうか？「うちの役員がやっていることは、違反なの？」と迷った時に使える、3つのチェックリストを用意しました。</p>
+
+        <div class="checklist">
+            <h3>🔴 チェック①：その取引、誰のため？</h3>
+            <ul>
+                <li class="red-circle">役員が「自分のため」もしくは「友人や家族など、第三者のため」に利益を得ようとする取引は、承認が必要です。</li>
+                <li class="red-circle">事例1：会社の取引先を、自分が作った新会社にこっそり切り替えさせるようなケース。</li>
+                <li class="red-circle">事例2：奥さんの名前で会社を設立して、その会社が競合してるようなケース。</li>
+            </ul>
+
+            <h3>🔴 チェック②：会社の事業とカブってない？</h3>
+            <ul>
+                <li class="red-circle">役員が始めようとしているビジネスが、あなたの会社の事業と競合する場合も承認が必要です。</li>
+                <li class="red-circle">ただし、ここで注意が必要なのは、「実際に今やっている事業」だけでなく、「将来やる予定の事業」も含まれることです。つまり、会社が新事業への参入を検討していることを知った取締役が、先回りしてその事業を始めるのも違反なんです。</li>
+                <li class="red-circle">例えば、あなたの会社が飲食店だとして、役員がすぐ近くに同じようなコンセプトのカフェを開くのは、顧客を奪い合う可能性が高いのでアウトです。</li>
+            </ul>
+
+            <h3>🔴 チェック③：役員の立場、利用してない？</h3>
+            <ul>
+                <li class="red-circle">取締役という立場を利用して行う取引は、基本的にすべて承認が必要だと考えてください。「私は営業担当じゃないから関係ない」は通用しません。</li>
+                <li class="red-circle">取締役である以上、会社の重要な情報にアクセスできる立場にあるからです。</li>
+            </ul>
+        </div>
+
+        <h3>3. 社長が取るべき3つの対抗策</h3>
+        <p>もし裏切られたら…そんな時でも、社長であるあなたには、法律で認められた3つの強力な対抗策があります。</p>
+
+        <div class="checklist">
+            <h3>🔵 対抗策①：ストップをかける！「差止請求」</h3>
+            <ul>
+                <li class="blue-circle">裁判所に差止請求を申立てることで、競業行為の停止を求めることができます。</li>
+                <li class="blue-circle">緊急性が高い場合は仮処分申立ても可能ですが、一定の手続きと時間が必要です。</li>
+            </ul>
+
+            <h3>🔵 対抗策②：会社から追放！「取締役の解任」</h3>
+            <ul>
+                <li class="blue-circle">当然ですが、会社を裏切った役員をそのままにしておくわけにはいきません。株主総会の決議を経て、その役員を解任することができます。</li>
+            </ul>
+
+            <h3>🔵 対抗策③：損害を取り戻す！「損害賠償請求」</h3>
+            <ul>
+                <li class="blue-circle">そして最も重要なのがこれです。役員の裏切り行為によって会社が被った損害、例えば「奪われた顧客の売上」や「流出した情報によって失われた利益」などを、その役員個人に損害賠償請求できます。</li>
+                <li class="blue-circle">例えば：ある製造業では、顧客の3割が移り、数千万円の売上減となったケースもあります。この場合、会社は損害賠償を請求し、役員を解任。さらに、競合会社の営業を差し止めることが可能の場合もあります。</li>
+            </ul>
+        </div>
+
+        <div class="summary-card">
+            <h2>③課題の最後に</h2>
+            <p>役員の競業トラブルは、起きてから感情的に対応しても、証拠が足りなければ会社を守り切れないことがあります。大切なのは、事前にルールを明確にし、承認手続きと証拠を残すことです。</p>
+        </div>
+        
+        <div class="pledge-box">
+            <p>こうしたトラブルを未然に防ぐために最も効果的なのは、役員就任時に<strong>「競業避止義務に関する誓約書」</strong>を取り交わしておくことです。これにより、役員の意識を高め、万が一の際の強力な証拠となります。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>迷ったら専門家への相談をおススメします(^^)。<br>
+            参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/08</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/5WqKiuKePYw" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
