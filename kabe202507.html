@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f3f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+            --radius-md: 16px;
+            --radius-sm: 10px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(47,128,237,0.13), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.20), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.12), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.38), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(47,128,237,0.30), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "WORK LIMIT";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 4.15em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--gold), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,154,43,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .wall-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .wall-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .wall-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(47,128,237,0.08);
+        }
+
+        .wall-card.caution {
+            border-color: #ffd1d1;
+            background: linear-gradient(135deg, var(--red-soft), #fff);
+        }
+
+        .wall-card.opportunity {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .wall-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .wall-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.22em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .wall-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.88em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .highlight-box p:last-child,
+        .alert-box p:last-child,
+        .strategy-box p:last-child,
+        .cta-box p:last-child { margin-bottom: 0; }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "混同注意";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "旧";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "新";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .strategy-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .strategy-box::before {
+            content: "採用の切り札";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .cta-box strong {
+            color: #fff;
+            background: linear-gradient(transparent 65%, rgba(255,255,255,0.22) 65%);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 2.1em; }
+            .wall-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HeZA2ovGROo" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">年収の壁・扶養内勤務</span>
+            <span class="badge">人材確保・年末調整対策</span>
+        </div>
+        <h1>経営者必見！「103万円の壁」は過去の常識へ<br>新しい年収ラインを人材戦略に活かす方法</h1>
+        <p class="hero-lead">パート・アルバイトの働き方は、税制改正によって大きく変わります。所得税の壁だけでなく、社会保険の130万円の壁、学生アルバイト、年末調整まで含めて考えることが、これからの人材確保のカギになります。</p>
+    </section>
+
+    <div class="wall-row">
+        <div class="wall-card">
+            <span class="wall-label">OLD RULE</span>
+            <span class="wall-value">103万円の壁</span>
+            <p class="wall-note">給与所得控除55万円＋基礎控除48万円という旧来の目安。</p>
+        </div>
+        <div class="wall-card opportunity">
+            <span class="wall-label">NEW RULE</span>
+            <span class="wall-value">最大160万円へ</span>
+            <p class="wall-note">新しい控除の組み合わせで、働ける余地が広がる可能性。</p>
+        </div>
+        <div class="wall-card caution">
+            <span class="wall-label">CAUTION</span>
+            <span class="wall-value">130万円の壁</span>
+            <p class="wall-note">所得税だけでなく、社会保険の壁を混同しないことが重要。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「えっ、まだ103万円の壁を心配してるんですか？」</p>
+            <p>パートの方や大学生アルバイトを採用している会社では、「103万円を超えそうなのでシフトを減らしたい」という相談が今でもよくあります。</p>
+            <p>しかし、税制改正によって、これまでの常識は変わりつつあります。古い知識のままだと、採用で損をし、人手不足をさらに深刻にしてしまうかもしれません。</p>
+        </div>
+
+        <h2>知らないと大損！新しい年収ラインの正体</h2>
+        <p>なぜ「103万円の壁」が過去のものになりつつあるのか。そして、それが会社経営にどんなインパクトを与えるのか。ポイントは、控除額の見直しです。</p>
+
+        <h2>そもそも103万円の壁とは？</h2>
+        <p>これまでの103万円の壁は、給与所得控除の最低額55万円と、基礎控除48万円を足した金額でした。</p>
+        <p>年収が103万円を超えると、本人に所得税がかかるだけでなく、配偶者控除や扶養控除への影響が意識され、多くの人が働く時間を調整していました。</p>
+
+        <div class="checklist">
+            <h3>🔴 これまでの常識</h3>
+            <ul>
+                <li class="red-circle">給与所得控除55万円</li>
+                <li class="red-circle">基礎控除48万円</li>
+                <li class="red-circle">合計103万円が大きな目安</li>
+            </ul>
+            <h3>🔵 新しい考え方</h3>
+            <ul>
+                <li class="blue-circle">給与所得控除の最低額が65万円へ</li>
+                <li class="blue-circle">基礎控除が58万円へ</li>
+                <li class="blue-circle">さらに上乗せ控除により、最大160万円のラインが意識される</li>
+            </ul>
+        </div>
+
+        <h2>最大160万円の壁へ変わる理由</h2>
+        <p>2025年から、基礎控除と給与所得控除の見直しにより、所得税がかからない年収ラインが引き上がります。</p>
+        <ul class="standard-list">
+            <li>基礎控除：48万円から58万円へ</li>
+            <li>給与所得控除の最低額：55万円から65万円へ</li>
+        </ul>
+        <p>この2つを合わせると、まず123万円という新しいラインが見えてきます。さらに、低〜中所得者向けの上乗せ控除により、最大160万円まで所得税がかからないケースが出てくる可能性があります。</p>
+
+        <div class="highlight-box">
+            <p>重要なのは、「103万円を少し超えたらすぐ損」という単純な考え方から卒業することです。これからは、税金・扶養・社会保険を分けて考える必要があります。</p>
+        </div>
+
+        <h2>経営者が今すぐやるべき3つのこと</h2>
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>求人広告に反映する</strong><br>新しい年収ラインを理解している会社は、扶養内で働きたい人材に安心感を与えられます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>既存スタッフと面談する</strong><br>働き控えをしていたパートスタッフに、新しい働き方の選択肢を提案できます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>学生アルバイト採用を見直す</strong><br>大学生アルバイトの働き方や親の扶養への影響も含めて、採用計画を組み直せます。</p>
+            </div>
+        </div>
+
+        <h3>① 人材確保の切り札として活用する</h3>
+        <p>まだ多くの企業が制度変更を十分に把握していません。だからこそ、早く動いた会社ほど、人材確保で有利になります。</p>
+        <div class="strategy-box">
+            <p>求人広告では、たとえば「新しい扶養内勤務の目安に対応。働き方は個別に相談できます」といった表現にすると、安心感を与えやすくなります。</p>
+        </div>
+
+        <h3>② 既存スタッフの労働時間を再設計する</h3>
+        <p>これまで103万円を意識してシフトを減らしていたスタッフにとって、働ける時間が増える可能性があります。</p>
+        <p>ただし、全員に一律で「もっと働けます」と伝えるのではなく、配偶者控除、扶養控除、社会保険、本人の希望を確認したうえで、個別に提案することが大切です。</p>
+
+        <div class="alert-box">
+            <p><strong>所得税の壁と社会保険の壁は別物です。</strong><br>年収130万円を超えると、社会保険の扶養から外れる可能性があります。今回の話は主に所得税のラインであり、社会保険の負担増とは分けて考える必要があります。</p>
+        </div>
+
+        <h3>③ 大学生アルバイトの採用を強化する</h3>
+        <p>大学生の子どもを持つ親向けの新しい控除も、学生アルバイト採用に影響します。</p>
+        <p>学生本人がより働きやすくなるだけでなく、親の税負担への不安が減ることで、長期シフトに入りやすくなる可能性があります。</p>
+
+        <h2>年末調整で損しないために</h2>
+        <p>新しい制度は、2025年12月の年末調整から実務対応が必要になります。</p>
+        <ul class="standard-list">
+            <li>社内で103万円基準の古い案内を使っていないか確認する</li>
+            <li>給与計算ソフトの更新内容を確認する</li>
+            <li>パート・アルバイト向け説明資料を見直す</li>
+            <li>所得税と社会保険の違いを説明できるようにする</li>
+        </ul>
+
+        <div class="summary-card">
+            <h2>まとめ：年収の壁は、人材戦略の話です</h2>
+            <p>103万円の壁という古い常識だけでシフトを組む時代は変わりつつあります。</p>
+            <p>大切なのは、税制改正を単なる税金の話で終わらせず、<strong>採用・定着・シフト設計</strong>に活かすことです。</p>
+            <p>この変化を早く理解した会社ほど、人手不足の時代に一歩リードできます。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「自社のパートさんにどう説明すればよいか分からない」「年末調整の準備が不安」という方は、専門家に相談してください。<br>
+            今日の話が参考になったら、ぜひチャンネル登録や高評価で応援していただけると嬉しいです！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/07</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HeZA2ovGROo" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
