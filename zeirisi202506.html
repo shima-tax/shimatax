@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.15), transparent 30%),
+                radial-gradient(circle at top right, rgba(100,87,216,0.16), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.15), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(100,87,216,0.38), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.30), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "TAX PARTNER";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 3.75em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(100,87,216,0.08);
+        }
+
+        .risk-card.caution {
+            border-color: #ffd1d1;
+            background: linear-gradient(135deg, var(--red-soft), #fff);
+        }
+
+        .risk-card.safe {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .risk-card.notice {
+            border-color: #ded9ff;
+            background: linear-gradient(135deg, var(--purple-soft), #fff);
+        }
+
+        .risk-card.gold {
+            border-color: #ffe0a3;
+            background: linear-gradient(135deg, var(--gold-soft), #fff);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.1em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "丸投げリスク";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "税理士を味方にする実務";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature {
+            border-color: #ded9ff;
+            background: linear-gradient(135deg, var(--purple-soft), #fff);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--purple));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "危";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "共";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 900px) {
+            .risk-row { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.8em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/7h1Rx3j_DmI" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">税理士に丸投げリスク</span>
+            <span class="badge">税金貧乏回避・経営パートナー化</span>
+        </div>
+        <h1>【税理士に丸投げ】で「税金貧乏」確定！？<br>その回避法を解説</h1>
+        <p class="hero-lead">税理士に任せることは大切です。ただし、丸投げのままでは会社のお金の流れがブラックボックス化し、納税資金不足・節税機会の見落とし・税務調査リスクにつながる可能性があります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card caution">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">丸投げで見えない</span>
+            <p class="risk-note">会社のお金の流れを社長自身が把握できなくなります。</p>
+        </div>
+        <div class="risk-card gold">
+            <span class="risk-label">ACTION 01</span>
+            <span class="risk-value">節税カレンダー</span>
+            <p class="risk-note">納税時期を待たず、早めに節税チャンスを設計します。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">ACTION 02</span>
+            <span class="risk-value">情報共有</span>
+            <p class="risk-note">事業計画・設備投資・資金計画を税理士に伝えます。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">GOAL</span>
+            <span class="risk-value">経営パートナー化</span>
+            <p class="risk-note">税理士を書類作成係ではなく、会社を守る右腕にします。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「税理士に任せていたのに、税金で破産寸前？」</p>
+            <p>「税理士に全部任せてるから大丈夫」そう思っている経営者さんは少なくありません。もちろん、税理士は頼れる専門家です。</p>
+            <p>しかし、税理士に任せることと、会社のお金の流れを社長が見なくなることは別問題です。ここを間違えると、税金貧乏への入口になります。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>税金貧乏は、税金の支払いが資金繰りを圧迫する状態</li>
+                <li>税理士に丸投げすると、お金の流れがブラックボックス化しやすい</li>
+                <li>節税カレンダーで、納税前から対策を組み込む</li>
+                <li>事業計画や設備投資予定を共有すると、税理士の提案力が上がる</li>
+            </ul>
+        </div>
+
+        <h2>1. そもそも税金貧乏とは何か</h2>
+        <p>税金貧乏とは、利益は出ているのに、税金や社会保険料の支払いで会社のお金が回らなくなる状態です。</p>
+        <p>今期は利益が出た。通帳にもお金がある。ところが納税時期になって、「こんなに払うの？手元資金が足りない」と慌てる。これは多くの会社で起こり得ます。</p>
+
+        <div class="alert-box">
+            <p>税金は、請求書が来てから考えるものではありません。利益が出た時点で、将来の納税資金はすでに会社の中に“予約済み”だと考える必要があります。</p>
+        </div>
+
+        <h2>2. 税理士に丸投げする3つの落とし穴</h2>
+        <p>税理士に依頼すること自体は良いことです。問題は、社長が何も把握せず、すべてをブラックボックスにしてしまうことです。</p>
+
+        <div class="checklist">
+            <h3>🔴 要注意な丸投げサイン</h3>
+            <ul>
+                <li class="red-circle">税金の支払い時期が近づくと、毎回お金が足りるか不安になる</li>
+                <li class="red-circle">税理士から求められる書類の意味がよく分からない</li>
+                <li class="red-circle">税理士との面談が年数回だけで、節税や資金繰りの話が少ない</li>
+                <li class="red-circle">事業計画や設備投資予定を税理士に共有していない</li>
+            </ul>
+            <h3>🔵 改善するための共有ポイント</h3>
+            <ul>
+                <li class="blue-circle">今後の事業計画や新サービス開始予定</li>
+                <li class="blue-circle">設備投資・店舗出店・人材採用の予定</li>
+                <li class="blue-circle">役員報酬や家族給与の見直し希望</li>
+                <li class="blue-circle">資金繰りの不安や納税資金の準備状況</li>
+            </ul>
+        </div>
+
+        <div class="alert-box">
+            <p>「プロだから言わなくても分かるでしょ」は危険です。税理士は税務のプロですが、社長の頭の中にある未来計画までは読めません。税理士はエスパーではないのです。いたら便利ですが、たぶん顧問料が跳ね上がります。</p>
+        </div>
+
+        <h2>3. 攻めの節税カレンダーを作る</h2>
+        <p>税金貧乏を避けるには、納税時期を待つのではなく、節税のチャンスを前倒しで把握することが重要です。</p>
+        <p>節税カレンダーとは、単なる納税スケジュールではありません。節税制度、役員報酬見直し、設備投資、共済加入、決算対策などを、年間計画として組み込むための道具です。</p>
+
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>5月：制度活用を検討</strong><br>経営セーフティ共済、小規模企業共済、設備投資制度など、早めに候補を洗い出します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>6月：投資と控除を確認</strong><br>中小企業向けの税額控除や特別償却の対象になる設備投資がないか確認します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>7月：役員報酬を点検</strong><br>法人税・所得税・社会保険料のバランスを見ながら、来期設計を考えます。</p>
+            </div>
+        </div>
+
+        <div class="action-box">
+            <p>節税は、決算直前に慌てて考えるほど選択肢が減ります。早い段階で税理士に相談し、年間スケジュールに落とし込むことで、キャッシュを残す可能性が高まります。</p>
+        </div>
+
+        <h2>4. 税理士を経営パートナーに変える方法</h2>
+        <p>税理士を「書類を作る人」としてだけ見るのは、もったいないです。会社の数字を見ている税理士は、経営改善や資金繰り改善のヒントを持っていることがあります。</p>
+        <p>その力を引き出すには、社長側から情報を出すことが必要です。</p>
+
+        <ul class="standard-list">
+            <li>毎月または四半期ごとに、数字を見ながら面談する</li>
+            <li>納税予測を早めに出してもらう</li>
+            <li>資金繰り表に税金・社会保険料を入れる</li>
+            <li>新規出店や設備投資前に税務面を相談する</li>
+            <li>節税だけでなく、手元資金が増えるかで判断する</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>税理士との関係は、病院に似ています。症状を隠したまま「先生、完璧に治してください」は難しいですよね。会社の数字も同じで、情報を出すほど診断の精度が上がります。</p>
+        </div>
+
+        <h2>5. 今日からできる3ステップ</h2>
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>納税予測を確認する</strong><br>今期の利益予測から、法人税・消費税・社会保険料の見込みを出します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>節税カレンダーを作る</strong><br>制度活用や設備投資の判断時期を、年間予定に入れます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>未来計画を税理士に共有する</strong><br>出店、採用、投資、役員報酬、資金繰りの悩みを早めに伝えます。</p>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：丸投げから、二人三脚へ</h2>
+            <p>税理士に依頼することは大切です。しかし、丸投げのままでは、税金貧乏のリスクを見落とすことがあります。</p>
+            <p>大切なのは、社長自身がお金の流れを把握し、税理士と情報を共有し、節税カレンダーで早めに対策することです。</p>
+            <p>税理士を「処理する人」から「一緒に会社を守る経営パートナー」へ変える。これが、税金貧乏を抜け出す大きな一歩です。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「うちの会社も丸投げになっているかも」「納税予測や節税カレンダーを作りたい」と感じたら、専門家に相談してください。<br>
+            迷った時は、気軽に無料相談をご利用ください(^^)。</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/06</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/7h1Rx3j_DmI" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
