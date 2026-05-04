@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-2: #a73232;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.15), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.16), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.38), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.32), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 45%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "SWITCH ROADMAP";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 3.05em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,154,43,0.10);
+        }
+
+        .risk-card.caution {
+            border-color: #ffd1d1;
+            background: linear-gradient(135deg, var(--red-soft), #fff);
+        }
+
+        .risk-card.safe {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .risk-card.notice {
+            border-color: #cce0ff;
+            background: linear-gradient(135deg, var(--blue-soft), #fff);
+        }
+
+        .risk-card.gold {
+            border-color: #ffe0a3;
+            background: linear-gradient(135deg, var(--gold-soft), #fff);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.1em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f7fbfc, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "変更で失敗する危険サイン";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-2), var(--red));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "失敗しない変更戦略";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature {
+            border-color: #ffe0a3;
+            background: linear-gradient(135deg, var(--gold-soft), #fff);
+        }
+
+        .step-card.safe-step {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--gold));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card.safe-step .step-num {
+            background: linear-gradient(135deg, var(--navy), var(--green));
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "失";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "成";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 900px) {
+            .risk-row { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.55em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HBQEZKqXXpc" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">税理士変更のデメリット</span>
+            <span class="badge">引継ぎ・新税理士選び・信頼関係</span>
+        </div>
+        <h1>今の税理士に不満があるあなたへ<br>変更前に知るべき落とし穴と成功ルート</h1>
+        <p class="hero-lead">税理士変更は、会社を良くするチャンスです。ただし、勢いで前任税理士を切ると、資料回収・引継ぎ・新税理士選びでつまずき、かえって税務リスクを高めることがあります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card caution">
+            <span class="risk-label">NG 01</span>
+            <span class="risk-value">即契約解除</span>
+            <p class="risk-note">新税理士が決まる前に切ると、引継ぎで詰まりやすくなります。</p>
+        </div>
+        <div class="risk-card gold">
+            <span class="risk-label">RISK</span>
+            <span class="risk-value">資料不足</span>
+            <p class="risk-note">申告書・会計データ・届出書が欠けると、新税理士が困ります。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">POINT</span>
+            <span class="risk-value">慎重な選定</span>
+            <p class="risk-note">安さや紹介だけではなく、業種理解と説明力を確認します。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">GOAL</span>
+            <span class="risk-value">円滑な引継ぎ</span>
+            <p class="risk-note">資料・期間・役割を整えてから変更すると失敗しにくくなります。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">税理士を変えること自体は悪くありません。危ないのは、準備不足のまま変えることです。</p>
+            <p>「今の税理士さん、ちょっと合わないかも」「もっと安くて、もっと親身な先生はいないかな」と感じることはありますよね。</p>
+            <p>ただ、税理士変更は会社の数字を預け直す作業です。勢いで進めると、前の税理士の方が良かった、という後悔につながることがあります。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>税理士変更は、感情ではなく計画で進める</li>
+                <li>新しい税理士が決まる前に、前任税理士との契約を切らない</li>
+                <li>過去の申告書・会計データ・届出書などを漏れなく回収する</li>
+                <li>価格だけでなく、相性・専門性・レスポンス・説明力を確認する</li>
+            </ul>
+        </div>
+
+        <h2>1. 税理士変更の最大の落とし穴は「引継ぎ」</h2>
+        <p>税理士を変える時に最も大変なのが、過去資料の引継ぎです。新しい税理士は、過去の申告内容や会計処理を見なければ、正確な判断ができません。</p>
+        <p>決算書、申告書、総勘定元帳、試算表、届出書、定款、役員報酬の履歴、消費税の課税方式、電子申告情報など、必要な資料は意外と多いです。</p>
+
+        <div class="alert-box">
+            <p>資料が欠けていると、新税理士は「この数字の根拠は何ですか？」と確認せざるを得ません。ここで説明できないと、申告ミスや税務調査リスクにつながることがあります。</p>
+        </div>
+
+        <h2>2. 理想の税理士はすぐに見つからない</h2>
+        <p>「もっと安い税理士」「もっと親身な税理士」と探しても、理想の相手がすぐ見つかるとは限りません。</p>
+        <p>安さだけで選ぶと、対応範囲が狭い、相談回数が少ない、節税提案がない、レスポンスが遅い、といったミスマッチが起こることがあります。紹介の場合も、紹介者には合っていても、自社に合うとは限りません。</p>
+
+        <div class="checklist">
+            <h3>🔴 失敗しやすい進め方</h3>
+            <ul>
+                <li class="red-circle">前の税理士との契約をすぐに解除してしまう</li>
+                <li class="red-circle">報酬の安さだけで急いで決める</li>
+                <li class="red-circle">紹介だから安心だと思い、業種や相性を確認しない</li>
+                <li class="red-circle">引継ぎ資料の一覧を作らずに移行する</li>
+            </ul>
+            <h3>🔵 成功しやすい進め方</h3>
+            <ul>
+                <li class="blue-circle">新税理士が決まり、引継ぎの目処が立つまで契約を維持する</li>
+                <li class="blue-circle">自社が求めるサポート範囲を明確にする</li>
+                <li class="blue-circle">料金だけでなく、説明力・対応範囲・レスポンスを確認する</li>
+                <li class="blue-circle">必要資料をリスト化して、漏れなく回収する</li>
+            </ul>
+        </div>
+
+        <h2>3. 信頼関係はゼロから作り直しになる</h2>
+        <p>前の税理士は、長年の付き合いの中で、会社の事業内容、社長の考え方、過去の判断、資金繰りの癖まで理解していたかもしれません。</p>
+        <p>新しい税理士には、それをゼロから説明する必要があります。ここを面倒がって省略すると、税理士側も会社の本当の事情を理解できず、提案や判断がズレることがあります。</p>
+
+        <div class="action-box">
+            <p>最初の面談では、過去の決算書だけでなく、会社の強み、今後の事業計画、資金繰りの悩み、前税理士への不満、今後期待する役割まで共有しましょう。税理士は数字を見る人ですが、未来計画まで自動で読めるエスパーではありません。</p>
+        </div>
+
+        <h2>4. 失敗しない税理士変更ロードマップ</h2>
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>不満を言語化する</strong><br>料金、レスポンス、説明不足、専門性不足、提案不足など、何が不満なのかを分けます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>新税理士を先に探す</strong><br>契約解除より先に、候補者と面談し、自社に合うかを確認します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>必要資料を回収する</strong><br>申告書、元帳、試算表、届出書、電子申告情報、会計データを整理します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">4</div>
+                <p><strong>引継ぎ完了後に正式移行する</strong><br>不明点を確認できる期間を残しながら、無理なく移行します。</p>
+            </div>
+        </div>
+
+        <h2>5. 変更前に必ず確認したい資料リスト</h2>
+        <ul class="standard-list">
+            <li>過去3期分程度の法人税・所得税申告書</li>
+            <li>決算書・勘定科目内訳書</li>
+            <li>総勘定元帳・試算表</li>
+            <li>消費税申告書・課税方式に関する届出書</li>
+            <li>青色申告承認申請書などの各種届出書</li>
+            <li>定款・登記簿・役員報酬の議事録</li>
+            <li>会計ソフトのデータ・ログイン情報</li>
+            <li>電子申告の利用者識別番号・暗証番号等の管理状況</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>税理士変更は、引っ越しに似ています。家具だけ運んでも、鍵や電気・水道の手続きが抜けると生活できません。税務でも、申告書だけでなく届出書や電子申告情報までそろえることが大切です。</p>
+        </div>
+
+        <h2>6. 新しい税理士を選ぶ時の判断基準</h2>
+        <p>次の税理士を選ぶ時は、「安いかどうか」だけではなく、「自社に合うかどうか」を見てください。</p>
+        <ul class="standard-list">
+            <li>自社の業種・規模への理解があるか</li>
+            <li>質問への回答が分かりやすいか</li>
+            <li>レスポンスの目安を事前に確認できるか</li>
+            <li>月次面談や試算表説明の有無</li>
+            <li>節税だけでなく、資金繰りや税務リスクも説明してくれるか</li>
+            <li>税務調査への対応方針が明確か</li>
+            <li>危ない処理に対して、きちんと止めてくれるか</li>
+        </ul>
+
+        <div class="alert-box">
+            <p>「何でも経費にできます」と言う税理士は、一見頼もしく見えるかもしれません。でも本当に会社を守るのは、危ない時に止めてくれる税理士です。ブレーキのない車は、最初だけ気持ちよく走ります。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：税理士変更は“順番”が命</h2>
+            <p>税理士を変えること自体は、会社を良くするための前向きな判断です。しかし、勢いで前任税理士との契約を切ると、引継ぎ資料不足や新税理士選びの失敗につながることがあります。</p>
+            <p>大切なのは、不満を整理し、新税理士を先に探し、必要資料を回収し、引継ぎの目処が立ってから正式に移行することです。</p>
+            <p>税理士変更は、感情のリセットではなく、経営体制の再設計です。焦らず、順番を守って進めましょう。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「今の税理士を変えるべきか迷っている」「引継ぎ資料が足りているか不安」「次は失敗したくない」と感じたら、専門家に相談してください。<br>
+            今日の内容が参考になったら、チャンネル登録と高評価をよろしくお願いいたします。</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/05</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/HBQEZKqXXpc" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
