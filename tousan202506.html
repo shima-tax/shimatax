@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>✅</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.16), transparent 30%),
+                radial-gradient(circle at top right, rgba(47,128,237,0.15), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.15), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.36), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.32), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 48%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "CHAIN BANKRUPTCY";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 2.75em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .risk-card.safe {
+            border-color: #c7edd8;
+            background: linear-gradient(135deg, var(--green-soft), #fff);
+        }
+
+        .risk-card.notice {
+            border-color: #cce0ff;
+            background: linear-gradient(135deg, var(--blue-soft), #fff);
+        }
+
+        .risk-card.gold {
+            border-color: #ffe0a3;
+            background: linear-gradient(135deg, var(--gold-soft), #fff);
+        }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.12em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1f8fa, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line {
+            color: #62400a;
+            font-size: 1.06em;
+            font-weight: 900;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "連鎖倒産アラート";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "会社を守る防御策";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature {
+            border-color: #cceff1;
+            background: linear-gradient(135deg, var(--teal-soft), #fff);
+        }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--teal));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 {
+            margin-top: 0;
+            background: #f6fafb;
+            border: 1px solid #e2edf0;
+        }
+
+        .checklist ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0 0 18px;
+        }
+
+        .checklist ul:last-child { margin-bottom: 0; }
+
+        .checklist li {
+            margin-bottom: 10px;
+            padding: 13px 13px 13px 38px;
+            position: relative;
+            background: #fff;
+            border: 1px solid #e7eef2;
+            border-radius: 12px;
+        }
+
+        .checklist .red-circle::before {
+            content: "保";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "共";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+
+        .disclaimer-box ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .disclaimer-box li {
+            margin-bottom: 8px;
+            text-indent: -1em;
+            padding-left: 1em;
+        }
+
+        @media (max-width: 900px) {
+            .risk-row { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.45em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/MgnHoTbw1BA" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">取引先倒産・連鎖倒産対策</span>
+            <span class="badge">与信管理・リスク移転・税務防衛</span>
+        </div>
+        <h1>【取引先倒産で大ピンチ!?】<br>あなたの会社を守る4つの防御策</h1>
+        <p class="hero-lead">大口取引先の倒産は、売掛金の回収不能だけでなく、自社の資金繰りを一気に悪化させる危険があります。会社を守るには、リスク回避・低減・保有・移転を組み合わせた防御設計が必要です。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card safe">
+            <span class="risk-label">DEFENSE 01</span>
+            <span class="risk-value">リスク回避</span>
+            <p class="risk-note">危ない取引を最初から避ける。信用調査と与信判断が入口です。</p>
+        </div>
+        <div class="risk-card">
+            <span class="risk-label">DEFENSE 02</span>
+            <span class="risk-value">リスク低減</span>
+            <p class="risk-note">与信限度額・モニタリングで、損失の大きさをコントロール。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">DEFENSE 03</span>
+            <span class="risk-value">リスク保有</span>
+            <p class="risk-note">貸倒引当金や資金余力で、一定の損失に備える考え方。</p>
+        </div>
+        <div class="risk-card gold">
+            <span class="risk-label">DEFENSE 04</span>
+            <span class="risk-value">リスク移転</span>
+            <p class="risk-note">取引信用保険や共済で、外部の力を使って守ります。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「たった1社の倒産で、創業30年の会社が消えました…」</p>
+            <p>大口取引先が突然倒産し、数千万円から数億円の売掛金が回収不能になる。これは決して他人事ではありません。</p>
+            <p>売掛金は、帳簿上は資産です。しかし、相手が払えなくなった瞬間、資金繰りを直撃するリスクに変わります。だからこそ、普段からの与信管理とリスク分散が重要です。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>取引先倒産対策は、リスク回避・低減・保有・移転の4つで考える</li>
+                <li>新規取引前の信用調査と、取引開始後のモニタリングが重要</li>
+                <li>取引信用保険と倒産防止共済は、目的と性質が異なる</li>
+                <li>貸倒損失を使うには、回収不能を示す客観的資料が必要</li>
+            </ul>
+        </div>
+
+        <h2>1. 防御策1：リスク回避</h2>
+        <p>リスク回避とは、危険な取引を最初からしないという考え方です。短期的には売上チャンスを逃すように見えても、未回収リスクを避けることは会社を守る重要な判断です。</p>
+        <p>新規取引先と契約する前には、信用調査会社の情報、決算公告、支払い遅延の有無、業界内の評判などを確認しましょう。最近では、AIを活用した与信管理ツールも増えています。</p>
+
+        <div class="alert-box">
+            <p>注意点は、慎重になりすぎて「石橋を叩いて渡らない」状態になることです。大切なのは、取引額・自社の資金体力・相手の信用状態を見て、リスク許容ラインを決めることです。</p>
+        </div>
+
+        <h2>2. 防御策2：リスク低減</h2>
+        <p>リスク低減とは、取引はするけれど、万が一の損失を小さくする工夫です。</p>
+        <p>たとえば、1社あたりの売掛金残高を総売掛金の一定割合以内に抑える、月商に対する売掛金の上限を決める、取引開始後も半年ごとに信用情報を確認する、といった方法があります。</p>
+
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>与信限度額を決める</strong><br>1社あたりの売掛金上限を設定し、大口取引先への依存を防ぎます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>定期モニタリング</strong><br>契約時だけでなく、取引開始後も財務状況や支払い遅延を確認します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>条件変更で守る</strong><br>危険サインが出たら、取引額縮小・支払サイト短縮・前金化を検討します。</p>
+            </div>
+        </div>
+
+        <h2>3. 防御策3：リスク保有</h2>
+        <p>リスク保有とは、一定の損失は避けられないものとして、自社で備える考え方です。</p>
+        <p>代表例が、貸倒引当金です。将来発生する可能性のある貸倒れに備えて、あらかじめ損失を見積もり、会計上の準備をしておきます。</p>
+
+        <div class="alert-box">
+            <p>貸倒引当金は会計上の備えであり、実際に現金が増えるわけではありません。資金繰り対策としては、手元資金・借入枠・保険・共済と組み合わせて考える必要があります。</p>
+        </div>
+
+        <h2>4. 防御策4：リスク移転</h2>
+        <p>多くの経営者が見落としがちなのが、リスク移転です。自社だけで抱えきれないリスクを、保険や共済などの外部制度に移す考え方です。</p>
+        <p>代表例が、取引信用保険です。取引先の倒産や支払い遅延によって売掛金が回収不能になった場合、損失の一定割合を保険で補償してもらえる可能性があります。</p>
+
+        <div class="action-box">
+            <p>大口取引先への依存度が高い会社ほど、リスク移転の発想が重要です。売上の30%を占める取引先が倒産したらどうなるか。ここを一度シミュレーションしておくことが、会社の生存率を上げます。</p>
+        </div>
+
+        <h2>5. 取引信用保険と倒産防止共済の使い分け</h2>
+        <p>売掛金回収リスクへの備えとして、取引信用保険と中小企業倒産防止共済、いわゆる経営セーフティ共済があります。この2つは似ているようで、役割が違います。</p>
+
+        <div class="checklist">
+            <h3>🔴 取引信用保険</h3>
+            <ul>
+                <li class="red-circle">性質：掛け捨て型の保険</li>
+                <li class="red-circle">目的：売掛金の焦げ付き損失を直接補償</li>
+                <li class="red-circle">特徴：損失額の一定割合を比較的早く補償できる場合がある</li>
+                <li class="red-circle">向いている会社：大口取引先への依存度が高い会社</li>
+            </ul>
+            <h3>🔵 中小企業倒産防止共済</h3>
+            <ul>
+                <li class="blue-circle">性質：積立型の共済制度</li>
+                <li class="blue-circle">目的：取引先倒産時の当座資金を確保する</li>
+                <li class="blue-circle">特徴：掛金総額の10倍の範囲内で借入れを受けられる制度</li>
+                <li class="blue-circle">向いている会社：節税しながら資金繰りの備えを作りたい会社</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <p>直接補償を重視するなら取引信用保険、当座の運転資金確保と積立性を重視するなら倒産防止共済。大口取引先には保険、全体の備えには共済という組み合わせも検討できます。</p>
+        </div>
+
+        <h2>6. 税務上の落とし穴：貸倒損失</h2>
+        <p>取引先が倒産し、売掛金が回収不能になった場合、税務上は貸倒損失として損金処理できる可能性があります。</p>
+        <p>ただし、安易に「回収できなさそうだから経費」とするのは危険です。法律上の貸倒れ、事実上の貸倒れ、形式上の貸倒れのどれに該当するかを確認し、客観的な証拠をそろえる必要があります。</p>
+
+        <ul class="standard-list">
+            <li><strong>法律上の貸倒れ：</strong>破産・民事再生・会社更生などで債権の切り捨てが確定</li>
+            <li><strong>事実上の貸倒れ：</strong>資産状況や支払能力から全額回収不能が明らか</li>
+            <li><strong>形式上の貸倒れ：</strong>継続取引の停止後1年以上経過し、弁済見込みがないなど</li>
+        </ul>
+
+        <div class="alert-box">
+            <p>重要なのは、「回収努力を尽くしたこと」と「回収不能である客観的事実」を示すことです。内容証明、督促記録、弁護士相談記録、信用調査資料などを残しておきましょう。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：売掛金管理は会社の生命線</h2>
+            <p>取引先倒産対策は、単なる経理処理ではありません。会社の生存戦略です。</p>
+            <p>リスク回避、リスク低減、リスク保有、リスク移転。この4つを組み合わせることで、連鎖倒産の危険を大きく下げることができます。</p>
+            <p>そして、もし貸倒れが発生したら、税務上の貸倒損失を検討し、証拠資料を整えて冷静に対応しましょう。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「うちの売掛金管理は大丈夫？」「取引信用保険と倒産防止共済、どちらを使うべき？」と迷ったら、専門家に相談してください。<br>
+            迷った時は、気軽に無料相談、お待ちしております(^^)。</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/06</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/MgnHoTbw1BA" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
