@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-2: #a73232;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(47,128,237,0.16), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,76,76,0.18), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.16), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.38), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(47,128,237,0.36), transparent 34%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 45%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "3 YEARS RECORD";
+            position: absolute;
+            right: 10px;
+            bottom: -4px;
+            font-size: 3.05em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 16px 14px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -28px;
+            bottom: -32px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(47,128,237,0.08);
+        }
+
+        .risk-card.caution { border-color: #ffd1d1; background: linear-gradient(135deg, var(--red-soft), #fff); }
+        .risk-card.notice { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .risk-card.blue { border-color: #cce0ff; background: linear-gradient(135deg, var(--blue-soft), #fff); }
+        .risk-card.purple { border-color: #ded9ff; background: linear-gradient(135deg, var(--purple-soft), #fff); }
+        .risk-card.safe { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.76em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.02em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.82em;
+            line-height: 1.55;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--blue);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f7fbfc, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line { color: #62400a; font-size: 1.06em; font-weight: 900; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "3年記録の重要ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "調査官の注目ポイント";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-2), var(--red));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "鉄壁の守りを作る準備";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .step-card.safe-step { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--blue));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card.safe-step .step-num { background: linear-gradient(135deg, var(--navy), var(--green)); }
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 { margin-top: 0; background: #f6fafb; border: 1px solid #e2edf0; }
+        .checklist ul { list-style-type: none; padding-left: 0; margin: 0 0 18px; }
+        .checklist ul:last-child { margin-bottom: 0; }
+        .checklist li { margin-bottom: 10px; padding: 13px 13px 13px 38px; position: relative; background: #fff; border: 1px solid #e7eef2; border-radius: 12px; }
+
+        .checklist .red-circle::before {
+            content: "危";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "守";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+        .disclaimer-box ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .disclaimer-box li { margin-bottom: 8px; text-indent: -1em; padding-left: 1em; }
+
+        @media (max-width: 980px) { .risk-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.45em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/V89aiRCG07A" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">税務調査・過去3年の記録</span>
+            <span class="badge">売上漏れ・経費・外注費・在庫・証拠整合性</span>
+        </div>
+        <h1>税務署はあなたの「3年間」を見ている<br>調査官が狙う5つの急所と鉄壁の守り</h1>
+        <p class="hero-lead">税務調査でまず見られやすいのは、過去3年分の申告・帳簿・証拠資料です。売上のズレ、経費の公私混同、架空外注費、在庫の過少計上、帳簿と証拠の不一致を整理できているかが、会社を守る分かれ道になります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card caution">
+            <span class="risk-label">POINT 01</span>
+            <span class="risk-value">売上の漏れ</span>
+            <p class="risk-note">現金売上・入金ズレ・計上漏れは、最初に見られやすい急所です。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">POINT 02</span>
+            <span class="risk-value">経費の公私混同</span>
+            <p class="risk-note">私的支出を経費に混ぜると、説明で詰まりやすくなります。</p>
+        </div>
+        <div class="risk-card blue">
+            <span class="risk-label">POINT 03</span>
+            <span class="risk-value">外注費・人件費</span>
+            <p class="risk-note">契約書・成果物・振込記録がない支出は危険です。</p>
+        </div>
+        <div class="risk-card purple">
+            <span class="risk-label">POINT 04</span>
+            <span class="risk-value">在庫評価</span>
+            <p class="risk-note">期末在庫を少なく見せると、利益操作を疑われます。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">POINT 05</span>
+            <span class="risk-value">証拠の整合性</span>
+            <p class="risk-note">帳簿・領収書・請求書・通帳がつながる状態が守りになります。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">税務調査は、突然の電話から始まります。でも勝負は、その電話の前にほぼ決まっています。</p>
+            <p>もし明日、税務署から「調査に伺います」と連絡が来たら、多くの経営者はドキッとします。「うちは真面目にやっているから大丈夫」と思っていても、過去の記録が整理されていなければ、説明に苦労することがあります。</p>
+            <p>特に重要なのが、過去3年間の記録です。調査官は3年分の数字を見ることで、売上の傾向、経費の動き、お金の流れ、帳簿と証拠のズレを読み取ります。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>税務調査では、過去3年分の申告・帳簿・証拠資料が重要になる</li>
+                <li>売上の急増・急減、経費の増加、在庫の不自然さは確認されやすい</li>
+                <li>帳簿だけでなく、領収書・請求書・通帳・契約書との整合性が大切</li>
+                <li>税理士に丸投げせず、経営者自身もお金の流れを把握しておくことが守りになる</li>
+            </ul>
+        </div>
+
+        <h2>1. なぜ「3年」が会社の運命を握るのか</h2>
+        <p>税務調査は、申告内容が正しいかを確認する手続きです。通常、過去3年分を中心に確認されることが多く、3年分のデータがあれば、会社の傾向や不自然な動きがかなり見えてきます。</p>
+        <p>たとえば、ある年だけ売上が急に下がっている、逆に経費だけが大きく増えている、利益率が同業他社と比べて不自然に低い。このような変化は、調査官にとって確認すべきポイントになります。</p>
+
+        <div class="alert-box">
+            <p>「3年前のことなんて覚えていない」では済まされない場面があります。だからこそ、記憶ではなく記録で説明できる状態を作ることが大切です。</p>
+        </div>
+
+        <h2>2. 調査官が見る5つの急所</h2>
+        <p>調査官は、帳簿の数字だけを眺めているわけではありません。その数字の裏側にある取引実態、証拠、資金の流れを確認しています。</p>
+
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>売上の漏れとズレ</strong><br>現金売上、入金時期、請求書、レジデータ、予約履歴などを見て、売上が正しく計上されているか確認されます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>経費の公私混同</strong><br>家族との食事、私的な旅行、休日の領収書などは、事業との関係を説明できるかが問われます。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>架空の外注費・人件費</strong><br>契約書、成果物、勤務実態、振込記録がそろっているか確認されます。実態がない支出は悪質と見られやすい部分です。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">4</div>
+                <p><strong>在庫の過少申告</strong><br>期末在庫を少なく見せると、利益を小さく見せる処理と疑われます。棚卸表や数量管理が重要です。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">5</div>
+                <p><strong>帳簿と証拠の不一致</strong><br>帳簿に経費があるのに領収書がない、通帳から出た現金の使い道が分からない、といったズレが確認されます。</p>
+            </div>
+        </div>
+
+        <h2>3. 危険な状態と守れる状態の違い</h2>
+        <div class="checklist">
+            <h3>🔴 絶対に避けたいNG状態</h3>
+            <ul>
+                <li class="red-circle">領収書がバラバラで、調査当日に探し始める</li>
+                <li class="red-circle">売上と入金、請求書の対応関係が説明できない</li>
+                <li class="red-circle">外注費の契約書や成果物が残っていない</li>
+                <li class="red-circle">在庫の棚卸表を作っていない</li>
+                <li class="red-circle">税理士にすべて丸投げして、自分では数字を把握していない</li>
+            </ul>
+            <h3>🔵 今日から作りたい守りの状態</h3>
+            <ul>
+                <li class="blue-circle">過去3年分の帳簿・領収書・請求書・通帳をすぐ出せる</li>
+                <li class="blue-circle">売上の増減理由を、資料とメモで説明できる</li>
+                <li class="blue-circle">経費の目的・相手・事業との関係を記録している</li>
+                <li class="blue-circle">外注費は契約書・請求書・成果物・振込記録がつながっている</li>
+                <li class="blue-circle">不安な処理は申告前に税理士へ確認している</li>
+            </ul>
+        </div>
+
+        <h2>4. 今日からできる鉄壁の守り</h2>
+        <p>税務調査は、来てから慌てて準備するものではありません。日々の経理の中で、少しずつ守りを固めていくものです。</p>
+
+        <div class="action-box">
+            <p>一番大切なのは、税理士に丸投げするのではなく、経営者自身が自分の会社のお金の流れを把握しておくことです。売上がなぜ増えたのか、経費がなぜ増えたのか、在庫がどう変わったのか。自分の言葉で説明できる会社は、調査でも強くなります。</p>
+        </div>
+
+        <div class="step-grid">
+            <div class="step-card safe-step">
+                <div class="step-num">1</div>
+                <p><strong>3年分の資料を年度別に整理する</strong><br>帳簿、領収書、請求書、銀行明細、契約書を年度ごとにまとめ、すぐ出せる状態にします。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">2</div>
+                <p><strong>大きな変化には理由メモを残す</strong><br>売上急増、売上減少、経費増加、在庫変動などは、その背景をメモしておきます。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">3</div>
+                <p><strong>証拠を線でつなげる</strong><br>請求書、入金、契約書、納品物、メール履歴を組み合わせて、取引の流れを説明できるようにします。</p>
+            </div>
+        </div>
+
+        <h2>5. 税務調査に備える3年記録チェックリスト</h2>
+        <ul class="standard-list">
+            <li>過去3年分の申告書・決算書をすぐ出せる</li>
+            <li>帳簿・領収書・請求書・通帳が年度別に整理されている</li>
+            <li>売上の急増・急減について説明メモがある</li>
+            <li>接待交際費は、相手・目的・人数を説明できる</li>
+            <li>外注費は、契約書・請求書・成果物・振込記録がそろっている</li>
+            <li>在庫の棚卸表と評価根拠が残っている</li>
+            <li>現金の引き出しについて、使い道を説明できる</li>
+            <li>不安な処理は税理士に相談済みである</li>
+        </ul>
+
+        <div class="alert-box">
+            <p>調査官が怖いのは、資料を出してくる会社ではありません。資料がなく、説明も曖昧で、後から探しますと言う会社です。資料の整理は、静かな防御力です。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：3年分の記録は、会社を守る防御壁</h2>
+            <p>税務調査では、過去3年分の記録がとても重要です。売上の漏れ、経費の公私混同、架空外注費、在庫の過少申告、帳簿と証拠の不一致は、調査官が特に確認しやすい急所です。</p>
+            <p>しかし、普段から帳簿・領収書・請求書・通帳・契約書を整理し、取引の理由を説明できる状態にしておけば、調査は必要以上に怖がるものではありません。</p>
+            <p>税務調査は、経営を見直す機会にもなります。今日から3年分の記録を整え、いつ来ても慌てない会社を作っていきましょう。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「過去3年分の資料整理が不安」「現金売上や経費処理が心配」「税務調査に備えて確認したい」と感じたら、専門家に相談してください。<br>
+            今日の内容が参考になったら、チャンネル登録と高評価をよろしくお願いいたします。</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/04</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/V89aiRCG07A" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
