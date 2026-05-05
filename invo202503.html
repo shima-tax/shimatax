@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-2: #a73232;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --purple: #6457d8;
+            --purple-soft: #f1efff;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.20), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.26), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.16), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+        
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.42), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(47,128,237,0.34), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(217,76,76,0.30), transparent 32%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 43%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "INVOICE MAP";
+            position: absolute;
+            right: 12px;
+            bottom: -4px;
+            font-size: 3.35em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,154,43,0.10);
+        }
+
+        .risk-card.caution { border-color: #ffd1d1; background: linear-gradient(135deg, var(--red-soft), #fff); }
+        .risk-card.notice { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .risk-card.blue { border-color: #cce0ff; background: linear-gradient(135deg, var(--blue-soft), #fff); }
+        .risk-card.safe { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.08em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f7fbfc, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line { color: #62400a; font-size: 1.06em; font-weight: 900; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "インボイス制度の基礎";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "取引喪失リスク";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-2), var(--red));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "今すぐやる3ステップ";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .step-card.safe-step { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--gold));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card.safe-step .step-num { background: linear-gradient(135deg, var(--navy), var(--green)); }
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 { margin-top: 0; background: #f6fafb; border: 1px solid #e2edf0; }
+        .checklist ul { list-style-type: none; padding-left: 0; margin: 0 0 18px; }
+        .checklist ul:last-child { margin-bottom: 0; }
+        .checklist li { margin-bottom: 10px; padding: 13px 13px 13px 38px; position: relative; background: #fff; border: 1px solid #e7eef2; border-radius: 12px; }
+
+        .checklist .red-circle::before {
+            content: "登";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "慎";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+        .disclaimer-box ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .disclaimer-box li { margin-bottom: 8px; text-indent: -1em; padding-left: 1em; }
+
+        @media (max-width: 900px) { .risk-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.75em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/cRYy0eMH4rY" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">インボイス制度・基礎知識</span>
+            <span class="badge">取引継続・登録判断・価格交渉・経理DX</span>
+        </div>
+        <h1>インボイス制度とは？<br>今さら聞けない基礎知識と生き残り戦略</h1>
+        <p class="hero-lead">「インボイス発行できますか？」と聞かれた時に即答できるかどうかで、取引先との関係が変わることがあります。制度の正体、登録判断、交渉、経理デジタル化まで、経営初心者にも分かる形で整理します。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card caution">
+            <span class="risk-label">RISK 01</span>
+            <span class="risk-value">取引先を失う</span>
+            <p class="risk-note">インボイス未対応が、継続案件の見直し理由になる場合があります。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">POINT</span>
+            <span class="risk-value">適格請求書</span>
+            <p class="risk-note">仕入税額控除に関わる、消費税の透明化システムです。</p>
+        </div>
+        <div class="risk-card blue">
+            <span class="risk-label">JUDGE</span>
+            <span class="risk-value">登録判断</span>
+            <p class="risk-note">取引先・売上規模・価格交渉力を見て判断します。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">DX</span>
+            <span class="risk-value">経理自動化</span>
+            <p class="risk-note">会計・請求書・経費管理を整えると負担を減らせます。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">取引先から「インボイス発行できますか？」と聞かれたとき、答えに詰まるなら要注意です。</p>
+            <p>インボイス制度は、単なる請求書の書き方の話ではありません。取引先があなたと今後も取引を続けるかどうか、価格交渉が必要になるか、経理作業がどれだけ増えるかにも関わる制度です。</p>
+            <p>特にフリーランス、個人事業主、小規模法人にとっては、知らないまま放置すると、継続案件や法人取引に影響する可能性があります。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>インボイス制度は、正式には「適格請求書等保存方式」と呼ばれる</li>
+                <li>取引先が仕入税額控除を受けるために、適格請求書が重要になる</li>
+                <li>登録すべきかどうかは、法人取引の多さ・売上規模・価格交渉力で判断する</li>
+                <li>制度対応だけでなく、取引先交渉と経理デジタル化までセットで考える</li>
+            </ul>
+        </div>
+
+        <h2>1. インボイス制度の正体</h2>
+        <p>インボイス制度の正式名称は「適格請求書等保存方式」です。難しく聞こえますが、簡単に言えば、消費税の流れをより正確に確認するための仕組みです。</p>
+        <p>たとえば、カフェがコーヒー豆を仕入れるときには消費税を支払い、お客様にコーヒーを売るときには消費税を受け取ります。事業者は、受け取った消費税から支払った消費税を差し引いて納税します。</p>
+        <p>この「支払った消費税を差し引く」ために、取引先がインボイスを必要とする場面があります。</p>
+
+        <div class="alert-box">
+            <p>インボイスを発行できない取引先との取引は、買い手側にとって消費税計算上の不利が生じることがあります。これが、取引先から登録を求められる大きな理由です。</p>
+        </div>
+
+        <h2>2. なぜ小規模事業者に影響が大きいのか</h2>
+        <p>これまで年間売上1,000万円以下の免税事業者は、原則として消費税を納めない立場でした。しかし、インボイス登録をすると課税事業者となり、消費税の申告や納税が必要になります。</p>
+        <p>つまり、小規模事業者にとってインボイス登録は、単なる番号取得ではなく、納税負担と事務負担が増える経営判断です。</p>
+
+        <div class="checklist">
+            <h3>🔴 登録を検討した方がよいケース</h3>
+            <ul>
+                <li class="red-circle">取引先が法人中心</li>
+                <li class="red-circle">継続的な契約が多い</li>
+                <li class="red-circle">売上が800万円を超えている</li>
+                <li class="red-circle">大手企業や課税事業者との取引を維持したい</li>
+            </ul>
+            <h3>🔵 慎重に判断したいケース</h3>
+            <ul>
+                <li class="blue-circle">取引先が個人客中心</li>
+                <li class="blue-circle">価格競争力がある</li>
+                <li class="blue-circle">取引先との関係性が非常に強い</li>
+                <li class="blue-circle">消費税負担を価格に反映しにくい</li>
+            </ul>
+        </div>
+
+        <h2>3. 取引先との関係が一変する理由</h2>
+        <p>取引先の企業は、インボイスがないと消費税の控除に影響を受ける場合があります。そのため、取引先によっては「インボイスに対応できる相手と取引したい」と考えることがあります。</p>
+        <p>特に法人取引が多い方、業務委託契約が多い方、大手企業との継続案件がある方は、取引先が何を求めているか早めに確認することが重要です。</p>
+
+        <div class="alert-box">
+            <p>怖いのは、制度そのものよりも、取引先との認識ズレです。「必要だと思っていなかった」が、契約更新時のすれ違いになることがあります。</p>
+        </div>
+
+        <h2>4. インボイス制度を味方につける3つの戦略</h2>
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>登録判断を数字で行う</strong><br>消費税を納めるコストと、取引を失うリスクを比較します。感情ではなく、売上構成と取引先の要望で判断しましょう。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>免税事業者のままなら交渉する</strong><br>価格調整、付加価値の説明、長期契約の提案など、取引先に納得してもらう材料を用意します。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>経理システムをデジタル化する</strong><br>クラウド会計、請求書発行システム、経費管理アプリを使えば、制度対応の負担を減らしやすくなります。</p>
+            </div>
+        </div>
+
+        <h2>5. 今すぐやるべき3つのステップ</h2>
+        <div class="action-box">
+            <p>インボイス制度は、理解してから動くより、取引先確認から始める方が実務的です。制度の勉強だけで止まらず、自社の取引に当てはめて判断しましょう。</p>
+        </div>
+
+        <div class="step-grid">
+            <div class="step-card safe-step">
+                <div class="step-num">1</div>
+                <p><strong>現状分析</strong><br>取引先リストを作り、法人中心か個人客中心か、売上規模、継続契約の有無を確認します。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">2</div>
+                <p><strong>方針決定</strong><br>課税事業者になるか、免税事業者のまま交渉するか、必要な投資額や事務負担も含めて決めます。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">3</div>
+                <p><strong>実行</strong><br>取引先との確認、経理システムの導入、専門家への相談を進めます。後回しにすると、契約更新時に慌てることになります。</p>
+            </div>
+        </div>
+
+        <h2>6. インボイス対応チェックリスト</h2>
+        <ul class="standard-list">
+            <li>主要取引先が法人中心か個人客中心か整理した</li>
+            <li>取引先がインボイスを必要としているか確認した</li>
+            <li>年間売上と消費税負担を試算した</li>
+            <li>登録した場合の納税・申告・経理負担を確認した</li>
+            <li>免税事業者のままの場合の価格交渉方針を考えた</li>
+            <li>クラウド会計や請求書システムの導入を検討した</li>
+            <li>専門家に登録判断を相談した</li>
+        </ul>
+
+        <div class="alert-box">
+            <p>インボイス制度は、脅威でもあり、準備した人にとっては信頼を示す材料にもなります。問題は制度そのものではなく、何も決めないまま時間が過ぎることです。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：インボイスは制度対応ではなく、取引戦略</h2>
+            <p>インボイス制度は、消費税の透明化を目的とした仕組みであり、取引先の仕入税額控除に影響します。</p>
+            <p>登録すべきかどうかは、法人取引の割合、売上規模、取引先との関係性、価格交渉力によって変わります。</p>
+            <p>大切なのは、制度を怖がることではなく、自社の取引先と数字を見て判断することです。今日から取引先リストを見直し、必要なら専門家に相談して、ビジネスを守る準備を始めましょう。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「インボイス登録すべきか分からない」「取引先から相談された」「経理の負担を減らしたい」と感じたら、専門家に相談してください。<br>
+            今日の内容が参考になったら、チャンネル登録と高評価をよろしくお願いいたします。</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2025/03</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/cRYy0eMH4rY" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
