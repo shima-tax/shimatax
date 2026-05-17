@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+    
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-2: #a73232;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(47,128,237,0.18), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.32), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.18), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.48), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(47,128,237,0.36), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(18,160,106,0.32), transparent 32%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 42%, #0d737d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "STARTUP FUND MAP";
+            position: absolute;
+            right: 10px;
+            bottom: -4px;
+            font-size: 2.55em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--gold), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,154,43,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,154,43,0.10);
+        }
+
+        .risk-card.caution { border-color: #ffd1d1; background: linear-gradient(135deg, var(--red-soft), #fff); }
+        .risk-card.notice { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .risk-card.blue { border-color: #cce0ff; background: linear-gradient(135deg, var(--blue-soft), #fff); }
+        .risk-card.safe { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.08em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--gold);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--teal), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f7fbfc, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line { color: #62400a; font-size: 1.06em; font-weight: 900; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "創業融資の使い道";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "資金使途NGアラート";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-2), var(--red));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "融資審査を通す準備";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .step-card.safe-step { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--gold));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card.safe-step .step-num { background: linear-gradient(135deg, var(--navy), var(--green)); }
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 { margin-top: 0; background: #f6fafb; border: 1px solid #e2edf0; }
+        .checklist ul { list-style-type: none; padding-left: 0; margin: 0 0 18px; }
+        .checklist ul:last-child { margin-bottom: 0; }
+        .checklist li { margin-bottom: 10px; padding: 13px 13px 13px 38px; position: relative; background: #fff; border: 1px solid #e7eef2; border-radius: 12px; }
+
+        .checklist .red-circle::before {
+            content: "NG";
+            position: absolute;
+            left: 9px;
+            top: 12px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.62em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "OK";
+            position: absolute;
+            left: 9px;
+            top: 12px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.62em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+        .disclaimer-box ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .disclaimer-box li { margin-bottom: 8px; text-indent: -1em; padding-left: 1em; }
+
+        @media (max-width: 900px) { .risk-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.18em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/cctTCkXKyU8" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">創業融資の使い道</span>
+            <span class="badge">設備資金・運転資金・見せ金・資金使途違反・使途確認</span>
+        </div>
+        <h1>創業時の融資はどこまで使える？<br>意外なOK例と絶対避けたいNG例</h1>
+        <p class="hero-lead">創業融資は、事業を加速させる大切な燃料です。ただし、生活費への流用、見せ金、資金使途違反などをすると、金融機関からの信用を失い、将来の融資にも影響する可能性があります。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card notice">
+            <span class="risk-label">OK 01</span>
+            <span class="risk-value">設備資金</span>
+            <p class="risk-note">内装、機材、業務用ソフトなど、事業に必要な初期投資に使えます。</p>
+        </div>
+        <div class="risk-card blue">
+            <span class="risk-label">OK 02</span>
+            <span class="risk-value">運転資金</span>
+            <p class="risk-note">家賃、人件費、広告費など、開業後の固定費に使う資金です。</p>
+        </div>
+        <div class="risk-card caution">
+            <span class="risk-label">NG</span>
+            <span class="risk-value">生活費・見せ金</span>
+            <p class="risk-note">事業資金を個人目的に流用したり、自己資金を偽るのは危険です。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">GUARD</span>
+            <span class="risk-value">証拠保存</span>
+            <p class="risk-note">見積書・契約書・領収書・使途メモを残すことが防御になります。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">創業融資は、借りた後の「使い方」まで見られます。</p>
+            <p>「事業用のお金だから、事業っぽいものなら何でも大丈夫」と思っていませんか？</p>
+            <p>創業時の融資は、使い道が比較的広い一方で、資金使途を外すとトラブルになります。場合によっては、金融機関から説明を求められたり、今後の融資相談で不利になることもあります。</p>
+            <p>大切なのは、何に使えるかを知ること。そして、使った証拠を残すことです。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>創業融資の使い道は、大きく設備資金と運転資金に分かれる</li>
+                <li>Web制作費、広告費、採用費、専門家費用、業務用ソフトなども対象になり得る</li>
+                <li>生活費への流用、見せ金、資金使途違反、借入返済、事業外支出は避ける</li>
+                <li>融資後も使途確認に備え、見積書・領収書・契約書を保存する</li>
+            </ul>
+        </div>
+
+        <h2>1. 創業融資の使い道は2種類に分ける</h2>
+        <p>創業時の融資の使い道は、大きく分けると「設備資金」と「運転資金」です。</p>
+        <p>設備資金は、店舗内装、機械、車両、パソコン、業務用ソフトなど、長く使うものへの投資です。運転資金は、家賃、人件費、仕入れ、広告費など、開業後に事業を回すためのお金です。</p>
+
+        <div class="highlight-box">
+            <p>ポイントは、「その支出が売上や事業運営にどうつながるか」を説明できることです。金融機関は、金額だけでなく、事業との関係性を見ています。</p>
+        </div>
+
+        <h2>2. 意外と使えるOK例</h2>
+        <p>創業融資は、店舗の内装や仕入れだけに限られるわけではありません。事業に必要で、売上や成長につながると説明できるものは、対象として検討されることがあります。</p>
+
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>Webサイト制作費・SNS広告費</strong><br>オンラインショップや集客型ビジネスでは、Webサイトや広告が売上づくりの土台になります。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>求人掲載料・採用関連費</strong><br>スタッフ確保が売上に直結する業種では、採用費用も事業に必要な支出として説明しやすくなります。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>専門家費用・業務用ソフト</strong><br>司法書士、税理士、会計ソフト、顧客管理システムなど、事業運営に必要な初期費用も検討対象になります。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">4</div>
+                <p><strong>事業用保険の初期費用</strong><br>賠償責任保険や事業に必要な損害保険など、リスク対策の費用も業種によって重要です。</p>
+            </div>
+        </div>
+
+        <h2>3. 絶対に避けたいNG例5つ</h2>
+        <div class="checklist">
+            <h3>🔴 資金使途で危険な例</h3>
+            <ul>
+                <li class="red-circle"><strong>生活費への流用</strong><br>融資は事業用資金です。経営者個人の生活費とは区別する必要があります。</li>
+                <li class="red-circle"><strong>見せ金</strong><br>一時的に借りたお金を自己資金のように見せる行為は、通帳履歴で疑われやすく、信用を大きく落とします。</li>
+                <li class="red-circle"><strong>資金使途違反</strong><br>設備資金として借りたお金を別用途に使うなど、申込時の使い道と違う支出は危険です。</li>
+                <li class="red-circle"><strong>既存借入金の返済</strong><br>創業融資で他の借入を返すことは、原則として事業成長につながる資金使途と見られにくくなります。</li>
+                <li class="red-circle"><strong>事業と無関係な支出</strong><br>個人的な車、投資、ギャンブル、趣味の支出などは対象外です。</li>
+            </ul>
+        </div>
+
+        <div class="alert-box">
+            <p>計画変更が必要になった場合は、勝手に使い道を変えず、必ず金融機関に事前相談しましょう。「急に必要になったから」は、後からの説明では弱くなります。</p>
+        </div>
+
+        <h2>4. 融資審査で見られる3つのポイント</h2>
+        <div class="action-box">
+            <p>融資審査では、「何にいくら使うか」だけでなく、「なぜ必要か」「どう売上につながるか」「返済できるか」が見られます。</p>
+        </div>
+
+        <div class="step-grid">
+            <div class="step-card safe-step">
+                <div class="step-num">1</div>
+                <p><strong>金額と根拠を具体化する</strong><br>「広告費50万円」ではなく、「Web広告に月10万円を5か月、ターゲット層は30代女性、売上目標は月200万円」のように説明します。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">2</div>
+                <p><strong>見積書・契約書を準備する</strong><br>設備購入や内装工事は、見積書や契約書で金額の妥当性を示します。必要に応じて相見積もりも用意しましょう。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">3</div>
+                <p><strong>運転資金は期間で説明する</strong><br>家賃・人件費・広告費など、開業後3〜6か月分の必要額として説明すると、資金計画が伝わりやすくなります。</p>
+            </div>
+        </div>
+
+        <h2>5. 見逃しがちな落とし穴</h2>
+        <ul class="standard-list">
+            <li><strong>自宅兼事務所の按分</strong><br>自宅兼事務所の場合、事業用として使う部分だけを説明できるようにします。面積や使用状況の根拠が大切です。</li>
+            <li><strong>融資実行後の使途確認</strong><br>設備資金の場合、購入や設置後に確認されることがあります。領収書や納品書を保存しましょう。</li>
+            <li><strong>計画変更時の事前相談</strong><br>見積り変更、店舗計画変更、広告予算変更などがある場合は、金融機関に相談してから進めると安心です。</li>
+        </ul>
+
+        <h2>6. 創業融資の使い道チェックリスト</h2>
+        <ul class="standard-list">
+            <li>設備資金と運転資金を分けて説明できる</li>
+            <li>資金使途ごとに金額と根拠を整理している</li>
+            <li>見積書・契約書・請求書を準備している</li>
+            <li>広告費や採用費が売上につながる理由を説明できる</li>
+            <li>生活費や個人支出と事業資金を分けている</li>
+            <li>見せ金と疑われる資金移動がない</li>
+            <li>計画変更時は金融機関へ相談する体制にしている</li>
+            <li>融資実行後の領収書・納品書・通帳記録を保存している</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>創業融資は、夢を加速させる燃料です。ただし、ガソリンを水筒に入れて持ち歩くと危ないように、事業資金も正しい容器と使い道が必要です。用途を整理し、証拠を残して、安全に事業へ投資しましょう。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：創業融資は、使い道の説明力が勝負</h2>
+            <p>創業時の融資は、設備資金と運転資金に分けて考えると整理しやすくなります。内装、仕入れ、Web制作、広告、採用、専門家費用など、事業に必要な支出は幅広く検討できます。</p>
+            <p>一方で、生活費への流用、見せ金、資金使途違反、既存借入の返済、事業と無関係な支出は避ける必要があります。</p>
+            <p>融資は借りて終わりではありません。実行後も、計画通りに使ったことを説明できるよう、見積書・契約書・領収書・通帳記録を保存しておきましょう。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「創業融資の使い道が不安」「事業計画書の資金使途を整理したい」「金融機関にどう説明すればよいか分からない」と感じたら、専門家に相談してください。<br>
+            個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になったらチャンネル登録、高評価、お願いします！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2026/05</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/cctTCkXKyU8" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
