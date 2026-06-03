@@ -4,25 +4,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>あなたはどっち？税理士へ経理を丸投げして失敗する社長・成功する社長の決定的差は何？｜島田税理士事務所</title>
+<title>【税務調査の回避術！】3年・5年・7年の違いと対策まとめ！｜島田税理士事務所</title>
+<meta name="description" content="税務調査で遡られる3年・5年・7年の違いを、経営者・個人事業主・フリーランス向けに分かりやすく解説。経費否認、売上漏れ、架空経費などのリスクと実務対策を整理します。">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
 <style>
 :root{
   --navy:#0f2742;
-  --navy2:#163d62;
-  --teal:#0f9b8e;
-  --gold:#c8a45d;
-  --red:#d94747;
+  --navy-deep:#071827;
+  --teal:#0f8f86;
+  --gold:#c8a24a;
+  --red:#c94b4b;
   --blue:#2d6cdf;
-  --green:#2f9e64;
-  --ink:#1f2933;
-  --muted:#64748b;
-  --line:#e6edf3;
-  --bg:#f6f8fb;
-  --white:#ffffff;
-  --shadow-soft:0 12px 30px rgba(15,39,66,.08);
-  --shadow-card:0 8px 22px rgba(15,39,66,.07);
-  --radius:22px;
+  --green:#1f9d63;
+  --gray:#f5f7fa;
+  --soft-gray:#eef2f6;
+  --text:#243142;
+  --muted:#6b7785;
+  --white:#fff;
+  --shadow-soft:0 14px 36px rgba(15,39,66,.10);
+  --shadow-card:0 10px 26px rgba(15,39,66,.08);
+  --radius:24px;
 }
 
 html{
@@ -33,13 +34,13 @@ scroll-behavior:smooth;
 body{
 margin:0;
 overflow-x:hidden;
+font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",YuGothic,Meiryo,sans-serif;
 font-size:16px;
 line-height:1.85;
-color:var(--ink);
+color:var(--text);
 background:
-radial-gradient(circle at top left,rgba(15,155,142,.08),transparent 34%),
-linear-gradient(180deg,#ffffff 0%,#f6f8fb 100%);
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+radial-gradient(circle at top left,rgba(15,143,134,.08),transparent 28%),
+linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%);
 }
 
 a{
@@ -55,8 +56,8 @@ height:auto;
 .css-logo-wrapper{
 position:sticky;
 top:0;
-z-index:50;
-background:rgba(255,255,255,.94);
+z-index:20;
+background:rgba(255,255,255,.92);
 backdrop-filter:blur(14px);
 border-bottom:1px solid rgba(15,39,66,.08);
 }
@@ -64,24 +65,25 @@ border-bottom:1px solid rgba(15,39,66,.08);
 .css-logo-inner{
 max-width:980px;
 margin:0 auto;
-padding:14px 18px;
+padding:16px 18px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:18px;
+gap:16px;
 }
 
 .css-logo-text{
 display:flex;
 flex-direction:column;
-line-height:1.25;
+gap:2px;
 font-weight:900;
+letter-spacing:.04em;
 color:var(--navy);
-letter-spacing:.02em;
+line-height:1.3;
 }
 
 .css-logo-gradient{
-font-size:1.18rem;
+font-size:1.22rem;
 background:linear-gradient(135deg,var(--navy),var(--teal));
 -webkit-background-clip:text;
 background-clip:text;
@@ -89,38 +91,38 @@ color:transparent;
 }
 
 .logo-sub{
-font-size:.76rem;
+font-size:.74rem;
 color:var(--muted);
-font-weight:700;
+letter-spacing:.12em;
+text-transform:uppercase;
 }
 
 .top-nav{
 display:flex;
-align-items:center;
-gap:8px;
 flex-wrap:wrap;
 justify-content:flex-end;
+gap:8px;
 }
 
 .top-nav a,
 .nav-tel{
-min-height:34px;
-padding:6px 11px;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-border:1px solid rgba(15,39,66,.1);
+min-height:36px;
+padding:0 12px;
 border-radius:999px;
-background:#fff;
-color:var(--navy);
 font-size:.82rem;
 font-weight:800;
-box-shadow:0 4px 12px rgba(15,39,66,.05);
+color:var(--navy);
+background:#fff;
+border:1px solid rgba(15,39,66,.12);
+box-shadow:0 6px 16px rgba(15,39,66,.06);
 }
 
 .top-nav a:hover{
-background:linear-gradient(135deg,var(--navy),var(--navy2));
 color:#fff;
+background:linear-gradient(135deg,var(--navy),var(--teal));
 }
 
 .container{
@@ -132,23 +134,23 @@ padding:30px 18px 56px;
 .hero{
 position:relative;
 overflow:hidden;
-padding:44px 42px 46px;
-border-radius:30px;
+padding:48px 44px 46px;
+border-radius:32px;
 color:#fff;
 background:
-linear-gradient(135deg,rgba(15,39,66,.98),rgba(15,155,142,.88)),
-radial-gradient(circle at top right,rgba(200,164,93,.35),transparent 35%);
-box-shadow:0 22px 50px rgba(15,39,66,.18);
+linear-gradient(135deg,rgba(15,39,66,.96),rgba(15,143,134,.88)),
+radial-gradient(circle at 80% 20%,rgba(200,162,74,.35),transparent 30%);
+box-shadow:var(--shadow-soft);
 }
 
 .hero::after{
-content:"SMART OUTSOURCE";
+content:"AUDIT RISK RADAR";
 position:absolute;
-right:-95px;
-bottom:-22px;
-font-size:5.3rem;
+right:-120px;
+bottom:-24px;
+font-size:5.6rem;
 font-weight:900;
-letter-spacing:.04em;
+letter-spacing:.05em;
 color:rgba(255,255,255,.08);
 white-space:nowrap;
 pointer-events:none;
@@ -163,53 +165,48 @@ z-index:1;
 display:inline-flex;
 align-items:center;
 gap:8px;
-padding:7px 13px;
+margin-bottom:14px;
+padding:7px 12px;
 border-radius:999px;
 background:rgba(255,255,255,.14);
 border:1px solid rgba(255,255,255,.22);
+font-size:.86rem;
 font-weight:800;
-font-size:.88rem;
+letter-spacing:.08em;
 }
 
 .hero-badges{
 display:flex;
 flex-wrap:wrap;
 gap:8px;
-margin:18px 0 16px;
+margin:0 0 18px;
 }
 
 .badge{
 display:inline-flex;
 align-items:center;
-padding:6px 11px;
 min-height:28px;
+padding:3px 10px;
 border-radius:999px;
+font-size:.78rem;
+font-weight:800;
 background:rgba(255,255,255,.92);
 color:var(--navy);
-font-size:.78rem;
-font-weight:900;
 }
 
-.badge.alert{
-background:rgba(217,71,71,.95);
+.badge.red{
+background:rgba(201,75,75,.96);
 color:#fff;
 }
 
 .badge.gold{
-background:rgba(200,164,93,.96);
+background:rgba(200,162,74,.96);
 color:#fff;
-}
-
-h1{
-margin:0 0 18px;
-font-size:2.35rem;
-line-height:1.35;
-letter-spacing:.01em;
 }
 
 .hero p{
 max-width:760px;
-margin:0;
+margin:18px 0 0;
 color:rgba(255,255,255,.92);
 font-weight:600;
 }
@@ -218,34 +215,31 @@ font-weight:600;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:16px;
-margin:20px 0 24px;
+margin:22px 0 24px;
 }
 
 .risk-card{
 padding:18px 16px;
-border-radius:20px;
+border-radius:22px;
 background:#fff;
+border:1px solid rgba(15,39,66,.08);
 box-shadow:var(--shadow-card);
-border:1px solid rgba(15,39,66,.07);
-border-top:4px solid var(--teal);
+position:relative;
+overflow:hidden;
 }
 
-.risk-card:nth-child(2){
-border-top-color:var(--blue);
-}
-
-.risk-card:nth-child(3){
-border-top-color:var(--gold);
-}
-
-.risk-card:nth-child(4){
-border-top-color:var(--red);
+.risk-card::before{
+content:"";
+position:absolute;
+inset:0 auto 0 0;
+width:5px;
+background:linear-gradient(180deg,var(--teal),var(--gold));
 }
 
 .risk-card .label{
 display:inline-block;
 margin-bottom:8px;
-font-size:.75rem;
+font-size:.74rem;
 font-weight:900;
 color:var(--teal);
 letter-spacing:.08em;
@@ -253,10 +247,10 @@ letter-spacing:.08em;
 
 .risk-card strong{
 display:block;
-color:var(--navy);
-font-size:1.02rem;
-line-height:1.45;
 margin-bottom:6px;
+color:var(--navy);
+font-size:1.05rem;
+line-height:1.45;
 }
 
 .risk-card p{
@@ -268,10 +262,17 @@ line-height:1.65;
 
 .article-body{
 padding:34px 34px;
-border-radius:28px;
-background:rgba(255,255,255,.9);
-border:1px solid rgba(15,39,66,.07);
+border-radius:30px;
+background:rgba(255,255,255,.94);
+border:1px solid rgba(15,39,66,.08);
 box-shadow:var(--shadow-soft);
+}
+
+h1{
+margin:0;
+font-size:2.35rem;
+line-height:1.28;
+letter-spacing:.02em;
 }
 
 h2{
@@ -284,23 +285,10 @@ line-height:1.45;
 }
 
 h3{
-margin:28px 0 12px;
+margin:26px 0 12px;
 color:var(--navy);
-font-size:1.18rem;
+font-size:1.2rem;
 line-height:1.5;
-}
-
-p{
-margin:0 0 14px;
-}
-
-ul{
-margin:10px 0 0;
-padding-left:1.25em;
-}
-
-li{
-margin:6px 0;
 }
 
 .opening-box,
@@ -310,38 +298,32 @@ margin:6px 0;
 .summary-card,
 .cta-box,
 .disclaimer-box{
-position:relative;
-padding:23px 24px;
 margin:22px 0;
+padding:24px 24px;
 border-radius:22px;
 background:#fff;
-box-shadow:var(--shadow-card);
 border:1px solid rgba(15,39,66,.08);
+box-shadow:var(--shadow-card);
 }
 
 .opening-box{
 border-left:6px solid var(--teal);
-background:linear-gradient(135deg,#ffffff,#f0fbf9);
+background:linear-gradient(135deg,#ffffff,#f0fbfa);
 }
 
 .highlight-box{
-border-left:6px solid var(--blue);
-background:linear-gradient(135deg,#ffffff,#f2f7ff);
+border-left:6px solid var(--gold);
+background:linear-gradient(135deg,#fffdf7,#ffffff);
 }
 
 .alert-box{
 border-left:6px solid var(--red);
-background:linear-gradient(135deg,#ffffff,#fff5f5);
+background:linear-gradient(135deg,#fff7f7,#ffffff);
 }
 
 .action-box{
-border-left:6px solid var(--green);
-background:linear-gradient(135deg,#ffffff,#f2fbf6);
-}
-
-.summary-card{
-border-left:6px solid var(--gold);
-background:linear-gradient(135deg,#ffffff,#fffaf0);
+border-left:6px solid var(--blue);
+background:linear-gradient(135deg,#f6f9ff,#ffffff);
 }
 
 .box-label{
@@ -350,20 +332,20 @@ align-items:center;
 margin-bottom:10px;
 padding:4px 10px;
 border-radius:999px;
-background:var(--navy);
-color:#fff;
+background:rgba(15,39,66,.08);
+color:var(--navy);
 font-size:.78rem;
 font-weight:900;
-letter-spacing:.04em;
+letter-spacing:.06em;
 }
 
 .compare-table{
 width:100%;
 border-collapse:separate;
 border-spacing:0;
-margin:18px 0 24px;
 overflow:hidden;
 border-radius:18px;
+margin:18px 0 24px;
 box-shadow:var(--shadow-card);
 border:1px solid rgba(15,39,66,.08);
 background:#fff;
@@ -372,15 +354,15 @@ background:#fff;
 .compare-table th,
 .compare-table td{
 padding:14px 16px;
-border-bottom:1px solid var(--line);
-vertical-align:top;
 text-align:left;
+vertical-align:top;
+border-bottom:1px solid rgba(15,39,66,.08);
 }
 
 .compare-table th{
-background:linear-gradient(135deg,var(--navy),var(--navy2));
+background:linear-gradient(135deg,var(--navy),#163d62);
 color:#fff;
-font-weight:900;
+font-size:.9rem;
 }
 
 .compare-table tr:last-child td{
@@ -388,20 +370,20 @@ border-bottom:none;
 }
 
 .compare-table td:first-child{
+width:18%;
 font-weight:900;
 color:var(--navy);
-width:28%;
 }
 
 .step-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:16px;
-margin:18px 0 26px;
+margin:18px 0 24px;
 }
 
 .step-card{
-padding:19px 17px;
+padding:20px 18px;
 border-radius:20px;
 background:#fff;
 border:1px solid rgba(15,39,66,.08);
@@ -410,66 +392,73 @@ box-shadow:var(--shadow-card);
 
 .step-card .num{
 display:inline-flex;
-width:34px;
-height:34px;
 align-items:center;
 justify-content:center;
+width:34px;
+height:34px;
+margin-bottom:10px;
 border-radius:50%;
-background:linear-gradient(135deg,var(--teal),var(--blue));
+background:linear-gradient(135deg,var(--navy),var(--teal));
 color:#fff;
 font-weight:900;
-margin-bottom:10px;
 }
 
 .step-card strong{
 display:block;
-color:var(--navy);
 margin-bottom:6px;
+color:var(--navy);
 }
 
 .step-card p{
 margin:0;
 color:var(--muted);
 font-size:.92rem;
-line-height:1.68;
+line-height:1.7;
 }
 
 .checklist{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:18px;
-margin:18px 0 28px;
+margin:20px 0 26px;
 }
 
-.checklist .check-card{
-padding:21px 20px;
+.checklist > div{
+padding:22px 20px;
 border-radius:22px;
 background:#fff;
 box-shadow:var(--shadow-card);
 border:1px solid rgba(15,39,66,.08);
 }
 
-.checklist .danger{
-border-top:5px solid var(--red);
-}
-
-.checklist .safe{
-border-top:5px solid var(--blue);
-}
-
 .checklist h3{
 margin-top:0;
+}
+
+.checklist ul,
+.disclaimer-box ul{
+padding-left:1.2em;
+margin:10px 0 0;
+}
+
+.checklist li{
+margin:.45em 0;
+}
+
+.summary-card{
+border-left:6px solid var(--green);
+background:linear-gradient(135deg,#f4fff9,#ffffff);
 }
 
 .cta-box{
 color:#fff;
 background:
-linear-gradient(135deg,rgba(15,39,66,.98),rgba(22,61,98,.95)),
-radial-gradient(circle at top right,rgba(15,155,142,.28),transparent 34%);
+linear-gradient(135deg,var(--navy),var(--teal)),
+radial-gradient(circle at 90% 10%,rgba(200,162,74,.35),transparent 28%);
 }
 
 .cta-box p{
-color:rgba(255,255,255,.94);
+margin-top:0;
 font-weight:700;
 }
 
@@ -487,30 +476,21 @@ justify-content:center;
 min-height:48px;
 padding:0 22px;
 border-radius:999px;
-background:linear-gradient(135deg,var(--teal),#16b8aa);
-color:#fff;
+background:#fff;
+color:var(--navy);
 font-weight:900;
-box-shadow:0 8px 20px rgba(15,155,142,.25);
+box-shadow:0 10px 22px rgba(0,0,0,.16);
 }
 
 .cta-button.gold{
-background:linear-gradient(135deg,var(--gold),#e2bd71);
-box-shadow:0 8px 20px rgba(200,164,93,.25);
+background:linear-gradient(135deg,var(--gold),#e5c66c);
+color:#fff;
 }
 
 .disclaimer-box{
 background:#f8fafc;
-color:#475569;
+color:#4d5967;
 font-size:.9rem;
-box-shadow:none;
-}
-
-.disclaimer-box p{
-margin-bottom:8px;
-}
-
-.disclaimer-box ul{
-margin-top:8px;
 }
 
 @media(max-width:900px){
@@ -518,29 +498,17 @@ margin-top:8px;
 align-items:flex-start;
 flex-direction:column;
 }
-
 .top-nav{
 justify-content:flex-start;
 }
-
 .risk-row{
 grid-template-columns:repeat(2,1fr);
 }
-
 .step-grid{
 grid-template-columns:repeat(2,1fr);
 }
-
 .checklist{
 grid-template-columns:1fr;
-}
-
-h1{
-font-size:2rem;
-}
-
-.hero::after{
-font-size:4.1rem;
 }
 }
 
@@ -549,23 +517,19 @@ body{
 font-size:15.5px;
 line-height:1.78;
 }
-
 .css-logo-wrapper{
 position:static;
 }
-
 .css-logo-inner{
-padding:12px 12px;
+padding:14px 12px;
 gap:12px;
 }
-
 .top-nav{
 display:grid;
 grid-template-columns:repeat(2,minmax(0,1fr));
 gap:7px;
 width:100%;
 }
-
 .top-nav a,
 .nav-tel{
 width:100%;
@@ -574,60 +538,48 @@ border-radius:12px;
 white-space:normal;
 text-align:center;
 line-height:1.25;
-padding:6px 4px;
 box-sizing:border-box;
+padding:6px 8px;
 }
-
 .container{
 padding:18px 12px 40px;
 }
-
 .hero{
 padding:26px 18px 28px;
 border-radius:22px;
 }
-
 .hero::after{
 font-size:2.7rem;
 right:-120px;
 bottom:-8px;
 }
-
-.hero-badges{
-gap:6px;
+.hero-kicker{
+font-size:.78rem;
 }
-
 .badge{
 font-size:.74rem;
-padding:5px 9px;
 }
-
 h1{
 font-size:1.7rem;
 line-height:1.34;
 }
-
 h2{
 font-size:1.28rem;
 line-height:1.45;
 margin-top:34px;
 }
-
 h3{
 font-size:1.08rem;
 }
-
 .risk-row,
 .step-grid,
 .checklist{
 grid-template-columns:1fr;
 }
-
 .article-body{
 padding:20px 14px;
 border-radius:22px;
 }
-
 .opening-box,
 .highlight-box,
 .alert-box,
@@ -639,27 +591,17 @@ padding:18px 15px;
 margin:17px 0;
 border-radius:18px;
 }
-
-.risk-card,
-.step-card,
-.checklist .check-card{
-padding:17px 15px;
-border-radius:18px;
-}
-
 .cta-buttons{
 display:grid;
 grid-template-columns:1fr;
 gap:10px;
 }
-
 .cta-button{
 width:100%;
 min-height:48px;
 border-radius:14px;
 box-sizing:border-box;
 }
-
 .compare-table,
 .compare-table tbody,
 .compare-table tr,
@@ -668,17 +610,14 @@ display:block;
 width:100%;
 box-sizing:border-box;
 }
-
+.compare-table thead{
+display:none;
+}
 .compare-table{
 border:none;
 box-shadow:none;
 background:transparent;
 }
-
-.compare-table thead{
-display:none;
-}
-
 .compare-table tr{
 margin-bottom:12px;
 border-radius:16px;
@@ -687,32 +626,14 @@ background:#fff;
 box-shadow:var(--shadow-soft);
 border:1px solid rgba(15,39,66,.08);
 }
-
 .compare-table td{
-border-bottom:1px solid var(--line);
+border-bottom:1px solid rgba(15,39,66,.08);
 }
-
-.compare-table td:last-child{
-border-bottom:none;
-}
-
 .compare-table td:first-child{
 width:100%;
 background:linear-gradient(135deg,var(--navy),#163d62);
 color:#fff;
 font-weight:800;
-}
-
-.compare-table td:nth-child(2)::before{
-content:"ポイント：";
-font-weight:900;
-color:var(--teal);
-}
-
-.compare-table td:nth-child(3)::before{
-content:"対策：";
-font-weight:900;
-color:var(--blue);
 }
 }
 
@@ -720,30 +641,17 @@ color:var(--blue);
 body{
 font-size:15px;
 }
-
 .top-nav{
 grid-template-columns:1fr;
 }
-
 h1{
 font-size:1.55rem;
 }
-
 .article-body{
 padding:18px 12px;
 }
-
-.container{
-padding-left:10px;
-padding-right:10px;
-}
-
 .hero{
-padding:24px 15px 25px;
-}
-
-.css-logo-gradient{
-font-size:1.05rem;
+padding:24px 15px 26px;
 }
 } </style>
 
@@ -753,13 +661,13 @@ font-size:1.05rem;
 <header class="css-logo-wrapper">
   <div class="css-logo-inner">
     <div class="css-logo-text">
-      <span class="css-logo-gradient">🔍 島田税理士事務所</span>
+      <span class="css-logo-gradient">島田税理士事務所</span>
       <span class="logo-sub">YouTube動画連動column</span>
     </div>
-    <nav class="top-nav" aria-label="トップナビゲーション">
+    <nav class="top-nav" aria-label="主要ナビゲーション">
       <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
       <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
-      <a href="https://youtu.be/1q_2XIKY8-E" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+      <a href="https://youtu.be/geqgviavMcU" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
       <span class="nav-tel">【Tel 03-5485-2447】</span>
     </nav>
   </div>
@@ -770,288 +678,289 @@ font-size:1.05rem;
     <div class="hero-content">
       <div class="hero-kicker">YouTube連動コラム</div>
       <div class="hero-badges">
-        <span class="badge alert">経理丸投げアラート</span>
-        <span class="badge">記帳代行</span>
-        <span class="badge">クラウド会計</span>
-        <span class="badge gold">数字の見える化</span>
+        <span class="badge red">税務調査アラート</span>
+        <span class="badge">3年調査</span>
+        <span class="badge">5年調査</span>
+        <span class="badge gold">7年調査</span>
+        <span class="badge">証拠保存</span>
       </div>
-      <h1>あなたはどっち？税理士へ経理を丸投げして失敗する社長・成功する社長の決定的差は何？</h1>
+      <h1>【税務調査の回避術！】3年・5年・7年の違いと対策まとめ！</h1>
       <p>
-        レシートの山、入力作業、インボイス確認、帳簿のズレ。経理を税理士へ任せることは、時間と安心を得る有効な選択肢です。
-        ただし、「全部任せたから自分は何も見なくていい」と考えると、数字がブラックボックス化し、経営判断が遅れる危険があります。
+        税務調査で「何年分を見られるのか」は、経営者・個人事業主・フリーランスにとって非常に重要です。
+        3年・5年・7年では、見られる内容も、税務署からの見られ方も変わります。
+        今回は、調査期間ごとのリスクと、日頃からできる実務対策を分かりやすく整理します。
       </p>
     </div>
   </section>
 
-  <section class="risk-row" aria-label="今回の重要ポイント">
+  <section class="risk-row" aria-label="税務調査の重要カード">
     <div class="risk-card">
-      <span class="label">TIME</span>
-      <strong>時間を買う</strong>
-      <p>月10〜20時間の経理時間を、本業・営業・事業開発へ振り向けられる可能性があります。</p>
+      <span class="label">BASIC</span>
+      <strong>3年は日常経理の確認</strong>
+      <p>経費の曖昧さ、私用との混同、領収書の説明不足が見られやすい期間です。</p>
     </div>
     <div class="risk-card">
-      <span class="label">ACCURACY</span>
-      <strong>正確性を高める</strong>
-      <p>経費処理、インボイス、制度変更への対応など、専門家のチェックで不安を減らせます。</p>
+      <span class="label">BORDER</span>
+      <strong>5年は疑惑が深まる段階</strong>
+      <p>売上漏れ、現金管理、無申告など、経営姿勢そのものが問われます。</p>
     </div>
     <div class="risk-card">
-      <span class="label">VISIBILITY</span>
-      <strong>数字から離れない</strong>
-      <p>丸投げしても、利益・資金繰り・納税見込みは経営者が把握する必要があります。</p>
+      <span class="label">DANGER</span>
+      <strong>7年は不正認定リスク</strong>
+      <p>架空経費、二重帳簿、意図的な所得隠しは非常に重いリスクにつながります。</p>
     </div>
     <div class="risk-card">
-      <span class="label">RISK</span>
-      <strong>保存責任を確認</strong>
-      <p>電子取引データの保存など、税理士へ任せても経営者側に残る責任があります。</p>
+      <span class="label">DEFENSE</span>
+      <strong>証拠保存が最大の防御</strong>
+      <p>帳簿、契約書、領収書、成果物などを説明できる状態で残すことが基本です。</p>
     </div>
   </section>
 
   <article class="article-body">
     <div class="opening-box">
-      <span class="box-label">この記事のポイント</span>
+      <div class="box-label">この記事のポイント</div>
       <p>
-        「わっ……また溜まってる。レシートの山。」
-        確定申告や決算が近づくたびに、引き出しの中の領収書を見てため息が出る。
-        個人事業主や中小企業の社長にとって、経理は本業の集中力を奪いやすい仕事です。
+        「税務調査の連絡が来た」「3年前の経費は大丈夫だろうか」と不安になる方は少なくありません。
+        税務調査で遡られる期間は、実務上よく見られる3年、法律上の原則となる5年、そして不正が疑われる場合の7年で、意味合いが大きく異なります。
       </p>
       <p>
-        だからこそ、「もう全部、税理士に丸投げした方が楽なのでは？」と考えるのは自然です。
-        ただし、経理丸投げには向いている人と、危険な状態に入りやすい人がいます。
+        ただし、年数そのものが罰の重さを表すわけではありません。
+        重要なのは「どこまで過去を確認される可能性があるか」を理解し、日頃から説明できる経理を整えることです。
       </p>
     </div>
 
 ```
-<h2>経理丸投げは「時間」と「判断力」を買う行為</h2>
+<h2>税務調査の3年・5年・7年の違い</h2>
 <p>
-  経理丸投げの最大のメリットは、時間が戻ってくることです。
-  領収書の整理、会計入力、インボイス確認、帳簿のズレ修正は、一つひとつは小さく見えても、積み重なると大きな負担になります。
-</p>
-<p>
-  取引量によっては、月に10時間〜20時間以上かかるケースもあります。
-  たとえば本業で1時間5,000円の価値を生む方が、月20時間を経理に使っているなら、月10万円分の時間を経理に投じている計算になります。
-</p>
-
-<div class="highlight-box">
-  <span class="box-label">判断の核心</span>
-  <p>
-    月3万円で税理士に記帳代行を依頼し、その時間を営業や提案、事業開発に使えるなら、
-    経理丸投げは単なる「楽をするための外注」ではなく、「稼ぐための配置転換」になります。
-  </p>
-  <p>
-    実際に、ITフリーランスの方が経理を任せたことで営業・提案に集中できるようになり、月収が10万円以上伸びたというケースもあります。
-    ただし、成果は業種・営業力・契約内容により異なります。
-  </p>
-</div>
-
-<h2>正確性と安心感は、想像以上に大きい</h2>
-<p>
-  税金の世界では、「知らなかった」「うっかりしていた」「悪気はなかった」という事情だけでは、負担がなくなるとは限りません。
-  経費計上のミス、消費税の判定、インボイス対応、電子帳簿保存法への対応など、経理には専門的な判断が多く含まれます。
-</p>
-<p>
-  自力で経理をしていたフリーランスの方が、経費計上のミスに気づかず、後日税務署から指摘を受けたケースもあります。
-  本来の税金に加え、過少申告加算税や延滞税が発生すると、金額面だけでなく精神的な負担も大きくなります。
+  税務調査では、調査対象期間によって確認される深さやリスクが変わります。
+  まずは全体像を押さえましょう。
 </p>
 
 <table class="compare-table">
   <thead>
     <tr>
-      <th>項目</th>
-      <th>丸投げで得られるメリット</th>
-      <th>確認すべき注意点</th>
+      <th>期間</th>
+      <th>主な見られ方</th>
+      <th>狙われやすいポイント</th>
+      <th>実務上の対策</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>時間</td>
-      <td>入力・整理・確認作業を減らし、本業に集中しやすくなります。</td>
-      <td>資料提出や質問対応は必要です。完全放置はできません。</td>
+      <td>3年</td>
+      <td>通常の税務調査で確認されやすい期間です。</td>
+      <td>経費計上の曖昧さ、プライベートとの混同、領収書の説明不足。</td>
+      <td>第三者に説明できる証拠を残し、日常経理を丁寧に整えます。</td>
     </tr>
     <tr>
-      <td>正確性</td>
-      <td>専門家のチェックにより、処理ミスを減らせる可能性があります。</td>
-      <td>対応範囲は契約により異なります。事前確認が必要です。</td>
+      <td>5年</td>
+      <td>売上漏れや無申告など、疑いが強まった場合に問題化しやすい期間です。</td>
+      <td>現金売上の管理不足、売上除外、帳簿と資金の流れの不一致。</td>
+      <td>帳簿、銀行口座、カード明細、現金管理を一致させます。</td>
     </tr>
     <tr>
-      <td>安心感</td>
-      <td>制度変更や税務上の不安を相談しやすくなります。</td>
-      <td>税務判断・節税提案まで含むかは契約内容によります。</td>
-    </tr>
-    <tr>
-      <td>経営判断</td>
-      <td>数字が早く見える体制なら、判断スピードが上がります。</td>
-      <td>試算表が1〜2ヶ月遅れると、判断も遅れやすくなります。</td>
+      <td>7年</td>
+      <td>偽りその他不正の行為が疑われる場合に大きなリスクとなる期間です。</td>
+      <td>架空経費、二重帳簿、意図的な所得隠し、証拠隠し。</td>
+      <td>危ない取引を避け、書類を適切に保存し、クリーンな経営を徹底します。</td>
     </tr>
   </tbody>
 </table>
 
-<h2>本当に怖いデメリットは「数字との距離」</h2>
-<p>
-  経理丸投げにはコストがかかります。
-  法人の場合、顧問料と記帳代行を合わせて月3万〜5万円以上になることもあります。
-  ただし、金額は年商規模、取引量、訪問頻度、相談範囲、決算内容などによって変動します。
-</p>
-<p>
-  しかし、より注意すべきなのはコストそのものではありません。
-  本当に怖いのは、経営者が数字から離れてしまうことです。
-</p>
-
-<div class="alert-box">
-  <span class="box-label">経理丸投げアラート</span>
-  <p>
-    「税理士に任せているから大丈夫」と考え、今月の利益、資金残高、納税見込み、キャッシュが何ヶ月もつかを即答できない状態は危険です。
-  </p>
-  <p>
-    資料を渡してから試算表が出るまで1〜2ヶ月かかる体制では、経営判断が常に後ろ倒しになります。
-    数字が見えないまま走る経営は、目隠し運転に近い状態です。
-  </p>
-</div>
-
-<h2>経理丸投げで失敗しやすい3つの落とし穴</h2>
-
-<h3>落とし穴1：丸投げ＝何もしなくていい、という誤解</h3>
-<p>
-  領収書には、「何のために」「誰と」「どの事業に関係する支出なのか」までは書かれていません。
-  税理士側で処理するためには、経営者への確認が必要になる場面があります。
-</p>
-<p>
-  つまり、丸投げしても質問対応は必ず発生します。
-  完全放置できるサービスではなく、役割分担を明確にすることが大切です。
-</p>
-
-<h3>落とし穴2：電子帳簿保存法の勘違い</h3>
-<p>
-  Amazonの領収書、メール添付の請求書、Webからダウンロードした利用明細など、電子で受け取った取引データは、原則として電子データのまま保存する必要があります。
-</p>
-<p>
-  紙に印刷して保管するだけでは、要件を満たさない可能性があります。
-  税理士に経理を任せていても、データ保存の責任がすべて消えるわけではありません。
-</p>
-
-<h3>落とし穴3：格安丸投げの罠</h3>
-<p>
-  格安の記帳サービスの中には、「入力するだけ」で、節税提案や経営アドバイスまでは含まれないものもあります。
-  決算直前に「税金が300万円です」と言われても、その時点では選択肢が限られている場合があります。
-</p>
-
-<div class="alert-box">
-  <span class="box-label">失敗するパターン</span>
-  <p>
-    若手社長Dさんは、毎月封筒に領収書を入れて送るだけで、数字を確認していませんでした。
-    1年後の決算時に「利益が大きく出ています。税金は300万円です」と言われ、初めて状況を把握しました。
-  </p>
-  <p>
-    毎月数字を見ていれば、設備投資、共済、役員報酬、納税資金の準備など、検討できる対策があったかもしれません。
-    しかし、丸投げが思考停止になっていたことが、判断の遅れにつながりました。
-  </p>
-</div>
-
-<h2>成功する社長は「スマート丸投げ」にしている</h2>
-<p>
-  これからの経理丸投げで重要なのは、全部任せるけれど、数字からは離れないという考え方です。
-  入力作業や確認作業は外部に任せつつ、経営判断に必要な数字は社長が見える状態にしておく。
-  これが、スマート丸投げです。
-</p>
-
 <div class="highlight-box">
-  <span class="box-label">スマート丸投げの基本設計</span>
+  <div class="box-label">判断の核心</div>
   <p>
-    クラウド会計を使い、銀行口座やクレジットカードを連携し、税理士はチェックと戦略の役割を担う。
-    この形にすると、作業負担を減らしながら、数字の見える化を進めやすくなります。
-  </p>
-  <p>
-    経理は過去の記録ですが、経営は未来への選択です。
-    過去の数字を早く整理し、未来の判断に使える状態にすることが重要です。
+    税務調査で大切なのは、「これは経費です」と言えるかどうかではなく、
+    「第三者に見せても事業との関係を説明できるか」です。
+    調査官に説明できる証拠があるかどうかで、結果は大きく変わる可能性があります。
   </p>
 </div>
 
-<h2>今日から整えたい実務ステップ</h2>
-<div class="step-grid">
-  <div class="step-card">
-    <span class="num">1</span>
-    <strong>資料提出ルールを決める</strong>
-    <p>領収書、請求書、通帳、カード明細をいつ・どの形式で渡すかを決めます。</p>
-  </div>
-  <div class="step-card">
-    <span class="num">2</span>
-    <strong>電子データ保存を確認する</strong>
-    <p>メール請求書、Web領収書、ECサイト明細を電子のまま保存できる体制にします。</p>
-  </div>
-  <div class="step-card">
-    <span class="num">3</span>
-    <strong>月次数字を見る日を作る</strong>
-    <p>利益、資金残高、納税見込みを毎月確認する日を固定します。</p>
-  </div>
-  <div class="step-card">
-    <span class="num">4</span>
-    <strong>契約範囲を確認する</strong>
-    <p>記帳だけなのか、節税提案・資金繰り相談・経営助言まで含むのか確認します。</p>
-  </div>
-  <div class="step-card">
-    <span class="num">5</span>
-    <strong>質問対応を止めない</strong>
-    <p>税理士からの確認事項に早く答えるほど、数字の完成も早くなります。</p>
-  </div>
-  <div class="step-card">
-    <span class="num">6</span>
-    <strong>未来の判断に使う</strong>
-    <p>過去の記録で終わらせず、投資・採用・納税準備・融資判断に活用します。</p>
-  </div>
+<h2>1. 日常のうっかりが命取りになる「3年」調査</h2>
+<p>
+  法律上の更正期間は原則として5年ですが、実務上は過去3年分を中心に確認されるケースが多くあります。
+  そのため、まず固めるべきは直近3年分の経理です。
+</p>
+<p>
+  3年調査で見られやすいのは、経費計上の曖昧さです。
+  特に、交際費、会議費、旅費交通費、消耗品費などは、事業との関連性を説明できるかが重要になります。
+</p>
+
+<div class="alert-box">
+  <div class="box-label">失敗するパターン</div>
+  <p>
+    ある個人事業主の方は、友人との食事代を「打ち合わせ」として経費にしていました。
+    しかし、相手、目的、案件内容、事業との関係を説明できず、多くが否認される結果となりました。
+  </p>
+  <p>
+    「これくらい大丈夫だろう」という感覚だけで経費にしていると、数年分がまとまって問題になることがあります。
+  </p>
 </div>
 
 <div class="action-box">
-  <span class="box-label">今すぐできる防御策</span>
+  <div class="box-label">今すぐできる防御策</div>
   <p>
-    「経理を任せる範囲」と「社長が見るべき数字」を分けてください。
-    経理作業は外注しても、利益・資金繰り・納税見込みは社長が毎月確認する。
-    この線引きができている会社ほど、丸投げを武器にできます。
+    領収書やレシートには、できるだけ内容をメモしておきましょう。
+    たとえば「取引先名」「打ち合わせ内容」「案件名」「参加者」などを残すだけでも、後から説明しやすくなります。
+  </p>
+  <p>
+    判断基準はシンプルです。
+    「この支出を、数年後に税務署へ説明できるか」と考えて処理することが、3年調査への基本的な備えです。
   </p>
 </div>
 
-<h2>失敗する社長・成功する社長チェックリスト</h2>
+<h2>2. 疑惑を招くと泥沼化しやすい「5年」調査</h2>
+<p>
+  3年分の確認で、売上漏れや現金管理の不自然さが見つかると、調査対象がさらに広がる可能性があります。
+  5年調査で問題になりやすいのは、単なるミスではなく、売上や資金の流れに関する不整合です。
+</p>
+<p>
+  特に現金商売では、売上管理、レジ記録、仕入れ、在庫、銀行入金の流れが見られます。
+  「この仕入れ量に対して、この売上は少なすぎないか」という形で、業種平均や取引実態から確認されることもあります。
+</p>
+
+<div class="alert-box">
+  <div class="box-label">税務調査アラート</div>
+  <p>
+    飲食店などで現金売上の一部をレジに通さず除外していた場合、仕入れ量や利益率から不自然さを指摘されることがあります。
+    売上除外と判断されると、追徴税額だけでなく、加算税や延滞税の負担も重くなる可能性があります。
+  </p>
+</div>
+
+<div class="highlight-box">
+  <div class="box-label">成功するパターン</div>
+  <p>
+    5年調査を避けるためには、帳簿とお金の流れを一致させることが重要です。
+    クラウド会計ソフトを利用し、銀行口座やクレジットカードと連携させることで、入出金の記録を残しやすくなります。
+  </p>
+  <p>
+    無申告の状態にある場合は、税務署から連絡が来る前に自主的に期限後申告を検討してください。
+    個別事情によりますが、自主的な対応によりペナルティが軽減される可能性があります。
+  </p>
+</div>
+
+<h2>3. 不正認定のリスクが高まる「7年」調査</h2>
+<p>
+  7年調査は、税務署が「偽りその他不正の行為」があると判断した場合に問題となる、非常に重いステージです。
+  ここでは、単なる経理ミスではなく、意図的な所得隠しや証拠の偽装が疑われます。
+</p>
+<p>
+  架空経費、二重帳簿、実態のない外注費、売上の隠蔽などは、節税ではなく脱税と評価される可能性があります。
+  場合によっては、重加算税や刑事告発のリスクも生じます。
+</p>
+
+<div class="alert-box">
+  <div class="box-label">最終警告</div>
+  <p>
+    実態のないコンサルティング会社へ業務委託したように装い、多額の経費を計上していた法人が、契約書や成果物の不備から不正を指摘されるケースがあります。
+    形式的な契約書だけでは不十分で、実際に業務が行われた証拠が重要です。
+  </p>
+</div>
+
+<div class="action-box">
+  <div class="box-label">防御策のポイント</div>
+  <p>
+    7年調査への最大の対策は、危ない橋を渡らないことです。
+    架空の取引、売上の隠蔽、実態のない経費計上は、会社と経営者自身を大きなリスクにさらします。
+  </p>
+  <p>
+    帳簿書類は原則として7年、欠損金がある場合などは10年の保存が必要になることがあります。
+    書類を捨てる、証拠を残さない、説明できない取引を作るといった対応は避けましょう。
+  </p>
+</div>
+
+<h2>税務調査に備える実務ステップ</h2>
+<p>
+  税務調査対策は、調査の連絡が来てから始めるものではありません。
+  日々の経理の積み重ねが、最終的な防御力になります。
+</p>
+
+<div class="step-grid">
+  <div class="step-card">
+    <span class="num">1</span>
+    <strong>過去3年分の経費を確認する</strong>
+    <p>交際費、会議費、旅費、消耗品など、私用との混同がないか確認します。</p>
+  </div>
+  <div class="step-card">
+    <span class="num">2</span>
+    <strong>売上と入金の流れを合わせる</strong>
+    <p>帳簿、通帳、レジ、請求書、カード明細が整合しているか確認します。</p>
+  </div>
+  <div class="step-card">
+    <span class="num">3</span>
+    <strong>証拠を残す</strong>
+    <p>契約書、領収書、議事録、成果物、メールなどを説明可能な状態で保存します。</p>
+  </div>
+  <div class="step-card">
+    <span class="num">4</span>
+    <strong>無申告を放置しない</strong>
+    <p>申告漏れがある場合は、税務署から連絡が来る前の自主対応を検討します。</p>
+  </div>
+  <div class="step-card">
+    <span class="num">5</span>
+    <strong>調査連絡後は日程を整える</strong>
+    <p>税務調査の連絡が来ても、日程変更が可能な場合があります。焦らず準備しましょう。</p>
+  </div>
+  <div class="step-card">
+    <span class="num">6</span>
+    <strong>専門家へ早めに相談する</strong>
+    <p>判断に迷う取引や過年度の不安がある場合は、早めに税理士へ確認してください。</p>
+  </div>
+</div>
+
+<h2>税務調査リスク診断チェックリスト</h2>
 <div class="checklist">
-  <div class="check-card danger">
-    <h3>🔴 危険な状態 / 失敗するパターン</h3>
+  <div>
+    <h3>🔴 危険な状態 / 🔴 失敗するパターン</h3>
     <ul>
-      <li>領収書を封筒で送って終わりにしている</li>
-      <li>今月の利益を即答できない</li>
-      <li>資金が何ヶ月もつか把握していない</li>
-      <li>試算表を見るのが決算直前だけ</li>
-      <li>電子取引データを紙だけで保存している</li>
-      <li>格安サービスの対応範囲を確認していない</li>
-      <li>税理士からの質問に返信が遅い</li>
-      <li>「任せたから大丈夫」と思考停止している</li>
+      <li>領収書はあるが、何のための支出か説明できない</li>
+      <li>友人や家族との食事を安易に経費にしている</li>
+      <li>現金売上と帳簿の金額が一致していない</li>
+      <li>売上の一部を入金せず、記録にも残していない</li>
+      <li>実態のない外注費やコンサル料を計上している</li>
+      <li>契約書はあるが、成果物や業務実態がない</li>
+      <li>過去の申告漏れや無申告を放置している</li>
+      <li>税務調査の連絡に慌てて、準備なく対応してしまう</li>
     </ul>
   </div>
-  <div class="check-card safe">
-    <h3>🔵 守れる状態 / 成功するパターン</h3>
+  <div>
+    <h3>🔵 守れる状態 / 🔵 成功するパターン</h3>
     <ul>
-      <li>経理作業は任せつつ、数字は毎月見ている</li>
-      <li>銀行・カードをクラウド会計に連携している</li>
-      <li>利益・資金残高・納税見込みを確認している</li>
-      <li>税理士と月次確認のタイミングを決めている</li>
-      <li>電子データ保存のルールを整えている</li>
-      <li>契約範囲を事前に確認している</li>
-      <li>節税や資金繰りの相談時期を前倒ししている</li>
-      <li>過去の記録を未来の判断に使っている</li>
+      <li>経費ごとに相手先、目的、案件内容を説明できる</li>
+      <li>帳簿、通帳、請求書、領収書が整理されている</li>
+      <li>現金売上を毎日記録し、レジや入金と照合している</li>
+      <li>クラウド会計などで入出金の記録を残している</li>
+      <li>外注費や委託費について成果物やメールを保存している</li>
+      <li>書類を保存期間に応じて適切に保管している</li>
+      <li>申告漏れに気づいたら早めに自主対応を検討している</li>
+      <li>調査連絡後は日程調整を含め、専門家に相談している</li>
     </ul>
   </div>
 </div>
 
-<h2>まとめ：経理丸投げは逃げではなく、使い方が重要</h2>
+<h2>税務調査の連絡が来たときの注意点</h2>
+<div class="action-box">
+  <div class="box-label">調査前の実務行動</div>
+  <p>
+    税務調査の連絡が来ても、すぐに「明日でも大丈夫です」と答える必要はありません。
+    予定や準備状況に応じて、日程変更が可能な場合があります。
+  </p>
+  <p>
+    調査対象期間、確認される税目、必要書類を把握し、帳簿や証拠資料を整理してから対応しましょう。
+    不安な点がある場合は、調査前に専門家へ相談することをおすすめします。
+  </p>
+</div>
+
 <div class="summary-card">
-  <span class="box-label">まとめ</span>
+  <div class="box-label">まとめ</div>
   <p>
-    経理丸投げは、逃げではありません。
-    正しく使えば、時間が戻り、判断が早くなり、ビジネスを前に進める力になります。
+    税務調査は、3年で日常経理を見られ、5年で売上や申告姿勢を問われ、7年で不正の有無が大きな問題になります。
+    鉄則は「3年で守りを固め、5年の疑惑を招かず、7年の誘惑に絶対に乗らない」ことです。
   </p>
   <p>
-    ただし、丸投げが思考停止になると危険です。
-    経理作業は専門家に任せても、経営者は数字から離れてはいけません。
-  </p>
-  <p>
-    成功する社長は、「全部任せる、でも数字は見る」というスマート丸投げを実践しています。
-    自社の場合、どこまで任せるべきか、どの数字を毎月確認すべきかを整理することが、次の一歩です。
+    日々の記帳、証拠の保管、クリーンな経営意識。
+    この3つを整えることが、会社と経営者自身を守る最も現実的な対策です。
+    税務調査は、ある意味で経営の通信簿です。普段から説明できる経理を作っておきましょう。
   </p>
 </div>
 
@@ -1062,12 +971,12 @@ font-size:1.05rem;
   </p>
   <div class="cta-buttons">
     <a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
-    <a class="cta-button gold" href="https://youtu.be/1q_2XIKY8-E" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
+    <a class="cta-button gold" href="https://youtu.be/geqgviavMcU" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
   </div>
 </div>
 
 <div class="disclaimer-box">
-  <p><strong>【作成月】</strong>2026/06</p>
+  <p><strong>【作成月】</strong>2026/07</p>
   <p><strong>【ご利用にあたっての注意事項】</strong></p>
   <ul>
     <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
