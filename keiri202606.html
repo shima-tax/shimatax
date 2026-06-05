@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>脱税より怖い？“雑な経理”5選。税務調査で疑われる社長の共通点｜島田税理士事務所</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+<style>
+:root{
+  --navy:#0f2742;
+  --navy2:#163d62;
+  --teal:#0f766e;
+  --gold:#c8a24a;
+  --red:#c2413b;
+  --blue:#2563eb;
+  --green:#15803d;
+  --bg:#f4f7fa;
+  --text:#1f2937;
+  --muted:#667085;
+  --line:rgba(15,39,66,.12);
+  --shadow-soft:0 12px 32px rgba(15,39,66,.10);
+  --shadow-card:0 10px 26px rgba(15,39,66,.08);
+  --radius:24px;
+}
+html{
+  scroll-behavior:smooth;
+  -webkit-text-size-adjust:100%;
+}
+body{
+  margin:0;
+  overflow-x:hidden;
+  font-size:16px;
+  line-height:1.85;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left,rgba(15,118,110,.08),transparent 34%),
+    linear-gradient(180deg,#ffffff 0%,var(--bg) 100%);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+img{
+  max-width:100%;
+  height:auto;
+}
+.css-logo-wrapper{
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid rgba(15,39,66,.08);
+}
+.css-logo-inner{
+  max-width:980px;
+  margin:0 auto;
+  padding:14px 18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+}
+.css-logo-text{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:190px;
+}
+.css-logo-gradient{
+  font-weight:900;
+  letter-spacing:.04em;
+  font-size:1.18rem;
+  background:linear-gradient(135deg,var(--navy),var(--teal));
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+.logo-sub{
+  font-size:.78rem;
+  color:var(--gold);
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.top-nav{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.top-nav a,
+.nav-tel{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:36px;
+  padding:6px 12px;
+  border-radius:999px;
+  font-size:.84rem;
+  font-weight:800;
+  background:#fff;
+  border:1px solid rgba(15,39,66,.12);
+  box-shadow:0 4px 14px rgba(15,39,66,.06);
+  color:var(--navy);
+}
+.top-nav a:nth-child(2){
+  color:#fff;
+  background:linear-gradient(135deg,var(--teal),#14b8a6);
+  border-color:transparent;
+}
+.top-nav a:nth-child(3){
+  color:#fff;
+  background:linear-gradient(135deg,var(--gold),#d7b75f);
+  border-color:transparent;
+}
+.nav-tel{
+  color:var(--teal);
+}
+.container{
+  max-width:980px;
+  margin:0 auto;
+  padding:30px 18px 56px;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  padding:48px 42px;
+  border-radius:32px;
+  color:#fff;
+  background:
+    linear-gradient(135deg,rgba(15,39,66,.98),rgba(22,61,98,.94) 52%,rgba(15,118,110,.92)),
+    radial-gradient(circle at top right,rgba(200,162,74,.35),transparent 30%);
+  box-shadow:var(--shadow-soft);
+}
+.hero::after{
+  content:"AUDIT RISK RADAR";
+  position:absolute;
+  right:-80px;
+  bottom:-22px;
+  font-size:4.8rem;
+  font-weight:900;
+  letter-spacing:.04em;
+  color:rgba(255,255,255,.08);
+  white-space:nowrap;
+  pointer-events:none;
+}
+.hero-content{
+  position:relative;
+  z-index:1;
+}
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:14px;
+  padding:6px 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.13);
+  border:1px solid rgba(255,255,255,.22);
+  font-size:.86rem;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+.hero-badges{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin:0 0 18px;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:800;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.18);
+}
+.badge.alert{
+  background:rgba(194,65,59,.22);
+  border-color:rgba(255,255,255,.28);
+}
+.badge.gold{
+  background:rgba(200,162,74,.22);
+}
+.risk-row{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+  margin:18px 0 22px;
+}
+.risk-card{
+  background:#fff;
+  border:1px solid rgba(15,39,66,.08);
+  border-radius:22px;
+  padding:18px 16px;
+  box-shadow:var(--shadow-card);
+  position:relative;
+  overflow:hidden;
+}
+.risk-card::before{
+  content:"";
+  position:absolute;
+  inset:0 auto 0 0;
+  width:5px;
+  background:linear-gradient(180deg,var(--teal),var(--gold));
+}
+.risk-card .label{
+  display:inline-block;
+  margin-bottom:8px;
+  color:var(--teal);
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.06em;
+}
+.risk-card strong{
+  display:block;
+  margin-bottom:6px;
+  color:var(--navy);
+  font-size:1.02rem;
+  line-height:1.45;
+}
+.risk-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:.92rem;
+  line-height:1.65;
+}
+.article-body{
+  background:rgba(255,255,255,.95);
+  border:1px solid rgba(15,39,66,.08);
+  border-radius:28px;
+  padding:34px 32px;
+  box-shadow:var(--shadow-soft);
+}
+h1{
+  margin:0 0 16px;
+  font-size:2.45rem;
+  line-height:1.28;
+  letter-spacing:.01em;
+}
+h2{
+  margin:42px 0 18px;
+  padding-left:14px;
+  border-left:6px solid var(--teal);
+  color:var(--navy);
+  font-size:1.55rem;
+  line-height:1.45;
+}
+h3{
+  margin:28px 0 12px;
+  color:var(--navy);
+  font-size:1.16rem;
+  line-height:1.5;
+}
+p{
+  margin:0 0 14px;
+}
+ul{
+  margin:10px 0 0;
+  padding-left:1.25em;
+}
+li{
+  margin:.35em 0;
+}
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
+  padding:24px 22px;
+  margin:22px 0;
+  border-radius:22px;
+  border:1px solid rgba(15,39,66,.08);
+  box-shadow:var(--shadow-card);
+}
+.opening-box{
+  background:linear-gradient(135deg,#ffffff,#f8fbff);
+  border-left:6px solid var(--blue);
+}
+.highlight-box{
+  background:linear-gradient(135deg,rgba(15,118,110,.08),#ffffff);
+  border-left:6px solid var(--teal);
+}
+.alert-box{
+  background:linear-gradient(135deg,rgba(194,65,59,.08),#ffffff);
+  border-left:6px solid var(--red);
+}
+.action-box{
+  background:linear-gradient(135deg,rgba(37,99,235,.08),#ffffff);
+  border-left:6px solid var(--blue);
+}
+.box-label{
+  display:inline-flex;
+  align-items:center;
+  margin-bottom:10px;
+  padding:5px 10px;
+  border-radius:999px;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.04em;
+  color:#fff;
+  background:linear-gradient(135deg,var(--navy),var(--teal));
+}
+.compare-table{
+  width:100%;
+  border-collapse:separate;
+  border-spacing:0;
+  margin:18px 0 24px;
+  overflow:hidden;
+  border-radius:18px;
+  box-shadow:var(--shadow-card);
+  background:#fff;
+}
+.compare-table th{
+  background:linear-gradient(135deg,var(--navy),var(--navy2));
+  color:#fff;
+  padding:14px 12px;
+  text-align:left;
+  font-size:.92rem;
+}
+.compare-table td{
+  padding:14px 12px;
+  border-bottom:1px solid rgba(15,39,66,.08);
+  vertical-align:top;
+}
+.compare-table tr:last-child td{
+  border-bottom:none;
+}
+.compare-table td:first-child{
+  font-weight:900;
+  color:var(--navy);
+  width:24%;
+}
+.step-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin:18px 0 24px;
+}
+.step-card{
+  background:#fff;
+  border:1px solid rgba(15,39,66,.08);
+  border-radius:20px;
+  padding:18px 16px;
+  box-shadow:var(--shadow-card);
+}
+.step-card span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:34px;
+  height:34px;
+  margin-bottom:10px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--teal),#14b8a6);
+  color:#fff;
+  font-weight:900;
+}
+.step-card strong{
+  display:block;
+  margin-bottom:6px;
+  color:var(--navy);
+}
+.step-card p{
+  margin:0;
+  color:var(--muted);
+  font-size:.93rem;
+}
+.checklist{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin:20px 0 26px;
+}
+.check-card{
+  background:#fff;
+  border-radius:22px;
+  padding:20px 18px;
+  border:1px solid rgba(15,39,66,.08);
+  box-shadow:var(--shadow-card);
+}
+.check-card.danger{
+  border-top:6px solid var(--red);
+}
+.check-card.safe{
+  border-top:6px solid var(--blue);
+}
+.check-card h3{
+  margin:0 0 10px;
+}
+.check-card ul{
+  padding-left:0;
+  list-style:none;
+}
+.check-card li{
+  position:relative;
+  padding-left:1.55em;
+}
+.check-card li::before{
+  content:"✓";
+  position:absolute;
+  left:0;
+  top:0;
+  font-weight:900;
+  color:var(--teal);
+}
+.check-card.danger li::before{
+  content:"!";
+  color:var(--red);
+}
+.summary-card{
+  background:linear-gradient(135deg,#fff,rgba(200,162,74,.12));
+  border-left:6px solid var(--gold);
+}
+.cta-box{
+  background:
+    linear-gradient(135deg,rgba(15,39,66,.96),rgba(15,118,110,.92)),
+    radial-gradient(circle at top right,rgba(200,162,74,.32),transparent 36%);
+  color:#fff;
+  border:none;
+}
+.cta-box p{
+  font-weight:700;
+}
+.cta-buttons{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
+}
+.cta-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 22px;
+  border-radius:999px;
+  background:#fff;
+  color:var(--navy);
+  font-weight:900;
+  box-shadow:0 8px 22px rgba(0,0,0,.16);
+}
+.cta-button.gold{
+  color:#fff;
+  background:linear-gradient(135deg,var(--gold),#d7b75f);
+}
+.disclaimer-box{
+  background:#f8fafc;
+  color:#475569;
+  font-size:.9rem;
+  box-shadow:none;
+}
+.disclaimer-box ul{
+  margin-top:8px;
+}
+.note{
+  color:var(--muted);
+  font-size:.94rem;
+}
+.marker{
+  background:linear-gradient(transparent 60%,rgba(200,162,74,.32) 60%);
+  font-weight:900;
+}
+.rank{
+  display:inline-flex;
+  margin-right:6px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--red),#ef6a62);
+  border-radius:999px;
+  padding:2px 9px;
+  font-size:.82rem;
+  font-weight:900;
+}
+@media (max-width:900px){
+  .css-logo-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .top-nav{
+    justify-content:flex-start;
+  }
+  .risk-row{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .step-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+  .checklist{
+    grid-template-columns:1fr;
+  }
+  h1{
+    font-size:2.05rem;
+  }
+}
+@media (max-width:640px){
+  body{
+    font-size:15.5px;
+    line-height:1.78;
+  }
+  .css-logo-wrapper{
+    position:static;
+  }
+  .css-logo-inner{
+    padding:12px;
+    gap:10px;
+  }
+  .top-nav{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:7px;
+    width:100%;
+  }
+  .top-nav a,
+  .nav-tel{
+    width:100%;
+    min-height:38px;
+    box-sizing:border-box;
+    border-radius:12px;
+    white-space:normal;
+    text-align:center;
+    line-height:1.25;
+    padding:7px 6px;
+    font-size:.78rem;
+  }
+  .container{
+    padding:18px 12px 40px;
+  }
+  .hero{
+    padding:26px 18px 28px;
+    border-radius:22px;
+  }
+  .hero::after{
+    font-size:2.7rem;
+    right:-120px;
+    bottom:-8px;
+  }
+  .hero-kicker{
+    font-size:.78rem;
+  }
+  .badge{
+    font-size:.74rem;
+  }
+  h1{
+    font-size:1.7rem;
+    line-height:1.34;
+  }
+  h2{
+    font-size:1.28rem;
+    line-height:1.45;
+    margin:34px 0 14px;
+  }
+  h3{
+    font-size:1.08rem;
+  }
+  .risk-row,
+  .step-grid,
+  .checklist{
+    grid-template-columns:1fr;
+  }
+  .risk-card{
+    padding:16px 15px;
+    border-radius:18px;
+  }
+  .article-body{
+    padding:20px 14px;
+    border-radius:22px;
+  }
+  .opening-box,
+  .highlight-box,
+  .alert-box,
+  .action-box,
+  .summary-card,
+  .cta-box,
+  .disclaimer-box{
+    padding:18px 15px;
+    margin:17px 0;
+    border-radius:18px;
+  }
+  .cta-buttons{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .cta-button{
+    width:100%;
+    min-height:48px;
+    border-radius:14px;
+    box-sizing:border-box;
+  }
+  .compare-table,
+  .compare-table tbody,
+  .compare-table tr,
+  .compare-table td{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+  }
+  .compare-table thead{
+    display:none;
+  }
+  .compare-table{
+    background:transparent;
+    box-shadow:none;
+    border-radius:0;
+  }
+  .compare-table tr{
+    margin-bottom:12px;
+    border-radius:16px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:var(--shadow-soft);
+    border:1px solid rgba(15,39,66,.08);
+  }
+  .compare-table td{
+    border-bottom:1px solid rgba(15,39,66,.08);
+  }
+  .compare-table td:first-child{
+    width:100%;
+    background:linear-gradient(135deg,var(--navy),#163d62);
+    color:#fff;
+    font-weight:800;
+  }
+  .compare-table td:nth-child(2)::before{
+    content:"リスク：";
+    font-weight:900;
+    color:var(--red);
+  }
+  .compare-table td:nth-child(3)::before{
+    content:"対策：";
+    font-weight:900;
+    color:var(--teal);
+  }
+}
+@media (max-width:380px){
+  body{
+    font-size:15px;
+  }
+  .top-nav{
+    grid-template-columns:1fr;
+  }
+  h1{
+    font-size:1.55rem;
+  }
+  .article-body{
+    padding:18px 12px;
+  }
+  .hero{
+    padding:24px 15px 26px;
+  }
+  .css-logo-gradient{
+    font-size:1.05rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header class="css-logo-wrapper">
+  <div class="css-logo-inner">
+    <div class="css-logo-text">
+      <div class="css-logo-gradient">島田税理士事務所</div>
+      <div class="logo-sub">YouTube動画連動column</div>
+    </div>
+    <nav class="top-nav" aria-label="サイトナビゲーション">
+      <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+      <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+      <a href="https://youtu.be/9XUQOPe6XSw" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+      <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-kicker">YouTube連動コラム</div>
+      <div class="hero-badges">
+        <span class="badge alert">税務調査アラート</span>
+        <span class="badge">雑な経理</span>
+        <span class="badge">売上管理</span>
+        <span class="badge gold">証拠保存</span>
+      </div>
+      <h1>脱税より怖い？“雑な経理”5選。</h1>
+      <h1>税務調査で疑われる社長の共通点</h1>
+      <p>脱税するつもりがなくても、レシート紛失、現金管理の乱れ、売上記録の不足、プライベート混在、後から作ったように見える帳簿は、税務調査で疑いの入口になりやすいポイントです。大切なのは「正しいか」だけでなく、後から一貫して説明できる経理に整えることです。</p>
+    </div>
+  </section>
+
+  <section class="risk-row" aria-label="雑な経理の重要ポイント">
+    <div class="risk-card">
+      <span class="label">RISK 01</span>
+      <strong>説明できない入出金</strong>
+      <p>「たぶん」「覚えていない」が続くと、悪意がなくても確認対象になりやすくなります。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">RISK 02</span>
+      <strong>現金残高の不一致</strong>
+      <p>現金商売では、財布の混在や記録漏れが売上漏れの疑いにつながることがあります。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">RISK 03</span>
+      <strong>売上記録の不足</strong>
+      <p>経費よりも売上の説明不足は重く見られやすく、帳簿全体の信頼に影響します。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">RISK 04</span>
+      <strong>証拠保存の習慣</strong>
+      <p>領収書、請求書、通帳、契約書、メールなどを取引の流れで追える状態にします。</p>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+```
+<div class="opening-box">
+  <div class="box-label">この記事のポイント</div>
+  <p>「この入金、なんの売上ですか？」</p>
+  <p>「えっと……たぶん、先月の分だと思います」</p>
+  <p>「この現金3万円、どこから出ました？」</p>
+  <p>「覚えてないです」</p>
+  <p>税務調査の場で、このような受け答えになってしまう社長は少なくありません。脱税を考えたことがなくても、レシートをなくした、現金売上を後でまとめて入力した、通帳と売上が合わない。こうした“雑な経理”が積み重なると、調査官から疑われやすい状態になってしまいます。</p>
+  <p>今回は、税務調査で注意したい「脱税より怖い雑な経理5選」と、今日からできる3つの対策を整理します。</p>
+</div>
+
+<h2>重要解説：怖いのは悪意より「説明できない経理」</h2>
+
+<div class="highlight-box">
+  <div class="box-label">判断の核心</div>
+  <p>税務署は「悪いことをしたか」だけを見ているわけではありません。実務上、重要になるのは、帳簿、通帳、請求書、領収書、現金の動きについて、話に一貫性があるかどうかです。</p>
+  <p>家計簿で「先月の食費5万円の内訳は？」と聞かれて、「たぶん外食です。よく覚えていません」と答えたら、家族も不安になります。税務調査でも同じです。</p>
+  <p><span class="marker">「たぶん」「昔のことなので」「記憶があいまいです」</span>という言葉が続くと、調査官の見方は変わりやすくなります。悪気がなくても、説明できないお金の動きは疑いの入口になりやすいのです。</p>
+</div>
+
+<h2>税理士が「あ、この会社は危ないかも」と感じる雑な経理5選</h2>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>雑な経理</th>
+      <th>リスク</th>
+      <th>対策</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>第5位：レシート紛失</td>
+      <td>支払いの事実や事業との関係を説明しにくくなります。</td>
+      <td>写真保存、メモ、出金伝票などで取引の記録を残します。</td>
+    </tr>
+    <tr>
+      <td>第4位：現金管理がぐちゃぐちゃ</td>
+      <td>現金残高が合わず、売上漏れを疑われやすくなります。</td>
+      <td>事業用現金と生活費を分け、現金取引をできるだけ減らします。</td>
+    </tr>
+    <tr>
+      <td>第3位：売上記録が不足</td>
+      <td>売上の説明不足は、帳簿全体の信頼低下につながりやすいです。</td>
+      <td>請求書、入金、予約表、売上台帳をつなげて確認します。</td>
+    </tr>
+    <tr>
+      <td>第2位：私用と事業が混在</td>
+      <td>経費性を説明できず、否認リスクが高まります。</td>
+      <td>事業との関係、目的、相手、利用内容を記録します。</td>
+    </tr>
+    <tr>
+      <td>第1位：後から作ったように見える帳簿</td>
+      <td>つじつま合わせに見え、調査で警戒されやすくなります。</td>
+      <td>日々または毎月の早い段階で記録し、摘要欄も具体的に残します。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3><span class="rank">第5位</span>レシート紛失</h3>
+<p>問題は、お金を使ったかどうかだけではありません。重要なのは、支払いの事実と事業との関係を説明できる証拠が残っているかです。</p>
+<p>高額な現金払い、接待の飲食代、備品購入、出張の交通費などは、特に記録を残しておきたい取引です。</p>
+
+<div class="alert-box">
+  <div class="box-label">失敗するパターン</div>
+  <p>「5万円の会食、領収書はないけど経費でいいよね」という状態は危険です。領収書がないこと自体が直ちにすべて問題になるとは限りませんが、誰と、どこで、何の目的で支払ったのかが説明できないと、経費性を確認しにくくなります。</p>
+</div>
+
+<div class="action-box">
+  <div class="box-label">防御策のポイント</div>
+  <p>良い対応は、「誰と・どこで・何の目的か」をメモし、レシートはその日のうちに写真保存することです。紛失した場合も、出金伝票などの代替書類で記録を残します。</p>
+  <p>領収書がなくても、支払いの事実を合理的に説明できる記録があれば、経費として認められる場合があります。問題は、証拠が何も残っていない状態です。</p>
+</div>
+
+<h3><span class="rank">第4位</span>現金管理がぐちゃぐちゃ</h3>
+<p>個人事業主や小規模法人で多いのが、レジの現金、自分の財布、事業用の現金、生活費が混ざっている状態です。</p>
+<p>これが続くと、帳簿上の現金残高と実際の現金が合わなくなります。特に現金商売の場合、売上の抜けを疑われやすい構図になります。</p>
+<p>本人は「面倒だっただけ」と思っていても、外から見るとそう見えないことがあります。これが税務調査のリアルです。</p>
+
+<h3><span class="rank">第3位</span>売上記録が不足している</h3>
+<p>税務調査で最も注目されやすい項目の一つが売上です。</p>
+<ul>
+  <li>請求書はあるのに入金チェックがない</li>
+  <li>予約表はあるのに売上台帳がない</li>
+  <li>銀行入金と売上が一致しない</li>
+  <li>現金売上を月末にまとめて入力している</li>
+</ul>
+<p>ここで押さえたいのは、<span class="marker">経費の雑さは損で終わりやすい一方、売上の雑さは疑いに変わりやすい</span>という点です。売上の説明ができないと、帳簿全体の信頼が揺らぎます。</p>
+
+<h3><span class="rank">第2位</span>プライベートと事業が混ざっている</h3>
+<p>家族との外食、自宅用の日用品、趣味のカメラやゴルフ、私的な旅行など、小規模経営者ではプライベートと事業の境界があいまいになりがちです。</p>
+<p>大切なのは、領収書の有無だけではありません。事業との関係を自分の言葉で説明できるかどうかです。</p>
+<div class="alert-box">
+  <div class="box-label">落とし穴</div>
+  <p><strong>レシートは免罪符ではありません。</strong></p>
+  <p>レシートがあっても、事業との関係が説明できなければ、経費として認められない場合があります。反対に、領収書だけに頼らず、目的、相手、業務との関係を残しておくことで、説明の精度は高まります。</p>
+</div>
+
+<h3><span class="rank">第1位</span>後から作ったように見える帳簿</h3>
+<p>税理士目線でも、最も警戒されやすいのが「後から作ったように見える帳簿」です。</p>
+<ul>
+  <li>毎月末にまとめて入力している</li>
+  <li>摘要欄がすべて「売上」「経費」だけになっている</li>
+  <li>現実にはあり得ない現金残高のマイナスがある</li>
+  <li>実際の取引日と帳簿の日付がずれている</li>
+</ul>
+<p>調査官は「本当に日々記録していましたか？」という視点で見ます。間違いがある帳簿よりも、つじつまを合わせたように見える帳簿の方が、疑われやすい場合があります。</p>
+
+<h2>雑な経理を「疑われない経理」に変える3つの対策</h2>
+
+<div class="step-grid">
+  <div class="step-card">
+    <span>1</span>
+    <strong>証拠を残す</strong>
+    <p>レシート、請求書、通帳、契約書、メール、LINEなどを取引の流れで追える状態にします。</p>
+  </div>
+  <div class="step-card">
+    <span>2</span>
+    <strong>現金をできるだけ減らす</strong>
+    <p>振込、クレジットカード、電子決済に寄せて、記憶ではなく記録に残る形へ整えます。</p>
+  </div>
+  <div class="step-card">
+    <span>3</span>
+    <strong>毎月1回説明チェック</strong>
+    <p>帳簿を締めたら、売上、経費、現金の動きを自分の言葉で説明できるか確認します。</p>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <div class="box-label">今すぐできる防御策</div>
+  <p>経理の目的は、数字を合わせることだけではありません。後から見たときに、取引の流れを説明できる状態にすることです。</p>
+  <p>「この売上は何の売上か」「この経費は仕事との関係を説明できるか」「現金の増減は不自然ではないか」。この3つを毎月確認するだけでも、税務調査での受け答えは大きく変わります。</p>
+</div>
+
+<h2>実務チェックリスト</h2>
+
+<div class="checklist">
+  <div class="check-card danger">
+    <h3>🔴 危険な状態 / 失敗するパターン</h3>
+    <ul>
+      <li>領収書やレシートを後で探すことが多い</li>
+      <li>現金売上を月末にまとめて入力している</li>
+      <li>事業用財布と生活費の財布が分かれていない</li>
+      <li>請求書と入金の確認をしていない</li>
+      <li>摘要欄が「売上」「経費」だけになっている</li>
+      <li>私的支出を事業経費に混ぜている</li>
+      <li>現金残高がマイナスになることがある</li>
+    </ul>
+  </div>
+  <div class="check-card safe">
+    <h3>🔵 守れる状態 / 成功するパターン</h3>
+    <ul>
+      <li>レシートは当日中に写真保存している</li>
+      <li>通帳、請求書、売上台帳がつながっている</li>
+      <li>現金取引を減らし、振込やカード決済を使っている</li>
+      <li>会食や出張は目的、相手、内容をメモしている</li>
+      <li>毎月1回、売上と経費の説明チェックをしている</li>
+      <li>事業用口座とプライベート口座を分けている</li>
+      <li>不明点は早めに税理士へ確認している</li>
+    </ul>
+  </div>
+</div>
+
+<h2>まとめ</h2>
+
+<div class="summary-card">
+  <div class="box-label">まとめ</div>
+  <p>今回お伝えしたのは、5つの危険な経理パターンと3つの対策です。</p>
+  <p><strong>脱税するつもりがなくても、雑な経理は疑いを生みます。</strong></p>
+  <p>大切なのは、正確に記録すること。そして、その記録について後から説明できる状態を維持することです。</p>
+  <p>税務調査は、原則として事前に通知があります。ただし、不正が強く疑われるケースなどでは、例外的に事前通知なしで調査が行われることもあります。</p>
+  <p>いずれにせよ、「来てから慌てる」より「今から整える」方が、コストも精神的負担も小さくなりやすいです。個別事情により判断は異なりますので、不安がある場合は専門家に確認してください。</p>
+</div>
+
+<div class="cta-box">
+  <p>「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家に相談してください。<br>
+  個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になったらチャンネル登録、高評価、お願いします！</p>
+  <div class="cta-buttons">
+    <a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
+    <a class="cta-button gold" href="https://youtu.be/9XUQOPe6XSw" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
+  </div>
+</div>
+
+<div class="disclaimer-box">
+  <p><strong>【作成月】</strong>2026/06</p>
+  <p><strong>【ご利用にあたっての注意事項】</strong></p>
+  <ul>
+    <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+    <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+    <li>※内容の是非については、当事務所では対応いたしません。</li>
+  </ul>
+</div>
+```
+
+  </article>
+</main>
+
+</body>
+</html>
