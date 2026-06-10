@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>えっ法人はインボイス3割特例使えないの？社長の勘違いと3つの別解｜島田税理士事務所</title>
+<meta name="description" content="法人はインボイス3割特例を使えるのか。2割特例終了後の法人の消費税負担、簡易課税の検討、決算期変更や個人事業への変更リスクを初心者向けに整理します。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+<style>
+:root{
+  --navy:#0f2742;
+  --navy2:#163d62;
+  --teal:#0f8f8c;
+  --teal-light:#e9fbfa;
+  --gold:#c9a24d;
+  --gold-light:#fff7df;
+  --red:#d83b3b;
+  --red-light:#fff0f0;
+  --blue:#2277d4;
+  --blue-light:#edf6ff;
+  --green:#238b57;
+  --green-light:#eefaf3;
+  --ink:#1d2733;
+  --muted:#627083;
+  --line:rgba(15,39,66,.12);
+  --bg:#f5f7fa;
+  --white:#fff;
+  --shadow-soft:0 12px 28px rgba(15,39,66,.08);
+  --shadow-card:0 18px 45px rgba(15,39,66,.12);
+  --radius:24px;
+}
+
+html{
+scroll-behavior:smooth;
+-webkit-text-size-adjust:100%;
+}
+
+body{
+margin:0;
+overflow-x:hidden;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+font-size:16px;
+line-height:1.85;
+color:var(--ink);
+background:
+radial-gradient(circle at top left,rgba(15,143,140,.10),transparent 34%),
+linear-gradient(180deg,#ffffff 0%,#f5f7fa 46%,#ffffff 100%);
+}
+
+a{
+color:inherit;
+text-decoration:none;
+}
+
+img{
+max-width:100%;
+height:auto;
+}
+
+.css-logo-wrapper{
+position:sticky;
+top:0;
+z-index:20;
+background:rgba(255,255,255,.92);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line);
+}
+
+.css-logo-inner{
+max-width:980px;
+margin:0 auto;
+padding:15px 18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+}
+
+.css-logo-text{
+display:flex;
+flex-direction:column;
+line-height:1.25;
+font-weight:900;
+letter-spacing:.03em;
+color:var(--navy);
+}
+
+.css-logo-gradient{
+display:inline-flex;
+align-items:center;
+gap:9px;
+font-size:1.18rem;
+}
+
+.css-logo-gradient::before{
+content:"🔍";
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:36px;
+height:36px;
+border-radius:14px;
+background:linear-gradient(135deg,var(--navy),var(--teal));
+box-shadow:0 8px 18px rgba(15,39,66,.18);
+}
+
+.logo-sub{
+margin-top:3px;
+font-size:.78rem;
+color:var(--gold);
+font-weight:800;
+letter-spacing:.08em;
+text-transform:uppercase;
+}
+
+.top-nav{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+gap:8px;
+flex-wrap:wrap;
+}
+
+.top-nav a,
+.nav-tel{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:36px;
+padding:0 12px;
+border-radius:999px;
+background:#fff;
+border:1px solid rgba(15,39,66,.12);
+color:var(--navy);
+font-size:.82rem;
+font-weight:800;
+box-shadow:0 6px 16px rgba(15,39,66,.05);
+}
+
+.top-nav a:hover{
+background:var(--navy);
+color:#fff;
+}
+
+.container{
+max-width:980px;
+margin:0 auto;
+padding:30px 18px 56px;
+}
+
+.hero{
+position:relative;
+overflow:hidden;
+padding:44px 42px 46px;
+border-radius:32px;
+background:
+linear-gradient(135deg,rgba(15,39,66,.96),rgba(22,61,98,.94) 52%,rgba(15,143,140,.90)),
+radial-gradient(circle at top right,rgba(201,162,77,.38),transparent 34%);
+color:#fff;
+box-shadow:var(--shadow-card);
+}
+
+.hero::after{
+content:"INVOICE RISK MAP";
+position:absolute;
+right:-70px;
+bottom:-22px;
+font-size:5.6rem;
+line-height:1;
+font-weight:1000;
+letter-spacing:.05em;
+color:rgba(255,255,255,.08);
+white-space:nowrap;
+pointer-events:none;
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+max-width:760px;
+}
+
+.hero-kicker{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-bottom:14px;
+padding:7px 12px;
+border-radius:999px;
+background:rgba(255,255,255,.12);
+border:1px solid rgba(255,255,255,.20);
+font-size:.82rem;
+font-weight:900;
+letter-spacing:.08em;
+}
+
+.hero-badges{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:0 0 18px;
+}
+
+.badge{
+display:inline-flex;
+align-items:center;
+min-height:30px;
+padding:3px 10px;
+border-radius:999px;
+background:rgba(255,255,255,.14);
+border:1px solid rgba(255,255,255,.22);
+color:#fff;
+font-size:.8rem;
+font-weight:800;
+}
+
+.badge.alert{
+background:rgba(216,59,59,.92);
+border-color:rgba(255,255,255,.26);
+}
+
+.badge.gold{
+background:rgba(201,162,77,.92);
+}
+
+.risk-row{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin:20px 0 24px;
+}
+
+.risk-card{
+background:#fff;
+border:1px solid rgba(15,39,66,.08);
+border-radius:20px;
+padding:18px 16px;
+box-shadow:var(--shadow-soft);
+position:relative;
+overflow:hidden;
+}
+
+.risk-card::before{
+content:"";
+position:absolute;
+inset:0 auto 0 0;
+width:5px;
+background:linear-gradient(180deg,var(--teal),var(--gold));
+}
+
+.risk-card .label{
+display:inline-block;
+margin-bottom:6px;
+color:var(--teal);
+font-size:.78rem;
+font-weight:900;
+letter-spacing:.08em;
+}
+
+.risk-card strong{
+display:block;
+color:var(--navy);
+font-size:1.05rem;
+line-height:1.45;
+}
+
+.risk-card p{
+margin:8px 0 0;
+color:var(--muted);
+font-size:.92rem;
+line-height:1.65;
+}
+
+.article-body{
+background:rgba(255,255,255,.96);
+border:1px solid rgba(15,39,66,.08);
+border-radius:28px;
+padding:34px 34px;
+box-shadow:var(--shadow-soft);
+}
+
+h1{
+margin:0 0 18px;
+font-size:2.38rem;
+line-height:1.28;
+letter-spacing:.01em;
+}
+
+h2{
+margin:38px 0 16px;
+padding-left:14px;
+border-left:5px solid var(--teal);
+color:var(--navy);
+font-size:1.55rem;
+line-height:1.45;
+}
+
+h3{
+margin:26px 0 10px;
+color:var(--navy);
+font-size:1.16rem;
+line-height:1.5;
+}
+
+p{
+margin:0 0 14px;
+}
+
+ul{
+margin:10px 0 0;
+padding-left:1.25em;
+}
+
+li{
+margin:.35em 0;
+}
+
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
+padding:22px 22px;
+margin:22px 0;
+border-radius:22px;
+border:1px solid rgba(15,39,66,.10);
+box-shadow:var(--shadow-soft);
+}
+
+.opening-box{
+background:linear-gradient(135deg,#fff,var(--blue-light));
+border-left:6px solid var(--blue);
+}
+
+.highlight-box{
+background:linear-gradient(135deg,#fff,var(--teal-light));
+border-left:6px solid var(--teal);
+}
+
+.alert-box{
+background:linear-gradient(135deg,#fff,var(--red-light));
+border-left:6px solid var(--red);
+}
+
+.action-box{
+background:linear-gradient(135deg,#fff,var(--gold-light));
+border-left:6px solid var(--gold);
+}
+
+.box-label{
+display:inline-flex;
+align-items:center;
+gap:6px;
+margin-bottom:10px;
+padding:4px 10px;
+border-radius:999px;
+background:rgba(15,39,66,.07);
+color:var(--navy);
+font-size:.78rem;
+font-weight:900;
+letter-spacing:.06em;
+}
+
+.compare-table{
+width:100%;
+border-collapse:separate;
+border-spacing:0;
+overflow:hidden;
+border-radius:18px;
+border:1px solid rgba(15,39,66,.10);
+box-shadow:var(--shadow-soft);
+margin:18px 0 24px;
+background:#fff;
+}
+
+.compare-table th{
+background:linear-gradient(135deg,var(--navy),var(--navy2));
+color:#fff;
+padding:13px 14px;
+text-align:left;
+font-size:.92rem;
+}
+
+.compare-table td{
+padding:14px;
+border-top:1px solid rgba(15,39,66,.08);
+vertical-align:top;
+font-size:.94rem;
+}
+
+.compare-table td:first-child{
+font-weight:900;
+color:var(--navy);
+width:24%;
+}
+
+.step-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin:18px 0 22px;
+}
+
+.step-card{
+background:#fff;
+border:1px solid rgba(15,39,66,.10);
+border-radius:20px;
+padding:18px 16px;
+box-shadow:var(--shadow-soft);
+}
+
+.step-card .num{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:34px;
+height:34px;
+margin-bottom:9px;
+border-radius:12px;
+background:linear-gradient(135deg,var(--teal),var(--navy2));
+color:#fff;
+font-weight:900;
+}
+
+.step-card strong{
+display:block;
+color:var(--navy);
+line-height:1.45;
+margin-bottom:6px;
+}
+
+.step-card p{
+margin:0;
+color:var(--muted);
+font-size:.92rem;
+line-height:1.65;
+}
+
+.checklist{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+margin:18px 0 24px;
+}
+
+.checklist .check-card{
+border-radius:22px;
+padding:20px 18px;
+border:1px solid rgba(15,39,66,.10);
+box-shadow:var(--shadow-soft);
+background:#fff;
+}
+
+.checklist .danger{
+background:linear-gradient(135deg,#fff,var(--red-light));
+border-left:6px solid var(--red);
+}
+
+.checklist .safe{
+background:linear-gradient(135deg,#fff,var(--blue-light));
+border-left:6px solid var(--blue);
+}
+
+.checklist strong{
+display:block;
+margin-bottom:8px;
+color:var(--navy);
+}
+
+.summary-card{
+background:
+linear-gradient(135deg,rgba(15,39,66,.96),rgba(22,61,98,.94)),
+radial-gradient(circle at top right,rgba(201,162,77,.25),transparent 36%);
+color:#fff;
+}
+
+.summary-card .box-label{
+background:rgba(255,255,255,.14);
+color:#fff;
+}
+
+.summary-card ul{
+padding-left:1.25em;
+}
+
+.cta-box{
+background:linear-gradient(135deg,var(--navy),#102f4f 58%,var(--teal));
+color:#fff;
+text-align:center;
+border:none;
+}
+
+.cta-buttons{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
+.cta-button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:48px;
+padding:0 22px;
+border-radius:999px;
+background:#fff;
+color:var(--navy);
+font-weight:900;
+box-shadow:0 12px 24px rgba(0,0,0,.16);
+}
+
+.cta-button.gold{
+background:linear-gradient(135deg,#f2d57e,var(--gold));
+color:#2b2108;
+}
+
+.disclaimer-box{
+background:#fff;
+color:#4c5968;
+font-size:.9rem;
+border-left:6px solid rgba(15,39,66,.25);
+}
+
+.disclaimer-box ul{
+padding-left:1.2em;
+}
+
+.note-mini{
+color:var(--muted);
+font-size:.92rem;
+}
+
+.marker{
+background:linear-gradient(transparent 62%,rgba(201,162,77,.32) 62%);
+font-weight:900;
+}
+
+@media(max-width:900px){
+.css-logo-inner{
+align-items:flex-start;
+flex-direction:column;
+}
+.risk-row{
+grid-template-columns:repeat(2,1fr);
+}
+.step-grid{
+grid-template-columns:repeat(2,1fr);
+}
+.checklist{
+grid-template-columns:1fr;
+}
+h1{
+font-size:2.02rem;
+}
+}
+
+@media(max-width:640px){
+body{
+font-size:15.5px;
+line-height:1.78;
+}
+.css-logo-wrapper{
+position:static;
+}
+.css-logo-inner{
+padding:13px 12px;
+gap:12px;
+}
+.css-logo-gradient{
+font-size:1.02rem;
+}
+.top-nav{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:7px;
+width:100%;
+}
+.top-nav a,
+.nav-tel{
+width:100%;
+min-height:38px;
+border-radius:12px;
+white-space:normal;
+text-align:center;
+line-height:1.25;
+padding:0 6px;
+box-sizing:border-box;
+}
+.container{
+padding:18px 12px 40px;
+}
+.hero{
+padding:26px 18px 28px;
+border-radius:22px;
+}
+.hero::after{
+font-size:2.7rem;
+right:-120px;
+bottom:-8px;
+}
+.hero-kicker{
+font-size:.76rem;
+}
+.badge{
+font-size:.74rem;
+min-height:28px;
+}
+h1{
+font-size:1.7rem;
+line-height:1.34;
+}
+h2{
+font-size:1.28rem;
+line-height:1.45;
+margin-top:30px;
+}
+h3{
+font-size:1.08rem;
+}
+.risk-row,
+.step-grid,
+.checklist{
+grid-template-columns:1fr;
+}
+.risk-card{
+padding:16px 14px;
+}
+.article-body{
+padding:20px 14px;
+border-radius:22px;
+}
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
+padding:18px 15px;
+margin:17px 0;
+border-radius:18px;
+}
+.cta-buttons{
+display:grid;
+grid-template-columns:1fr;
+gap:10px;
+}
+.cta-button{
+width:100%;
+min-height:48px;
+border-radius:14px;
+box-sizing:border-box;
+}
+.compare-table,
+.compare-table tbody,
+.compare-table tr,
+.compare-table td{
+display:block;
+width:100%;
+box-sizing:border-box;
+}
+.compare-table{
+border:none;
+box-shadow:none;
+background:transparent;
+border-radius:0;
+}
+.compare-table thead{
+display:none;
+}
+.compare-table tr{
+margin-bottom:12px;
+border-radius:16px;
+overflow:hidden;
+background:#fff;
+box-shadow:var(--shadow-soft);
+border:1px solid rgba(15,39,66,.08);
+}
+.compare-table td{
+border-top:1px solid rgba(15,39,66,.08);
+padding:12px 13px;
+}
+.compare-table td:first-child{
+width:100%;
+background:linear-gradient(135deg,var(--navy),#163d62);
+color:#fff;
+font-weight:800;
+border-top:none;
+}
+.compare-table td:nth-child(2)::before{
+content:"ポイント：";
+font-weight:900;
+color:var(--teal);
+}
+.compare-table td:nth-child(3)::before{
+content:"リスク・対策：";
+font-weight:900;
+color:var(--red);
+}
+}
+
+@media(max-width:380px){
+body{
+font-size:15px;
+}
+.top-nav{
+grid-template-columns:1fr;
+}
+h1{
+font-size:1.55rem;
+}
+.article-body{
+padding:18px 12px;
+}
+.hero{
+padding:23px 15px 25px;
+}
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
+padding:16px 13px;
+}
+} </style>
+
+</head>
+<body>
+
+<header class="css-logo-wrapper">
+  <div class="css-logo-inner">
+    <div class="css-logo-text">
+      <span class="css-logo-gradient">島田税理士事務所</span>
+      <span class="logo-sub">YouTube動画連動column</span>
+    </div>
+    <nav class="top-nav" aria-label="トップナビゲーション">
+      <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+      <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+      <a href="https://youtu.be/-DPfRSHM1i0" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+      <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-kicker">YouTube連動コラム</div>
+      <div class="hero-badges">
+        <span class="badge alert">法人社長のインボイス注意報</span>
+        <span class="badge">2割特例終了</span>
+        <span class="badge">3割特例</span>
+        <span class="badge gold">簡易課税の検討</span>
+      </div>
+      <h1>えっ法人はインボイス3割特例使えないの？社長の勘違いと3つの別解</h1>
+      <p>「2割特例が終わったら、次は3割特例で大丈夫」と考えている法人社長は要注意です。法人には3割特例という中間クッションが用意されていないため、早めに資金計画と課税方式を確認する必要があります。</p>
+    </div>
+  </section>
+
+  <section class="risk-row" aria-label="冒頭重要カード">
+    <div class="risk-card">
+      <span class="label">MISUNDERSTANDING</span>
+      <strong>法人は3割特例の対象外</strong>
+      <p>令和9年分・令和10年分の3割特例は、個人事業主向けの措置として整理されています。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">TAX CASH</span>
+      <strong>納税資金が不足するリスク</strong>
+      <p>3割で済む前提で資金繰りを組むと、実際の納税額との差に驚く可能性があります。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">CHOICE</span>
+      <strong>本則課税か簡易課税へ</strong>
+      <p>法人は2割特例終了後、本則課税または簡易課税のどちらが合うかを試算する必要があります。</p>
+    </div>
+    <div class="risk-card">
+      <span class="label">ALTERNATIVE</span>
+      <strong>別解には副作用もある</strong>
+      <p>決算期変更や個人事業への変更は、消費税以外のコストや取引リスクも確認が必要です。</p>
+    </div>
+  </section>
+
+  <article class="article-body">
+
+```
+<div class="opening-box">
+  <div class="box-label">この記事の導入</div>
+  <p>「え、うちの会社も3割でいけるんでしょ？」</p>
+  <p>Web制作会社の社長から、このような相談がありました。2割特例が終わったら、次は3割特例があるから安心だと思っていたのです。</p>
+  <p>しかし、その安心は法人には用意されていません。法人社長が3割特例を当てにしていると、ある日突然、納税資金が足りなくなる可能性があります。</p>
+  <p>今回は、法人が勘違いしやすいインボイス特例の整理と、まだ検討できる3つの別解を、初心者向けに整理します。</p>
+</div>
+
+<div class="highlight-box">
+  <div class="box-label">この記事のポイント</div>
+  <ul>
+    <li>法人は、原則としてインボイスの「3割特例」を使えません。</li>
+    <li>法人の2割特例は、令和8年9月30日を含む事業年度で終了します。</li>
+    <li>終了後は、本則課税または簡易課税への移行を前提に準備が必要です。</li>
+    <li>決算期変更、法人解散、個人事業化などの別解には、税務以外のリスクがあります。</li>
+  </ul>
+</div>
+
+<h2>1. なぜ法人は3割特例を使えないのか</h2>
+
+<p>インボイス制度の負担を和らげる特例は、段階的に変わっていきます。</p>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>制度</th>
+      <th>概要</th>
+      <th>法人社長が見るべき注意点</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2割特例</td>
+      <td>免税事業者から課税事業者になった事業者が、売上にかかる消費税の2割を納めればよい制度です。</td>
+      <td>法人も要件を満たせば利用できる期間がありますが、終了時期を必ず確認する必要があります。</td>
+    </tr>
+    <tr>
+      <td>3割特例</td>
+      <td>2割特例の後に出てくる緩和措置として、売上にかかる消費税の3割を納める制度です。</td>
+      <td>令和9年分と令和10年分の個人事業主を対象として新設された制度であり、法人は対象外です。</td>
+    </tr>
+    <tr>
+      <td>法人の次の選択肢</td>
+      <td>2割特例終了後は、本則課税または簡易課税への移行を検討します。</td>
+      <td>「2割から3割へ」となだらかに移れるわけではなく、税額が大きく変わる可能性があります。</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="alert-box">
+  <div class="box-label">インボイス制度アラート</div>
+  <p>法人にとっては、<span class="marker">「2割特例 → 3割特例」ではなく、「2割特例 → 本則課税または簡易課税」</span>という切り替えになります。</p>
+  <p>つまり、3割という中間のクッションはありません。この点を誤解したまま資金計画を立てると、納税資金の見積もりが大きくズレる可能性があります。</p>
+</div>
+
+<h2>2. この勘違いが危ない3つの理由</h2>
+
+<p>「3割特例があると思っていた」という勘違いは、単なる知識不足では済まないことがあります。実務では、資金繰り、届出、税額試算に影響するためです。</p>
+
+<div class="step-grid">
+  <div class="step-card">
+    <div class="num">1</div>
+    <strong>納税資金の見積もりが狂う</strong>
+    <p>3割特例を使える前提で資金計画を立てると、実際の納税額が想定より増える可能性があります。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">2</div>
+    <strong>簡易課税の届出を逃す</strong>
+    <p>簡易課税は、原則として適用課税期間の初日の前日までに届出が必要です。特例的な届出期限もありますが、早めの確認が安全です。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">3</div>
+    <strong>本則課税で負担が増える</strong>
+    <p>Web制作、コンサル、サービス業など仕入れや外注費が少ない業種では、本則課税が不利になるケースがあります。</p>
+  </div>
+</div>
+
+<div class="alert-box">
+  <div class="box-label">失敗するパターン</div>
+  <p>特に危険なのは、「3割特例があるはずだから、今は何もしなくていい」と考えることです。</p>
+  <p>準備なしに2割特例の期間が終わると、原則課税へ移行し、「思っていたより消費税が重い」「簡易課税の検討が遅れた」という状況になりかねません。</p>
+</div>
+
+<h2>3. 法人がまず検討すべきは簡易課税</h2>
+
+<p>法人が2割特例終了後にまず検討したいのは、<strong>簡易課税制度への切り替え</strong>です。</p>
+<p>簡易課税は、実際の仕入れを細かく集計するのではなく、売上に対して業種ごとの「みなし仕入率」を使って納税額を計算する制度です。</p>
+
+<div class="highlight-box">
+  <div class="box-label">簡易課税が向いている可能性がある会社</div>
+  <ul>
+    <li>外注費や仕入れの管理が複雑で、実額計算が大変な会社</li>
+    <li>実際の仕入れ税額が少ないサービス業、Web制作業、コンサル業など</li>
+    <li>みなし仕入率が、自社の実態より有利に働く可能性がある会社</li>
+  </ul>
+</div>
+
+<div class="action-box">
+  <div class="box-label">判断の核心</div>
+  <p>簡易課税が有利かどうかは、業種名だけでは判断できません。</p>
+  <p>売上、外注費、仕入れ、経費の内訳、インボイス登録先との取引状況をもとに、<strong>本則課税と簡易課税の両方で試算</strong>する必要があります。</p>
+  <p>仕入れが多い製造業や卸売業では、本則課税のほうが有利になることもあります。個別事情により異なるため、早めに専門家へ確認してください。</p>
+</div>
+
+<h2>4. 攻めた3つの別解と、その副作用</h2>
+
+<p>ここからは、「それでも消費税負担を抑えたい」と考えた3社の事例形式で、少し攻めた別解を見ていきます。</p>
+<p>ただし、これらは制度上検討できる場合があっても、必ずしも有利になるとは限りません。税務、法務、融資、取引先対応まで含めて総合判断が必要です。</p>
+
+<h3>ケース①：8月決算への変更を検討したA社</h3>
+
+<div class="highlight-box">
+  <div class="box-label">別解1：決算期変更</div>
+  <p>A社は、2割特例の適用期間をできるだけ長く使うため、決算期の変更を検討しました。</p>
+  <p>2割特例は「令和8年9月30日を含む事業年度」まで使えるため、決算月を調整することで、恩恵を受けられる期間が数か月延びる可能性があります。</p>
+</div>
+
+<div class="alert-box">
+  <div class="box-label">決算期変更の落とし穴</div>
+  <p>決算期変更には、法律上の禁止規定がない場合でも、短期決算申告、定款変更、税務届出、会計処理の手間などが発生します。</p>
+  <p>また、銀行融資の審査タイミング、決算書の見え方、社内の資金管理にも影響します。消費税だけを見て決算月を変えると、別の場所で困る可能性があります。</p>
+</div>
+
+<h3>ケース②：法人解散＋個人事業者としてインボイス登録を検討したB社</h3>
+
+<div class="highlight-box">
+  <div class="box-label">別解2：個人事業者として登録</div>
+  <p>B社の社長は、「法人をやめて個人事業者に戻れば、3割特例を使えるかもしれない」と考えました。</p>
+  <p>制度上の可能性として検討に値するケースもありますが、個人として要件を満たすかどうかは、売上、過去の課税関係、事業実態などによって異なります。</p>
+</div>
+
+<div class="alert-box">
+  <div class="box-label">法人解散のリスク</div>
+  <ul>
+    <li>解散・清算には登録免許税や司法書士費用などのコストが発生します。</li>
+    <li>取引先との契約を個人名義に切り替える必要があります。</li>
+    <li>法人で受けていた融資や保証を、個人では引き継げない場合があります。</li>
+    <li>法人から個人への資産移転に、税務上の問題が生じることがあります。</li>
+  </ul>
+  <p>消費税が少し軽くなる可能性があっても、諸費用や信用面の影響で、結果的に不利になる可能性があります。</p>
+</div>
+
+<h3>ケース③：法人解散＋個人の免税事業者を検討したC社</h3>
+
+<div class="highlight-box">
+  <div class="box-label">別解3：個人の免税事業者</div>
+  <p>C社は、「法人を解散して個人事業に戻り、免税事業者になれば消費税を払わなくて済むのでは」と考えました。</p>
+  <p>売上が1,000万円以下であれば、免税事業者になれる可能性があります。ただし、適用可否は基準期間や特定期間などの要件確認が必要です。</p>
+</div>
+
+<div class="alert-box">
+  <div class="box-label">インボイス未発行の取引リスク</div>
+  <p>免税事業者になると、原則としてインボイスを発行できません。</p>
+  <p>BtoB取引が多い場合、取引先は仕入税額控除を十分に受けられなくなるため、価格交渉や取引継続に影響する可能性があります。</p>
+  <p>「消費税は軽くなったが、売上そのものが下がった」という本末転倒の結果になる可能性もあります。</p>
+</div>
+
+<h2>5. 実務ステップ：法人社長が今すぐ確認すること</h2>
+
+<p>2割特例終了後に慌てないためには、制度の名前を覚えるよりも、自社の数字で確認することが重要です。</p>
+
+<div class="step-grid">
+  <div class="step-card">
+    <div class="num">1</div>
+    <strong>決算月を確認する</strong>
+    <p>令和8年9月30日を含む事業年度が、自社ではいつからいつまでかを確認します。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">2</div>
+    <strong>消費税額を試算する</strong>
+    <p>2割特例、本則課税、簡易課税で納税額がどれくらい変わるかを比較します。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">3</div>
+    <strong>届出期限を確認する</strong>
+    <p>簡易課税を選ぶ場合の届出期限を、決算月ごとに確認します。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">4</div>
+    <strong>取引先の影響を見る</strong>
+    <p>インボイス未登録先との取引や、自社がインボイスを出せない場合の影響を整理します。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">5</div>
+    <strong>法人を続ける意味を確認する</strong>
+    <p>節税だけでなく、信用、融資、契約、採用、社会保険も含めて判断します。</p>
+  </div>
+  <div class="step-card">
+    <div class="num">6</div>
+    <strong>専門家に相談する</strong>
+    <p>制度の適用可否や有利不利は個別事情により異なるため、事前確認が大切です。</p>
+  </div>
+</div>
+
+<h2>6. チェックリスト：危険な状態と守れる状態</h2>
+
+<div class="checklist">
+  <div class="check-card danger">
+    <strong>🔴 危険な状態 / 失敗するパターン</strong>
+    <ul>
+      <li>法人でも3割特例を使えると思っている</li>
+      <li>2割特例終了後の消費税額を試算していない</li>
+      <li>簡易課税の届出期限を確認していない</li>
+      <li>本則課税と簡易課税の比較をしていない</li>
+      <li>消費税だけを理由に法人解散を考えている</li>
+      <li>インボイスを出せない場合の取引先影響を見ていない</li>
+    </ul>
+  </div>
+  <div class="check-card safe">
+    <strong>🔵 守れる状態 / 成功するパターン</strong>
+    <ul>
+      <li>法人は3割特例の対象外と理解している</li>
+      <li>自社の決算月と2割特例の終了時期を把握している</li>
+      <li>消費税の納税資金を早めに準備している</li>
+      <li>簡易課税が有利かどうか数字で確認している</li>
+      <li>法人継続、決算期変更、個人化を総合的に比較している</li>
+      <li>届出前に税理士へ確認している</li>
+    </ul>
+  </div>
+</div>
+
+<div class="summary-card">
+  <div class="box-label">まとめ</div>
+  <p>今日の結論は、<strong>法人社長はインボイスの3割特例を使えない</strong>ということです。</p>
+  <p>今すぐ確認してほしいポイントは、次の5つです。</p>
+  <ul>
+    <li>自分の会社の決算月</li>
+    <li>簡易課税が有利かどうか</li>
+    <li>インボイス未登録先との取引状況</li>
+    <li>法人を続ける意味</li>
+    <li>個人事業者に戻る場合のリスク</li>
+  </ul>
+  <p>3割特例を当てにしたまま進むのではなく、2割特例終了後の納税額と届出期限を、早めに数字で確認しておきましょう。</p>
+</div>
+
+<div class="cta-box">
+  <p>「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家に相談してください。<br>
+  個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になったらチャンネル登録、高評価、お願いします！</p>
+  <div class="cta-buttons">
+    <a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
+    <a class="cta-button gold" href="https://youtu.be/-DPfRSHM1i0" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
+  </div>
+</div>
+
+<div class="disclaimer-box">
+  <p><strong>【作成月】</strong>2026/06</p>
+  <p><strong>【ご利用にあたっての注意事項】</strong></p>
+  <ul>
+    <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+    <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+    <li>※内容の是非については、当事務所では対応いたしません。</li>
+  </ul>
+</div>
+```
+
+  </article>
+</main>
+
+</body>
+</html>
