@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社長。9月に注意。税務署システム変更で納税証明書が取れない？5つの対策｜島田税理士事務所</title>
+  <meta name="description" content="2026年9月の国税システム更改により、e-Tax停止期間、納付書様式変更、電子通知、納税証明書の取得に注意が必要です。融資・補助金・許認可に備える5つの実務対策を解説します。">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+
+  <style>
+    :root{
+      --navy:#0f2742;
+      --navy-2:#163d62;
+      --teal:#1aa39a;
+      --gold:#c9a24a;
+      --red:#d84a4a;
+      --blue:#2878c8;
+      --green:#2b9b66;
+      --bg:#f5f7fa;
+      --text:#1f2933;
+      --muted:#6b7785;
+      --line:rgba(15,39,66,.12);
+      --shadow-soft:0 10px 28px rgba(15,39,66,.08);
+      --shadow-card:0 14px 36px rgba(15,39,66,.12);
+      --radius:24px;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      -webkit-text-size-adjust:100%;
+    }
+
+    body{
+      margin:0;
+      overflow-x:hidden;
+      font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;
+      font-size:16px;
+      line-height:1.85;
+      color:var(--text);
+      background:linear-gradient(180deg,#ffffff 0%,var(--bg) 45%,#ffffff 100%);
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    img{
+      max-width:100%;
+      height:auto;
+    }
+
+    .css-logo-wrapper{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.94);
+      backdrop-filter:blur(12px);
+      border-bottom:1px solid rgba(15,39,66,.08);
+    }
+
+    .css-logo-inner{
+      max-width:980px;
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .css-logo-text{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+      font-weight:900;
+      letter-spacing:.04em;
+      color:var(--navy);
+      line-height:1.25;
+      white-space:nowrap;
+    }
+
+    .css-logo-gradient{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      font-size:1.08rem;
+      background:linear-gradient(135deg,var(--navy),var(--teal));
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .logo-sub{
+      font-size:.72rem;
+      color:var(--muted);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .top-nav{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:8px;
+      font-size:.86rem;
+    }
+
+    .top-nav a,
+    .nav-tel{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:34px;
+      padding:6px 12px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid rgba(15,39,66,.12);
+      color:var(--navy);
+      font-weight:700;
+      box-shadow:0 4px 14px rgba(15,39,66,.05);
+    }
+
+    .top-nav a:hover{
+      background:linear-gradient(135deg,var(--navy),var(--navy-2));
+      color:#fff;
+    }
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding:30px 18px 56px;
+      box-sizing:border-box;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:46px 42px 44px;
+      border-radius:32px;
+      background:
+        radial-gradient(circle at 85% 18%,rgba(26,163,154,.28),transparent 30%),
+        linear-gradient(135deg,#0f2742 0%,#163d62 48%,#0f2742 100%);
+      color:#fff;
+      box-shadow:var(--shadow-card);
+    }
+
+    .hero::after{
+      content:"TAX SYSTEM RISK";
+      position:absolute;
+      right:-170px;
+      bottom:-24px;
+      font-size:5.7rem;
+      line-height:1;
+      font-weight:900;
+      letter-spacing:.05em;
+      color:rgba(255,255,255,.08);
+      white-space:nowrap;
+      pointer-events:none;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:760px;
+    }
+
+    .hero-kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      margin-bottom:16px;
+      padding:7px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
+      font-size:.86rem;
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .hero-badges{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 18px;
+    }
+
+    .badge{
+      display:inline-flex;
+      align-items:center;
+      min-height:30px;
+      padding:5px 10px;
+      border-radius:999px;
+      font-size:.78rem;
+      font-weight:800;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.22);
+    }
+
+    .badge.alert{
+      background:rgba(216,74,74,.22);
+      border-color:rgba(255,255,255,.28);
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-size:2.35rem;
+      line-height:1.28;
+      letter-spacing:.02em;
+    }
+
+    .hero p{
+      margin:0;
+      color:rgba(255,255,255,.9);
+      font-size:1.02rem;
+    }
+
+    .risk-row{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin:20px 0 24px;
+    }
+
+    .risk-card{
+      background:#fff;
+      border:1px solid rgba(15,39,66,.08);
+      border-radius:22px;
+      padding:18px 16px;
+      box-shadow:var(--shadow-soft);
+      border-top:4px solid var(--teal);
+    }
+
+    .risk-card:nth-child(2){
+      border-top-color:var(--gold);
+    }
+
+    .risk-card:nth-child(3){
+      border-top-color:var(--red);
+    }
+
+    .risk-card:nth-child(4){
+      border-top-color:var(--blue);
+    }
+
+    .risk-card small{
+      display:block;
+      margin-bottom:7px;
+      color:var(--muted);
+      font-weight:800;
+      letter-spacing:.08em;
+    }
+
+    .risk-card strong{
+      display:block;
+      color:var(--navy);
+      font-size:1.05rem;
+      line-height:1.45;
+      margin-bottom:8px;
+    }
+
+    .risk-card p{
+      margin:0;
+      color:#536170;
+      font-size:.92rem;
+      line-height:1.65;
+    }
+
+    .article-body{
+      background:#fff;
+      border-radius:28px;
+      padding:34px 32px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(15,39,66,.08);
+    }
+
+    h2{
+      margin:36px 0 16px;
+      padding-left:14px;
+      border-left:5px solid var(--teal);
+      color:var(--navy);
+      font-size:1.55rem;
+      line-height:1.45;
+      letter-spacing:.02em;
+    }
+
+    h3{
+      margin:26px 0 12px;
+      color:var(--navy);
+      font-size:1.2rem;
+      line-height:1.5;
+    }
+
+    p{
+      margin:0 0 14px;
+    }
+
+    ul,
+    ol{
+      margin:10px 0 10px 1.2em;
+      padding:0;
+    }
+
+    li{
+      margin:6px 0;
+    }
+
+    .opening-box,
+    .highlight-box,
+    .alert-box,
+    .action-box,
+    .summary-card,
+    .cta-box,
+    .disclaimer-box{
+      position:relative;
+      margin:22px 0;
+      padding:22px 22px;
+      border-radius:22px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(15,39,66,.08);
+    }
+
+    .opening-box{
+      background:linear-gradient(135deg,#f7fbff,#ffffff);
+      border-left:5px solid var(--blue);
+    }
+
+    .highlight-box{
+      background:linear-gradient(135deg,#f2fbf8,#ffffff);
+      border-left:5px solid var(--teal);
+    }
+
+    .alert-box{
+      background:linear-gradient(135deg,#fff6f6,#ffffff);
+      border-left:5px solid var(--red);
+    }
+
+    .action-box{
+      background:linear-gradient(135deg,#fffaf0,#ffffff);
+      border-left:5px solid var(--gold);
+    }
+
+    .summary-card{
+      background:linear-gradient(135deg,#f8fafc,#ffffff);
+      border-left:5px solid var(--navy);
+    }
+
+    .box-label{
+      display:inline-flex;
+      align-items:center;
+      min-height:28px;
+      margin-bottom:10px;
+      padding:4px 10px;
+      border-radius:999px;
+      background:var(--navy);
+      color:#fff;
+      font-size:.78rem;
+      font-weight:900;
+      letter-spacing:.06em;
+    }
+
+    .compare-table{
+      width:100%;
+      border-collapse:separate;
+      border-spacing:0;
+      overflow:hidden;
+      border-radius:18px;
+      box-shadow:var(--shadow-soft);
+      border:1px solid rgba(15,39,66,.08);
+      margin:18px 0 24px;
+      background:#fff;
+    }
+
+    .compare-table th,
+    .compare-table td{
+      padding:14px 15px;
+      border-bottom:1px solid rgba(15,39,66,.08);
+      vertical-align:top;
+      text-align:left;
+    }
+
+    .compare-table th{
+      background:linear-gradient(135deg,var(--navy),var(--navy-2));
+      color:#fff;
+      font-size:.9rem;
+      letter-spacing:.03em;
+    }
+
+    .compare-table tr:last-child td{
+      border-bottom:none;
+    }
+
+    .compare-table td:first-child{
+      width:28%;
+      font-weight:900;
+      color:var(--navy);
+      background:#f7fafc;
+    }
+
+    .step-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+      margin:18px 0;
+    }
+
+    .step-card{
+      padding:18px 16px;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid rgba(15,39,66,.08);
+      box-shadow:var(--shadow-soft);
+    }
+
+    .step-card span{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      width:34px;
+      height:34px;
+      margin-bottom:10px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--teal),#44c2b8);
+      color:#fff;
+      font-weight:900;
+    }
+
+    .step-card strong{
+      display:block;
+      color:var(--navy);
+      margin-bottom:8px;
+      line-height:1.45;
+    }
+
+    .step-card p{
+      margin:0;
+      font-size:.93rem;
+      color:#536170;
+      line-height:1.65;
+    }
+
+    .checklist{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin:18px 0 24px;
+    }
+
+    .checklist .alert-box,
+    .checklist .highlight-box{
+      margin:0;
+      box-shadow:var(--shadow-soft);
+    }
+
+    .checklist ul{
+      margin-left:1.1em;
+    }
+
+    .cta-box{
+      background:
+        radial-gradient(circle at 92% 18%,rgba(201,162,74,.22),transparent 28%),
+        linear-gradient(135deg,#0f2742,#163d62);
+      color:#fff;
+      border:none;
+      overflow:hidden;
+    }
+
+    .cta-box p{
+      color:rgba(255,255,255,.92);
+    }
+
+    .cta-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:18px;
+    }
+
+    .cta-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:48px;
+      padding:10px 18px;
+      border-radius:999px;
+      background:linear-gradient(135deg,var(--teal),#43c4bc);
+      color:#fff;
+      font-weight:900;
+      box-shadow:0 10px 24px rgba(0,0,0,.16);
+      text-align:center;
+      box-sizing:border-box;
+    }
+
+    .cta-button.gold{
+      background:linear-gradient(135deg,var(--gold),#e2c46d);
+      color:#172033;
+    }
+
+    .disclaimer-box{
+      background:#f8fafc;
+      color:#465363;
+      font-size:.9rem;
+      box-shadow:none;
+    }
+
+    .email-template{
+      background:#0f2742;
+      color:#fff;
+      border-radius:18px;
+      padding:18px;
+      margin-top:14px;
+      font-size:.95rem;
+      line-height:1.75;
+      white-space:pre-wrap;
+      overflow-wrap:anywhere;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    @media(max-width:900px){
+      .css-logo-inner{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .top-nav{
+        justify-content:flex-start;
+      }
+
+      .risk-row{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .step-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .checklist{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:2rem;
+      }
+    }
+
+    @media(max-width:640px){
+      body{
+        font-size:15.5px;
+        line-height:1.78;
+      }
+
+      .css-logo-wrapper{
+        position:static;
+      }
+
+      .css-logo-inner{
+        padding:12px 12px;
+        gap:12px;
+      }
+
+      .css-logo-text{
+        white-space:normal;
+      }
+
+      .top-nav{
+        display:grid;
+        grid-template-columns:repeat(2,minmax(0,1fr));
+        gap:7px;
+        width:100%;
+      }
+
+      .top-nav a,
+      .nav-tel{
+        width:100%;
+        min-height:38px;
+        border-radius:12px;
+        white-space:normal;
+        text-align:center;
+        line-height:1.25;
+        padding:7px 8px;
+        box-sizing:border-box;
+      }
+
+      .container{
+        padding:18px 12px 40px;
+      }
+
+      .hero{
+        padding:26px 18px 28px;
+        border-radius:22px;
+      }
+
+      .hero::after{
+        font-size:2.7rem;
+        right:-120px;
+        bottom:-8px;
+      }
+
+      h1{
+        font-size:1.7rem;
+        line-height:1.34;
+      }
+
+      h2{
+        font-size:1.28rem;
+        line-height:1.45;
+        margin-top:30px;
+      }
+
+      h3{
+        font-size:1.08rem;
+      }
+
+      .hero p{
+        font-size:.96rem;
+      }
+
+      .risk-row,
+      .step-grid,
+      .checklist{
+        grid-template-columns:1fr;
+      }
+
+      .risk-row{
+        gap:12px;
+      }
+
+      .risk-card{
+        padding:16px 14px;
+        border-radius:18px;
+      }
+
+      .article-body{
+        padding:20px 14px;
+        border-radius:22px;
+      }
+
+      .opening-box,
+      .highlight-box,
+      .alert-box,
+      .action-box,
+      .summary-card,
+      .cta-box,
+      .disclaimer-box{
+        padding:18px 15px;
+        margin:17px 0;
+        border-radius:18px;
+      }
+
+      .step-card{
+        padding:16px 14px;
+        border-radius:18px;
+      }
+
+      .cta-buttons{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .cta-button{
+        width:100%;
+        min-height:48px;
+        border-radius:14px;
+      }
+
+      .compare-table,
+      .compare-table tbody,
+      .compare-table tr,
+      .compare-table td{
+        display:block;
+        width:100%;
+        box-sizing:border-box;
+      }
+
+      .compare-table{
+        border:none;
+        box-shadow:none;
+        background:transparent;
+      }
+
+      .compare-table thead{
+        display:none;
+      }
+
+      .compare-table tr{
+        margin-bottom:12px;
+        border-radius:16px;
+        overflow:hidden;
+        background:#fff;
+        box-shadow:var(--shadow-soft);
+        border:1px solid rgba(15,39,66,.08);
+      }
+
+      .compare-table td{
+        border-bottom:1px solid rgba(15,39,66,.08);
+      }
+
+      .compare-table td:last-child{
+        border-bottom:none;
+      }
+
+      .compare-table td:first-child{
+        width:100%;
+        background:linear-gradient(135deg,var(--navy),#163d62);
+        color:#fff;
+        font-weight:800;
+      }
+
+      .compare-table td:nth-child(2)::before{
+        content:"リスク：";
+        display:block;
+        margin-bottom:4px;
+        color:var(--red);
+        font-weight:900;
+      }
+
+      .compare-table td:nth-child(3)::before{
+        content:"対策：";
+        display:block;
+        margin-bottom:4px;
+        color:var(--teal);
+        font-weight:900;
+      }
+    }
+
+    @media(max-width:380px){
+      body{
+        font-size:15px;
+      }
+
+      .top-nav{
+        grid-template-columns:1fr;
+      }
+
+      h1{
+        font-size:1.55rem;
+      }
+
+      .article-body{
+        padding:18px 12px;
+      }
+
+      .hero{
+        padding:24px 15px 26px;
+      }
+
+      .badge{
+        font-size:.74rem;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <header class="css-logo-wrapper">
+    <div class="css-logo-inner">
+      <div class="css-logo-text">
+        <span class="css-logo-gradient">🔍 島田税理士事務所</span>
+        <span class="logo-sub">YouTube動画連動column</span>
+      </div>
+      <nav class="top-nav" aria-label="上部ナビゲーション">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/NXBQjLwnvk0" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-content">
+        <div class="hero-kicker">YouTube連動コラム</div>
+        <div class="hero-badges">
+          <span class="badge alert">9月の税務手続きアラート</span>
+          <span class="badge">e-Tax停止期間</span>
+          <span class="badge">納税証明書</span>
+          <span class="badge">融資・補助金対策</span>
+        </div>
+        <h1>社長。9月に注意。税務署システム変更で納税証明書が取れない？5つの対策</h1>
+        <p>
+          2026年9月、国税システムの更改により、e-Taxの利用停止、納付書様式の変更、電子通知の確認漏れなどが起きやすい時期になります。
+          税金が増える話ではありませんが、段取りミスが融資・補助金・許認可・取引審査に影響する可能性があります。
+        </p>
+      </div>
+    </section>
+
+```
+<section class="risk-row" aria-label="冒頭4カード">
+  <article class="risk-card">
+    <small>CHECK 01</small>
+    <strong>e-Tax停止期間</strong>
+    <p>9月19日から24日朝、9月26日は税務手続きの予定に注意が必要です。</p>
+  </article>
+  <article class="risk-card">
+    <small>CHECK 02</small>
+    <strong>納付書の様式変更</strong>
+    <p>整理番号欄からお問い合わせ番号欄へ。紙納付を続ける会社は確認が必要です。</p>
+  </article>
+  <article class="risk-card">
+    <small>CHECK 03</small>
+    <strong>電子通知の確認漏れ</strong>
+    <p>社長・税理士・経理担当者の間で「誰が見るのか」を決めておくことが重要です。</p>
+  </article>
+  <article class="risk-card">
+    <small>CHECK 04</small>
+    <strong>納税証明書の取得遅れ</strong>
+    <p>融資・補助金・許認可・入札・大口取引の前に、取得時期を前倒しで確認しましょう。</p>
+  </article>
+</section>
+
+<article class="article-body">
+  <section class="opening-box">
+    <div class="box-label">この記事のポイント</div>
+    <p>
+      「社長、9月に納税証明書が取れなくて、融資の書類が遅れるかもしれません」
+    </p>
+    <p>
+      こう言われたら、かなり焦りますよね。
+      2026年9月24日に予定されている国税システム更改は、税務署内部のシステム変更に見えるかもしれません。
+      しかし実務では、申告、納付、届出、電子通知、納税証明書の取得スケジュールに影響する可能性があります。
+    </p>
+    <p>
+      怖いのは、増税ではありません。
+      怖いのは、必要なタイミングで必要な書類や手続きが進まない「段取りミス」です。
+    </p>
+  </section>
+
+  <h2>重要解説：2026年9月、何が変わるのか</h2>
+  <p>
+    国税庁は、令和8年9月24日に国税システムの更改を予定しています。
+    これに伴い、申告書等の様式、納付書、所得税徴収高計算書、e-Taxのメンテナンス時間、電子通知の扱いなどについて、実務上の確認が必要になります。
+  </p>
+  <p>
+    税理士は申告のプロです。
+    ただし、会社の融資スケジュール、補助金申請、許認可更新、入札、大口取引の審査時期まで、常にすべて把握しているとは限りません。
+  </p>
+  <p>
+    つまり、税理士に任せることは正解でも、「会社側が何も確認しない」状態は危険です。
+  </p>
+
+  <section class="highlight-box">
+    <div class="box-label">判断の核心</div>
+    <p>
+      今回のテーマは「税金が増えるかどうか」ではなく、
+      <strong>9月前後の手続きが予定通り進むように、社長が先に段取りを確認すること</strong>です。
+    </p>
+  </section>
+
+  <h2>損する会社TOP5：9月に足元をすくわれるパターン</h2>
+
+  <h3>第5位：電子通知を誰も見ていない会社</h3>
+  <p>
+    電子交付の対象や同意方法の変更により、通知の確認フローが曖昧な会社では見落としが起きやすくなります。
+  </p>
+  <p>
+    社長は「税理士が見ているはず」。
+    税理士は「会社側で見ているはず」。
+    経理担当者は「私の担当でしたっけ？」。
+  </p>
+  <p>
+    恋愛なら三角関係ですが、税務では事故です。
+  </p>
+
+  <section class="action-box">
+    <div class="box-label">今すぐできる防御策</div>
+    <ul>
+      <li>e-Taxのメッセージボックスを誰が確認するのかを決める</li>
+      <li>税理士と会社、どちらが一次確認するのかを決める</li>
+      <li>確認後に、社長・経理・税理士へどう共有するのかを決める</li>
+    </ul>
+  </section>
+
+  <h3>第4位：古い納付書を何も確認せず使い続ける会社</h3>
+  <p>
+    2026年9月24日に、納付書や所得税徴収高計算書の様式変更が予定されています。
+    主な変更点は、これまでの「整理番号」欄が「お問い合わせ番号」欄に変わる点です。
+  </p>
+  <p>
+    ただし、古い様式が9月24日からすぐにすべて使えなくなる、という単純な話ではありません。
+    所得税徴収高計算書については、現行様式も一定期間使用できる予定とされています。
+  </p>
+  <p>
+    とはいえ、紙納付を続ける会社、引き出しに古い納付書が残っている会社、経理担当者が慣れで処理している会社は、9月以降に使う用紙を早めに確認しておくと安心です。
+  </p>
+
+  <h3>第3位：e-Tax停止期間を知らない会社</h3>
+  <p>
+    e-Taxは、国税システム更改に伴うメンテナンスにより、次の期間は利用できないと案内されています。
+  </p>
+  <section class="alert-box">
+    <div class="box-label">税務手続きアラート</div>
+    <ul>
+      <li>2026年9月19日（土）0:00 ～ 9月24日（木）8:30</li>
+      <li>2026年9月26日（土）0:00 ～ 24:00</li>
+    </ul>
+    <p>
+      「連休明けにやればいいか」と考えていた申告、納付、届出、証明書請求が、予定通り進まない可能性があります。
+    </p>
+  </section>
+
+  <h3>第2位：納税証明書が必要な時に取れない会社</h3>
+  <p>
+    ここが、社長に一番関係します。
+  </p>
+  <p>
+    納税証明書は、融資、補助金、許認可、入札、大口取引の審査などで必要になることがあります。
+    金融機関から「来週までに納税証明書をお願いします」と言われた時期が、e-Tax停止期間やシステム変更直後と重なると、社内がバタつく可能性があります。
+  </p>
+  <p>
+    もちろん、これだけで融資が必ず止まるという話ではありません。
+    ただ、必要書類が必要な時に揃わないリスクは、社長として避けたいところです。
+  </p>
+
+  <h3>第1位：税理士に丸投げで何も確認しない会社</h3>
+  <p>
+    任せることは正解です。
+    しかし、丸投げと確認ゼロは別物です。
+  </p>
+  <p>
+    9月前後に融資・補助金・許認可・入札・大口取引の予定がある会社は、税理士、経理担当者、金融機関へ早めに確認しましょう。
+  </p>
+
+  <h2>比較表：9月前後に確認すべき実務リスク</h2>
+  <table class="compare-table">
+    <thead>
+      <tr>
+        <th>確認項目</th>
+        <th>放置した場合のリスク</th>
+        <th>対策</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>e-Tax停止期間</td>
+        <td>申告・納付・届出・証明書請求が予定通り進まない可能性があります。</td>
+        <td>9月19日から24日朝、9月26日を社内カレンダーに登録します。</td>
+      </tr>
+      <tr>
+        <td>納税証明書</td>
+        <td>融資・補助金・許認可・入札・取引審査の書類準備が遅れる可能性があります。</td>
+        <td>9月前後に必要な予定がある場合は、早めに税理士や金融機関へ確認します。</td>
+      </tr>
+      <tr>
+        <td>納付書</td>
+        <td>古い様式を慣れで使い、窓口や社内処理で混乱する可能性があります。</td>
+        <td>9月以降に使う納付書、紙納付の継続、電子納付への移行を確認します。</td>
+      </tr>
+      <tr>
+        <td>電子通知</td>
+        <td>会社と税理士の間で確認者が曖昧になり、通知を見落とす可能性があります。</td>
+        <td>誰が見るか、誰に共有するかを事前に決めます。</td>
+      </tr>
+      <tr>
+        <td>会計ソフト</td>
+        <td>ソフト側の対応確認が遅れ、電子申告や納付作業で手戻りが出る可能性があります。</td>
+        <td>利用中の会計ソフト・給与ソフトの案内を確認します。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>実務ステップ：今日からやる5つの対策</h2>
+  <div class="step-grid">
+    <div class="step-card">
+      <span>1</span>
+      <strong>9月の予定を洗い出す</strong>
+      <p>融資、補助金、許認可、入札、大口取引、決算・申告・納付の予定を確認します。</p>
+    </div>
+    <div class="step-card">
+      <span>2</span>
+      <strong>e-Tax停止日を登録する</strong>
+      <p>9月19日から24日朝、9月26日を社内カレンダーに登録します。</p>
+    </div>
+    <div class="step-card">
+      <span>3</span>
+      <strong>納税証明書を前倒し確認</strong>
+      <p>金融機関や提出先に、必要な種類・期限・取得方法を確認します。</p>
+    </div>
+    <div class="step-card">
+      <span>4</span>
+      <strong>電子通知の担当を決める</strong>
+      <p>e-Taxメッセージボックスを誰が見て、誰に共有するかを決めます。</p>
+    </div>
+    <div class="step-card">
+      <span>5</span>
+      <strong>税理士へ確認メールを送る</strong>
+      <p>9月前後の申告・納付・証明書取得に問題がないか、文面で確認します。</p>
+    </div>
+    <div class="step-card">
+      <span>6</span>
+      <strong>紙から電子納付も検討</strong>
+      <p>紙納付を続けるか、ダイレクト納付などへ移行するかを早めに検討します。</p>
+    </div>
+  </div>
+
+  <section class="action-box">
+    <div class="box-label">コピペ用メール文面</div>
+    <p>
+      税理士さんや経理担当者へ、そのまま送れる確認文です。
+    </p>
+    <div class="email-template">件名：2026年9月の国税システム更改に関する確認
+```
+
+〇〇先生
+
+いつもお世話になっております。
+
+2026年9月の国税システム更改に伴い、当社の税務手続きについて念のため確認させてください。
+
+1. 9月19日から24日朝、9月26日に申告や納付の予定はありますか。
+2. 納付書の様式変更で、当社が注意すべき点はありますか。
+3. 電子通知やe-Taxのメッセージボックスは、当社と先生のどちらで確認すべきでしょうか。
+4. 会計ソフト・給与ソフト側で対応が必要なことはありますか。
+5. 9月前後に納税証明書が必要な場合、早めに準備すべきでしょうか。
+
+お手数ですが、当社で事前に対応すべきことがあればご教示ください。
+よろしくお願いいたします。</div> </section>
+
+```
+  <h2>チェックリスト：危険な状態と守れる状態</h2>
+  <div class="checklist">
+    <section class="alert-box">
+      <div class="box-label">🔴 危険な状態 / 失敗するパターン</div>
+      <ul>
+        <li>9月のe-Tax停止期間を誰も把握していない</li>
+        <li>融資や補助金の予定があるのに、納税証明書の取得時期を確認していない</li>
+        <li>古い納付書をそのまま使い続けるつもりでいる</li>
+        <li>電子通知を誰が確認するか決まっていない</li>
+        <li>税理士に任せているから大丈夫、と会社側で何も確認していない</li>
+      </ul>
+    </section>
+
+    <section class="highlight-box">
+      <div class="box-label">🔵 守れる状態 / 成功するパターン</div>
+      <ul>
+        <li>9月19日から24日朝、9月26日を社内カレンダーに登録している</li>
+        <li>金融機関や提出先へ、納税証明書の必要時期を確認している</li>
+        <li>9月以降に使う納付書や電子納付の方針を確認している</li>
+        <li>電子通知の確認担当と共有ルールが決まっている</li>
+        <li>税理士へ5つの質問を送り、会社側の対応事項を確認している</li>
+      </ul>
+    </section>
+  </div>
+
+  <h2>まとめ：税金より怖いのは、段取りミスです</h2>
+  <section class="summary-card">
+    <div class="box-label">まとめ</div>
+    <p>
+      今回の話は、税金が増える話ではありません。
+      しかし、確認していない会社ほど、手続きで慌てる可能性があります。
+    </p>
+    <p>
+      特に9月前後に、融資、補助金、許認可、入札、大口取引の予定がある会社は、今日中に一度確認してください。
+    </p>
+    <p>
+      今日やることは1つです。
+    </p>
+    <p>
+      <strong>「うちは9月、大丈夫ですか？」</strong>
+    </p>
+    <p>
+      この一言で、防げるトラブルはたくさんあります。
+    </p>
+  </section>
+
+  <div class="cta-box">
+    <p>
+      「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家に相談してください。<br>
+      個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になったらチャンネル登録、高評価、お願いします！
+    </p>
+    <div class="cta-buttons">
+      <a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
+      <a class="cta-button gold" href="https://youtu.be/NXBQjLwnvk0" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
+    </div>
+  </div>
+
+  <div class="disclaimer-box">
+    <p><strong>【作成月】</strong>2026/07</p>
+    <p><strong>【ご利用にあたっての注意事項】</strong></p>
+    <ul>
+      <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+      <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+      <li>※内容の是非については、当事務所では対応いたしません。</li>
+    </ul>
+  </div>
+</article>
+```
+
+  </main>
+</body>
+</html>
