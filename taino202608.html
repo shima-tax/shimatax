@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>資金繰りが苦しい社長必見。税金が払えない時の乗り切り方と3つの対策</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+
+<style>
+:root{
+--navy:#12355b;
+--teal:#0f8b8d;
+--gold:#d9a441;
+--red:#d64545;
+--blue:#2d6cdf;
+--green:#1f8f58;
+--bg:#f5f7fb;
+--shadow-soft:0 10px 28px rgba(0,0,0,.08);
+}
+html{
+scroll-behavior:smooth;
+-webkit-text-size-adjust:100%;
+}
+body{
+margin:0;
+font-family:"Yu Gothic","Hiragino Sans","Meiryo",sans-serif;
+background:var(--bg);
+color:#222;
+line-height:1.85;
+font-size:16px;
+overflow-x:hidden;
+}
+img{max-width:100%;height:auto;}
+a{text-decoration:none;}
+.css-logo-wrapper{
+background:#fff;
+box-shadow:var(--shadow-soft);
+}
+.css-logo-inner{
+max-width:980px;
+margin:auto;
+padding:18px;
+}
+.css-logo-text{
+font-size:1.7rem;
+font-weight:800;
+color:var(--navy);
+}
+.css-logo-gradient{
+background:linear-gradient(90deg,var(--navy),var(--teal));
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+.logo-sub{
+color:#666;
+font-size:.95rem;
+margin-top:4px;
+}
+.top-nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:15px;
+}
+.top-nav a,.nav-tel{
+background:#eef4fb;
+padding:10px 16px;
+border-radius:999px;
+font-size:.92rem;
+color:var(--navy);
+font-weight:700;
+}
+.container{
+max-width:980px;
+margin:auto;
+padding:30px 18px 56px;
+}
+.hero{
+position:relative;
+overflow:hidden;
+border-radius:30px;
+padding:48px;
+background:linear-gradient(135deg,#113b62,#0f8b8d);
+color:#fff;
+margin-bottom:28px;
+}
+.hero::after{
+content:"TAX CASH FLOW";
+position:absolute;
+right:-80px;
+bottom:-10px;
+font-size:5rem;
+font-weight:900;
+opacity:.08;
+white-space:nowrap;
+}
+.hero-content{position:relative;z-index:2;}
+.hero-kicker{
+font-size:.95rem;
+letter-spacing:2px;
+text-transform:uppercase;
+}
+.hero-badges{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin:14px 0;
+}
+.badge{
+background:rgba(255,255,255,.15);
+padding:6px 12px;
+border-radius:999px;
+font-size:.85rem;
+}
+h1{
+font-size:2.2rem;
+margin:10px 0 16px;
+line-height:1.3;
+}
+h2{
+font-size:1.5rem;
+color:var(--navy);
+margin-top:40px;
+}
+h3{
+font-size:1.2rem;
+color:var(--teal);
+}
+.risk-row{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:16px;
+margin-bottom:28px;
+}
+.risk-card{
+background:#fff;
+border-radius:18px;
+padding:18px;
+box-shadow:var(--shadow-soft);
+border-left:6px solid var(--teal);
+}
+.risk-card small{
+display:block;
+color:#777;
+margin-bottom:6px;
+}
+.article-body{
+background:#fff;
+padding:34px;
+border-radius:28px;
+box-shadow:var(--shadow-soft);
+}
+.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{
+padding:22px;
+border-radius:20px;
+margin:22px 0;
+}
+.opening-box{background:#eef7ff;border-left:6px solid var(--blue);}
+.highlight-box{background:#eefcf6;border-left:6px solid var(--green);}
+.alert-box{background:#fff5f5;border-left:6px solid var(--red);}
+.action-box{background:#fffbea;border-left:6px solid var(--gold);}
+.box-label{
+font-weight:800;
+margin-bottom:10px;
+color:var(--navy);
+}
+.step-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:16px;
+margin:20px 0;
+}
+.step-card{
+background:#f7f9fc;
+padding:18px;
+border-radius:18px;
+box-shadow:var(--shadow-soft);
+}
+.checklist{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+.checklist>div{
+background:#fafafa;
+padding:18px;
+border-radius:18px;
+box-shadow:var(--shadow-soft);
+}
+.compare-table{
+width:100%;
+border-collapse:collapse;
+margin:20px 0;
+}
+.compare-table th,.compare-table td{
+border:1px solid #ddd;
+padding:12px;
+}
+.compare-table th{
+background:var(--navy);
+color:#fff;
+}
+.cta-box{
+background:linear-gradient(135deg,#113b62,#0f8b8d);
+color:#fff;
+text-align:center;
+}
+.cta-buttons{
+display:flex;
+gap:14px;
+justify-content:center;
+margin-top:18px;
+}
+.cta-button{
+display:inline-block;
+padding:14px 24px;
+border-radius:14px;
+background:#fff;
+color:var(--navy);
+font-weight:800;
+}
+.cta-button.gold{
+background:var(--gold);
+color:#fff;
+}
+.disclaimer-box{
+background:#f2f2f2;
+font-size:.92rem;
+}
+@media(max-width:900px){
+.risk-row{grid-template-columns:repeat(2,1fr);}
+.step-grid{grid-template-columns:repeat(2,1fr);}
+.checklist{grid-template-columns:1fr;}
+}
+@media(max-width:640px){
+body{font-size:15.5px;line-height:1.78;}
+.css-logo-wrapper{position:static;}
+.top-nav{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:7px;
+width:100%;
+}
+.top-nav a,.nav-tel{
+width:100%;
+min-height:38px;
+border-radius:12px;
+white-space:normal;
+text-align:center;
+line-height:1.25;
+}
+.container{padding:18px 12px 40px;}
+.hero{padding:26px 18px 28px;border-radius:22px;}
+.hero::after{font-size:2.7rem;right:-120px;bottom:-8px;}
+h1{font-size:1.7rem;line-height:1.34;}
+h2{font-size:1.28rem;line-height:1.45;}
+.risk-row,.step-grid,.checklist{grid-template-columns:1fr;}
+.article-body{padding:20px 14px;border-radius:22px;}
+.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{
+padding:18px 15px;
+margin:17px 0;
+border-radius:18px;
+}
+.cta-buttons{
+display:grid;
+grid-template-columns:1fr;
+gap:10px;
+}
+.cta-button{
+width:100%;
+min-height:48px;
+}
+.compare-table,.compare-table tbody,.compare-table tr,.compare-table td{
+display:block;
+width:100%;
+}
+.compare-table thead{display:none;}
+.compare-table tr{
+margin-bottom:12px;
+border-radius:16px;
+overflow:hidden;
+background:#fff;
+box-shadow:var(--shadow-soft);
+}
+.compare-table td:first-child{
+background:linear-gradient(135deg,var(--navy),#163d62);
+color:#fff;
+font-weight:800;
+}
+}
+@media(max-width:380px){
+body{font-size:15px;}
+.top-nav{grid-template-columns:1fr;}
+h1{font-size:1.55rem;}
+.article-body{padding:18px 12px;}
+}
+</style>
+</head>
+
+<body>
+
+<header class="css-logo-wrapper">
+<div class="css-logo-inner">
+
+<div class="css-logo-text">
+<span class="css-logo-gradient">島田税理士事務所</span>
+</div>
+
+<div class="logo-sub">
+YouTube動画連動 column
+</div>
+
+<nav class="top-nav">
+<a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+<a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+<a href="https://youtu.be/nhtQdazSCao" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+<span class="nav-tel">【Tel 03-5485-2447】</span>
+</nav>
+
+</div>
+</header>
+
+<div class="container">
+
+<section class="hero">
+<div class="hero-content">
+
+<div class="hero-kicker">
+YouTube連動コラム
+</div>
+
+<div class="hero-badges">
+<span class="badge">資金繰り注意</span>
+<span class="badge">納税相談</span>
+<span class="badge">分割納付</span>
+<span class="badge">差押え対策</span>
+</div>
+
+<h1>資金繰りが苦しい社長必見。<br>税金が払えない時の乗り切り方と3つの対策</h1>
+
+<p>
+税金が払えない状況でも、放置せず適切な順番で動けば選択肢が残る可能性があります。
+本記事では、税金未納時に最初に確認すべき数字、相談の順番、税務署へ持参したい資料、避けるべき行動を実務目線で整理します。
+</p>
+
+</div>
+</section>
+
+<section class="risk-row">
+
+<div class="risk-card">
+<small>STEP1</small>
+<strong>未納税額を整理</strong>
+<p>税目ごとの金額を確認。</p>
+</div>
+
+<div class="risk-card">
+<small>STEP2</small>
+<strong>資金を見える化</strong>
+<p>現預金と入金予定を把握。</p>
+</div>
+
+<div class="risk-card">
+<small>STEP3</small>
+<strong>毎月払える額</strong>
+<p>現実的な返済計画を作成。</p>
+</div>
+
+<div class="risk-card">
+<small>STEP4</small>
+<strong>相談の順番</strong>
+<p>税理士→税務署→金融機関。</p>
+</div>
+
+</section>
+
+<div class="article-body">
+
+<div class="opening-box">
+<div class="box-label">この記事のポイント</div>
+
+<p>
+税務署から届いた封筒を見るだけで不安になる経営者の方は少なくありません。しかし、税金が払えない状況は必ずしも経営能力の問題ではなく、資金繰りのタイミングによるケースもあります。
+</p>
+
+<p>
+最も避けたいのは「払えないこと」ではなく「放置すること」です。早めに状況を整理し、相談を始めることが重要です。
+</p>
+
+</div>
+
+<h2>放置するとどうなるのか</h2>
+
+<div class="alert-box">
+<div class="box-label">税務調査アラート</div>
+
+<ul>
+<li>納期限後は原則として延滞税が発生</li>
+<li>督促後は法律上、差押えが行われる可能性がある</li>
+<li>銀行口座が差押えられると資金繰りへ大きな影響</li>
+</ul>
+
+<p>
+一方で、納付が難しい事情がある場合は、分割納付や納税の猶予が検討される場合があります。個別事情によって取扱いは異なるため、早めの相談が大切です。
+</p>
+
+</div>
+
+<h2>最初に確認する3つの数字</h2>
+
+<div class="highlight-box">
+<div class="box-label">判断の核心</div>
+
+<ol>
+<li>未納税額を税目ごとに整理する</li>
+<li>現在の現預金・入金予定を把握する</li>
+<li>今月必ず必要となる支出を一覧化する</li>
+</ol>
+
+<p>
+税務署へ伝えるべきなのは「払えません」ではなく、「今月はいくら納付でき、今後は毎月いくら支払える予定か」という具体的な数字です。
+</p>
+
+</div>
+
+<h2>相談する順番</h2>
+
+<div class="step-grid">
+
+<div class="step-card">
+<h3>STEP1</h3>
+<p><strong>税理士へ相談</strong><br>
+未納額・資金繰り・今後の税負担を整理します。</p>
+</div>
+
+<div class="step-card">
+<h3>STEP2</h3>
+<p><strong>税務署へ相談</strong><br>
+分割納付や納税猶予などの制度について確認します。</p>
+</div>
+
+<div class="step-card">
+<h3>STEP3</h3>
+<p><strong>金融機関へ相談</strong><br>
+税金の見通しを整理したうえで、必要に応じて返済条件の見直し等を相談します。</p>
+</div>
+
+</div>
+
+<h2>税務署へ持参したい資料7点</h2>
+
+<div class="action-box">
+<div class="box-label">申請前の準備</div>
+
+<ol>
+<li>納付書・督促状</li>
+<li>申告書控え</li>
+<li>通帳残高・入出金明細</li>
+<li>売掛金一覧</li>
+<li>買掛金・未払金一覧</li>
+<li>今後3か月の資金繰り表</li>
+<li>毎月納付できる金額のメモ</li>
+</ol>
+
+</div>
+
+<h2>よくある失敗例と改善例</h2>
+
+<table class="compare-table">
+<thead>
+<tr>
+<th>比較</th>
+<th>失敗例</th>
+<th>改善例</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>ポイント</td>
+<td>封筒を開封せず税務署へ無連絡</td>
+<td>税理士と資金繰り表を作成し税務署へ相談</td>
+</tr>
+
+<tr>
+<td>リスク</td>
+<td>売上を全て運転資金へ使い納税資金が消える</td>
+<td>納税可能額を先に確保する</td>
+</tr>
+
+<tr>
+<td>対策</td>
+<td>銀行へ追加融資だけ相談</td>
+<td>税金の分割計画を整理してから金融機関へ相談</td>
+</tr>
+
+</tbody>
+</table>
+
+<h2>チェックリスト</h2>
+
+<div class="checklist">
+
+<div>
+<h3>🔴 失敗するパターン</h3>
+<ul>
+<li>封筒を開けない</li>
+<li>税務署へ連絡しない</li>
+<li>数字を整理していない</li>
+<li>一人で抱え込む</li>
+</ul>
+</div>
+
+<div>
+<h3>🔵 成功するパターン</h3>
+<ul>
+<li>未納税額を整理する</li>
+<li>資金繰り表を作成する</li>
+<li>毎月払える金額を決める</li>
+<li>税理士→税務署→銀行の順で相談する</li>
+</ul>
+</div>
+
+</div>
+
+<div class="summary-card">
+<div class="box-label">まとめ</div>
+
+<ol>
+<li>未納税額・手元資金・必要経費を数字で整理する。</li>
+<li>現実的な納付計画を資金繰り表へ落とし込む。</li>
+<li>税理士→税務署→金融機関の順番で相談する。</li>
+</ol>
+
+<p>
+税金が払えない状況でも、何もしない時間が長くなるほど選択肢は少なくなります。税務署へ訪問する際は、事前に電話で担当部署へ連絡し、相談日時を調整しておくとスムーズです。
+</p>
+
+</div>
+
+<div class="cta-box">
+
+<p>
+「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家へご相談ください。<br><br>
+
+個別ケースは専門家に相談を。迷ったら無料相談お待ちしております。参考になりましたら、チャンネル登録・高評価もぜひお願いいたします。
+</p>
+
+<div class="cta-buttons">
+
+<a class="cta-button"
+href="https://www.shimadakaikei.com/inquiry/index.html"
+target="_blank"
+rel="noopener noreferrer">
+無料相談はこちら
+</a>
+
+<a class="cta-button gold"
+href="https://youtu.be/nhtQdazSCao"
+target="_blank"
+rel="noopener noreferrer">
+今回のYouTube動画を見る
+</a>
+
+</div>
+
+</div>
+
+<div class="disclaimer-box">
+
+<p><strong>【作成月】</strong>2026/08</p>
+
+<p><strong>【ご利用にあたっての注意事項】</strong></p>
+
+<ul>
+<li>内容は作成時点の法令・制度をもとに作成しています。制度の改正や個別事情により取扱いが異なる場合があります。</li>
+<li>分割納付や納税猶予等の適用可否は個別事情により判断されます。詳細は税務署または税理士へご確認ください。</li>
+<li>本記事は一般的な情報提供を目的としており、個別案件への判断を保証するものではありません。</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
