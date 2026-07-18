@@ -1,589 +1,1473 @@
 <!DOCTYPE html>
+
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>資金繰りが苦しい社長必見。税金が払えない時の乗り切り方と3つの対策</title>
-
+<meta name="description" content="資金繰りが苦しいときに税金が払えない場合の対応方法を解説。放置するリスク、税務署への相談方法、資金繰り表の作り方、税理士・税務署・金融機関へ相談する順番まで分かりやすく紹介します。">
+<title>資金繰りが苦しい社長必見。税金が払えない時の乗り切り方と3つの対策｜島田税理士事務所</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
 
 <style>
 :root{
---navy:#12355b;
---teal:#0f8b8d;
---gold:#d9a441;
---red:#d64545;
---blue:#2d6cdf;
---green:#1f8f58;
---bg:#f5f7fb;
---shadow-soft:0 10px 28px rgba(0,0,0,.08);
+--navy:#102f4d;
+--navy-deep:#0a2238;
+--navy-soft:#173f63;
+--teal:#0b7780;
+--teal-light:#32a7ad;
+--teal-pale:#eaf7f7;
+--gold:#c9952f;
+--gold-light:#f2cf78;
+--gold-pale:#fff8e8;
+--red:#c94b50;
+--red-deep:#9f3439;
+--red-pale:#fff1f2;
+--blue:#377fc0;
+--blue-pale:#eef6fd;
+--green:#34856a;
+--green-pale:#eef8f3;
+--ink:#203444;
+--muted:#657784;
+--line:#dfe8eb;
+--line-strong:#cfdee2;
+--surface:#ffffff;
+--surface-soft:#f7fafb;
+--shadow-sm:0 8px 22px rgba(16,47,77,.07);
+--shadow-md:0 18px 45px rgba(16,47,77,.10);
+--shadow-lg:0 26px 70px rgba(10,34,56,.15);
+--radius-sm:14px;
+--radius-md:20px;
+--radius-lg:28px;
 }
+
+*{
+box-sizing:border-box;
+}
+
 html{
 scroll-behavior:smooth;
 -webkit-text-size-adjust:100%;
 }
+
 body{
 margin:0;
-font-family:"Yu Gothic","Hiragino Sans","Meiryo",sans-serif;
-background:var(--bg);
-color:#222;
-line-height:1.85;
-font-size:16px;
 overflow-x:hidden;
+font-size:16px;
+line-height:1.85;
+font-family:"Yu Gothic","Hiragino Kaku Gothic ProN","Hiragino Sans","Meiryo",sans-serif;
+color:var(--ink);
+background:
+radial-gradient(circle at top left,rgba(217,76,76,.13),transparent 30%),
+radial-gradient(circle at top right,rgba(13,115,125,.16),transparent 28%),
+linear-gradient(180deg,#fbfdfe,#f3f6f7);
 }
-img{max-width:100%;height:auto;}
-a{text-decoration:none;}
-.css-logo-wrapper{
-background:#fff;
-box-shadow:var(--shadow-soft);
+
+a{
+color:inherit;
+text-decoration:none;
 }
-.css-logo-inner{
-max-width:980px;
-margin:auto;
-padding:18px;
+
+img{
+max-width:100%;
+height:auto;
 }
-.css-logo-text{
-font-size:1.7rem;
-font-weight:800;
-color:var(--navy);
-}
-.css-logo-gradient{
-background:linear-gradient(90deg,var(--navy),var(--teal));
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-}
-.logo-sub{
-color:#666;
-font-size:.95rem;
-margin-top:4px;
-}
-.top-nav{
-display:flex;
-flex-wrap:wrap;
-gap:10px;
-margin-top:15px;
-}
-.top-nav a,.nav-tel{
-background:#eef4fb;
-padding:10px 16px;
-border-radius:999px;
-font-size:.92rem;
-color:var(--navy);
-font-weight:700;
-}
+
 .container{
 max-width:980px;
-margin:auto;
+margin:0 auto;
 padding:30px 18px 56px;
 }
-.hero{
+
+.css-logo-wrapper,
+.footer{
 position:relative;
 overflow:hidden;
-border-radius:30px;
-padding:48px;
-background:linear-gradient(135deg,#113b62,#0f8b8d);
-color:#fff;
-margin-bottom:28px;
+background:rgba(255,255,255,.94);
+border:1px solid rgba(207,222,226,.9);
+border-radius:26px;
+box-shadow:var(--shadow-md);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
 }
-.hero::after{
-content:"TAX CASH FLOW";
+
+.css-logo-wrapper{
+margin-bottom:24px;
+}
+
+.css-logo-wrapper::before,
+.footer::before{
+content:"";
 position:absolute;
-right:-80px;
-bottom:-10px;
-font-size:5rem;
-font-weight:900;
-opacity:.08;
+inset:0 auto 0 0;
+width:5px;
+background:linear-gradient(180deg,var(--teal-light),var(--teal),var(--gold));
+}
+
+.css-logo-inner,
+.footer-inner{
+padding:25px 28px 27px 31px;
+}
+
+.css-logo-text,
+.footer-brand{
+font-family:"Yu Mincho","Hiragino Mincho ProN","MS PMincho",serif;
+font-size:clamp(1.7rem,3vw,2.2rem);
+line-height:1.25;
+letter-spacing:.06em;
+color:var(--teal);
+font-weight:700;
+}
+
+.logo-sub,
+.footer-sub{
+position:relative;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+width:100%;
+min-height:38px;
+margin-top:14px;
+padding:8px 17px;
+border-radius:10px;
+overflow:hidden;
+background:linear-gradient(90deg,#8edce1 0%,#3aabb2 46%,#0b7780 100%);
+color:#fff;
+font-size:.88rem;
+font-weight:800;
+letter-spacing:.06em;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.28);
+}
+
+.logo-sub::before,
+.footer-sub::before{
+content:"SHIMADA TAX OFFICE";
+position:absolute;
+left:16px;
+font-size:.68rem;
+letter-spacing:.2em;
+opacity:.58;
+}
+
+.top-nav,
+.footer-nav{
+display:flex;
+flex-wrap:wrap;
+gap:9px;
+margin-top:18px;
+}
+
+.top-nav a,
+.nav-tel,
+.footer-nav a,
+.footer-nav span{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:40px;
+padding:8px 15px;
+border:1px solid #d9e7e7;
+border-radius:999px;
+background:linear-gradient(180deg,#f8fbfb,#eef5f4);
+color:var(--teal);
+font-size:.89rem;
+font-weight:800;
+letter-spacing:.02em;
+transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease,background .2s ease;
+}
+
+.top-nav a:hover,
+.footer-nav a:hover{
+transform:translateY(-2px);
+border-color:#b9d8d8;
+background:#fff;
+box-shadow:0 8px 18px rgba(11,119,128,.12);
+}
+
+.nav-tel,
+.footer-nav span{
+color:var(--navy);
+background:linear-gradient(180deg,#fff,#f5f8f9);
+}
+
+.hero{
+position:relative;
+isolation:isolate;
+overflow:hidden;
+margin-bottom:26px;
+padding:48px 44px 46px;
+border:1px solid rgba(255,255,255,.14);
+border-radius:30px;
+background:
+radial-gradient(circle at 86% 14%,rgba(80,201,200,.27),transparent 28%),
+radial-gradient(circle at 6% 90%,rgba(201,149,47,.18),transparent 27%),
+linear-gradient(135deg,var(--navy-deep) 0%,var(--navy-soft) 47%,var(--teal) 100%);
+color:#fff;
+box-shadow:var(--shadow-lg);
+}
+
+.hero::before{
+content:"";
+position:absolute;
+z-index:-1;
+top:-120px;
+right:-90px;
+width:340px;
+height:340px;
+border:1px solid rgba(255,255,255,.12);
+border-radius:50%;
+box-shadow:
+0 0 0 46px rgba(255,255,255,.035),
+0 0 0 92px rgba(255,255,255,.025);
+}
+
+.hero::after{
+content:"TAX PAYMENT RESCUE";
+position:absolute;
+z-index:-1;
+right:-55px;
+bottom:-26px;
 white-space:nowrap;
+font-family:Arial,sans-serif;
+font-size:5.3rem;
+line-height:1;
+font-weight:900;
+letter-spacing:.06em;
+color:#fff;
+opacity:.055;
 }
-.hero-content{position:relative;z-index:2;}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:790px;
+}
+
 .hero-kicker{
-font-size:.95rem;
-letter-spacing:2px;
-text-transform:uppercase;
+display:inline-flex;
+align-items:center;
+gap:9px;
+margin-bottom:16px;
+padding:7px 13px;
+border:1px solid rgba(255,255,255,.22);
+border-radius:999px;
+background:rgba(255,255,255,.11);
+font-size:.82rem;
+font-weight:800;
+letter-spacing:.11em;
+box-shadow:inset 0 1px 0 rgba(255,255,255,.14);
 }
+
+.hero-kicker::before{
+content:"▶";
+display:inline-flex;
+align-items:center;
+justify-content:center;
+width:20px;
+height:20px;
+border-radius:50%;
+background:var(--gold);
+color:#fff;
+font-size:.62rem;
+}
+
 .hero-badges{
 display:flex;
 flex-wrap:wrap;
 gap:8px;
-margin:14px 0;
+margin:0 0 19px;
 }
+
 .badge{
-background:rgba(255,255,255,.15);
-padding:6px 12px;
+display:inline-flex;
+align-items:center;
+min-height:31px;
+padding:5px 11px;
+border:1px solid rgba(255,255,255,.18);
 border-radius:999px;
-font-size:.85rem;
+background:rgba(255,255,255,.12);
+color:#eefeff;
+font-size:.8rem;
+font-weight:700;
+letter-spacing:.03em;
 }
+
 h1{
-font-size:2.2rem;
-margin:10px 0 16px;
-line-height:1.3;
+max-width:820px;
+margin:0 0 18px;
+font-size:clamp(2rem,4.6vw,3rem);
+line-height:1.28;
+letter-spacing:.015em;
+font-weight:800;
+text-wrap:balance;
 }
-h2{
-font-size:1.5rem;
-color:var(--navy);
-margin-top:40px;
+
+.hero p{
+max-width:760px;
+margin:0;
+color:rgba(255,255,255,.9);
+font-size:1rem;
+line-height:1.9;
 }
-h3{
-font-size:1.2rem;
-color:var(--teal);
-}
+
 .risk-row{
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:16px;
 margin-bottom:28px;
 }
+
 .risk-card{
-background:#fff;
-border-radius:18px;
-padding:18px;
-box-shadow:var(--shadow-soft);
-border-left:6px solid var(--teal);
-}
-.risk-card small{
-display:block;
-color:#777;
-margin-bottom:6px;
-}
-.article-body{
-background:#fff;
-padding:34px;
-border-radius:28px;
-box-shadow:var(--shadow-soft);
-}
-.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{
-padding:22px;
+position:relative;
+overflow:hidden;
+min-height:180px;
+padding:20px 18px 18px;
+border:1px solid var(--line);
 border-radius:20px;
-margin:22px 0;
+background:rgba(255,255,255,.96);
+box-shadow:var(--shadow-sm);
+transition:transform .2s ease,box-shadow .2s ease;
 }
-.opening-box{background:#eef7ff;border-left:6px solid var(--blue);}
-.highlight-box{background:#eefcf6;border-left:6px solid var(--green);}
-.alert-box{background:#fff5f5;border-left:6px solid var(--red);}
-.action-box{background:#fffbea;border-left:6px solid var(--gold);}
-.box-label{
-font-weight:800;
-margin-bottom:10px;
+
+.risk-card:hover{
+transform:translateY(-3px);
+box-shadow:var(--shadow-md);
+}
+
+.risk-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:5px;
+background:var(--teal);
+}
+
+.risk-card:nth-child(2)::before{background:var(--blue);}
+.risk-card:nth-child(3)::before{background:var(--gold);}
+.risk-card:nth-child(4)::before{background:var(--red);}
+
+.risk-card>div:first-child{
+display:inline-flex;
+align-items:center;
+min-height:26px;
+padding:3px 9px;
+border-radius:999px;
+background:var(--teal-pale);
+color:var(--teal);
+font-size:.7rem;
+font-weight:900;
+letter-spacing:.12em;
+}
+
+.risk-card:nth-child(2)>div:first-child{
+background:var(--blue-pale);
+color:var(--blue);
+}
+
+.risk-card:nth-child(3)>div:first-child{
+background:var(--gold-pale);
+color:#9a711f;
+}
+
+.risk-card:nth-child(4)>div:first-child{
+background:var(--red-pale);
+color:var(--red);
+}
+
+.risk-card strong{
+display:block;
+margin:14px 0 7px;
 color:var(--navy);
+font-size:1.03rem;
+line-height:1.5;
 }
+
+.risk-card{
+color:var(--muted);
+font-size:.9rem;
+line-height:1.75;
+}
+
+.article-body{
+position:relative;
+overflow:hidden;
+padding:38px 38px 40px;
+border:1px solid rgba(207,222,226,.9);
+border-radius:28px;
+background:rgba(255,255,255,.97);
+box-shadow:var(--shadow-md);
+}
+
+.article-body::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:4px;
+background:linear-gradient(90deg,var(--teal),var(--blue),var(--gold),var(--red));
+}
+
+h2{
+position:relative;
+margin:48px 0 20px;
+padding:0 0 12px 18px;
+border-bottom:1px solid var(--line);
+color:var(--navy);
+font-size:1.52rem;
+line-height:1.45;
+letter-spacing:.01em;
+}
+
+h2::before{
+content:"";
+position:absolute;
+left:0;
+top:.18em;
+width:6px;
+height:1.45em;
+border-radius:999px;
+background:linear-gradient(180deg,var(--teal-light),var(--teal));
+box-shadow:0 0 0 4px var(--teal-pale);
+}
+
+h3{
+margin:0 0 8px;
+color:var(--navy);
+font-size:1.05rem;
+line-height:1.55;
+}
+
+p{
+margin:0 0 1.1em;
+}
+
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
+position:relative;
+margin:24px 0;
+padding:24px 24px 22px;
+border-radius:20px;
+}
+
+.opening-box{
+border:1px solid #d5e7f5;
+border-left:6px solid var(--blue);
+background:
+linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.18)),
+var(--blue-pale);
+}
+
+.highlight-box{
+border:1px solid #d3e9dd;
+border-left:6px solid var(--green);
+background:
+linear-gradient(135deg,rgba(255,255,255,.76),rgba(255,255,255,.14)),
+var(--green-pale);
+}
+
+.alert-box{
+border:1px solid #f0d4d7;
+border-left:6px solid var(--red);
+background:
+linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.12)),
+var(--red-pale);
+}
+
+.action-box{
+border:1px solid #efdfb7;
+border-left:6px solid var(--gold);
+background:
+linear-gradient(135deg,rgba(255,255,255,.78),rgba(255,255,255,.12)),
+var(--gold-pale);
+}
+
+.box-label{
+display:inline-flex;
+align-items:center;
+gap:7px;
+margin-bottom:10px;
+padding:5px 10px;
+border-radius:999px;
+background:rgba(255,255,255,.72);
+color:var(--navy);
+font-size:.72rem;
+font-weight:900;
+letter-spacing:.08em;
+box-shadow:0 3px 10px rgba(16,47,77,.05);
+}
+
+.box-label::before{
+content:"";
+width:7px;
+height:7px;
+border-radius:50%;
+background:currentColor;
+}
+
+.opening-box .box-label{color:var(--blue);}
+.highlight-box .box-label{color:var(--green);}
+.alert-box .box-label{color:var(--red);}
+.action-box .box-label{color:#9a711f;}
+
+.opening-box p:last-child,
+.highlight-box p:last-child,
+.alert-box p:last-child,
+.action-box p:last-child{
+margin-bottom:0;
+}
+
 .step-grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:16px;
-margin:20px 0;
+margin:22px 0 8px;
 }
+
 .step-card{
-background:#f7f9fc;
-padding:18px;
-border-radius:18px;
-box-shadow:var(--shadow-soft);
+position:relative;
+min-height:220px;
+padding:23px 20px 20px;
+border:1px solid var(--line);
+border-radius:19px;
+background:
+linear-gradient(180deg,#fff 0%,#f7fafb 100%);
+box-shadow:var(--shadow-sm);
 }
+
+.step-card::after{
+content:"";
+position:absolute;
+top:0;
+left:20px;
+right:20px;
+height:3px;
+border-radius:0 0 999px 999px;
+background:linear-gradient(90deg,var(--teal-light),var(--teal));
+}
+
+.step-card strong{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-height:28px;
+margin-bottom:14px;
+padding:4px 10px;
+border-radius:999px;
+background:var(--navy);
+color:#fff;
+font-size:.7rem;
+font-weight:900;
+letter-spacing:.12em;
+}
+
+.step-card p,
+.step-card{
+color:var(--muted);
+font-size:.92rem;
+line-height:1.78;
+}
+
+.compare-table{
+width:100%;
+margin:24px 0;
+border-collapse:separate;
+border-spacing:0;
+overflow:hidden;
+border:1px solid var(--line-strong);
+border-radius:18px;
+background:#fff;
+box-shadow:var(--shadow-sm);
+}
+
+.compare-table th,
+.compare-table td{
+padding:15px 16px;
+vertical-align:top;
+border-right:1px solid var(--line);
+border-bottom:1px solid var(--line);
+}
+
+.compare-table th:last-child,
+.compare-table td:last-child{
+border-right:none;
+}
+
+.compare-table tr:last-child td{
+border-bottom:none;
+}
+
+.compare-table th{
+background:linear-gradient(135deg,var(--navy-deep),var(--navy-soft));
+color:#fff;
+font-size:.88rem;
+font-weight:800;
+letter-spacing:.03em;
+}
+
+.compare-table td:first-child{
+width:18%;
+background:#f3f7f8;
+color:var(--navy);
+font-weight:800;
+}
+
+.compare-table td:nth-child(2){
+background:#fff9f9;
+}
+
+.compare-table td:nth-child(3){
+background:#f6fbf8;
+}
+
 .checklist{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:18px;
+margin-top:22px;
 }
+
 .checklist>div{
-background:#fafafa;
-padding:18px;
-border-radius:18px;
-box-shadow:var(--shadow-soft);
+position:relative;
+overflow:hidden;
+padding:22px 20px;
+border-radius:20px;
+border:1px solid var(--line);
 }
-.compare-table{
-width:100%;
-border-collapse:collapse;
-margin:20px 0;
+
+.checklist .danger{
+border-color:#efd4d6;
+background:linear-gradient(180deg,#fff7f7,#fff0f1);
 }
-.compare-table th,.compare-table td{
-border:1px solid #ddd;
-padding:12px;
+
+.checklist .safe{
+border-color:#d2e4f4;
+background:linear-gradient(180deg,#f7fbff,#edf6ff);
 }
-.compare-table th{
-background:var(--navy);
+
+.checklist>div::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+right:0;
+height:5px;
+}
+
+.checklist .danger::before{
+background:linear-gradient(90deg,var(--red-deep),var(--red));
+}
+
+.checklist .safe::before{
+background:linear-gradient(90deg,#245f9c,var(--blue));
+}
+
+.checklist h3{
+margin-bottom:12px;
+font-size:1.02rem;
+}
+
+.checklist ul{
+margin:0;
+padding:0;
+list-style:none;
+}
+
+.checklist li{
+position:relative;
+margin:0;
+padding:9px 0 9px 30px;
+border-bottom:1px dashed rgba(101,119,132,.18);
+}
+
+.checklist li:last-child{
+border-bottom:none;
+}
+
+.checklist .danger li::before,
+.checklist .safe li::before{
+position:absolute;
+left:0;
+top:9px;
+display:flex;
+align-items:center;
+justify-content:center;
+width:21px;
+height:21px;
+border-radius:50%;
 color:#fff;
+font-size:.72rem;
+font-weight:900;
 }
+
+.checklist .danger li::before{
+content:"×";
+background:var(--red);
+}
+
+.checklist .safe li::before{
+content:"✓";
+background:var(--blue);
+}
+
+.summary-card{
+margin-top:32px;
+border:1px solid #cfe2e3;
+background:
+radial-gradient(circle at 95% 8%,rgba(50,167,173,.12),transparent 24%),
+linear-gradient(135deg,#f8ffff,#edf7f7);
+box-shadow:var(--shadow-sm);
+}
+
+.summary-card h2{
+margin-top:0;
+}
+
+.summary-card ol{
+margin:18px 0;
+padding:0;
+counter-reset:summary;
+list-style:none;
+}
+
+.summary-card li{
+position:relative;
+margin:11px 0;
+padding:14px 16px 14px 52px;
+border:1px solid #dbeaea;
+border-radius:14px;
+background:rgba(255,255,255,.78);
+font-weight:700;
+}
+
+.summary-card li::before{
+counter-increment:summary;
+content:counter(summary);
+position:absolute;
+left:14px;
+top:50%;
+transform:translateY(-50%);
+display:flex;
+align-items:center;
+justify-content:center;
+width:27px;
+height:27px;
+border-radius:50%;
+background:var(--teal);
+color:#fff;
+font-size:.8rem;
+font-weight:900;
+}
+
 .cta-box{
-background:linear-gradient(135deg,#113b62,#0f8b8d);
+overflow:hidden;
+padding:31px 28px 29px;
+border:1px solid rgba(255,255,255,.1);
+background:
+radial-gradient(circle at 88% 12%,rgba(83,211,210,.22),transparent 26%),
+linear-gradient(135deg,var(--navy-deep),var(--navy-soft) 52%,var(--teal));
 color:#fff;
 text-align:center;
+box-shadow:var(--shadow-lg);
 }
+
+.cta-box::before{
+content:"FREE CONSULTATION";
+position:absolute;
+right:-12px;
+top:10px;
+color:#fff;
+font-size:2.5rem;
+font-weight:900;
+letter-spacing:.08em;
+opacity:.045;
+}
+
+.cta-box p{
+position:relative;
+z-index:1;
+max-width:780px;
+margin:0 auto;
+color:rgba(255,255,255,.92);
+}
+
 .cta-buttons{
+position:relative;
+z-index:1;
 display:flex;
-gap:14px;
 justify-content:center;
-margin-top:18px;
+gap:12px;
+margin-top:22px;
+flex-wrap:wrap;
 }
+
 .cta-button{
-display:inline-block;
-padding:14px 24px;
-border-radius:14px;
+display:inline-flex;
+align-items:center;
+justify-content:center;
+min-width:220px;
+min-height:50px;
+padding:12px 21px;
+border-radius:999px;
+font-weight:900;
+letter-spacing:.02em;
+transition:transform .2s ease,box-shadow .2s ease;
+}
+
+.cta-button:hover{
+transform:translateY(-2px);
+}
+
+.cta-button:first-child{
 background:#fff;
 color:var(--navy);
-font-weight:800;
+box-shadow:0 10px 22px rgba(0,0,0,.16);
 }
+
 .cta-button.gold{
-background:var(--gold);
+background:linear-gradient(135deg,var(--gold-light),var(--gold));
 color:#fff;
+box-shadow:0 10px 22px rgba(201,149,47,.27);
 }
+
 .disclaimer-box{
-background:#f2f2f2;
-font-size:.92rem;
+margin-bottom:0;
+border:1px solid var(--line);
+background:linear-gradient(180deg,#f8fafb,#f1f5f6);
+color:#5d6f7b;
+font-size:.88rem;
 }
+
+.disclaimer-box strong{
+color:var(--navy);
+}
+
+.disclaimer-box ul{
+margin:10px 0 0;
+padding-left:1.35em;
+}
+
+.disclaimer-box li{
+margin:.4em 0;
+}
+
+.footer{
+margin-top:26px;
+}
+
 @media(max-width:900px){
-.risk-row{grid-template-columns:repeat(2,1fr);}
-.step-grid{grid-template-columns:repeat(2,1fr);}
-.checklist{grid-template-columns:1fr;}
+.risk-row{
+grid-template-columns:repeat(2,1fr);
 }
+
+.step-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.checklist{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:40px 34px;
+}
+
+.article-body{
+padding:32px 28px 34px;
+}
+}
+
 @media(max-width:640px){
-body{font-size:15.5px;line-height:1.78;}
-.css-logo-wrapper{position:static;}
-.top-nav{
+body{
+font-size:15.5px;
+line-height:1.78;
+}
+
+.container{
+padding:18px 12px 40px;
+}
+
+.css-logo-wrapper,
+.footer{
+border-radius:22px;
+}
+
+.css-logo-inner,
+.footer-inner{
+padding:21px 16px 22px 20px;
+}
+
+.css-logo-text,
+.footer-brand{
+font-size:1.62rem;
+}
+
+.logo-sub,
+.footer-sub{
+justify-content:center;
+padding:8px 10px;
+font-size:.79rem;
+}
+
+.logo-sub::before,
+.footer-sub::before{
+display:none;
+}
+
+.top-nav,
+.footer-nav{
 display:grid;
 grid-template-columns:repeat(2,minmax(0,1fr));
 gap:7px;
-width:100%;
 }
-.top-nav a,.nav-tel{
+
+.top-nav a,
+.nav-tel,
+.footer-nav a,
+.footer-nav span{
 width:100%;
-min-height:38px;
-border-radius:12px;
-white-space:normal;
+min-height:42px;
+padding:7px 9px;
 text-align:center;
-line-height:1.25;
+font-size:.78rem;
 }
-.container{padding:18px 12px 40px;}
-.hero{padding:26px 18px 28px;border-radius:22px;}
-.hero::after{font-size:2.7rem;right:-120px;bottom:-8px;}
-h1{font-size:1.7rem;line-height:1.34;}
-h2{font-size:1.28rem;line-height:1.45;}
-.risk-row,.step-grid,.checklist{grid-template-columns:1fr;}
-.article-body{padding:20px 14px;border-radius:22px;}
-.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{
-padding:18px 15px;
+
+.hero{
+padding:28px 19px 30px;
+border-radius:23px;
+}
+
+.hero::before{
+top:-160px;
+right:-150px;
+}
+
+.hero::after{
+right:-120px;
+bottom:-6px;
+font-size:2.7rem;
+}
+
+.hero-kicker{
+font-size:.75rem;
+}
+
+.hero-badges{
+gap:6px;
+margin-bottom:15px;
+}
+
+.badge{
+font-size:.72rem;
+}
+
+h1{
+font-size:1.7rem;
+line-height:1.34;
+}
+
+.hero p{
+font-size:.93rem;
+line-height:1.8;
+}
+
+h2{
+margin-top:38px;
+font-size:1.28rem;
+line-height:1.45;
+}
+
+.risk-row,
+.step-grid,
+.checklist{
+grid-template-columns:1fr;
+}
+
+.risk-card{
+min-height:auto;
+padding:18px 16px 17px;
+}
+
+.article-body{
+padding:22px 14px 24px;
+border-radius:22px;
+}
+
+.opening-box,
+.highlight-box,
+.alert-box,
+.action-box,
+.summary-card,
+.cta-box,
+.disclaimer-box{
 margin:17px 0;
+padding:18px 15px;
 border-radius:18px;
 }
+
+.step-card{
+min-height:auto;
+padding:20px 17px 18px;
+}
+
+.cta-box{
+padding:24px 16px 22px;
+}
+
 .cta-buttons{
 display:grid;
 grid-template-columns:1fr;
 gap:10px;
 }
+
 .cta-button{
 width:100%;
+min-width:0;
 min-height:48px;
 }
-.compare-table,.compare-table tbody,.compare-table tr,.compare-table td{
+
+.compare-table,
+.compare-table tbody,
+.compare-table tr,
+.compare-table td{
 display:block;
 width:100%;
 }
-.compare-table thead{display:none;}
-.compare-table tr{
-margin-bottom:12px;
-border-radius:16px;
-overflow:hidden;
-background:#fff;
-box-shadow:var(--shadow-soft);
+
+.compare-table{
+border:none;
+box-shadow:none;
+background:transparent;
 }
+
+.compare-table thead{
+display:none;
+}
+
+.compare-table tr{
+margin-bottom:14px;
+overflow:hidden;
+border:1px solid var(--line);
+border-radius:17px;
+background:#fff;
+box-shadow:var(--shadow-sm);
+}
+
+.compare-table td{
+padding:13px 14px;
+border-right:none;
+border-bottom:1px solid var(--line);
+}
+
+.compare-table td:last-child{
+border-bottom:none;
+}
+
 .compare-table td:first-child{
-background:linear-gradient(135deg,var(--navy),#163d62);
+width:100%;
+background:linear-gradient(135deg,var(--navy-deep),var(--navy-soft));
 color:#fff;
 font-weight:800;
 }
+
+.compare-table td:nth-child(2)::before{
+content:"リスク：";
+display:block;
+margin-bottom:4px;
+color:var(--red);
+font-size:.75rem;
+font-weight:900;
+letter-spacing:.05em;
 }
+
+.compare-table td:nth-child(3)::before{
+content:"対策：";
+display:block;
+margin-bottom:4px;
+color:var(--green);
+font-size:.75rem;
+font-weight:900;
+letter-spacing:.05em;
+}
+
+.summary-card li{
+padding:13px 13px 13px 48px;
+}
+}
+
 @media(max-width:380px){
-body{font-size:15px;}
-.top-nav{grid-template-columns:1fr;}
-h1{font-size:1.55rem;}
-.article-body{padding:18px 12px;}
+body{
+font-size:15px;
+}
+
+.top-nav,
+.footer-nav{
+grid-template-columns:1fr;
+}
+
+h1{
+font-size:1.55rem;
+}
+
+.article-body{
+padding:18px 12px;
+}
+
+.css-logo-text,
+.footer-brand{
+font-size:1.48rem;
+}
 }
 </style>
+
 </head>
 
 <body>
+<div class="container">
 
 <header class="css-logo-wrapper">
 <div class="css-logo-inner">
+<div class="css-logo-text">島田税理士事務所</div>
+<div class="logo-sub">YouTube動画連動column</div>
 
-<div class="css-logo-text">
-<span class="css-logo-gradient">島田税理士事務所</span>
-</div>
-
-<div class="logo-sub">
-YouTube動画連動 column
-</div>
-
-<nav class="top-nav">
+<nav class="top-nav" aria-label="メインナビゲーション">
 <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
 <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
 <a href="https://youtu.be/nhtQdazSCao" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
 <span class="nav-tel">【Tel 03-5485-2447】</span>
 </nav>
-
 </div>
 </header>
 
-<div class="container">
-
 <section class="hero">
 <div class="hero-content">
-
-<div class="hero-kicker">
-YouTube連動コラム
-</div>
+<div class="hero-kicker">YouTube連動コラム</div>
 
 <div class="hero-badges">
-<span class="badge">資金繰り注意</span>
-<span class="badge">納税相談</span>
+<span class="badge">資金繰り</span>
+<span class="badge">税金未納</span>
 <span class="badge">分割納付</span>
-<span class="badge">差押え対策</span>
+<span class="badge">納税相談</span>
 </div>
 
 <h1>資金繰りが苦しい社長必見。<br>税金が払えない時の乗り切り方と3つの対策</h1>
 
 <p>
-税金が払えない状況でも、放置せず適切な順番で動けば選択肢が残る可能性があります。
-本記事では、税金未納時に最初に確認すべき数字、相談の順番、税務署へ持参したい資料、避けるべき行動を実務目線で整理します。
+税金が払えないときに最も避けたいのは「放置」です。未納額・手元資金・必要経費を数字で整理し、税理士、税務署、金融機関の順で相談することで、事業継続につながる選択肢を検討しやすくなります。
 </p>
-
 </div>
 </section>
 
-<section class="risk-row">
-
+<section class="risk-row" aria-label="重要チェックポイント">
 <div class="risk-card">
-<small>STEP1</small>
-<strong>未納税額を整理</strong>
-<p>税目ごとの金額を確認。</p>
+<div>CHECK 01</div>
+<strong>放置が最大のリスク</strong>
+納期限を過ぎたまま連絡をしないと、延滞税や差押えのリスクが高まる可能性があります。
 </div>
 
 <div class="risk-card">
-<small>STEP2</small>
-<strong>資金を見える化</strong>
-<p>現預金と入金予定を把握。</p>
+<div>CHECK 02</div>
+<strong>最初に3つの数字を出す</strong>
+未納税額、使える現金、今月必ず出ていくお金を見える化します。
 </div>
 
 <div class="risk-card">
-<small>STEP3</small>
-<strong>毎月払える額</strong>
-<p>現実的な返済計画を作成。</p>
+<div>CHECK 03</div>
+<strong>相談には正しい順番がある</strong>
+税理士、税務署、金融機関の順で動くと、説明と調整を進めやすくなります。
 </div>
 
 <div class="risk-card">
-<small>STEP4</small>
-<strong>相談の順番</strong>
-<p>税理士→税務署→金融機関。</p>
+<div>CHECK 04</div>
+<strong>根性論より資金繰り表</strong>
+払う意思だけでなく、現実的な納付計画を数字で示すことが重要です。
 </div>
-
 </section>
 
-<div class="article-body">
+<main class="article-body">
 
 <div class="opening-box">
 <div class="box-label">この記事のポイント</div>
-
 <p>
-税務署から届いた封筒を見るだけで不安になる経営者の方は少なくありません。しかし、税金が払えない状況は必ずしも経営能力の問題ではなく、資金繰りのタイミングによるケースもあります。
+「税務署から届いた封筒を開けるのが怖い」「電話が鳴るたびに督促ではないかと不安になる」。資金繰りが厳しいとき、このような悩みを一人で抱えてしまう経営者は少なくありません。
 </p>
-
 <p>
-最も避けたいのは「払えないこと」ではなく「放置すること」です。早めに状況を整理し、相談を始めることが重要です。
+税金が払えないのは、必ずしも経営が下手だからではありません。売上の入金時期と納税時期が重なり、一時的に資金繰りが合わなくなることもあります。重要なのは、払えないことよりも、状況を放置しないことです。
 </p>
-
 </div>
 
-<h2>放置するとどうなるのか</h2>
+<h2>税金を払えないまま放置するとどうなるのか</h2>
+
+<p>
+納期限を過ぎると、原則として延滞税がかかります。また、督促状を受け取った後も何も対応しない場合、法令上は銀行口座や売掛金などが差し押さえられる可能性があります。
+</p>
+
+<p>
+特に口座の差押えは、仕入代金、給与、家賃などの支払いに影響し、会社の資金の流れを止めるおそれがあります。
+</p>
 
 <div class="alert-box">
-<div class="box-label">税務調査アラート</div>
-
-<ul>
-<li>納期限後は原則として延滞税が発生</li>
-<li>督促後は法律上、差押えが行われる可能性がある</li>
-<li>銀行口座が差押えられると資金繰りへ大きな影響</li>
-</ul>
-
+<div class="box-label">資金繰りアラート</div>
 <p>
-一方で、納付が難しい事情がある場合は、分割納付や納税の猶予が検討される場合があります。個別事情によって取扱いは異なるため、早めの相談が大切です。
+税金を払えないことが、直ちに倒産を意味するわけではありません。納付が難しい事情がある場合は、税務署へ早めに相談することで、分割納付や納税の猶予を検討してもらえる余地があります。
 </p>
-
+<p>
+一方で、連絡が取れない状態が続くと、納付する意思が伝わりにくくなります。封筒を開け、現在の状況を確認し、早めに行動することが重要です。
+</p>
 </div>
 
-<h2>最初に確認する3つの数字</h2>
+<h2>最初に整理するのは3つの数字</h2>
 
 <div class="highlight-box">
 <div class="box-label">判断の核心</div>
-
-<ol>
-<li>未納税額を税目ごとに整理する</li>
-<li>現在の現預金・入金予定を把握する</li>
-<li>今月必ず必要となる支出を一覧化する</li>
-</ol>
-
 <p>
-税務署へ伝えるべきなのは「払えません」ではなく、「今月はいくら納付でき、今後は毎月いくら支払える予定か」という具体的な数字です。
+税務署へ電話する前に、まずは会社の状況を数字で説明できる状態にします。必要なのは、次の3つです。
 </p>
-
 </div>
-
-<h2>相談する順番</h2>
 
 <div class="step-grid">
-
 <div class="step-card">
-<h3>STEP1</h3>
-<p><strong>税理士へ相談</strong><br>
-未納額・資金繰り・今後の税負担を整理します。</p>
-</div>
-
-<div class="step-card">
-<h3>STEP2</h3>
-<p><strong>税務署へ相談</strong><br>
-分割納付や納税猶予などの制度について確認します。</p>
+<strong>STEP 01</strong>
+<h3>未納税額を税目ごとに分ける</h3>
+納付書、督促状、申告書の控えを確認し、消費税、源泉所得税、法人税、住民税など、税目ごとの未納額を整理します。
 </div>
 
 <div class="step-card">
-<h3>STEP3</h3>
-<p><strong>金融機関へ相談</strong><br>
-税金の見通しを整理したうえで、必要に応じて返済条件の見直し等を相談します。</p>
+<strong>STEP 02</strong>
+<h3>現在使える現金を把握する</h3>
+法人口座の残高、手元現金、直近の入金予定を確認し、今使える資金を見える化します。
 </div>
 
+<div class="step-card">
+<strong>STEP 03</strong>
+<h3>今月必ず出るお金を一覧化する</h3>
+給与、家賃、仕入、外注費、借入返済、社会保険料など、事業継続に必要な支出を整理します。
 </div>
-
-<h2>税務署へ持参したい資料7点</h2>
+</div>
 
 <div class="action-box">
-<div class="box-label">申請前の準備</div>
+<div class="box-label">実務上の重要ポイント</div>
+<p>
+大切なのは、単に「払えません」と伝えることではありません。
+</p>
+<p>
+<strong>「今月は20万円なら納付できます。来月からは毎月15万円ずつであれば納付できます」</strong>
+というように、現実的な金額と期間を整理しておくことが重要です。
+</p>
+<p>
+税務署へ持っていくべきものは根性論ではなく、資金繰り表です。納付する意思と、継続できる計画を数字で示せるようにしましょう。
+</p>
+</div>
 
+<h2>相談する順番は「税理士→税務署→金融機関」</h2>
+
+<p>
+資金繰りが厳しいとき、多くの経営者が金融機関へ先に相談しようとします。しかし、税金の状況を整理してから相談した方が、金融機関にも説明しやすくなります。
+</p>
+
+<div class="step-grid">
+<div class="step-card">
+<strong>STEP 01</strong>
+<h3>税理士へ相談する</h3>
+未納額、納期限、今後発生する税金、現在の資金繰りを整理し、どこまでなら現実的に納付できるかを検討します。
+</div>
+
+<div class="step-card">
+<strong>STEP 02</strong>
+<h3>税務署の徴収担当へ相談する</h3>
+整理した納付計画を持参し、分割納付や猶予制度を利用できるか確認します。適用可否は個別事情により異なります。
+</div>
+
+<div class="step-card">
+<strong>STEP 03</strong>
+<h3>金融機関へ相談する</h3>
+税金の見通しが立った後で、既存借入の返済条件の変更やリスケジュールなどを相談します。
+</div>
+</div>
+
+<div class="highlight-box">
+<div class="box-label">金融機関への説明ポイント</div>
+<p>
+税金の未納を隠したまま追加融資だけを相談するよりも、「税務署へ相談済みで、分割納付について協議しています」と説明できる方が、金融機関も現在の状況を判断しやすくなります。
+</p>
+<p>
+ただし、金融機関の対応や審査結果を保証するものではありません。契約内容や財務状況などにより判断は異なります。
+</p>
+</div>
+
+<h2>税務署に持っていく資料7点セット</h2>
+
+<p>
+税務署へ手ぶらで相談に行くよりも、現在の状況が分かる資料を用意した方が、話を進めやすくなります。完璧な資料でなくても構いません。
+</p>
+
+<div class="action-box">
+<div class="box-label">今すぐできる対策</div>
 <ol>
 <li>納付書・督促状</li>
-<li>申告書控え</li>
-<li>通帳残高・入出金明細</li>
-<li>売掛金一覧</li>
-<li>買掛金・未払金一覧</li>
+<li>申告書の控え</li>
+<li>通帳残高・直近の入出金明細</li>
+<li>売掛金一覧：いつ、いくら入るか</li>
+<li>買掛金・未払金一覧：いつ、いくら出るか</li>
 <li>今後3か月の資金繰り表</li>
 <li>毎月納付できる金額のメモ</li>
 </ol>
-
+<p>
+資料を通じて、「逃げていない」「納付する意思がある」「現実的な計画を考えている」ということを伝えやすくなります。
+</p>
 </div>
 
-<h2>よくある失敗例と改善例</h2>
+<h2>絶対に避けたい3つの落とし穴</h2>
+
+<div class="alert-box">
+<div class="box-label">落とし穴</div>
+<h3>NG1：税務署からの封筒を開けない</h3>
+<p>
+封筒を放置しても状況は改善しません。延滞税が増え、検討できる選択肢が少なくなる可能性があります。
+</p>
+
+<h3>NG2：売上入金をすべて使い切る</h3>
+<p>
+目の前の支払いに売上をすべて使うと、次回の納税資金を確保できなくなります。特に消費税については、入金時から納税分を分けて管理する意識が重要です。
+</p>
+
+<h3>NG3：誰にも相談しない</h3>
+<p>
+一人で抱えるほど判断が遅れ、状況が悪化しやすくなります。早い段階で相談するほど、検討できる対策が残りやすくなります。
+</p>
+</div>
+
+<h2>失敗例と対策例を比較</h2>
 
 <table class="compare-table">
 <thead>
 <tr>
-<th>比較</th>
-<th>失敗例</th>
-<th>改善例</th>
+<th>比較項目</th>
+<th>危険な対応</th>
+<th>改善につながる対応</th>
 </tr>
 </thead>
 <tbody>
-
 <tr>
-<td>ポイント</td>
-<td>封筒を開封せず税務署へ無連絡</td>
-<td>税理士と資金繰り表を作成し税務署へ相談</td>
+<td>税務署への対応</td>
+<td>封筒を開けず、税務署からの連絡にも対応しない。</td>
+<td>通知内容を確認し、事前に電話で予約を取って相談する。</td>
 </tr>
-
 <tr>
-<td>リスク</td>
-<td>売上を全て運転資金へ使い納税資金が消える</td>
-<td>納税可能額を先に確保する</td>
+<td>資金管理</td>
+<td>売上入金を仕入や支払いにすべて使い、納税原資を残さない。</td>
+<td>未納額、必要経費、納付可能額を分けて管理する。</td>
 </tr>
-
 <tr>
-<td>対策</td>
-<td>銀行へ追加融資だけ相談</td>
-<td>税金の分割計画を整理してから金融機関へ相談</td>
+<td>金融機関への相談</td>
+<td>税金の状況を整理せず、追加融資だけを依頼する。</td>
+<td>税務署との相談状況と資金繰り計画を説明したうえで相談する。</td>
 </tr>
-
 </tbody>
 </table>
 
-<h2>チェックリスト</h2>
+<div class="highlight-box">
+<div class="box-label">事例から見る改善のポイント</div>
+<p>
+例えば、未納となっている消費税が80万円、手元資金が120万円、今月の必要経費が90万円であれば、今月納付できる金額は30万円という整理ができます。
+</p>
+<p>
+そのうえで税理士と資金繰り表を作成し、税務署へ分割納付を相談し、金融機関には税金の納付計画と既存借入の返済条件について相談します。
+</p>
+<p>
+分割回数や各機関の対応は個別事情により異なりますが、数字、相談の順番、資料の3つを整えることで、会社の資金の流れを守りながら再建策を検討しやすくなります。
+</p>
+</div>
+
+<h2>危険な状態と守れる状態のチェックリスト</h2>
 
 <div class="checklist">
-
-<div>
-<h3>🔴 失敗するパターン</h3>
+<div class="danger">
+<h3>🔴 危険な状態・失敗するパターン</h3>
 <ul>
-<li>封筒を開けない</li>
-<li>税務署へ連絡しない</li>
-<li>数字を整理していない</li>
-<li>一人で抱え込む</li>
+<li>税務署からの封筒を開けていない</li>
+<li>未納税額を正確に把握していない</li>
+<li>使える現金と必要経費を整理していない</li>
+<li>毎月納付できる金額を決めていない</li>
+<li>税務署へ何も連絡していない</li>
+<li>売上入金をすべて使い切っている</li>
+<li>誰にも相談せず一人で抱えている</li>
 </ul>
 </div>
 
-<div>
-<h3>🔵 成功するパターン</h3>
+<div class="safe">
+<h3>🔵 守れる状態・成功につながるパターン</h3>
 <ul>
-<li>未納税額を整理する</li>
-<li>資金繰り表を作成する</li>
-<li>毎月払える金額を決める</li>
-<li>税理士→税務署→銀行の順で相談する</li>
+<li>通知や督促状の内容を確認している</li>
+<li>税目ごとの未納額を整理している</li>
+<li>今後3か月の資金繰りを把握している</li>
+<li>現実的な納付可能額を決めている</li>
+<li>税理士へ早めに相談している</li>
+<li>税務署へ事前予約のうえ相談している</li>
+<li>金融機関へ状況を説明できる資料がある</li>
 </ul>
 </div>
-
 </div>
 
 <div class="summary-card">
-<div class="box-label">まとめ</div>
-
+<h2>まとめ</h2>
 <ol>
-<li>未納税額・手元資金・必要経費を数字で整理する。</li>
-<li>現実的な納付計画を資金繰り表へ落とし込む。</li>
-<li>税理士→税務署→金融機関の順番で相談する。</li>
+<li>未納税額、手元資金、今月の必要経費を数字で出す</li>
+<li>毎月納付できる金額を決め、資金繰り表にする</li>
+<li>税理士、税務署、金融機関の順番で相談する</li>
 </ol>
-
 <p>
-税金が払えない状況でも、何もしない時間が長くなるほど選択肢は少なくなります。税務署へ訪問する際は、事前に電話で担当部署へ連絡し、相談日時を調整しておくとスムーズです。
+税金が払えないことより怖いのは、何も決めずに時間だけが過ぎることです。税務署へ相談する場合は、突然訪問するのではなく、事前に電話で予約を取ってから訪問してください。
 </p>
-
+<p>
+分割納付や猶予が認められるかどうか、延滞税がどの程度になるかは個別事情により異なります。適用可否は専門家や所轄税務署へ事前に確認してください。
+</p>
 </div>
 
 <div class="cta-box">
-
 <p>
-「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家へご相談ください。<br><br>
-
-個別ケースは専門家に相談を。迷ったら無料相談お待ちしております。参考になりましたら、チャンネル登録・高評価もぜひお願いいたします。
+「今回のテーマで不安がある」「自社の場合にどう判断すべきか知りたい」「具体的な対策を確認したい」と感じたら、専門家に相談してください。<br>
+個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になったらチャンネル登録、高評価、お願いします！
 </p>
 
 <div class="cta-buttons">
-
-<a class="cta-button"
-href="https://www.shimadakaikei.com/inquiry/index.html"
-target="_blank"
-rel="noopener noreferrer">
-無料相談はこちら
-</a>
-
-<a class="cta-button gold"
-href="https://youtu.be/nhtQdazSCao"
-target="_blank"
-rel="noopener noreferrer">
-今回のYouTube動画を見る
-</a>
-
+<a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
+<a class="cta-button gold" href="https://youtu.be/nhtQdazSCao" target="_blank" rel="noopener noreferrer">今回のYouTube動画を見る</a>
 </div>
-
 </div>
 
 <div class="disclaimer-box">
-
 <p><strong>【作成月】</strong>2026/08</p>
-
 <p><strong>【ご利用にあたっての注意事項】</strong></p>
-
 <ul>
-<li>内容は作成時点の法令・制度をもとに作成しています。制度の改正や個別事情により取扱いが異なる場合があります。</li>
-<li>分割納付や納税猶予等の適用可否は個別事情により判断されます。詳細は税務署または税理士へご確認ください。</li>
-<li>本記事は一般的な情報提供を目的としており、個別案件への判断を保証するものではありません。</li>
+<li>※内容について、できる限り正確な情報を提供するよう努めていますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載内容によって生じた損害等の責任を負いかねます。</li>
+<li>※具体的な利用にあたっては必ず税理士事務所等へご確認ください。</li>
+<li>※内容の是非については、当事務所では対応いたしません。</li>
 </ul>
-
 </div>
 
+</main>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-brand">島田税理士事務所</div>
+<div class="footer-sub">YouTube動画連動column</div>
+
+<nav class="footer-nav" aria-label="フッターナビゲーション">
+<a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+<a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+<a href="https://youtu.be/nhtQdazSCao" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+<span>【Tel 03-5485-2447】</span>
+</nav>
 </div>
+</footer>
 
 </div>
-
 </body>
 </html>
