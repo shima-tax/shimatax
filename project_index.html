@@ -3,45 +3,230 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="島田税理士事務所専用のChatGPTプロジェクト一覧ページ。経営アラート、借入余力、数字の翻訳、日次換算、経費見直し、経営判断シミュレーション、限界利益、季節予測、会社の健康診断、生存月数・資金体力の概要と使い方を紹介します。">
+<meta name="description" content="島田税理士事務所専用のChatGPTプロジェクト一覧ページ。オリジナルMyプロジェクト、経営アラート、借入余力、数字の翻訳、日次換算、経費見直し、経営判断シミュレーション、限界利益、季節予測、会社の健康診断、生存月数・資金体力の概要と使い方を紹介します。">
 <title>ChatGPT 島田税理士事務所専用プロジェクト一覧</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
 <style>
 :root{--navy:#0b2947;--teal:#0d737d;--blue:#3d7db8;--green:#2e8b68;--gold:#b88a2e;--red:#c65050;--line:#dbe6eb;--text:#24384a;--muted:#63788a;--shadow-soft:0 10px 26px rgba(16,47,80,.08)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{margin:0;overflow-x:hidden;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;background:radial-gradient(circle at top left,rgba(217,76,76,.13),transparent 30%),radial-gradient(circle at top right,rgba(13,115,125,.16),transparent 28%),linear-gradient(180deg,#fbfdfe 0%,#f3f6f7 100%)}a{color:inherit;text-decoration:none;overflow-wrap:anywhere}img{max-width:100%;height:auto}
-.css-logo-wrapper,.footer{position:relative;overflow:hidden;max-width:980px;margin-left:auto;margin-right:auto;border:1px solid rgba(219,230,235,.95);border-radius:24px;background:rgba(255,255,255,.96);box-shadow:0 22px 52px rgba(16,42,67,.14)}.css-logo-wrapper{margin-top:24px;margin-bottom:28px}.footer{margin-top:30px;margin-bottom:24px}.css-logo-inner,.footer-inner{width:100%}.css-logo-text,.footer-brand{margin:0;padding:24px 32px 10px;font-family:"Yu Mincho","YuMincho","Hiragino Mincho ProN","MS PMincho",serif;font-size:2.25rem;font-weight:700;line-height:1.25;letter-spacing:.06em;color:#115d63}.css-logo-gradient{height:0}.logo-sub,.footer-sub{display:flex;align-items:center;justify-content:flex-end;min-height:54px;margin:0;padding:0 22px;background:linear-gradient(90deg,#eaf6f7 0%,#3ab1b8 55%,#0d737d 100%);color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.05em}.top-nav,.footer-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;width:100%;margin:0;padding:16px 12px;border-top:1px solid #dbe6eb;background:#f4f9fa}.top-nav a,.top-nav .nav-tel,.footer-nav a,.footer-nav span{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;border:1px solid rgba(13,115,125,.16);border-radius:999px;background:#fff;color:#0d737d;font-size:.95rem;font-weight:800;text-align:center;white-space:normal}
-.container{max-width:980px;margin:0 auto;padding:0 18px 56px}.hero{position:relative;isolation:isolate;overflow:hidden;padding:52px 48px 46px;border-radius:28px;background:radial-gradient(circle at 84% 18%,rgba(255,255,255,.13),transparent 20rem),linear-gradient(135deg,#0b2947 0%,#0f4961 54%,#168b86 100%);color:#fff;box-shadow:0 20px 50px rgba(9,35,61,.18)}.hero::after{content:"PROJECT INDEX";position:absolute;right:-45px;bottom:-24px;font-size:4.9rem;font-weight:900;white-space:nowrap;color:rgba(255,255,255,.065);z-index:-1}.hero-content{position:relative;z-index:1;max-width:760px}.hero-kicker{margin:0 0 12px;font-size:.9rem;font-weight:900;letter-spacing:.12em;color:#d8f4f4}.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.badge{display:inline-flex;align-items:center;min-height:34px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);font-size:.82rem;font-weight:800}h1{margin:0 0 18px;font-size:2.35rem;line-height:1.35}.hero-lead{margin:0;max-width:720px;font-size:1.04rem;color:#eefbfb}
-.risk-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0 28px}.risk-card{position:relative;overflow:hidden;padding:20px 17px 18px;border-radius:18px;background:#fff;border:1px solid rgba(15,39,66,.08);box-shadow:var(--shadow-soft)}.risk-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--teal)}.risk-card:nth-child(2)::before{background:var(--blue)}.risk-card:nth-child(3)::before{background:var(--gold)}.risk-card:nth-child(4)::before{background:var(--red)}.risk-card-label{display:block;margin-bottom:8px;color:var(--muted);font-size:.72rem;font-weight:900;letter-spacing:.12em}.risk-card strong{display:block;margin-bottom:7px;color:var(--navy);font-size:1.02rem}.risk-card p{margin:0;color:var(--muted);font-size:.9rem}
-.article-body{padding:38px 40px;border:1px solid rgba(16,47,80,.07);border-radius:28px;background:rgba(255,255,255,.97);box-shadow:0 10px 30px rgba(16,47,80,.08)}h2{position:relative;margin:48px 0 20px;padding:0 0 12px 19px;font-size:1.56rem;color:var(--navy);border-bottom:1px solid var(--line)}h2::before{content:"";position:absolute;left:0;top:.18em;width:6px;height:1.2em;border-radius:999px;background:linear-gradient(180deg,var(--teal),var(--navy))}h3{margin:0 0 10px;color:var(--navy);font-size:1.18rem}#projects{scroll-margin-top:24px}.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{padding:22px;margin:20px 0;border-radius:20px}.opening-box{border:1px solid #dbe8f3;border-left:6px solid var(--blue);background:linear-gradient(135deg,#edf6ff,#fff)}.highlight-box{border:1px solid #d6eee2;border-left:6px solid var(--green);background:linear-gradient(135deg,#eaf8f1,#fff)}.alert-box{border:1px solid #f0d5d5;border-left:6px solid var(--red);background:linear-gradient(135deg,#fff0f0,#fff)}.action-box{border:1px solid #eddcaf;border-left:6px solid var(--gold);background:linear-gradient(135deg,#fff5dc,#fff)}.box-label{display:inline-flex;align-items:center;min-height:30px;margin-bottom:10px;padding:4px 10px;border-radius:999px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:900;box-shadow:0 4px 12px rgba(16,47,80,.06)}
-.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:22px 0}.project-card{position:relative;overflow:hidden;padding:26px 24px 22px;border:1px solid rgba(13,115,125,.14);border-radius:22px;background:linear-gradient(180deg,#fff,#f9fcfc);box-shadow:var(--shadow-soft)}.project-card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--navy),var(--teal))}.project-no{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;margin-bottom:12px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font-weight:900}.project-card h3{font-size:1.22rem}.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 16px}.project-tags span{display:inline-flex;padding:5px 9px;border-radius:999px;background:#eef7f7;color:var(--teal);font-size:.77rem;font-weight:800}.project-link{display:flex;align-items:center;justify-content:center;min-height:50px;margin:18px 0 6px;padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font-weight:900;text-align:center}.feature-list,.use-list{margin:12px 0 0;padding:0;list-style:none}.feature-list li,.use-list li{position:relative;margin:8px 0;padding-left:1.6em}.feature-list li::before{content:"◆";position:absolute;left:0;color:var(--teal)}.use-list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}.note{font-size:.9rem;color:var(--muted)}
-.compare-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff}.compare-table th{padding:14px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;text-align:left}.compare-table td{padding:14px;border-top:1px solid var(--line);vertical-align:top}.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}.step-card{padding:20px 17px;border-radius:18px;border:1px solid rgba(15,39,66,.08);background:#fff;box-shadow:var(--shadow-soft)}.step-card .step{display:inline-flex;min-height:30px;margin-bottom:10px;padding:5px 10px;border-radius:999px;background:var(--navy);color:#fff;font-size:.75rem;font-weight:900}.step-card:nth-child(2) .step{background:var(--teal)}.step-card:nth-child(3) .step{background:var(--gold)}.step-card p{margin:0;color:var(--muted)}.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:20px 0}.check-panel{padding:20px 18px;border-radius:18px;background:#fff;box-shadow:var(--shadow-soft);border:1px solid rgba(15,39,66,.08)}.check-panel.danger{border-top:5px solid var(--red)}.check-panel.safe{border-top:5px solid var(--blue)}.check-panel ul{margin:12px 0 0;padding:0;list-style:none}.check-panel li{position:relative;margin:9px 0;padding-left:1.7em}.check-panel.danger li::before{content:"×";position:absolute;left:0;color:var(--red);font-weight:900}.check-panel.safe li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:900}.summary-card{border:1px solid #d4e8ea;background:linear-gradient(135deg,#edf8f8,#fff);box-shadow:var(--shadow-soft)}.cta-box{color:#fff;background:linear-gradient(135deg,var(--navy),var(--teal));box-shadow:0 18px 38px rgba(11,41,71,.18)}.cta-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.cta-button{display:flex;align-items:center;justify-content:center;min-height:50px;padding:11px 16px;border-radius:14px;background:#fff;color:var(--navy);font-weight:900;text-align:center}.cta-button.gold{background:#d8aa48;color:#2a210e}.disclaimer-box{border:1px solid #dce5ea;background:#f7f9fa;color:#536979;font-size:.88rem}
-@media(max-width:900px){.css-logo-wrapper,.footer{margin-left:18px;margin-right:18px}.risk-row{grid-template-columns:repeat(2,1fr)}.step-grid{grid-template-columns:repeat(2,1fr)}.checklist,.project-grid{grid-template-columns:1fr}}
-@media(max-width:640px){body{font-size:15.5px;line-height:1.78}.css-logo-wrapper,.footer{margin-left:12px;margin-right:12px;border-radius:20px}.css-logo-text,.footer-brand{padding:19px 17px 9px;font-size:1.55rem}.logo-sub,.footer-sub{min-height:46px;padding:0 15px;font-size:.82rem}.top-nav,.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:12px 10px}.top-nav a,.top-nav .nav-tel,.footer-nav a,.footer-nav span{width:100%;min-height:42px;padding:8px 7px;font-size:.78rem}.container{padding:0 12px 40px}.hero{padding:26px 18px 28px;border-radius:22px}.hero::after{font-size:2.7rem;right:-110px;bottom:-8px}h1{font-size:1.7rem}h2{font-size:1.28rem}.risk-row,.step-grid,.checklist,.project-grid{grid-template-columns:1fr}.article-body{padding:20px 14px;border-radius:22px}.project-card{padding:23px 17px 19px}.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{padding:18px 15px;margin:17px 0;border-radius:18px}.cta-buttons{grid-template-columns:1fr}.compare-table,.compare-table tbody,.compare-table tr,.compare-table td{display:block;width:100%}.compare-table thead{display:none}.compare-table tr{margin-bottom:12px;border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow-soft);border:1px solid rgba(15,39,66,.08)}.compare-table td:first-child{background:linear-gradient(135deg,var(--navy),#163d62);color:#fff;font-weight:800}.compare-table td:nth-child(2)::before{content:"概要：";font-weight:900;color:var(--teal)}.compare-table td:nth-child(3)::before{content:"活用例：";font-weight:900;color:var(--teal)}}
-@media(max-width:380px){body{font-size:15px}.top-nav,.footer-nav{grid-template-columns:1fr}h1{font-size:1.55rem}.article-body{padding:18px 12px}.css-logo-text,.footer-brand{font-size:1.38rem}.logo-sub,.footer-sub{justify-content:center;text-align:center}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;overflow-x:hidden;color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.85;background:radial-gradient(circle at top left,rgba(217,76,76,.13),transparent 30%),radial-gradient(circle at top right,rgba(13,115,125,.16),transparent 28%),linear-gradient(180deg,#fbfdfe 0%,#f3f6f7 100%)}
+a{color:inherit;text-decoration:none;overflow-wrap:anywhere}
+img{max-width:100%;height:auto}
+.css-logo-wrapper,.footer{position:relative;overflow:hidden;max-width:980px;margin-left:auto;margin-right:auto;border:1px solid rgba(219,230,235,.95);border-radius:24px;background:rgba(255,255,255,.96);box-shadow:0 22px 52px rgba(16,42,67,.14)}
+.css-logo-wrapper{margin-top:24px;margin-bottom:28px}
+.footer{margin-top:30px;margin-bottom:24px}
+.css-logo-inner,.footer-inner{width:100%}
+.css-logo-text,.footer-brand{margin:0;padding:24px 32px 10px;font-family:"Yu Mincho","YuMincho","Hiragino Mincho ProN","MS PMincho",serif;font-size:2.25rem;font-weight:700;line-height:1.25;letter-spacing:.06em;color:#115d63}
+.css-logo-gradient{height:0}
+.logo-sub,.footer-sub{display:flex;align-items:center;justify-content:flex-end;min-height:54px;margin:0;padding:0 22px;background:linear-gradient(90deg,#eaf6f7 0%,#3ab1b8 55%,#0d737d 100%);color:#fff;font-size:.95rem;font-weight:800;letter-spacing:.05em}
+.top-nav,.footer-nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;width:100%;margin:0;padding:16px 12px;border-top:1px solid #dbe6eb;background:#f4f9fa}
+.top-nav a,.top-nav .nav-tel,.footer-nav a,.footer-nav span{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:8px 14px;border:1px solid rgba(13,115,125,.16);border-radius:999px;background:#fff;color:#0d737d;font-size:.95rem;font-weight:800;text-align:center;white-space:normal}
+.container{max-width:980px;margin:0 auto;padding:0 18px 56px}
+.hero{position:relative;isolation:isolate;overflow:hidden;padding:52px 48px 46px;border-radius:28px;background:radial-gradient(circle at 84% 18%,rgba(255,255,255,.13),transparent 20rem),linear-gradient(135deg,#0b2947 0%,#0f4961 54%,#168b86 100%);color:#fff;box-shadow:0 20px 50px rgba(9,35,61,.18)}
+.hero::after{content:"PROJECT INDEX";position:absolute;right:-45px;bottom:-24px;font-size:4.9rem;font-weight:900;white-space:nowrap;color:rgba(255,255,255,.065);z-index:-1}
+.hero-content{position:relative;z-index:1;max-width:760px}
+.hero-kicker{margin:0 0 12px;font-size:.9rem;font-weight:900;letter-spacing:.12em;color:#d8f4f4}
+.hero-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}
+.badge{display:inline-flex;align-items:center;min-height:34px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.18);font-size:.82rem;font-weight:800}
+h1{margin:0 0 18px;font-size:2.35rem;line-height:1.35}
+.hero-lead{margin:0;max-width:720px;font-size:1.04rem;color:#eefbfb}
+.risk-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:22px 0 28px}
+.risk-card{position:relative;overflow:hidden;padding:20px 17px 18px;border-radius:18px;background:#fff;border:1px solid rgba(15,39,66,.08);box-shadow:var(--shadow-soft)}
+.risk-card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--teal)}
+.risk-card:nth-child(2)::before{background:var(--blue)}
+.risk-card:nth-child(3)::before{background:var(--gold)}
+.risk-card:nth-child(4)::before{background:var(--red)}
+.risk-card-label{display:block;margin-bottom:8px;color:var(--muted);font-size:.72rem;font-weight:900;letter-spacing:.12em}
+.risk-card strong{display:block;margin-bottom:7px;color:var(--navy);font-size:1.02rem}
+.risk-card p{margin:0;color:var(--muted);font-size:.9rem}
+.article-body{padding:38px 40px;border:1px solid rgba(16,47,80,.07);border-radius:28px;background:rgba(255,255,255,.97);box-shadow:0 10px 30px rgba(16,47,80,.08)}
+h2{position:relative;margin:48px 0 20px;padding:0 0 12px 19px;font-size:1.56rem;color:var(--navy);border-bottom:1px solid var(--line)}
+h2::before{content:"";position:absolute;left:0;top:.18em;width:6px;height:1.2em;border-radius:999px;background:linear-gradient(180deg,var(--teal),var(--navy))}
+h3{margin:0 0 10px;color:var(--navy);font-size:1.18rem}
+#projects{scroll-margin-top:24px}
+.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{padding:22px;margin:20px 0;border-radius:20px}
+.opening-box{border:1px solid #dbe8f3;border-left:6px solid var(--blue);background:linear-gradient(135deg,#edf6ff,#fff)}
+.highlight-box{border:1px solid #d6eee2;border-left:6px solid var(--green);background:linear-gradient(135deg,#eaf8f1,#fff)}
+.alert-box{border:1px solid #f0d5d5;border-left:6px solid var(--red);background:linear-gradient(135deg,#fff0f0,#fff)}
+.action-box{border:1px solid #eddcaf;border-left:6px solid var(--gold);background:linear-gradient(135deg,#fff5dc,#fff)}
+.box-label{display:inline-flex;align-items:center;min-height:30px;margin-bottom:10px;padding:4px 10px;border-radius:999px;background:#fff;color:var(--navy);font-size:.78rem;font-weight:900;box-shadow:0 4px 12px rgba(16,47,80,.06)}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:22px 0}
+.project-card{position:relative;overflow:hidden;padding:26px 24px 22px;border:1px solid rgba(13,115,125,.14);border-radius:22px;background:linear-gradient(180deg,#fff,#f9fcfc);box-shadow:var(--shadow-soft)}
+.project-card::before{content:"";position:absolute;left:0;right:0;top:0;height:6px;background:linear-gradient(90deg,var(--navy),var(--teal))}
+.project-card.featured{grid-column:1/-1;background:linear-gradient(135deg,#f4fbfb 0%,#fff 55%,#f8fcfc 100%);border-color:rgba(13,115,125,.24)}
+.project-card.featured::before{height:7px;background:linear-gradient(90deg,#0b2947 0%,#0d737d 45%,#d8aa48 100%)}
+.project-card.featured h3{font-size:1.35rem}
+.project-no{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;margin-bottom:12px;border-radius:12px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font-weight:900}
+.project-card h3{font-size:1.22rem}
+.project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 16px}
+.project-tags span{display:inline-flex;padding:5px 9px;border-radius:999px;background:#eef7f7;color:var(--teal);font-size:.77rem;font-weight:800}
+.project-link{display:flex;align-items:center;justify-content:center;min-height:50px;margin:18px 0 6px;padding:10px 14px;border-radius:14px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;font-weight:900;text-align:center}
+.feature-list,.use-list{margin:12px 0 0;padding:0;list-style:none}
+.feature-list li,.use-list li{position:relative;margin:8px 0;padding-left:1.6em}
+.feature-list li::before{content:"◆";position:absolute;left:0;color:var(--teal)}
+.use-list li::before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+.note{font-size:.9rem;color:var(--muted)}
+.compare-table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff}
+.compare-table th{padding:14px;background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;text-align:left}
+.compare-table td{padding:14px;border-top:1px solid var(--line);vertical-align:top}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:20px 0}
+.step-card{padding:20px 17px;border-radius:18px;border:1px solid rgba(15,39,66,.08);background:#fff;box-shadow:var(--shadow-soft)}
+.step-card .step{display:inline-flex;min-height:30px;margin-bottom:10px;padding:5px 10px;border-radius:999px;background:var(--navy);color:#fff;font-size:.75rem;font-weight:900}
+.step-card:nth-child(2) .step{background:var(--teal)}
+.step-card:nth-child(3) .step{background:var(--gold)}
+.step-card p{margin:0;color:var(--muted)}
+.checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:20px 0}
+.check-panel{padding:20px 18px;border-radius:18px;background:#fff;box-shadow:var(--shadow-soft);border:1px solid rgba(15,39,66,.08)}
+.check-panel.danger{border-top:5px solid var(--red)}
+.check-panel.safe{border-top:5px solid var(--blue)}
+.check-panel ul{margin:12px 0 0;padding:0;list-style:none}
+.check-panel li{position:relative;margin:9px 0;padding-left:1.7em}
+.check-panel.danger li::before{content:"×";position:absolute;left:0;color:var(--red);font-weight:900}
+.check-panel.safe li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:900}
+.summary-card{border:1px solid #d4e8ea;background:linear-gradient(135deg,#edf8f8,#fff);box-shadow:var(--shadow-soft)}
+.cta-box{color:#fff;background:linear-gradient(135deg,var(--navy),var(--teal));box-shadow:0 18px 38px rgba(11,41,71,.18)}
+.cta-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.cta-button{display:flex;align-items:center;justify-content:center;min-height:50px;padding:11px 16px;border-radius:14px;background:#fff;color:var(--navy);font-weight:900;text-align:center}
+.cta-button.gold{background:#d8aa48;color:#2a210e}
+.disclaimer-box{border:1px solid #dce5ea;background:#f7f9fa;color:#536979;font-size:.88rem}
+
+@media(max-width:900px){
+.css-logo-wrapper,.footer{margin-left:18px;margin-right:18px}
+.risk-row{grid-template-columns:repeat(2,1fr)}
+.step-grid{grid-template-columns:repeat(2,1fr)}
+.checklist,.project-grid{grid-template-columns:1fr}
+.project-card.featured{grid-column:auto}
+}
+
+@media(max-width:640px){
+body{font-size:15.5px;line-height:1.78}
+.css-logo-wrapper,.footer{margin-left:12px;margin-right:12px;border-radius:20px}
+.css-logo-text,.footer-brand{padding:19px 17px 9px;font-size:1.55rem}
+.logo-sub,.footer-sub{min-height:46px;padding:0 15px;font-size:.82rem}
+.top-nav,.footer-nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px;padding:12px 10px}
+.top-nav a,.top-nav .nav-tel,.footer-nav a,.footer-nav span{width:100%;min-height:42px;padding:8px 7px;font-size:.78rem}
+.container{padding:0 12px 40px}
+.hero{padding:26px 18px 28px;border-radius:22px}
+.hero::after{font-size:2.7rem;right:-110px;bottom:-8px}
+h1{font-size:1.7rem}
+h2{font-size:1.28rem}
+.risk-row,.step-grid,.checklist,.project-grid{grid-template-columns:1fr}
+.article-body{padding:20px 14px;border-radius:22px}
+.project-card{padding:23px 17px 19px}
+.project-card.featured h3{font-size:1.24rem}
+.opening-box,.highlight-box,.alert-box,.action-box,.summary-card,.cta-box,.disclaimer-box{padding:18px 15px;margin:17px 0;border-radius:18px}
+.cta-buttons{grid-template-columns:1fr}
+.compare-table,.compare-table tbody,.compare-table tr,.compare-table td{display:block;width:100%}
+.compare-table thead{display:none}
+.compare-table tr{margin-bottom:12px;border-radius:16px;overflow:hidden;background:#fff;box-shadow:var(--shadow-soft);border:1px solid rgba(15,39,66,.08)}
+.compare-table td:first-child{background:linear-gradient(135deg,var(--navy),#163d62);color:#fff;font-weight:800}
+.compare-table td:nth-child(2)::before{content:"概要：";font-weight:900;color:var(--teal)}
+.compare-table td:nth-child(3)::before{content:"活用例：";font-weight:900;color:var(--teal)}
+}
+
+@media(max-width:380px){
+body{font-size:15px}
+.top-nav,.footer-nav{grid-template-columns:1fr}
+h1{font-size:1.55rem}
+.article-body{padding:18px 12px}
+.css-logo-text,.footer-brand{font-size:1.38rem}
+.logo-sub,.footer-sub{justify-content:center;text-align:center}
+}
 </style>
 </head>
 <body>
-<header class="css-logo-wrapper"><div class="css-logo-inner"><p class="css-logo-text">島田税理士事務所</p><div class="css-logo-gradient"></div><p class="logo-sub">ChatGPT専用プロジェクト INDEX</p><nav class="top-nav"><a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a><a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a><a href="#projects">【プロジェクト一覧】</a><span class="nav-tel">【Tel 03-5485-2447】</span></nav></div></header>
+<header class="css-logo-wrapper">
+<div class="css-logo-inner">
+<p class="css-logo-text">島田税理士事務所</p>
+<div class="css-logo-gradient"></div>
+<p class="logo-sub">ChatGPT専用プロジェクト INDEX</p>
+<nav class="top-nav">
+<a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+<a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+<a href="#projects">【プロジェクト一覧】</a>
+<span class="nav-tel">【Tel 03-5485-2447】</span>
+</nav>
+</div>
+</header>
+
 <main class="container">
-<section class="hero"><div class="hero-content"><p class="hero-kicker">SHIMADA TAX ACCOUNTING OFFICE</p><div class="hero-badges"><span class="badge">ChatGPT活用</span><span class="badge">経営支援</span><span class="badge">顧客説明資料</span></div><h1>ChatGPT 島田税理士事務所専用プロジェクト</h1><p class="hero-lead">試算表や決算情報をもとに、経営者へ分かりやすく説明するための専用プロジェクトをまとめたインデックスです。目的に合うプロジェクトを選び、顧客説明や社内検討のたたき台としてご活用ください。</p></div></section>
-<section class="risk-row"><div class="risk-card"><span class="risk-card-label">CHECK 01</span><strong>目的別に選べる</strong><p>経営リスク、資金調達、数字の翻訳、日次換算、経費見直し、シミュレーション、限界利益、季節予測、健康診断、生存月数を使い分けられます。</p></div><div class="risk-card"><span class="risk-card-label">CHECK 02</span><strong>説明資料に加工</strong><p>お客様向け試算表の補足資料や、面談時の説明資料として活用できます。</p></div><div class="risk-card"><span class="risk-card-label">CHECK 03</span><strong>初心者にも伝わる</strong><p>専門用語を抑え、経営者が直感的に理解しやすい構成です。</p></div><div class="risk-card"><span class="risk-card-label">CHECK 04</span><strong>最終確認は必須</strong><p>AIの回答は参考情報です。利用前に数値、前提、表現を必ず確認してください。</p></div></section>
+<section class="hero">
+<div class="hero-content">
+<p class="hero-kicker">SHIMADA TAX ACCOUNTING OFFICE</p>
+<div class="hero-badges">
+<span class="badge">ChatGPT活用</span>
+<span class="badge">経営支援</span>
+<span class="badge">顧客説明資料</span>
+</div>
+<h1>ChatGPT 島田税理士事務所専用プロジェクト</h1>
+<p class="hero-lead">試算表や決算情報をもとに、経営者へ分かりやすく説明するための専用プロジェクトをまとめたインデックスです。目的に合うプロジェクトを選び、顧客説明や社内検討のたたき台としてご活用ください。</p>
+</div>
+</section>
+
+<section class="risk-row">
+<div class="risk-card"><span class="risk-card-label">CHECK 01</span><strong>目的別に選べる</strong><p>オリジナルプロンプト作成、経営リスク、資金調達、数字の翻訳、日次換算、経費見直し、シミュレーション、限界利益、季節予測、健康診断、生存月数を使い分けられます。</p></div>
+<div class="risk-card"><span class="risk-card-label">CHECK 02</span><strong>説明資料に加工</strong><p>お客様向け試算表の補足資料や、面談時の説明資料として活用できます。</p></div>
+<div class="risk-card"><span class="risk-card-label">CHECK 03</span><strong>初心者にも伝わる</strong><p>専門用語を抑え、経営者が直感的に理解しやすい構成です。</p></div>
+<div class="risk-card"><span class="risk-card-label">CHECK 04</span><strong>最終確認は必須</strong><p>AIの回答は参考情報です。利用前に数値、前提、表現を必ず確認してください。</p></div>
+</section>
+
 <article class="article-body">
 <div class="opening-box"><span class="box-label">このページの役割</span><p>このページは、島田税理士事務所で利用するChatGPT専用プロジェクトの入口です。各プロジェクトの特徴、向いている場面、基本的な使い方を簡潔に整理しています。</p></div>
+
 <div class="highlight-box"><span class="box-label">活用の基本</span><p><strong>「何を判断したいのか」を先に決めてから、目的に合うプロジェクトを選ぶ</strong>のがポイントです。</p></div>
-<h2 id="projects">専用プロジェクト一覧</h2><div class="project-grid">
-<section class="project-card"><div class="project-no">01</div><h3>✅『アラート🟥🟨🟦付き経営レポート』</h3><div class="project-tags"><span>経営信号機</span><span>BS分析</span><span>回収リスク</span><span>設備投資判断</span></div><p>危険を察知する「信号機（赤・黄・青）」アラートを中心に、現金比率、借入比率、回収リスクをAIが総合判定します。</p><ul class="feature-list"><li>🚦 今月の経営信号機</li><li>💡 今月のひと言</li><li>🔍 今月の詳細（素人社長向け解説）</li></ul><p class="note">今月はBSが黄色信号なので、新規の設備投資は一回ストップしましょう、といった説明に使えます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6c906f45748191810f21ae401b0812-aratofu-kijing-ying-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">02</div><h3>✅『緊急資金・潜在的借入枠レポート』</h3><div class="project-tags"><span>緊急資金</span><span>追加融資</span><span>借入余力</span><span>安心材料</span></div><p>現在の貸借対照表の資産状況から、銀行から追加融資を受けられそうな金額の目安である「潜在的借入枠」をAIが予測します。</p><ul class="feature-list"><li>🚦 潜在的借入枠予測額</li><li>💡 今月のひと言</li><li>🔍 今月の詳細（素人社長向け解説）</li></ul><p class="note">手元現金は少ないものの、いざという時に追加借入を検討できる余力があります、といった説明に活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6dc6c932f88191bbe00745ab326aca-jin-ji-zi-jin-qian-zai-de-jie-ru-waku-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">03</div><h3>✅『数字の翻訳・会社の見える化レポート』</h3><div class="project-tags"><span>数字の翻訳</span><span>会社の見える化</span><span>社長向け説明</span><span>月次報告</span></div><p>難しい専門用語や会計科目を、社長が直感的に理解しやすい「日常の言葉」へAIで一括変換します。</p><ul class="feature-list"><li>📖 今月の数字を、ひと言でいうと</li><li>💰 会社のお金は、今こうなっています</li><li>🛍️ 商売は、今どうなっていますか</li><li>🔍 社長が特に見てほしい数字 3つ</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">「売上原価」を「商品を仕入れるためにかかったお金」、「通信費」を「スマホ・ネット代」と表現します。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6dd97918fc8191a509ce9dccedd7c0-shu-zi-nofan-yi-hui-she-nojian-eruhua-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">04</div><h3>✅『会社の一日・お金の流れレポート』</h3><div class="project-tags"><span>一日あたり</span><span>お金の流れ</span><span>会社の見える化</span><span>社長向け説明</span></div><p>年間や月間の大きな数字を「お店の一日」へスケールダウンし、1日あたりの売上と経費に直して示します。</p><ul class="feature-list"><li>📅 社長、会社の一日はこう動いています</li><li>💰 一日あたりのお金の流れ</li><li>🏪 会社を「一日のお店」にたとえると</li><li>🔍 社長が特に見てほしいこと 3つ</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">毎日10万円売り上げて、毎日8万円の経費が使われています、といった説明に活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6ddf7b52a48191a48cf53d3a61db41-hui-she-noyi-ri-ojin-noliu-rerehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">05</div><h3>✅『経費の断捨離・見直しランキングレポート』</h3><div class="project-tags"><span>経費削減</span><span>断捨離ランキング</span><span>TOP5</span><span>具体的アクション</span></div><p>金額が大きく、比較的見直しやすそうな経費をAIが上位5つに整理し、改善行動につなげます。</p><ul class="feature-list"><li>🧹 今月の経費断捨離・見直しランキング</li><li>🏆 優先して見直したい経費 TOP5</li><li>⚠️ 今回は、すぐに削らない方がよさそうな経費</li><li>✅ 社長が今月やること 3つ</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">まずはこの3つのサブスクや通信費を見直しませんか、と具体的な行動へつなげます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6de375b7e48191924b07d108883010-jing-fei-noduan-she-li-jian-zhi-sirankinkurehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">06</div><h3>✅『3パターンのもしも・経営判断シミュレーションレポート』</h3><div class="project-tags"><span>AIシミュレーション</span><span>もしも分析</span><span>経営判断</span><span>リスクとリターン</span></div><p>売上、単価、求人費などの条件を変えた3パターンの「もしも」をAIで試算します。</p><ul class="feature-list"><li>🔮 社長、3つの「もしも」を数字で見ると</li><li>📌 今の会社の基準となる数字</li><li>✅ 社長が次に打つべき一手</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">売上が5％下がったら、単価を3％上げたら、求人費を150万円増やしたら、などを比較できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6de64482cc81918dbf923e732f87a8-3hatannomosimojing-ying-pan-duan-simiyuresiyonrehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">07</div><h3>✅『限界利益・社長のご褒美レポート』</h3><div class="project-tags"><span>限界利益</span><span>損益分岐点</span><span>固定費・変動費</span><span>利益の見える化</span></div><p>変動費と固定費から生まれる「限界利益」の仕組みを、社長の趣味や身近なものに置き換えて説明します。</p><ul class="feature-list"><li>🎁 社長、売上が増えた時の「ご褒美」はこう増えます</li><li>💰 今の会社の「利益が生まれる仕組み」</li><li>🚩 赤字にならないために必要な売上</li><li>🏆 売上が増えた時の「社長のご褒美」</li><li>🔍 社長が選べる、利益を増やす3つの道</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">あと〇個売れば固定費がペイでき、そこから先は社長のご褒美が増える、と身近に説明できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e6f310a508191ae5a3f6220d1ce03-7-xian-jie-li-yi-she-chang-nokobao-mei-rehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">08</div><h3>✅『季節バイオリズム・先読み経営レポート』</h3><div class="project-tags"><span>季節変動</span><span>3か月予測</span><span>売上・経費予測</span><span>先回り対策</span></div><p>過去数年の月別損益データから、会社特有の季節ごとの「お金の波」を読み取り、向こう3か月の見通しを整理します。</p><ul class="feature-list"><li>🌿 社長、会社には季節ごとのお金の波があります</li><li>📈 向こう3か月の売上・経費予測グラフ</li><li>🔮 向こう3か月の見通し</li><li>⚠️ 先に備えたい経費の動き</li><li>✅ 社長が今月やること 3つ</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">例年、来月は消耗品費が跳ね上がる時期なので注意しましょう、と先回りできます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e755920d88191a32433ba55515f77-ji-jie-haiorisumuxian-du-mijing-ying-rehoto-guo-qu-3nian-fen-yue-bie-pl-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">09</div><h3>✅『会社の健康診断書・A〜E判定レポート』</h3><div class="project-tags"><span>会社の健康診断</span><span>A〜E判定</span><span>財務指標</span><span>社長向け説明</span></div><p>自己資本比率や流動比率などの難しい財務指標を、健康診断になぞらえてA〜Eで総合判定します。</p><ul class="feature-list"><li>🩺 今月の会社健康診断・総合判定</li><li>❤️ 5つの健康チェック</li><li>🔍 今月、特に見てほしいところ</li><li>✅ 会計事務所から社長へのひと言</li></ul><p class="note">現在の現金残高は「貧血気味」ですが、自己資本は「骨太」で健康です、と会社の状態を身近に説明できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e79b367dc8191a04164857e13e977-hui-she-nojian-kang-zhen-duan-shu-a-epan-ding-rehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
-<section class="project-card"><div class="project-no">10</div><h3>✅『会社の生存月数・資金体力カウンターレポート』</h3><div class="project-tags"><span>生存月数</span><span>資金体力</span><span>現預金</span><span>固定費</span></div><p>現預金残高と毎月の固定費を突き合わせ、現金をまったく稼げなくなった場合に会社があと何か月持ちこたえられそうかをAIで試算します。</p><ul class="feature-list"><li>⏳ 社長、会社はあと何か月持ちこたえられそうか</li><li>💰 会社の金庫に、緊急時に使えるお金</li><li>🧾 売上が止まっても、毎月出ていくお金</li><li>🚦 生存月数の見方</li><li>🔍 社長が今すぐ確認したいこと</li><li>✅ 会計事務所から社長へのひと言</li></ul><p class="note">会社のリアルな資金体力を「あと何か月」という直感的な数字で確認し、資金繰り対策の優先順位づけに活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e8c7144c4819185a0053612a05cb0-hui-she-nosheng-cun-yue-shu-zi-jin-ti-li-kauntarehoto-hui-she-noshi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<h2 id="projects">専用プロジェクト一覧</h2>
+
+<div class="project-grid">
+
+<section class="project-card featured">
+<div class="project-no">00</div>
+<h3>✅『オリジナルMyプロジェクト』</h3>
+<div class="project-tags">
+<span>7つの質問</span>
+<span>100通り</span>
+<span>自分専用プロンプト</span>
+<span>Chat・プロジェクト両対応</span>
 </div>
+<p><strong>7つの質問に答えるだけで、唯一自分専用の100通りの「オリジナルMyプロンプト」を作成できます。</strong></p>
+<ul class="feature-list">
+<li>7つの質問に答えて、自分専用のプロンプトを作成</li>
+<li>100通りのオリジナルMyプロンプトに展開</li>
+<li>Chat欄へ入力するプロンプトとして利用可能</li>
+<li>ChatGPTプロジェクトの「指示」としても利用可能</li>
+</ul>
+<p class="note">用途や目的に合わせて、自分専用のChatGPT活用ルールを作りたいときの入口として利用できます。</p>
+<a class="project-link" href="https://chatgpt.com/g/g-p-6a7aea399810819188f4e54f48fbbb13-orisinarumyhurosiekutozuo-cheng-yong-huronhuto-zuo-cheng-kai-shi-toru-li-sitesutato/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a>
+</section>
+
+<section class="project-card"><div class="project-no">01</div><h3>✅『アラート🟥🟨🟦付き経営レポート』</h3><div class="project-tags"><span>経営信号機</span><span>BS分析</span><span>回収リスク</span><span>設備投資判断</span></div><p>危険を察知する「信号機（赤・黄・青）」アラートを中心に、現金比率、借入比率、回収リスクをAIが総合判定します。</p><ul class="feature-list"><li>🚦 今月の経営信号機</li><li>💡 今月のひと言</li><li>🔍 今月の詳細（素人社長向け解説）</li></ul><p class="note">今月はBSが黄色信号なので、新規の設備投資は一回ストップしましょう、といった説明に使えます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6c906f45748191810f21ae401b0812-aratofu-kijing-ying-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">02</div><h3>✅『緊急資金・潜在的借入枠レポート』</h3><div class="project-tags"><span>緊急資金</span><span>追加融資</span><span>借入余力</span><span>安心材料</span></div><p>現在の貸借対照表の資産状況から、銀行から追加融資を受けられそうな金額の目安である「潜在的借入枠」をAIが予測します。</p><ul class="feature-list"><li>🚦 潜在的借入枠予測額</li><li>💡 今月のひと言</li><li>🔍 今月の詳細（素人社長向け解説）</li></ul><p class="note">手元現金は少ないものの、いざという時に追加借入を検討できる余力があります、といった説明に活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6dc6c932f88191bbe00745ab326aca-jin-ji-zi-jin-qian-zai-de-jie-ru-waku-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">03</div><h3>✅『数字の翻訳・会社の見える化レポート』</h3><div class="project-tags"><span>数字の翻訳</span><span>会社の見える化</span><span>社長向け説明</span><span>月次報告</span></div><p>難しい専門用語や会計科目を、社長が直感的に理解しやすい「日常の言葉」へAIで一括変換します。</p><ul class="feature-list"><li>📖 今月の数字を、ひと言でいうと</li><li>💰 会社のお金は、今こうなっています</li><li>🛍️ 商売は、今どうなっていますか</li><li>🔍 社長が特に見てほしい数字 3つ</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">「売上原価」を「商品を仕入れるためにかかったお金」、「通信費」を「スマホ・ネット代」と表現します。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6dd97918fc8191a509ce9dccedd7c0-shu-zi-nofan-yi-hui-she-nojian-eruhua-rehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">04</div><h3>✅『会社の一日・お金の流れレポート』</h3><div class="project-tags"><span>一日あたり</span><span>お金の流れ</span><span>会社の見える化</span><span>社長向け説明</span></div><p>年間や月間の大きな数字を「お店の一日」へスケールダウンし、1日あたりの売上と経費に直して示します。</p><ul class="feature-list"><li>📅 社長、会社の一日はこう動いています</li><li>💰 一日あたりのお金の流れ</li><li>🏪 会社を「一日のお店」にたとえると</li><li>🔍 社長が特に見てほしいこと 3つ</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">毎日10万円売り上げて、毎日8万円の経費が使われています、といった説明に活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6ddf7b52a48191a48cf53d3a61db41-hui-she-noyi-ri-ojin-noliu-rerehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">05</div><h3>✅『経費の断捨離・見直しランキングレポート』</h3><div class="project-tags"><span>経費削減</span><span>断捨離ランキング</span><span>TOP5</span><span>具体的アクション</span></div><p>金額が大きく、比較的見直しやすそうな経費をAIが上位5つに整理し、改善行動につなげます。</p><ul class="feature-list"><li>🧹 今月の経費断捨離・見直しランキング</li><li>🏆 優先して見直したい経費 TOP5</li><li>⚠️ 今回は、すぐに削らない方がよさそうな経費</li><li>✅ 社長が今月やること 3つ</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">まずはこの3つのサブスクや通信費を見直しませんか、と具体的な行動へつなげます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6de375b7e48191924b07d108883010-jing-fei-noduan-she-li-jian-zhi-sirankinkurehoto-zui-chu-nihui-she-noshi-suan-biao-pdf-wotian-fu-siteritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">06</div><h3>✅『3パターンのもしも・経営判断シミュレーションレポート』</h3><div class="project-tags"><span>AIシミュレーション</span><span>もしも分析</span><span>経営判断</span><span>リスクとリターン</span></div><p>売上、単価、求人費などの条件を変えた3パターンの「もしも」をAIで試算します。</p><ul class="feature-list"><li>🔮 社長、3つの「もしも」を数字で見ると</li><li>📌 今の会社の基準となる数字</li><li>✅ 社長が次に打つべき一手</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">売上が5％下がったら、単価を3％上げたら、求人費を150万円増やしたら、などを比較できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6de64482cc81918dbf923e732f87a8-3hatannomosimojing-ying-pan-duan-simiyuresiyonrehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">07</div><h3>✅『限界利益・社長のご褒美レポート』</h3><div class="project-tags"><span>限界利益</span><span>損益分岐点</span><span>固定費・変動費</span><span>利益の見える化</span></div><p>変動費と固定費から生まれる「限界利益」の仕組みを、社長の趣味や身近なものに置き換えて説明します。</p><ul class="feature-list"><li>🎁 社長、売上が増えた時の「ご褒美」はこう増えます</li><li>💰 今の会社の「利益が生まれる仕組み」</li><li>🚩 赤字にならないために必要な売上</li><li>🏆 売上が増えた時の「社長のご褒美」</li><li>🔍 社長が選べる、利益を増やす3つの道</li><li>✅ 社長へ、今月のひと言</li></ul><p class="note">あと〇個売れば固定費がペイでき、そこから先は社長のご褒美が増える、と身近に説明できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e6f310a508191ae5a3f6220d1ce03-7-xian-jie-li-yi-she-chang-nokobao-mei-rehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">08</div><h3>✅『季節バイオリズム・先読み経営レポート』</h3><div class="project-tags"><span>季節変動</span><span>3か月予測</span><span>売上・経費予測</span><span>先回り対策</span></div><p>過去数年の月別損益データから、会社特有の季節ごとの「お金の波」を読み取り、向こう3か月の見通しを整理します。</p><ul class="feature-list"><li>🌿 社長、会社には季節ごとのお金の波があります</li><li>📈 向こう3か月の売上・経費予測グラフ</li><li>🔮 向こう3か月の見通し</li><li>⚠️ 先に備えたい経費の動き</li><li>✅ 社長が今月やること 3つ</li><li>💡 会計事務所から社長へのひと言</li></ul><p class="note">例年、来月は消耗品費が跳ね上がる時期なので注意しましょう、と先回りできます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e755920d88191a32433ba55515f77-ji-jie-haiorisumuxian-du-mijing-ying-rehoto-guo-qu-3nian-fen-yue-bie-pl-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">09</div><h3>✅『会社の健康診断書・A〜E判定レポート』</h3><div class="project-tags"><span>会社の健康診断</span><span>A〜E判定</span><span>財務指標</span><span>社長向け説明</span></div><p>自己資本比率や流動比率などの難しい財務指標を、健康診断になぞらえてA〜Eで総合判定します。</p><ul class="feature-list"><li>🩺 今月の会社健康診断・総合判定</li><li>❤️ 5つの健康チェック</li><li>🔍 今月、特に見てほしいところ</li><li>✅ 会計事務所から社長へのひと言</li></ul><p class="note">現在の現金残高は「貧血気味」ですが、自己資本は「骨太」で健康です、と会社の状態を身近に説明できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e79b367dc8191a04164857e13e977-hui-she-nojian-kang-zhen-duan-shu-a-epan-ding-rehoto-hui-she-shi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+<section class="project-card"><div class="project-no">10</div><h3>✅『会社の生存月数・資金体力カウンターレポート』</h3><div class="project-tags"><span>生存月数</span><span>資金体力</span><span>現預金</span><span>固定費</span></div><p>現預金残高と毎月の固定費を突き合わせ、現金をまったく稼げなくなった場合に会社があと何か月持ちこたえられそうかをAIで試算します。</p><ul class="feature-list"><li>⏳ 社長、会社はあと何か月持ちこたえられそうか</li><li>💰 会社の金庫に、緊急時に使えるお金</li><li>🧾 売上が止まっても、毎月出ていくお金</li><li>🚦 生存月数の見方</li><li>🔍 社長が今すぐ確認したいこと</li><li>✅ 会計事務所から社長へのひと言</li></ul><p class="note">会社のリアルな資金体力を「あと何か月」という直感的な数字で確認し、資金繰り対策の優先順位づけに活用できます。</p><a class="project-link" href="https://chatgpt.com/g/g-p-6a6e8c7144c4819185a0053612a05cb0-hui-she-nosheng-cun-yue-shu-zi-jin-ti-li-kauntarehoto-hui-she-noshi-suan-biao-pdf-wotian-fu-hou-ritanki/project" target="_blank" rel="noopener noreferrer">このプロジェクトを開く</a></section>
+
+</div>
+
 <h2>目的別の選び方</h2>
-<table class="compare-table"><thead><tr><th>プロジェクト</th><th>主な目的</th><th>向いている場面</th></tr></thead><tbody>
+<table class="compare-table">
+<thead><tr><th>プロジェクト</th><th>主な目的</th><th>向いている場面</th></tr></thead>
+<tbody>
+<tr><td>オリジナルMyプロジェクト</td><td>7つの質問から自分専用プロンプトを作成</td><td>Chat欄のプロンプト作成、プロジェクト指示の作成</td></tr>
 <tr><td>アラート付き経営レポート</td><td>経営リスクを信号機で見える化</td><td>月次面談、試算表説明、設備投資判断</td></tr>
 <tr><td>緊急資金・潜在的借入枠レポート</td><td>追加融資の余地や資金調達力を確認</td><td>資金繰り不安、借入相談、金融機関面談</td></tr>
 <tr><td>数字の翻訳・会社の見える化レポート</td><td>会計用語を日常の言葉へ翻訳</td><td>数字が苦手な経営者への月次報告</td></tr>
@@ -52,14 +237,74 @@
 <tr><td>季節バイオリズム・先読み経営レポート</td><td>向こう3か月の売上・経費を予測</td><td>資金繰り準備、繁忙期・閑散期対策</td></tr>
 <tr><td>会社の健康診断書・A〜E判定レポート</td><td>財務指標を健康診断に例えA〜E判定</td><td>財務体質、会社の強みと注意点の共有</td></tr>
 <tr><td>会社の生存月数・資金体力カウンターレポート</td><td>現預金と固定費から生存月数を試算</td><td>資金繰り確認、緊急時対応、固定費見直し</td></tr>
-</tbody></table>
+</tbody>
+</table>
+
 <div class="alert-box"><span class="box-label">AI利用上の注意</span><p>AIの回答は、入力された資料や前提条件に大きく左右されます。回答結果をそのまま確定資料として使用せず、数値・表現・前提を必ず確認してください。</p></div>
-<h2>基本的な使い方</h2><div class="step-grid"><div class="step-card"><span class="step">STEP 01</span><h3>目的を選ぶ</h3><p>10のテーマから、今回確認したい目的を先に決めます。</p></div><div class="step-card"><span class="step">STEP 02</span><h3>試算表等を準備</h3><p>対象会社の試算表、決算書、補足情報を確認して入力します。</p></div><div class="step-card"><span class="step">STEP 03</span><h3>結果を点検する</h3><p>数値、表現、前提条件を確認し、必要に応じて修正します。</p></div></div>
-<div class="action-box"><span class="box-label">実務でのおすすめ活用法</span><ul class="use-list"><li>お客様用試算表への添付資料として加工する</li><li>月次面談で使う説明資料のたたき台にする</li><li>難しい財務説明を経営者向けの言葉へ置き換える</li><li>会社の財務体質を健康診断になぞらえ、A〜E判定で共有する</li><li>現預金と固定費から生存月数を確認し、資金繰り対策の優先順位を整理する</li></ul></div>
-<h2>利用前チェックリスト</h2><div class="checklist"><div class="check-panel danger"><h3>🔴 危険な使い方</h3><ul><li>AIの回答を確認せず、そのままお客様へ渡す</li><li>古い試算表や不足資料だけで判断する</li><li>判定や借入可能額を確定情報のように説明する</li><li>会社ごとの事情を反映しない</li></ul></div><div class="check-panel safe"><h3>🔵 安全な使い方</h3><ul><li>入力資料と回答結果を照合する</li><li>参考情報として位置づける</li><li>必要に応じて表現や数値を修正する</li><li>最終判断は専門家等へ確認する</li></ul></div></div>
-<div class="summary-card"><span class="box-label">まとめ</span><p>10の専用プロジェクトは、経営リスク、資金調達力、数字の翻訳、日々のお金の流れ、経費見直し、将来シミュレーション、限界利益、季節予測、会社の健康状態、資金体力を、それぞれ分かりやすく説明するための補助ツールです。</p><p>今回追加した「会社の生存月数・資金体力カウンターレポート」は、現預金残高と毎月の固定費をもとに、売上が止まった場合にあと何か月持ちこたえられそうかを可視化し、資金繰り対策の優先順位を考えるためのプロジェクトです。</p><p>いずれも最終資料にする前に、入力データ、固定費の範囲、計算結果、表現内容を必ず確認してください。</p></div>
-<div class="cta-box"><p>「どのプロジェクトを使うべきか迷う」「顧客説明資料として整えたい」と感じたら、用途に合わせて内容を加工してください。個別ケースは専門家にご相談ください。</p><div class="cta-buttons"><a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a><a class="cta-button gold" href="#projects">プロジェクト一覧を見る</a></div></div>
-<div class="disclaimer-box"><p><strong>【作成月】</strong>2026/08</p><p><strong>【ご利用にあたっての注意事項】</strong></p><ul><li>※内容について正確な情報の提供に努めていますが、正確性や安全性を保証するものではありません。</li><li>※AIの回答結果は、入力資料、前提条件、読み取り状況などにより異なります。利用前に必ず内容をご確認ください。</li><li>※融資審査、借入可能額、各種判定は、金融機関の判断や個別事情により異なります。</li><li>※内容の具体的な利用にあっては、必要に応じて税理士事務所、金融機関等へご確認ください。</li></ul></div>
-</article></main>
-<footer class="footer"><div class="footer-inner"><p class="footer-brand">島田税理士事務所</p><p class="footer-sub">ChatGPT専用プロジェクト INDEX</p><nav class="footer-nav"><a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a><a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a><a href="#projects">【プロジェクト一覧】</a><span>【Tel 03-5485-2447】</span></nav></div></footer>
-</body></html>
+
+<h2>基本的な使い方</h2>
+<div class="step-grid">
+<div class="step-card"><span class="step">STEP 01</span><h3>目的を選ぶ</h3><p>11のテーマから、今回確認したい目的を先に決めます。</p></div>
+<div class="step-card"><span class="step">STEP 02</span><h3>必要情報を準備</h3><p>対象プロジェクトに応じて、質問への回答、試算表、決算書、補足情報などを準備します。</p></div>
+<div class="step-card"><span class="step">STEP 03</span><h3>結果を点検する</h3><p>数値、表現、前提条件を確認し、必要に応じて修正します。</p></div>
+</div>
+
+<div class="action-box"><span class="box-label">実務でのおすすめ活用法</span>
+<ul class="use-list">
+<li>オリジナルMyプロジェクトで、自分専用のChatGPT指示やプロンプトを作る</li>
+<li>お客様用試算表への添付資料として加工する</li>
+<li>月次面談で使う説明資料のたたき台にする</li>
+<li>難しい財務説明を経営者向けの言葉へ置き換える</li>
+<li>会社の財務体質を健康診断になぞらえ、A〜E判定で共有する</li>
+<li>現預金と固定費から生存月数を確認し、資金繰り対策の優先順位を整理する</li>
+</ul>
+</div>
+
+<h2>利用前チェックリスト</h2>
+<div class="checklist">
+<div class="check-panel danger"><h3>🔴 危険な使い方</h3><ul><li>AIの回答を確認せず、そのままお客様へ渡す</li><li>古い試算表や不足資料だけで判断する</li><li>判定や借入可能額を確定情報のように説明する</li><li>会社ごとの事情を反映しない</li></ul></div>
+<div class="check-panel safe"><h3>🔵 安全な使い方</h3><ul><li>入力資料と回答結果を照合する</li><li>参考情報として位置づける</li><li>必要に応じて表現や数値を修正する</li><li>最終判断は専門家等へ確認する</li></ul></div>
+</div>
+
+<div class="summary-card">
+<span class="box-label">まとめ</span>
+<p>11の専用プロジェクトは、オリジナルプロンプト作成、経営リスク、資金調達力、数字の翻訳、日々のお金の流れ、経費見直し、将来シミュレーション、限界利益、季節予測、会社の健康状態、資金体力を、それぞれ分かりやすく整理するための補助ツールです。</p>
+<p>今回追加した「オリジナルMyプロジェクト」は、7つの質問に答えることで、自分専用のオリジナルMyプロンプトを作り、Chat欄のプロンプトやChatGPTプロジェクトの指示として活用できる入口です。</p>
+<p>いずれも利用前に内容、前提、数値、表現を必ず確認してください。</p>
+</div>
+
+<div class="cta-box">
+<p>「どのプロジェクトを使うべきか迷う」「顧客説明資料として整えたい」と感じたら、用途に合わせて内容を加工してください。個別ケースは専門家にご相談ください。</p>
+<div class="cta-buttons">
+<a class="cta-button" href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">無料相談はこちら</a>
+<a class="cta-button gold" href="#projects">プロジェクト一覧を見る</a>
+</div>
+</div>
+
+<div class="disclaimer-box">
+<p><strong>【作成月】</strong>2026/08</p>
+<p><strong>【ご利用にあたっての注意事項】</strong></p>
+<ul>
+<li>※内容について正確な情報の提供に努めていますが、正確性や安全性を保証するものではありません。</li>
+<li>※AIの回答結果は、入力資料、前提条件、読み取り状況などにより異なります。利用前に必ず内容をご確認ください。</li>
+<li>※融資審査、借入可能額、各種判定は、金融機関の判断や個別事情により異なります。</li>
+<li>※内容の具体的な利用にあっては、必要に応じて税理士事務所、金融機関等へご確認ください。</li>
+</ul>
+</div>
+</article>
+</main>
+
+<footer class="footer">
+<div class="footer-inner">
+<p class="footer-brand">島田税理士事務所</p>
+<p class="footer-sub">ChatGPT専用プロジェクト INDEX</p>
+<nav class="footer-nav">
+<a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+<a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+<a href="#projects">【プロジェクト一覧】</a>
+<span>【Tel 03-5485-2447】</span>
+</nav>
+</div>
+</footer>
+</body>
+</html>
