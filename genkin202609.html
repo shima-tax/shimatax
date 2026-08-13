@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>島田税理士事務所コラム</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text x=%2250%%22 y=%2250%%22 style=%22dominant-baseline:central;text-anchor:middle;font-size:90px;%22>🔍</text></svg>">
+
+    <style>
+        :root {
+            --bg: #f4f6f7;
+            --paper: #ffffff;
+            --ink: #1f2d36;
+            --muted: #65757f;
+            --navy: #102a43;
+            --navy-2: #153b5c;
+            --teal: #0d737d;
+            --teal-2: #23a6ad;
+            --teal-soft: #e8f7f8;
+            --blue: #2f80ed;
+            --blue-soft: #edf5ff;
+            --green: #12a06a;
+            --green-soft: #eaf9f1;
+            --red: #d94c4c;
+            --red-2: #a73232;
+            --red-soft: #fff0f0;
+            --gold: #d99a2b;
+            --gold-soft: #fff5df;
+            --line: #dbe6eb;
+            --shadow: 0 22px 52px rgba(16, 42, 67, 0.14);
+            --radius-lg: 24px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            line-height: 1.82;
+            color: var(--ink);
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 24px;
+            background:
+                radial-gradient(circle at top left, rgba(217,76,76,0.18), transparent 30%),
+                radial-gradient(circle at top right, rgba(217,154,43,0.30), transparent 28%),
+                radial-gradient(circle at bottom right, rgba(47,128,237,0.16), transparent 30%),
+                linear-gradient(180deg, #fbfdfe 0%, var(--bg) 100%);
+            letter-spacing: 0.018em;
+        }
+
+        a { color: inherit; }
+
+        .css-logo-wrapper {
+            background: rgba(255,255,255,0.96);
+            margin-bottom: 28px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .css-logo-text {
+            font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'MS PMincho', serif;
+            font-size: 2.25em;
+            font-weight: bold;
+            color: #115d63;
+            padding: 24px 32px 10px;
+            margin: 0;
+            letter-spacing: 0.06em;
+            line-height: 1.25;
+        }
+
+        .css-logo-gradient {
+            min-height: 54px;
+            background: linear-gradient(90deg, #eaf6f7 0%, #3ab1b8 55%, #0d737d 100%);
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            color: #fff;
+            padding: 0 22px;
+            font-weight: bold;
+            font-size: 0.95em;
+            letter-spacing: 0.05em;
+        }
+
+        .top-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-color: #f4f9fa;
+            padding: 16px 12px;
+            gap: 12px;
+            border-top: 1px solid var(--line);
+        }
+
+        .top-nav a, .top-nav .nav-tel {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.95em;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid rgba(13,115,125,0.16);
+            transition: 0.2s ease;
+        }
+
+        .top-nav a:hover {
+            background-color: var(--teal-soft);
+            transform: translateY(-1px);
+            text-decoration: none;
+        }
+
+        .top-nav .nav-tel { cursor: default; color: var(--muted); }
+
+        .container {
+            background: var(--paper);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(219,230,235,0.95);
+        }
+
+        .hero {
+            position: relative;
+            padding: 42px 36px 36px;
+            color: #fff;
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.46), transparent 32%),
+                radial-gradient(circle at bottom left, rgba(217,76,76,0.42), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(47,128,237,0.28), transparent 32%),
+                linear-gradient(135deg, #102a43 0%, #153b5c 42%, #7f1d1d 100%);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: "CASHFLOW RADAR";
+            position: absolute;
+            right: 10px;
+            bottom: -4px;
+            font-size: 2.74em;
+            font-weight: 900;
+            letter-spacing: 0.075em;
+            color: rgba(255,255,255,0.085);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .hero-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 18px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            padding: 6px 12px;
+            border-radius: 999px;
+            font-size: 0.82em;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.22);
+        }
+
+        .badge.warning {
+            background: linear-gradient(135deg, var(--red), #ff7a59);
+            color: #fff;
+            border: none;
+            box-shadow: 0 10px 22px rgba(217,76,76,0.24);
+        }
+
+        h1 {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #fff;
+            font-size: clamp(1.46em, 4vw, 2.14em);
+            line-height: 1.45;
+            letter-spacing: 0.035em;
+        }
+
+        .hero-lead {
+            position: relative;
+            z-index: 1;
+            max-width: 830px;
+            margin: 18px 0 0;
+            color: rgba(255,255,255,0.9);
+            font-size: 1.04em;
+            font-weight: 600;
+        }
+
+        .risk-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            padding: 0 36px 26px;
+            background: linear-gradient(180deg, #f8fbfc 0%, #ffffff 100%);
+            transform: translateY(-18px);
+            margin-bottom: -18px;
+        }
+
+        .risk-card {
+            background: #fff;
+            border: 1px solid #e1ebef;
+            border-radius: 18px;
+            padding: 18px 16px;
+            box-shadow: 0 12px 28px rgba(16,42,67,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .risk-card::after {
+            content: "";
+            position: absolute;
+            right: -26px;
+            bottom: -30px;
+            width: 82px;
+            height: 82px;
+            border-radius: 50%;
+            background: rgba(217,76,76,0.08);
+        }
+
+        .risk-card.caution { border-color: #ffd1d1; background: linear-gradient(135deg, var(--red-soft), #fff); }
+        .risk-card.notice { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .risk-card.blue { border-color: #cce0ff; background: linear-gradient(135deg, var(--blue-soft), #fff); }
+        .risk-card.safe { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .risk-label {
+            display: inline-block;
+            margin-bottom: 8px;
+            color: var(--muted);
+            font-size: 0.78em;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+        }
+
+        .risk-value {
+            display: block;
+            color: var(--navy);
+            font-size: 1.08em;
+            line-height: 1.35;
+            font-weight: 900;
+        }
+
+        .risk-note {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 0.84em;
+            line-height: 1.6;
+            position: relative;
+            z-index: 1;
+        }
+
+        .article-body { padding: 30px 36px 40px; }
+
+        h2 {
+            color: var(--navy);
+            font-size: 1.48em;
+            line-height: 1.5;
+            margin: 42px 0 18px;
+            padding: 0 0 0 18px;
+            border-left: 7px solid var(--red);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 3px;
+            margin-top: 10px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--gold), transparent);
+        }
+
+        h3 {
+            color: var(--navy);
+            font-size: 1.18em;
+            line-height: 1.55;
+            margin: 32px 0 14px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f7fbfc, #ffffff);
+            border: 1px solid var(--line);
+        }
+
+        p { margin: 0 0 1.1em; }
+
+        strong {
+            color: var(--navy);
+            font-weight: 900;
+            background: linear-gradient(transparent 65%, rgba(217,154,43,0.28) 65%);
+            padding: 0 2px;
+        }
+
+        .opening-box {
+            background: linear-gradient(135deg, var(--gold-soft) 0%, #ffffff 100%);
+            border: 1px solid #ffe0a3;
+            border-left: 8px solid var(--gold);
+            border-radius: 18px;
+            padding: 22px 24px;
+            margin-bottom: 28px;
+            box-shadow: 0 8px 20px rgba(217,154,43,0.08);
+        }
+
+        .opening-box::before {
+            content: "OPENING";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: var(--gold);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.08em;
+        }
+
+        .hook-line { color: #62400a; font-size: 1.06em; font-weight: 900; }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--teal-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #cceff1;
+            border-left: 8px solid var(--teal);
+            box-shadow: 0 8px 20px rgba(13,115,125,0.07);
+        }
+
+        .highlight-box::before {
+            content: "資金繰りの核心";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--teal), var(--teal-2));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .alert-box {
+            background: linear-gradient(135deg, var(--red-soft), #ffffff);
+            border-radius: 16px;
+            padding: 18px 20px;
+            margin: 24px 0;
+            border: 1px solid #ffd1d1;
+            border-left: 8px solid var(--red);
+            box-shadow: 0 8px 20px rgba(217,76,76,0.06);
+        }
+
+        .alert-box::before {
+            content: "通帳アラート";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--red-2), var(--red));
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .action-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.22), transparent 28%),
+                linear-gradient(135deg, var(--green-soft), #ffffff);
+            border: 1px solid #c7edd8;
+            border-left: 8px solid var(--green);
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(18,160,106,0.07);
+        }
+
+        .action-box::before {
+            content: "3か月先を見つける方法";
+            display: inline-block;
+            margin-bottom: 10px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, var(--green), #35c58b);
+            color: #fff;
+            font-size: 0.75em;
+            font-weight: 900;
+            letter-spacing: 0.07em;
+        }
+
+        .step-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            margin: 26px 0;
+        }
+
+        .step-card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 18px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+            box-shadow: 0 8px 20px rgba(16,42,67,0.06);
+        }
+
+        .step-card.feature { border-color: #ffe0a3; background: linear-gradient(135deg, var(--gold-soft), #fff); }
+        .step-card.safe-step { border-color: #c7edd8; background: linear-gradient(135deg, var(--green-soft), #fff); }
+
+        .step-num {
+            width: 38px;
+            height: 38px;
+            border-radius: 13px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy), var(--red));
+            color: #fff;
+            font-weight: 900;
+        }
+
+        .step-card.safe-step .step-num { background: linear-gradient(135deg, var(--navy), var(--green)); }
+        .step-card p { margin-bottom: 0; }
+
+        ul.standard-list {
+            padding-left: 0;
+            list-style: none;
+            margin: 20px 0 26px;
+        }
+
+        ul.standard-list li {
+            margin-bottom: 12px;
+            padding: 14px 15px 14px 46px;
+            background: #fbfdfe;
+            border: 1px solid #e2ebf0;
+            border-radius: 14px;
+            position: relative;
+        }
+
+        ul.standard-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 14px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--teal);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8em;
+            font-weight: 900;
+        }
+
+        .checklist {
+            background: linear-gradient(180deg, #ffffff 0%, #f9fcfd 100%);
+            border: 1px solid #dde8ed;
+            border-radius: 18px;
+            padding: 22px;
+            margin: 26px 0;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .checklist h3 { margin-top: 0; background: #f6fafb; border: 1px solid #e2edf0; }
+        .checklist ul { list-style-type: none; padding-left: 0; margin: 0 0 18px; }
+        .checklist ul:last-child { margin-bottom: 0; }
+        .checklist li { margin-bottom: 10px; padding: 13px 13px 13px 38px; position: relative; background: #fff; border: 1px solid #e7eef2; border-radius: 12px; }
+
+        .checklist .red-circle::before {
+            content: "危";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--red);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .checklist .blue-circle::before {
+            content: "守";
+            position: absolute;
+            left: 10px;
+            top: 12px;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 0.72em;
+        }
+
+        .summary-card {
+            background: linear-gradient(135deg, #f8fbfc 0%, #ffffff 100%);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+            padding: 24px;
+            margin: 32px 0 26px;
+            box-shadow: 0 10px 24px rgba(16,42,67,0.06);
+        }
+
+        .summary-card h2 { margin-top: 0; }
+
+        .cta-box {
+            background:
+                radial-gradient(circle at top right, rgba(217,154,43,0.34), transparent 32%),
+                linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 24px;
+            margin: 28px 0 10px;
+            box-shadow: 0 18px 36px rgba(13,115,125,0.22);
+        }
+
+        .disclaimer-box {
+            margin-top: 40px;
+            padding: 22px;
+            background-color: #f5f5f5;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .disclaimer-box p { margin: 0 0 10px 0; }
+        .disclaimer-box ul { list-style-type: none; padding-left: 0; margin: 0; }
+        .disclaimer-box li { margin-bottom: 8px; text-indent: -1em; padding-left: 1em; }
+
+        @media (max-width: 900px) { .risk-row { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 760px) {
+            body { padding: 12px; max-width: 100%; }
+            .css-logo-text { font-size: 1.7em; padding: 18px 20px 8px; }
+            .css-logo-gradient { justify-content: center; padding: 0 12px; text-align: center; }
+            .top-nav a, .top-nav .nav-tel { width: 100%; text-align: center; }
+            .hero { padding: 28px 20px 26px; }
+            .hero::after { font-size: 1.35em; }
+            .risk-row { grid-template-columns: 1fr; padding: 0 20px 24px; }
+            .article-body { padding: 24px 20px 30px; }
+            h2 { font-size: 1.26em; }
+            h3 { font-size: 1.08em; }
+            .step-card { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="css-logo-wrapper">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/FtimWBbA984" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+<div class="container">
+    <section class="hero">
+        <div class="hero-badges">
+            <span class="badge">YouTube連動コラム</span>
+            <span class="badge warning">黒字でも危ない資金繰りサイン</span>
+            <span class="badge">通帳残高・売掛金・税金社会保険・借入返済・役員借入金</span>
+        </div>
+        <h1>黒字でも危ない…社長が今すぐ確認すべき<br>通帳へ現れる5つの変化</h1>
+        <p class="hero-lead">利益が出ていても、支払日に通帳へお金がなければ会社は苦しくなります。通帳残高の減少、入金遅れ、税金や社会保険の後回し、返済のための借入れ、社長個人からの入金は、早めに確認したい資金繰りのサインです。</p>
+    </section>
+
+    <div class="risk-row">
+        <div class="risk-card caution">
+            <span class="risk-label">SIGN 01</span>
+            <span class="risk-value">残高減少</span>
+            <p class="risk-note">黒字なのに月末預金が減るなら、仕入れ・返済・回収を分けて確認します。</p>
+        </div>
+        <div class="risk-card notice">
+            <span class="risk-label">SIGN 02</span>
+            <span class="risk-value">入金遅れ</span>
+            <p class="risk-note">売掛金の入金日が少しずつ遅れると、給与や仕入れの支払いに影響します。</p>
+        </div>
+        <div class="risk-card blue">
+            <span class="risk-label">SIGN 03</span>
+            <span class="risk-value">支払い後回し</span>
+            <p class="risk-note">税金や社会保険を後回しにし始めたら、資金繰り表で早めに見直します。</p>
+        </div>
+        <div class="risk-card safe">
+            <span class="risk-label">ACTION</span>
+            <span class="risk-value">3か月資金繰り表</span>
+            <p class="risk-note">今月・来月・再来月の残高を見て、足りなくなる月を先に見つけます。</p>
+        </div>
+    </div>
+
+    <div class="article-body">
+        <div class="opening-box">
+            <p class="hook-line">「先月も黒字だったのに、なぜか通帳の残高だけが減っている」</p>
+            <p>そんな違和感を、「売上はあるから、来月には戻るはず」と見過ごしていませんか。</p>
+            <p>会社は利益だけでは支払いを続けられません。給与日、家賃、仕入代金、借入金の返済日。その日に、通帳にお金があるか。ここが経営の現実です。</p>
+            <p>会社が苦しくなる前には、通帳の動きや支払い方に、小さな変化が出ることがあります。今日は、実務でよく見かける5つの変化と、3か月先の資金不足を支払日前に見つける方法を整理します。</p>
+        </div>
+
+        <div class="highlight-box">
+            <p><strong>この記事のポイント</strong></p>
+            <ul class="standard-list">
+                <li>利益と現金は同じではなく、黒字でも支払いに詰まることがある</li>
+                <li>通帳残高、売掛金、税金・社会保険、借入返済、役員借入金の変化を見る</li>
+                <li>複数のサインが数か月続く場合は、早めに資金繰りを確認する</li>
+                <li>3か月資金繰り表を作ると、支払日前に不足月を見つけやすい</li>
+            </ul>
+        </div>
+
+        <h2>1. 大前提：利益と現金は同じではない</h2>
+        <p>まず大前提です。利益と現金は同じものではありません。</p>
+        <p>たとえば7月に100万円を売り上げても、実際の入金が9月なら、7月の給与や家賃には使えません。在庫の仕入れや借入金の返済も、通帳からお金が出ていきます。</p>
+        <p>利益は会社の成績表。通帳残高は、明日の支払いに使える財布です。両方を見ることが大切です。</p>
+
+        <div class="alert-box">
+            <p>黒字だから安心、ではありません。支払日に現金が足りない状態が続くと、黒字でも資金繰りが苦しくなることがあります。</p>
+        </div>
+
+        <h2>2. 通帳へ現れる5つの変化</h2>
+        <div class="step-grid">
+            <div class="step-card feature">
+                <div class="step-num">1</div>
+                <p><strong>売上はあるのに、月末の預金残高がじわじわ減っている</strong><br>過去6か月分の通帳を開き、各月末残高を書き出します。売上が大きく変わっていないのに残高だけが3か月、4か月と減っているなら、仕入れ・返済・回収に分けて原因を確認しましょう。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">2</div>
+                <p><strong>売掛金の入金日が少しずつ遅れている</strong><br>請求書を出しても、その時点ではまだお金は入っていません。取引先ごとに「請求額」「入金予定日」「実際の入金日」を並べ、遅れに早めに気づける状態にします。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">3</div>
+                <p><strong>税金や社会保険を、後回しにし始める</strong><br>一度だけ事情がある場合もありますが、続くなら資金繰り見直しのサインです。払えないと分かった時点で、未納予定額、手元預金、今後の入出金を整理しましょう。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">4</div>
+                <p><strong>返済のための借入れが増えている</strong><br>借換え自体は悪いことではありません。問題は、借りたお金が赤字の穴埋めだけに消え、改善の見通しがないまま残高だけが増える状態です。</p>
+            </div>
+            <div class="step-card feature">
+                <div class="step-num">5</div>
+                <p><strong>社長個人のお金を、毎月会社へ入れている</strong><br>一時的な立替えならすぐ問題とは限りません。ただ、役員借入金が毎月増え続けるなら、本業の入金だけでは支払いをまかなえていない可能性があります。</p>
+            </div>
+        </div>
+
+        <h2>3. 危険な状態・守れる状態</h2>
+        <div class="checklist">
+            <h3>🔴 危険な状態</h3>
+            <ul>
+                <li class="red-circle">利益が出ているから通帳は見なくていいと思っている</li>
+                <li class="red-circle">月末残高が減っている理由を分解していない</li>
+                <li class="red-circle">売掛金の入金予定日と実際の入金日を比べていない</li>
+                <li class="red-circle">税金や社会保険の支払い遅れが続いている</li>
+                <li class="red-circle">返済のための借入れが増え、改善策がない</li>
+                <li class="red-circle">社長個人のお金を毎月会社へ入れている</li>
+            </ul>
+            <h3>🔵 守れる状態</h3>
+            <ul>
+                <li class="blue-circle">過去6か月分の月末預金残高を書き出している</li>
+                <li class="blue-circle">仕入れ・返済・回収に分けて原因を確認している</li>
+                <li class="blue-circle">請求額・入金予定日・実際の入金日を取引先ごとに管理している</li>
+                <li class="blue-circle">納付が難しい時点で早めに相談している</li>
+                <li class="blue-circle">借入相談前に赤字原因と返済額見直しを整理している</li>
+                <li class="blue-circle">3か月資金繰り表で不足月を先に見つけている</li>
+            </ul>
+        </div>
+
+        <h2>4. 3か月資金繰り表で支払日前に気づく</h2>
+        <div class="action-box">
+            <p>通帳の変化に気づいたら、3か月資金繰り表を作ります。難しい表でなくても大丈夫です。まずは「今月・来月・再来月」の3列で、入金と支払いを並べるだけで始められます。</p>
+        </div>
+
+        <div class="step-grid">
+            <div class="step-card safe-step">
+                <div class="step-num">1</div>
+                <p><strong>月初の預金残高を書く</strong><br>最初に、今月・来月・再来月のスタート時点の預金残高を置きます。最初は概算でもかまいません。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">2</div>
+                <p><strong>入金予定を書く</strong><br>売上の入金予定、売掛金の回収予定、その他の入金を月ごとに書き出します。予定日が遅れている取引先は別に確認します。</p>
+            </div>
+            <div class="step-card safe-step">
+                <div class="step-num">3</div>
+                <p><strong>支払い予定を書く</strong><br>給与、家賃、仕入れ、借入返済、税金、社会保険料を並べます。最後に月末残高を出し、マイナスになる月を探します。</p>
+            </div>
+        </div>
+
+        <h2>5. 相談の目安と準備資料</h2>
+        <p>目安として、3か月資金繰り表でマイナスが見えたとき、税金や社会保険の遅れが2か月続いたとき、役員借入金が3か月連続で増えているときは、早めに専門家へ相談してください。</p>
+
+        <ul class="standard-list">
+            <li>通帳6か月分</li>
+            <li>3か月資金繰り表</li>
+            <li>借入返済予定表</li>
+            <li>売掛金の入金予定表</li>
+            <li>税金・社会保険料の未納予定額</li>
+            <li>今後の売上・仕入れ・固定費の見込み</li>
+        </ul>
+
+        <div class="highlight-box">
+            <p>現金は、会社にとっての血液のようなものです。利益という筋肉があっても、血が止まれば会社は倒れてしまいます。だからこそ、通帳の小さな変化を早めに見つけることが大切です。</p>
+        </div>
+
+        <div class="summary-card">
+            <h2>まとめ：通帳の小さな変化は、会社からの早期警報</h2>
+            <p>今日の5つの変化は、売上があっても預金残高が減り続ける、売掛金の入金が遅れる、税金や社会保険を後回しにする、返済を借入れで補う状態が続く、社長個人のお金が毎月会社へ入る、というものです。</p>
+            <p>一つ当てはまっただけで、会社が立ち行かなくなるとは限りません。けれど、複数が重なり、数か月続くなら、早めの確認が必要です。</p>
+            <p>今日、過去6か月の通帳残高を書き出し、3か月先までの資金繰り表を作ってみてください。毎月、実績と予定のズレを書き換えるほど、経営の先読みがしやすくなります。</p>
+        </div>
+
+        <div class="cta-box">
+            <p>「黒字なのに通帳残高が減っている」「税金や社会保険の支払いが不安」「3か月先の資金繰りを確認したい」と感じたら、専門家に相談してください。<br>
+            個別ケースは専門家に相談を。迷ったら無料相談お待ちしてます(^^)。参考になった方は、チャンネル登録と高評価で応援していただけると嬉しいです！</p>
+        </div>
+
+        <div class="disclaimer-box">
+            <p><strong>【作成月】</strong>2026/09</p>
+            <p><strong>【ご利用にあたっての注意事項】</strong></p>
+            <ul>
+                <li>※内容について、できる限り正確な情報を提供するように努めておりますが、正確性や安全性を保証するものではありません。内容は作成時点の法律に基づいています。掲載された内容によって生じた損害等の一切の責任を負いかねますのでご了承ください。</li>
+                <li>※内容の具体的な利用にあっては必ず税理士事務所等へご確認ください。</li>
+                <li>※内容の是非については、当事務所では対応いたしません。</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="css-logo-wrapper" style="margin-top: 30px; margin-bottom: 0;">
+    <p class="css-logo-text">島田税理士事務所</p>
+    <div class="css-logo-gradient">YouTube動画連動column</div>
+    <nav class="top-nav">
+        <a href="https://www.shimadakaikei.com/" target="_blank" rel="noopener noreferrer">【ホーム】</a>
+        <a href="https://www.shimadakaikei.com/inquiry/index.html" target="_blank" rel="noopener noreferrer">【無料相談】</a>
+        <a href="https://youtu.be/FtimWBbA984" target="_blank" rel="noopener noreferrer">【今回のYouTube動画】</a>
+        <span class="nav-tel">【Tel 03-5485-2447】</span>
+    </nav>
+</div>
+
+</body>
+</html>
